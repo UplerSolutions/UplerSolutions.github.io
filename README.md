@@ -19,6 +19,7 @@
 Latamplix es una plataforma de crowdfunding que tiene como objetivo apoyar y potenciar startups de América Latina. Nuestra misión es brindar un espacio seguro y accesible para que emprendedores talentosos puedan convertir sus ideas innovadoras en realidades exitosas.
 
 💡 ¿Qué hacemos?
+
 - Facilitamos la conexión entre emprendedores y donantes entusiastas que desean respaldar proyectos prometedores en América Latina.
 - Fomentamos el crecimiento y la visibilidad de las startups, ofreciéndoles la oportunidad de crear colecciones personalizadas de NFTs y proporcionar beneficios exclusivos a sus donantes.
 - Impulsamos la diversidad y la inclusión al apoyar proyectos de diversos sectores y orígenes en toda la región.
@@ -38,15 +39,19 @@ Latamplix es una plataforma de crowdfunding que tiene como objetivo apoyar y pot
 Para comenzar con Latamplix, sigue estos pasos:
 
 1. Clona el repositorio en tu máquina local:
-git clone https://github.com/Latamplix/Latamplix.github.io.git
+
+   git clone https://github.com/Latamplix/Latamplix.github.io.git
 
 2. Instala las dependencias necesarias:
-cd Latamplix
-npm install
+
+   cd Latamplix
+
+   $ npm install
 
 3. Inicia el servidor de desarrollo:
-npm run dev
-  
+
+   $ npm start
+
 4. ¡Explora y contribuye al crecimiento del emprendimiento en América Latina!
 
 ## Contribuir
@@ -62,4 +67,3 @@ Este proyecto está licenciado bajo [MIT License](LICENSE).
 ¿Tienes alguna pregunta o sugerencia? No dudes en contactarnos en [contact@latamplix.com](mailto:contact@latamplix.com) o a través de nuestras redes sociales.
 
 ¡Gracias por ser parte de Latamplix y contribuir al crecimiento del emprendimiento en América Latina! 🌎💫
-
