@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const Navbar = () => {
   return (
     <nav className='flex flex-col items-center justify-evenly w-full'>
-      <div className='flex z-10 w-full items-center justify-evenly font-mono text-sm lg:flex pt-10 pb-10 lg:pb-60'>
+      <div className='flex z-10 w-full items-center justify-evenly font-mono text-sm pt-10 pb-10 lg:pb-60'>
         <Link className='' href='/'>
           <img
             className=' w-[200px] md:w-64 min-w-full'
@@ -14,7 +14,7 @@ export const Navbar = () => {
             alt='Latamplix Logo'
           />
         </Link>
-        <div className='w-0 invisible text-lg lg:visible lg:w-auto'>
+        <div className=' hidden text-lg  lg:block lg:w-auto'>
           <Link className='p-6' href='/aboutUs'>
             Nosotros
           </Link>
