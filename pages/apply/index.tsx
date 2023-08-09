@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
 
-const Apply = () => {
+const Apply: NextPage = () => {
   return (
-    <Layout>
+    <Layout title='Apply'>
       <h1 className=' text-center text-6xl'>Postulate</h1>
     </Layout>
   )

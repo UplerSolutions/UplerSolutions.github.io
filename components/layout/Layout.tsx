@@ -5,7 +5,7 @@ import { Footer } from '../ui/footer'
 
 interface Props {
   children: React.ReactNode
-  title?: string
+  title: string
   description?: string
   keywords?: string
 }

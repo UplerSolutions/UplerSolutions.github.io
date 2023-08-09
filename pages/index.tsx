@@ -1,26 +1,29 @@
 import Image from 'next/image'
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/utils/config'
 import { Inter } from 'next/font/google'
 import { Layout } from '@/components/layout/Layout'
 import { CustomButton } from '@/components/layout'
+import { Partner } from '@/components/ui/partner'
+import { Contributions } from '@/components/ui/contributions'
+// import { Carousel } from "@/components/ui/carousel"
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const Home: NextPage = () => {
   const origin =
     typeof window !== 'undefined' && window.location.origin
       ? window.location.origin
       : SITE_URL
 
   return (
-    <Layout>
+    <Layout title='Home'>
       <Head>
         <title>{SITE_NAME}</title>
         <meta name='description' content={SITE_DESCRIPTION} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-
       <div className='relative flex flex-col place-items-center w-full'>
         <h1 className=' text-4xl text-center font-bold md:text-5xl lg:text-7xl '>
           Se el <span className=' text-purple-400'>sueño</span> que quieres{' '}
@@ -28,8 +31,8 @@ export default function Home() {
           ver en el <span className=' text-purple-400'>mundo.</span>
         </h1>
         <p className='pb-10 pt-6 lg:p-10 text-center'>
-          Impulsando startups innovadoras a traves de la inversion colaborativa
-          y tokenizacion.
+          Impulsa startups innovadoras a través de la inversión colaborativa y
+          la tokenización.
         </p>
         <CustomButton
           className=' bg-purple-500 h-14 w-48'
@@ -40,28 +43,10 @@ export default function Home() {
           }}
         />
       </div>
-      <main className='pb-6 flex justify-center items-center lg:pb-10'>
-        <div className=' flex justify-center items-center mt-10 w-5/6 lg:w-3/5 pt-10'>
-          <div className='flex flex-col justify-center items-center h-20 border shadow-md w-full'>
-            <span className=' text-lg font-bold text-purple-500 leading-5'>
-              {0}
-            </span>
-            <span className=''>Proyectos</span>
-          </div>
-          <div className='flex flex-col justify-center items-center h-20 border shadow-md w-full'>
-            <span className=' text-lg font-bold text-purple-500 leading-5'>
-              U$D {0}
-            </span>
-            <span className=''>Destinados a creadores</span>
-          </div>
-          <div className='flex flex-col justify-center items-center h-20 border shadow-md w-full'>
-            <span className=' text-lg font-bold text-purple-500 leading-5'>
-              {0}
-            </span>
-            <span className=''>Contribuciones</span>
-          </div>
-        </div>
-      </main>
+      <Contributions />
+      {/* <Carousel /> */}
+      <Partner />
     </Layout>
   )
 }
+export default Home

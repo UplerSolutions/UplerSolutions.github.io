@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { ConnectButtom } from '@/components/ui/connectbuttom/ConnectButtom'
 import Link from 'next/link'
 
 export const Navbar = () => {
@@ -14,7 +14,7 @@ export const Navbar = () => {
             alt='Latamplix Logo'
           />
         </Link>
-        <div className=' hidden text-lg  lg:block lg:w-auto'>
+        <div className='hidden text-lg  lg:block lg:w-auto'>
           <Link className='p-6' href='/aboutUs'>
             Nosotros
           </Link>
@@ -29,7 +29,7 @@ export const Navbar = () => {
           </Link>
         </div>
         <div>
-          <ConnectButton />
+          <ConnectButtom />
         </div>
       </div>
     </nav>

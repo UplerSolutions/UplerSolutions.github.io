@@ -1,8 +1,9 @@
 import { Layout } from '@/components/layout/Layout'
+import type { NextPage } from 'next'
 
-const Startups = () => {
+const Startups: NextPage = () => {
   return (
-    <Layout>
+    <Layout title='Start Ups'>
       <div>Startups</div>
     </Layout>
   )
