@@ -28,7 +28,8 @@ export const WALLET_CONNECT_PROJECT_ID = '7301c27df5004880e903a97f361f6e8f'
 export const SITE_NAME = 'Latamplix'
 export const SITE_DESCRIPTION =
   '¡Latamplix - Impulsando Startups en América Latina! '
-export const SITE_URL = 'https://boilr3.vercel.app'
+//TODO: completar url de la pagina
+export const SITE_URL = ''
 
 export const SOCIAL_TWITTER = 'Envoy_1084'
 export const SOCIAL_GITHUB = 'Envoy-VC/boilr3'

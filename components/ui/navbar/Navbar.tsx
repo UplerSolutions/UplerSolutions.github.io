@@ -1,11 +1,12 @@
 import Image from 'next/image'
+import { Inter } from 'next/font/google'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import Link from 'next/link'
 
 export const Navbar = () => {
   return (
-    <nav className='flex flex-col items-center justify-between p-4 ${inter.className}'>
-      <div className='flex z-10 w-full max-w-7xl items-center justify-between font-mono text-sm lg:flex pt-10 pb-60'>
+    <nav className='flex flex-col items-center justify-evenly w-full'>
+      <div className='flex z-10 w-full items-center justify-evenly font-mono text-sm lg:flex pt-10 pb-10 lg:pb-60'>
         <Link className='' href='/'>
           <img
             className=' w-[200px] md:w-64 min-w-full'
@@ -13,7 +14,7 @@ export const Navbar = () => {
             alt='Latamplix Logo'
           />
         </Link>
-        <div className='text-lg'>
+        <div className='w-0 invisible text-lg lg:visible lg:w-auto'>
           <Link className='p-6' href='/aboutUs'>
             Nosotros
           </Link>

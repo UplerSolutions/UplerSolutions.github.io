@@ -1,15 +1,15 @@
-import { Layout } from '@/components/layout/Layout'
 import React from 'react'
 
 export const Footer = () => {
   return (
-    <footer className='bg-neutral-600 flex justify-evenly h-[350px] pt-10'>
+    <footer className='w-full bg-neutral-600 flex flex-col justify-evenly h-auto pt-10 md:flex-row md:h-[350px] items-center'>
       <div className='flex flex-col'>
         <h1 className='font-bold text-lg pb-6'>ACERCA DE NOSOTROS</h1>
         <span>Nosotros</span>
         <span>Nuestra acta</span>
         <span>Prensa</span>
         <span>Empleos</span>
+
         <div className='pt-16 flex'>
           <img src='/whiteisotipo.png' alt='' className='w-[35px]' />
           <span className=' pl-3'>Latamplix © 2023</span>
@@ -24,14 +24,6 @@ export const Footer = () => {
       </div>
       <div className='flex flex-col invisible'>
         <h1 className='font-bold text-lg'>DONDE ESTAMOS</h1>
-        <span>Lorem ipsum sit amet No. 18,</span>
-        <span>Buenos Aires, Argentina</span>
-        <span>10000</span>
-        <div></div>
-        <div className='flex'>
-          <button>Español &gt;</button>
-          <button>USD &gt;</button>
-        </div>
       </div>
       <div className='flex flex-col'>
         <h1 className='font-bold text-lg pb-6'>DONDE ESTAMOS</h1>

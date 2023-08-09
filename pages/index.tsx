@@ -21,13 +21,13 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
-      <div className='relative flex flex-col place-items-center'>
+      <div className='relative flex flex-col place-items-center w-full'>
         <h1 className=' text-4xl text-center font-bold md:text-5xl lg:text-7xl '>
           Se el <span className=' text-purple-400'>sueño</span> que quieres{' '}
           <br />
           ver en el <span className=' text-purple-400'>mundo.</span>
         </h1>
-        <p className='p-10'>
+        <p className='pb-10 pt-6 lg:p-10 text-center'>
           Impulsando startups innovadoras a traves de la inversion colaborativa
           y tokenizacion.
         </p>
@@ -40,8 +40,8 @@ export default function Home() {
           }}
         />
       </div>
-      <main className='flex justify-center items-center pb-10'>
-        <div className=' flex justify-center items-center mt-10 w-3/5 pt-10'>
+      <main className='pb-6 flex justify-center items-center lg:pb-10'>
+        <div className=' flex justify-center items-center mt-10 w-5/6 lg:w-3/5 pt-10'>
           <div className='flex flex-col justify-center items-center h-20 border shadow-md w-full'>
             <span className=' text-lg font-bold text-purple-500 leading-5'>
               {0}
