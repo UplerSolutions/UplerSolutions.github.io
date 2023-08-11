@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Partner = () => {
   return (
-    <div className='flex items-center justify-center flex-col pb-6 pt-6'>
+    <section className='flex items-center justify-center flex-col pb-6 pt-6'>
       <div className='flex flex-col text-left m-auto lg:w-[75%]'>
         <div className='text-center flex items-center lg:text-left pb-10 w-full'>
           <div className='flex flex-col'>
@@ -54,6 +54,6 @@ export const Partner = () => {
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[250px]'
         />
       </div>
-    </div>
+    </section>
   )
 }
