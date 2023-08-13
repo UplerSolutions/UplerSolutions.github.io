@@ -1,15 +1,12 @@
-import Image from 'next/image'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/utils/config'
 import { Inter } from 'next/font/google'
 import { Layout } from '@/components/layout/Layout'
-import { CustomButton } from '@/components/layout'
-import { Partner } from '@/components/ui/partner'
 import { Contributions } from '@/components/ui/contributions'
-import { Carousel } from '@/components/ui/carousel'
-import { redirect } from 'next/navigation'
 import { useRouter } from 'next/router'
+import { CardPlan } from '@/components/ui/plan'
+import { Globalplix } from '@/components/ui/globalplix'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,27 +30,27 @@ const Home: NextPage = () => {
         <meta name='description' content={SITE_DESCRIPTION} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <div className='relative flex flex-col place-items-center'>
-        <h1 className=' text-[32px] text-center font-bold md:text-5xl lg:text-7xl '>
-          Se el <span className=' text-purple-400'>sueño</span> que quieres{' '}
-          <br />
-          ver en el <span className=' text-purple-400'>mundo.</span>
-        </h1>
+      <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#FFAAF8] to-[#FFF6AE] text-neutral-700 pb-7'>
+        <div className='text-[32px] text-center font-bold md:text-5xl lg:text-7xl'>
+          <h3 className='md:pb-4'>Tu suscripción</h3>
+          <span className=' text-purple-400 text-[35px] md:text-5xl lg:text-7xl'>
+            definitiva.
+          </span>
+        </div>
         <p className='pb-10 pt-6 lg:p-10 text-center w-11/12'>
-          Impulsa startups innovadoras a través de la inversión colaborativa y
-          la tokenización.
+          Consigue cientos de softwares para tu carrera profesional. Todo en una
+          sola suscripción.
         </p>
         <button
-          className=' bg-purple-500 h-12 w-48 rounded-xl'
+          className=' bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600'
           onClick={handleClick}
         >
           Invierte Ahora
         </button>
       </div>
       <Contributions />
-      <Carousel />
-
-      <Partner />
+      <Globalplix />
+      <CardPlan />
     </Layout>
   )
 }

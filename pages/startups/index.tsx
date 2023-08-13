@@ -8,7 +8,7 @@ const Startups: NextPage = () => {
     <Layout title='Start Ups'>
       <h1 className=' text-center text-5xl'>Explora</h1>
       {/* <SearchBar /> */}
-      <Explore />
+      {/* <Explore /> */}
     </Layout>
   )
 }

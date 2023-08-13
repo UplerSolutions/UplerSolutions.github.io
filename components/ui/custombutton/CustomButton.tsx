@@ -14,7 +14,7 @@ interface Props {
   handleClick: () => any
 }
 
-const CustomButton = (props: Props) => {
+export const CustomButton = (props: Props) => {
   return (
     <button
       className={`w-full text-lg text-white rounded-3xl font-semibold px-4 py-2 mt-8 ${
@@ -34,5 +34,3 @@ const CustomButton = (props: Props) => {
     </button>
   )
 }
-
-export default CustomButton

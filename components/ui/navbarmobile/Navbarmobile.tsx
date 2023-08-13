@@ -1,10 +1,7 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import React from 'react'
 import Link from 'next/link'
 import { PiRocket } from 'react-icons/pi'
-import { BsCalendar4Week } from 'react-icons/bs'
-import { FaRegHeart, FaRegUser } from 'react-icons/fa'
+import { BiPackage } from 'react-icons/bi'
 import { AiOutlineHome } from 'react-icons/ai'
 
 export const Navbarmobile = () => {
@@ -24,24 +21,10 @@ export const Navbarmobile = () => {
         </Link>
         <Link
           className='flex flex-col w-1/6 text-center items-center'
-          href='/companyEvents'
+          href='/plans'
         >
-          <BsCalendar4Week />
-          <span className=' text-xs'>Eventos</span>
-        </Link>
-        <Link
-          className='flex flex-col w-1/6 text-center items-center'
-          href='/apply'
-        >
-          <FaRegHeart />
-          <span className=' text-xs'>Favoritos</span>
-        </Link>
-        <Link
-          className='flex flex-col w-1/6 text-center items-center '
-          href='/apply'
-        >
-          <FaRegUser />
-          <span className=' text-xs'>Perfil</span>
+          <BiPackage />
+          <span className=' text-xs'>Planes</span>
         </Link>
       </div>
     </nav>
