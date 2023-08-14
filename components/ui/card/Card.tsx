@@ -6,7 +6,7 @@ import { GoShieldCheck } from 'react-icons/go'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 interface Props {
-  title: string | undefined | string[]
+  title?: string | undefined | string[]
 }
 
 export const Card: FC<Props> = ({ title }) => {
