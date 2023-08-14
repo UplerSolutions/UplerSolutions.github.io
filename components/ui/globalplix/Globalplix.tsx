@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export const Globalplix = () => {
@@ -17,7 +18,7 @@ export const Globalplix = () => {
         </div>
         <div className='relative '>
           <h1 className='md:h-[40px]  xl:ml-0 xl:h-auto'></h1>
-          <img src='/box.png' alt='' className='lg:ml-[75px]' />
+          <Image src='/box.png' alt='' className='lg:ml-[75px]' />
         </div>
       </div>
     </div>

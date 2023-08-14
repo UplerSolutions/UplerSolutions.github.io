@@ -18,7 +18,7 @@ export const Card: FC<Props> = ({ title }) => {
             <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-bold '>
               ¡Ya casi lo logras! Completa tu pedido
             </h1>
-            <div className='flex items-center xl:ml-20'>
+            <div className='flex items-center xl:ml-20'>| 
               <GoShieldCheck className='text-purple-500 text-3xl' />
               <span className='w-[200px]'>
                 30 días de garantía de devolución del dinero

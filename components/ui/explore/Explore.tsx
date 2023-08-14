@@ -1,6 +1,7 @@
 import React from 'react'
 import Pagination from '@mui/material/Pagination'
 import Link from 'next/link'
+import Image from "next/image"
 export const Explore = () => {
   return (
     <div className='flex flex-col xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full m-auto px-4 py-4 lg:py-8 items-center'>
@@ -9,7 +10,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <img src='/isotipo.png' alt='' />
+                <Image src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -36,7 +37,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <img src='/isotipo.png' alt='' />
+                <Image src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -63,7 +64,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <img src='/isotipo.png' alt='' />
+                <Image src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -90,7 +91,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <img src='/isotipo.png' alt='' />
+                <Image src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -117,7 +118,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <img src='/isotipo.png' alt='' />
+                <Image src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -144,7 +145,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <img src='/isotipo.png' alt='' />
+                <Image src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>

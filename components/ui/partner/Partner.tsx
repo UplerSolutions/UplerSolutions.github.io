@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export const Partner = () => {
   return (
     <section className='flex items-center justify-center flex-col pb-6 pt-8  text-neutral-600 font-semibold '>
@@ -23,34 +25,34 @@ export const Partner = () => {
       </div>
 
       <div className='flex flex-wrap justify-center sm:flex-row '>
-        <img
+        <Image
           src='./isotipo.png'
-          alt=''
+          alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
-        <img
+        <Image
           src='./isotipo.png'
-          alt=''
+          alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
-        <img
+        <Image
           src='./isotipo.png'
-          alt=''
+          alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
-        <img
+        <Image
           src='./isotipo.png'
-          alt=''
+          alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
-        <img
+        <Image
           src='./isotipo.png'
-          alt=''
+          alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
-        <img
+        <Image
           src='./isotipo.png'
-          alt=''
+          alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
       </div>
