@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           className=' bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600'
           onClick={handleClick}
         >
-          Invierte Ahora
+          Encontra Tu Plan
         </button>
       </div>
       <Contributions />

@@ -26,32 +26,44 @@ export const Partner = () => {
 
       <div className='flex flex-wrap justify-center sm:flex-row '>
         <Image
-          src='./isotipo.png'
+          height={120}
+          width={120}
+          src='/isotipo.png'
           alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
         <Image
-          src='./isotipo.png'
+          height={120}
+          width={120}
+          src='/isotipo.png'
           alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
         <Image
-          src='./isotipo.png'
+          height={120}
+          width={120}
+          src='/isotipo.png'
           alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
         <Image
-          src='./isotipo.png'
+          height={120}
+          width={120}
+          src='/isotipo.png'
           alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
         <Image
-          src='./isotipo.png'
+          height={120}
+          width={120}
+          src='/isotipo.png'
           alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />
         <Image
-          src='./isotipo.png'
+          height={120}
+          width={120}
+          src='/isotipo.png'
           alt='partner-logo'
           className='p-8 flew-wrap w-28 md:w-[180px] md:flex-wrap lg:w-[230px]'
         />

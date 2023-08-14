@@ -10,7 +10,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <Image src='/isotipo.png' alt='logo' />
+                <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -37,7 +37,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <Image src='/isotipo.png' alt='logo' />
+                <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -64,7 +64,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <Image src='/isotipo.png' alt='logo' />
+                <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -91,7 +91,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <Image src='/isotipo.png' alt='logo' />
+                <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -118,7 +118,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <Image src='/isotipo.png' alt='logo' />
+                <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>
@@ -145,7 +145,7 @@ export const Explore = () => {
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
               <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
-                <Image src='/isotipo.png' alt='logo' />
+                <Image height={200} src='/isotipo.png' alt='logo' width={200} />
               </div>
               <div className='p-4 flex flex-col flex-1'>
                 <div>

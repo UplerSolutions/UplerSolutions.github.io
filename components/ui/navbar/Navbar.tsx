@@ -12,6 +12,8 @@ export const Navbar = () => {
             className=' w-[150px] md:w-40 min-w-full'
             src='/uplerlogo.png'
             alt='global Logo'
+            width={100}
+            height={100}
           />
         </Link>
         <div className='hidden text-lg lg:w-auto lg:flex gap-9'>

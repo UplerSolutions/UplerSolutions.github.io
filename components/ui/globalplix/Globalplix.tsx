@@ -18,7 +18,7 @@ export const Globalplix = () => {
         </div>
         <div className='relative '>
           <h1 className='md:h-[40px]  xl:ml-0 xl:h-auto'></h1>
-          <Image src='/box.png' alt='' className='lg:ml-[75px]' />
+          <Image height={950} width={950} src='/box.png' alt='' className='lg:ml-[75px]' />
         </div>
       </div>
     </div>
