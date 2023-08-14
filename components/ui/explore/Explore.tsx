@@ -1,9 +1,10 @@
 import React from 'react'
+import Pagination from '@mui/material/Pagination'
 import Link from 'next/link'
 export const Explore = () => {
   return (
-    <div className='max-w-screen-lg w-full m-auto px-4 py-4 lg:py-8'>
-      <ul className='grid grid-cols-[repeat(auto-fill,_minmax(240px,_1fr))] gap-4'>
+    <div className='flex flex-col xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full m-auto px-4 py-4 lg:py-8 items-center'>
+      <ul className='grid grid-cols-[repeat(auto-fill,_minmax(310px,_1fr))] gap-4'>
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
@@ -167,6 +168,7 @@ export const Explore = () => {
           </Link>
         </li>
       </ul>
+      <Pagination count={10} className='pt-10' />
     </div>
   )
 }

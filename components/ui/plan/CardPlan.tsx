@@ -11,8 +11,8 @@ export const CardPlan = () => {
 
   return (
     <>
-      <section className='max-w-[100%] w-full bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
-        <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8 '>
+      <section className='max-w-[100%] w-full'>
+        <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             Un plan para cada
             <span className='text-purple-600'> profesional </span>

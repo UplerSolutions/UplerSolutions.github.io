@@ -14,15 +14,18 @@ export const Navbar = () => {
             alt='global Logo'
           />
         </Link>
-        <div className='hidden text-lg  lg:block lg:w-auto'>
-          <Link className='p-6' href='/startups'>
+        <div className='hidden text-lg lg:w-auto lg:flex gap-9'>
+          <Link className='group relative inline-block ' href='/startups'>
             Startups
+            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
           </Link>
-          <Link className='p-6' href='/plans'>
+          <Link className=' group relative inline-block ' href='/plans'>
             Planes
+            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
           </Link>
-          <Link className='p-6' href='/apply'>
+          <Link className=' group relative inline-block ' href='/apply'>
             Postulate
+            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
           </Link>
         </div>
         <div>

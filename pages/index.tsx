@@ -50,7 +50,9 @@ const Home: NextPage = () => {
       </div>
       <Contributions />
       <Globalplix />
-      <CardPlan />
+      <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
+        <CardPlan />
+      </div>
     </Layout>
   )
 }

@@ -5,7 +5,9 @@ import type { NextPage } from 'next'
 const Plans: NextPage = () => {
   return (
     <Layout title='Plans'>
-      <CardPlan />
+      <div className='bg-gradient-to-r from-[#FFAAF8] to-[#FFF6AE]'>
+        <CardPlan />
+      </div>
     </Layout>
   )
 }
