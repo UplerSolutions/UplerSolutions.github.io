@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <meta name='description' content={SITE_DESCRIPTION} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#FFAAF8] to-[#FFF6AE] text-neutral-700 pb-7'>
+      <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700 pt-28 pb-7'>
         <div className='text-[32px] text-center font-bold md:text-5xl lg:text-7xl'>
           <h3 className='md:pb-4'>Tu suscripción</h3>
           <span className=' text-purple-400 text-[35px] md:text-5xl lg:text-7xl'>

@@ -16,7 +16,7 @@ const Startups: NextPage = () => {
   const anchorEl = useRef<HTMLDivElement>(null)
   return (
     <Layout title='startups'>
-      <section className='flex flex-col justify-center pt-10 pb-20 bg-[#fcf9ff]'>
+      <section className='flex flex-col justify-center pt-10 pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <div className=' flex justify-center'>
           <Box maxWidth={'sm'} margin='auto'>
             <Typography textAlign='center' my={2}></Typography>
