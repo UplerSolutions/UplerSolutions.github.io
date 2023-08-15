@@ -22,7 +22,7 @@ export const Navbar = () => {
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className=' group relative inline-block ' href='/plans'>
-            Blunes
+            Boundles
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className=' group relative inline-block ' href='/apply'>
