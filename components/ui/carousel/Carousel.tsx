@@ -32,8 +32,8 @@ export const Carousel = () => {
 
         <Swiper
           style={{
-            '--swiper-pagination-color': '#b06eca',
-            '--swiper-navigation-color': '#b06eca',
+            '--swiper-pagination-color': 'primary-color',
+            '--swiper-navigation-color': 'primary-color',
             '--swiper-navigation-position': 'absolute',
             '--swiper-pagination-bullet-size': '14px'
           }}
@@ -60,12 +60,12 @@ export const Carousel = () => {
                       <div>
                         <h3>
                           <span className=' line-through pr-3'>$ 84 USD</span>
-                          <span className='bg-purple-100 text-purple-400 py-1 px-2 rounded-md'>
+                          <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
                             AHORRÁ 68%
                           </span>
                         </h3>
                       </div>
-                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-purple-600'>
+                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                         <span className='text-xl'>$</span>
                         {plan.price}
                         <span className=' text-base text-neutral-600 font-normal'>
@@ -73,7 +73,7 @@ export const Carousel = () => {
                         </span>
                       </h2>
                       <Link href={`/plans/${plan.name}`}>
-                        <button className=' bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-100 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600'>
+                        <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
                           Adquirir plan
                         </button>
                       </Link>
@@ -90,7 +90,7 @@ export const Carousel = () => {
                               key={herramienta}
                               className='text-neutral-500 py-3 flex items-center '
                             >
-                              <FaCheck className='text-purple-600' />
+                              <FaCheck className='text-primary-color' />
                               <span className='pl-3'>{herramienta}</span>
                             </li>
                           ))}
@@ -117,7 +117,7 @@ export const Carousel = () => {
       <div className='max-w-[100%] w-full m-auto py-6 lg:py-8 b'>
         <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
           Un plan para cada
-          <span className='text-purple-600'> empresa </span>
+          <span className='text-primary-color'> empresa </span>
         </h1>
 
         <Swiper
@@ -150,12 +150,12 @@ export const Carousel = () => {
                       <div>
                         <h3>
                           <span className=' line-through pr-3'>$ 84 USD</span>
-                          <span className='bg-purple-100 text-purple-400 py-1 px-2 rounded-md'>
+                          <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
                             AHORRÁ 68%
                           </span>
                         </h3>
                       </div>
-                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-purple-600'>
+                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                         <span className='text-xl'>$</span>
                         {companias.price}
                         <span className=' text-base text-neutral-600 font-normal'>
@@ -163,7 +163,7 @@ export const Carousel = () => {
                         </span>
                       </h2>
                       <Link href={`/plans/${companias.name}`}>
-                        <button className=' bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-100 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600'>
+                        <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
                           Adquirir plan
                         </button>
                       </Link>
@@ -180,7 +180,7 @@ export const Carousel = () => {
                               key={herramienta}
                               className='text-neutral-500 py-3 flex items-center '
                             >
-                              <FaCheck className='text-purple-600' />
+                              <FaCheck className='text-primary-color' />
                               <span className='pl-3'>{herramienta}</span>
                             </li>
                           ))}

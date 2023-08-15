@@ -19,7 +19,7 @@ export const Card: FC<Props> = ({ title }) => {
               ¡Ya casi lo logras! Completa tu pedido
             </h1>
             <div className='mr-6 sm:mr-0 flex flex-row-reverse sm:flex-row items-center xl:ml-20 '>
-              <VerifiedUserOutlinedIcon className='text-purple-500 scale-[2] md:mr-4' />
+              <VerifiedUserOutlinedIcon className='text-primary-color scale-[2] md:mr-4' />
               <span className='w-[200px]'>
                 30 días de garantía de devolución del dinero
               </span>
@@ -28,17 +28,17 @@ export const Card: FC<Props> = ({ title }) => {
           <div>
             <h2 className='text-xl'>
               Plan seleccionado:
-              <span className='text-purple-500 font-semibold'> {title}</span>
+              <span className='text-primary-color font-semibold'> {title}</span>
             </h2>
           </div>
           <div className='flex flex-col sm:flex-row gap-5'>
             <p>este plan incluye:</p>
             <ul>
               <li className='flex items-center gap-3'>
-                <FaCheck className='text-purple-500' />3 herramientas esenciales
+                <FaCheck className='text-primary-color' />3 herramientas esenciales
               </li>
               <li className='flex items-center gap-3'>
-                <FaCheck className='text-purple-500' />1 Token Upler para usar
+                <FaCheck className='text-primary-color' />1 Token Upler para usar
                 en Startups
               </li>
             </ul>
@@ -54,19 +54,19 @@ export const Card: FC<Props> = ({ title }) => {
         <div className='flex gap-10 pt-20 flex-wrap items-center justify-center'>
           <div className='flex flex-col w-[350px] h-[350px] bg-white rounded-xl items-center text-center'>
             <div className='flex flex-col items-center'>
-              <span className='bg-purple-200 text-purple-500 px-4'>
+              <span className='bg-fuchsia-200 text-primary-color px-4'>
                 AHORRA 68%
               </span>
               <input
                 type='checkbox'
-                className='ml-[-200px] sm:ml-0 sm:mr-[280px] scale-[2] accent-purple-500'
+                className='ml-[-200px] sm:ml-0 sm:mr-[280px] scale-[2] accent-primary-color'
               />
               <h1 className='font-semibold text-3xl text-neutral-700'>
                 12 MESES
               </h1>
               <div className='flex text-neutral-600 items-center pt-10'>
-                <span className='text-purple-500 font-semibold text-xl'>$</span>
-                <h3 className='text-purple-500 text-7xl font-bold'>55</h3>
+                <span className='text-primary-color font-semibold text-xl'>$</span>
+                <h3 className='text-primary-color text-7xl font-bold'>55</h3>
                 <span className='font-semibold'>USD/mes</span>
               </div>
               <h3 className='p-10 text-neutral-600 text-center'>
@@ -76,19 +76,19 @@ export const Card: FC<Props> = ({ title }) => {
           </div>
           <div className='flex flex-col w-[350px] h-[350px] bg-white rounded-xl items-center text-center'>
             <div className='flex flex-col items-center'>
-              <span className='bg-purple-200 text-purple-500 px-4'>
+              <span className='bg-fuchsia-200 text-primary-color px-4'>
                 AHORRA 68%
               </span>
               <input
                 type='checkbox'
-                className='ml-[-200px] sm:ml-0 sm:mr-[280px] scale-[2] accent-purple-500'
+                className='ml-[-200px] sm:ml-0 sm:mr-[280px] scale-[2] accent-primary-color'
               />
               <h1 className='font-semibold text-3xl text-neutral-700'>
                 12 MESES
               </h1>
               <div className='flex text-neutral-600 items-center pt-10'>
-                <span className='text-purple-500 font-semibold text-xl'>$</span>
-                <h3 className='text-purple-500 text-7xl font-bold'>55</h3>
+                <span className='text-primary-color font-semibold text-xl'>$</span>
+                <h3 className='text-primary-color text-7xl font-bold'>55</h3>
                 <span className='font-semibold'>USD/mes</span>
               </div>
               <h3 className='p-10 text-neutral-600 text-center'>
@@ -98,19 +98,19 @@ export const Card: FC<Props> = ({ title }) => {
           </div>
           <div className='flex flex-col w-[350px] h-[350px] bg-white rounded-xl items-center text-center'>
             <div className='flex flex-col items-center'>
-              <span className='bg-purple-200 text-purple-500 px-4'>
+              <span className='bg-fuchsia-200 text-primary-color px-4'>
                 AHORRA 68%
               </span>
               <input
                 type='checkbox'
-                className='ml-[-200px] sm:ml-0  sm:mr-[280px] scale-[2] accent-purple-500'
+                className='ml-[-200px] sm:ml-0  sm:mr-[280px] scale-[2] accent-primary-color'
               />
               <h1 className='font-semibold text-3xl text-neutral-700'>
                 12 MESES
               </h1>
               <div className='flex text-neutral-600 items-center pt-10'>
-                <span className='text-purple-500 font-semibold text-xl'>$</span>
-                <h3 className='text-purple-500 text-7xl font-bold'>55</h3>
+                <span className='text-primary-color font-semibold text-xl'>$</span>
+                <h3 className='text-primary-color text-7xl font-bold'>55</h3>
                 <span className='font-semibold'>USD/mes</span>
               </div>
               <h3 className='p-10 text-neutral-600 text-center'>

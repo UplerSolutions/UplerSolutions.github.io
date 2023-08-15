@@ -19,15 +19,15 @@ export const Navbar = () => {
         <div className='hidden text-lg lg:w-auto lg:flex gap-9'>
           <Link className='group relative inline-block ' href='/startups'>
             Startups
-            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
+            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className=' group relative inline-block ' href='/plans'>
             Boundles
-            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
+            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className=' group relative inline-block ' href='/apply'>
             Become our partner
-            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-purple-400 transition-all duration-500 group-hover:w-full'></span>
+            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
         </div>
         <div>

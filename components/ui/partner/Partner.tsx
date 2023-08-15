@@ -11,14 +11,14 @@ export const Partner = () => {
             </h3>
             <h2 className='text-2xl lg:text-4xl'>
               Nuestros
-              <span className='text-purple-500'> partnerships oficiales</span>
+              <span className='text-primary-color'> partnerships oficiales</span>
             </h2>
           </div>
           <div className=' hidden lg:invisible'>
             <h3 className=''>CONOCE QUIEN CONFIA EN NOSOTROS</h3>
             <h2 className='text-4xl'>
               Nuestros
-              <span className='text-purple-500'> partnerships oficiales</span>
+              <span className='text-primary-color0'> partnerships oficiales</span>
             </h2>
           </div>
         </div>

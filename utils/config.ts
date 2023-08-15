@@ -25,9 +25,9 @@ export const ETH_CHAINS = [
 ]
 export const WALLET_CONNECT_PROJECT_ID = '7301c27df5004880e903a97f361f6e8f'
 
-export const SITE_NAME = 'Latamplix'
+export const SITE_NAME = 'Upler'
 export const SITE_DESCRIPTION =
-  '¡Latamplix - Impulsando Startups en América Latina! '
+  '¡Upler - Aqui podras encontrar cientos de softwares para tu carrera profesional/independiente '
 //TODO: completar url de la pagina
 export const SITE_URL = ''
 

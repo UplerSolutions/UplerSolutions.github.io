@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700 lg:pt-28 pb-7'>
         <div className='text-[32px] text-center font-bold md:text-5xl lg:text-7xl'>
           <h3 className='md:pb-4'>Tu suscripción</h3>
-          <span className=' text-purple-400 text-[35px] md:text-5xl lg:text-7xl'>
+          <span className='text-primary-color text-[35px] md:text-5xl lg:text-7xl'>
             definitiva.
           </span>
         </div>
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           sola suscripción.
         </p>
         <button
-          className=' bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600'
+          className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
           onClick={handleClick}
         >
           Encontra Tu Plan

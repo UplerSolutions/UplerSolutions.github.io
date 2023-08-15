@@ -17,7 +17,7 @@ export const CardPlan = () => {
         <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             Un plan para cada
-            <span className='text-purple-600'> profesional </span>
+            <span className='text-primary-color'> profesional </span>
           </h1>
           <ul className=' grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))] gap-14 justify-center items-center pt-10'>
             {plans.map((plan) => (
@@ -37,19 +37,19 @@ export const CardPlan = () => {
                       <div>
                         <h3>
                           <span className=' line-through pr-3'>$ 84 USD</span>
-                          <span className='bg-purple-100 text-purple-400 py-1 px-2 rounded-md'>
+                          <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
                             AHORRÁ 68%
                           </span>
                         </h3>
                       </div>
-                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-purple-600'>
+                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                         <span className='text-xl'>$</span>
                         {plan.price}
                         <span className=' text-base text-neutral-600 font-normal'>
                           USD /mes
                         </span>
                       </h2>
-                      <button className=' bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-100 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600'>
+                      <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
                         Adquirir plan
                       </button>
                     </div>
@@ -65,7 +65,7 @@ export const CardPlan = () => {
                               key={herramienta}
                               className='text-neutral-500 py-3 flex items-center '
                             >
-                              <FaCheck className='text-purple-600' />
+                              <FaCheck className='text-primary-color' />
                               <span className='pl-3'>{herramienta}</span>
                             </li>
                           ))}
@@ -91,7 +91,7 @@ export const CardPlan = () => {
         <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8 b'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             Un plan para cada
-            <span className='text-purple-600'> empresa </span>
+            <span className='text-primary-color'> empresa </span>
           </h1>
           <ul className='  grid grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(2,_minmax(350px,500px))] gap-14 justify-center items-center py-10'>
             {companias.map((companias) => (
@@ -111,19 +111,19 @@ export const CardPlan = () => {
                       <div>
                         <h3>
                           <span className=' line-through pr-3'>$ 84 USD</span>
-                          <span className='bg-purple-100 text-purple-400 py-1 px-2 rounded-md'>
+                          <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
                             AHORRÁ 68%
                           </span>
                         </h3>
                       </div>
-                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-purple-600'>
+                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                         <span className='text-xl'>$</span>
                         {companias.price}
                         <span className=' text-base text-neutral-600 font-normal'>
                           USD /mes
                         </span>
                       </h2>
-                      <button className=' bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-100 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600'>
+                      <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
                         Adquirir plan
                       </button>
                     </div>
@@ -139,7 +139,7 @@ export const CardPlan = () => {
                               key={herramienta}
                               className='text-neutral-500 py-3 flex items-center '
                             >
-                              <FaCheck className='text-purple-600' />
+                              <FaCheck className='text-primary-color' />
                               <span className='pl-3'>{herramienta}</span>
                             </li>
                           ))}

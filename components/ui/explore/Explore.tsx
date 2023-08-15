@@ -9,7 +9,7 @@ export const Explore = () => {
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
+              <div className='relative p-6 w-full h-full bg-primary-color rounded-xl'>
                 <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
@@ -24,8 +24,8 @@ export const Explore = () => {
                 </div>
 
                 <div>
-                  <hr className=' my-1 mx-1 h-2 bg-purple-600 rounded border-0' />
-                  <p className='mx-1 text-purple-500 font-semibold'>
+                  <hr className=' my-1 mx-1 h-2 bg-primary-color rounded border-0' />
+                  <p className='mx-1 text-primary-color font-semibold'>
                     70% financiado
                   </p>
                 </div>
@@ -36,7 +36,7 @@ export const Explore = () => {
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
+              <div className='relative p-6 w-full h-full bg-primary-color rounded-xl'>
                 <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
@@ -51,8 +51,8 @@ export const Explore = () => {
                 </div>
 
                 <div>
-                  <hr className=' my-1 mx-1 h-2 bg-purple-600 rounded border-0' />
-                  <p className='mx-1 text-purple-500 font-semibold'>
+                  <hr className=' my-1 mx-1 h-2 bg-primary-color rounded border-0' />
+                  <p className='mx-1 text-primary-color font-semibold'>
                     70% financiado
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export const Explore = () => {
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
+              <div className='relative p-6 w-full h-full bg-primary-color rounded-xl'>
                 <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
@@ -78,8 +78,8 @@ export const Explore = () => {
                 </div>
 
                 <div>
-                  <hr className=' my-1 mx-1 h-2 bg-purple-600 rounded border-0' />
-                  <p className='mx-1 text-purple-500 font-semibold'>
+                  <hr className=' my-1 mx-1 h-2 bg-primary-color rounded border-0' />
+                  <p className='mx-1 text-primary-color font-semibold'>
                     70% financiado
                   </p>
                 </div>
@@ -90,7 +90,7 @@ export const Explore = () => {
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
+              <div className='relative p-6 w-full h-full bg-primary-color rounded-xl'>
                 <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
@@ -105,8 +105,8 @@ export const Explore = () => {
                 </div>
 
                 <div>
-                  <hr className=' my-1 mx-1 h-2 bg-purple-600 rounded border-0' />
-                  <p className='mx-1 text-purple-500 font-semibold'>
+                  <hr className=' my-1 mx-1 h-2 bg-primary-color rounded border-0' />
+                  <p className='mx-1 text-primary-color font-semibold'>
                     70% financiado
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export const Explore = () => {
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
+              <div className='relative p-6 w-full h-full bg-primary-color rounded-xl'>
                 <Image height={200} width={200} src='/isotipo.png' alt='logo' />
               </div>
               <div className='p-4 flex flex-col flex-1'>
@@ -132,8 +132,8 @@ export const Explore = () => {
                 </div>
 
                 <div>
-                  <hr className=' my-1 mx-1 h-2 bg-purple-600 rounded border-0' />
-                  <p className='mx-1 text-purple-500 font-semibold'>
+                  <hr className=' my-1 mx-1 h-2 bg-primary-color rounded border-0' />
+                  <p className='mx-1 text-primary-color font-semibold'>
                     70% financiado
                   </p>
                 </div>
@@ -144,7 +144,7 @@ export const Explore = () => {
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-full bg-purple-600 rounded-xl'>
+              <div className='relative p-6 w-full h-full bg-primary-color rounded-xl'>
                 <Image height={200} src='/isotipo.png' alt='logo' width={200} />
               </div>
               <div className='p-4 flex flex-col flex-1'>
@@ -159,8 +159,8 @@ export const Explore = () => {
                 </div>
 
                 <div>
-                  <hr className=' my-1 mx-1 h-2 bg-purple-600 rounded border-0' />
-                  <p className='mx-1 text-purple-500 font-semibold'>
+                  <hr className=' my-1 mx-1 h-2 bg-primary-color rounded border-0' />
+                  <p className='mx-1 text-primary-color font-semibold'>
                     70% financiado
                   </p>
                 </div>
