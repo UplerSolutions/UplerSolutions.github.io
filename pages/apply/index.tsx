@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
+import {CustomForm} from '@/components/ui/customform/CustomForm'
 
 const Apply: NextPage = () => {
   return (
     <Layout title='Apply'>
-      <h1 className=' text-center text-6xl'>Postulate</h1>
+      <CustomForm/>
     </Layout>
   )
 }

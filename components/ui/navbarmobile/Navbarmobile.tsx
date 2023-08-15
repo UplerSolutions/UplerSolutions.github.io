@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { PiRocket } from 'react-icons/pi'
+import { PiRocket,PiClipboard } from 'react-icons/pi'
 import { BiPackage } from 'react-icons/bi'
 import { AiOutlineHome } from 'react-icons/ai'
 
@@ -24,7 +24,14 @@ export const Navbarmobile = () => {
           href='/plans'
         >
           <BiPackage />
-          <span className=' text-xs'>Planes</span>
+          <span className=' text-xs'>Plans</span>
+        </Link>
+        <Link
+          className='flex flex-col w-1/6 text-center items-center'
+          href='/apply'
+        >
+          <PiClipboard />
+          <span className=' text-xs'>Apply</span>
         </Link>
       </div>
     </nav>
