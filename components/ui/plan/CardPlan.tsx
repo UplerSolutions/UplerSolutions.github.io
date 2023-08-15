@@ -4,6 +4,7 @@ import { FaCheck } from 'react-icons/fa'
 import { Partner } from '../partner'
 import { data } from '../../../public/plans.js'
 import { useRouter } from 'next/router'
+import { Carousel } from '../carousel/Carousel'
 
 export const CardPlan = () => {
   const [plans, setPlans] = useState(data.planes)
@@ -11,6 +12,7 @@ export const CardPlan = () => {
 
   return (
     <>
+      <Carousel />
       <section className='hidden max-w-[100%] w-full md:flex md:flex-col'>
         <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
