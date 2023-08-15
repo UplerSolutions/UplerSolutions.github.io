@@ -11,7 +11,7 @@ export const CardPlan = () => {
 
   return (
     <>
-      <section className='max-w-[100%] w-full'>
+      <section className='hidden max-w-[100%] w-full md:flex md:flex-col'>
         <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             Un plan para cada
@@ -19,7 +19,10 @@ export const CardPlan = () => {
           </h1>
           <ul className=' grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))] gap-14 justify-center items-center pt-10'>
             {plans.map((plan) => (
-              <li key={plan.name} className=' hover:scale-[1.07] transition duration-300 hover:delay-100 '>
+              <li
+                key={plan.name}
+                className=' hover:scale-[1.07] transition duration-300 hover:delay-100 '
+              >
                 <Link href={`/plans/${plan.name}`}>
                   <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
                     <div className='relative px-6 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
@@ -56,7 +59,10 @@ export const CardPlan = () => {
                         </h2>
                         <ul className='pb-6'>
                           {plan.herramientas.map((herramienta) => (
-                            <li key={herramienta} className='text-neutral-500 py-3 flex items-center '>
+                            <li
+                              key={herramienta}
+                              className='text-neutral-500 py-3 flex items-center '
+                            >
                               <FaCheck className='text-purple-600' />
                               <span className='pl-3'>{herramienta}</span>
                             </li>
@@ -87,7 +93,10 @@ export const CardPlan = () => {
           </h1>
           <ul className='  grid grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(2,_minmax(350px,500px))] gap-14 justify-center items-center py-10'>
             {companias.map((companias) => (
-              <li key={companias.name} className=' hover:scale-[1.07] transition duration-300 hover:delay-100 '>
+              <li
+                key={companias.name}
+                className=' hover:scale-[1.07] transition duration-300 hover:delay-100 '
+              >
                 <Link href={`/plans/${companias.name}`}>
                   <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
                     <div className='pb-4 relative px-6 first-letter:w-full h-full flex flex-col justify-evenly items-center text-center'>
@@ -124,7 +133,10 @@ export const CardPlan = () => {
                         </h2>
                         <ul className='pb-6'>
                           {companias.herramientas.map((herramienta) => (
-                            <li key={herramienta} className='text-neutral-500 py-3 flex items-center '>
+                            <li
+                              key={herramienta}
+                              className='text-neutral-500 py-3 flex items-center '
+                            >
                               <FaCheck className='text-purple-600' />
                               <span className='pl-3'>{herramienta}</span>
                             </li>

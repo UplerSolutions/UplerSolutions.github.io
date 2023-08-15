@@ -1,4 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { color } from 'framer-motion'
 
 export const ConnectButtom = () => {
   return (
@@ -59,18 +60,28 @@ export const ConnectButtom = () => {
               }
 
               return (
-                <div style={{ display: 'flex', gap: 12 }}>
+                <div
+                  className='flex flex-col sm:flex-row gap-10 items-center text-neutral-600 mt-2'
+                  style={{
+                    display: 'flex',
+                    gap: 12,
+                    alignItems: 'center',
+                    fontSize: '16px'
+                  }}
+                >
                   <button
                     onClick={openChainModal}
+                    className=' sm:hidden'
                     style={{ display: 'flex', alignItems: 'center' }}
                     type='button'
                   >
                     {chain.hasIcon && (
                       <div
+                        className='text-neutral-600'
                         style={{
                           background: chain.iconBackground,
-                          width: 12,
-                          height: 12,
+                          width: 20,
+                          height: 20,
                           borderRadius: 999,
                           overflow: 'hidden',
                           marginRight: 4
@@ -80,12 +91,12 @@ export const ConnectButtom = () => {
                           <img
                             alt={chain.name ?? 'Chain icon'}
                             src={chain.iconUrl}
-                            style={{ width: 12, height: 12 }}
+                            style={{ width: 20, height: 20 }}
                           />
                         )}
                       </div>
                     )}
-                    {chain.name}
+                    <div className='sm:hidden'>{chain.name}</div>
                   </button>
 
                   <button onClick={openAccountModal} type='button'>
