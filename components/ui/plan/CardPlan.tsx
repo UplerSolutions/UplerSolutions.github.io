@@ -93,7 +93,7 @@ export const CardPlan = () => {
           A Bundle for each
             <span className='text-primary-color'> company </span>
           </h1>
-          <ul className='flex flex-col  lg:grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(2,_minmax(350px,500px))] gap-14 justify-center items-center py-10'>
+          <ul className='flex flex-col  lg:grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(auto-fill,_minmax(350px,400px))] gap-14 justify-center items-center py-10'>
             {companias.map((companias) => (
               <li
                 key={companias.name}
