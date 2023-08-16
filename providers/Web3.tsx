@@ -69,7 +69,7 @@ const Web3Provider = (props: Props) => {
           darkMode: darkTheme({ overlayBlur: 'small' })
         }}
         appInfo={{
-          appName: 'boilr3',
+          appName: 'upler',
           learnMoreUrl: 'https://github.com/Envoy-VC/boilr3'
         }}
       >
