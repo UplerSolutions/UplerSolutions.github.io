@@ -55,7 +55,29 @@ export const Card: FC<Props> = ({ title }) => {
           <div className='flex flex-col w-[350px] h-[350px] bg-white rounded-xl items-center text-center'>
             <div className='flex flex-col items-center'>
               <span className='bg-fuchsia-200 text-primary-color px-4'>
-                AHORRA 68%
+                SAVE 68%
+              </span>
+              <input
+                type='checkbox'
+                className='ml-[-200px] sm:ml-0 sm:mr-[280px] scale-[2] accent-primary-color'
+              />
+              <h1 className='font-semibold text-3xl text-neutral-700'>
+                12 MESES
+              </h1>
+              <div className='flex text-neutral-600 items-center pt-10'>
+                <span className='text-primary-color font-semibold text-xl'>$</span>
+                <h3 className='text-primary-color text-7xl font-bold'>55</h3>
+                <span className='font-semibold'>USD/month</span>
+              </div>
+              <h3 className='p-10 text-neutral-600 text-center'>
+                El plan se renueva a <br /> $55 USD/mes el 17/09/2023
+              </h3>
+            </div>
+          </div>
+          <div className='flex flex-col w-[350px] h-[350px] bg-white rounded-xl items-center text-center'>
+            <div className='flex flex-col items-center'>
+              <span className='bg-fuchsia-200 text-primary-color px-4'>
+                SAVE 68%
               </span>
               <input
                 type='checkbox'
@@ -77,29 +99,7 @@ export const Card: FC<Props> = ({ title }) => {
           <div className='flex flex-col w-[350px] h-[350px] bg-white rounded-xl items-center text-center'>
             <div className='flex flex-col items-center'>
               <span className='bg-fuchsia-200 text-primary-color px-4'>
-                AHORRA 68%
-              </span>
-              <input
-                type='checkbox'
-                className='ml-[-200px] sm:ml-0 sm:mr-[280px] scale-[2] accent-primary-color'
-              />
-              <h1 className='font-semibold text-3xl text-neutral-700'>
-                12 MESES
-              </h1>
-              <div className='flex text-neutral-600 items-center pt-10'>
-                <span className='text-primary-color font-semibold text-xl'>$</span>
-                <h3 className='text-primary-color text-7xl font-bold'>55</h3>
-                <span className='font-semibold'>USD/mes</span>
-              </div>
-              <h3 className='p-10 text-neutral-600 text-center'>
-                El plan se renueva a <br /> $55 USD/mes el 17/09/2023
-              </h3>
-            </div>
-          </div>
-          <div className='flex flex-col w-[350px] h-[350px] bg-white rounded-xl items-center text-center'>
-            <div className='flex flex-col items-center'>
-              <span className='bg-fuchsia-200 text-primary-color px-4'>
-                AHORRA 68%
+                SAVE 68%
               </span>
               <input
                 type='checkbox'
