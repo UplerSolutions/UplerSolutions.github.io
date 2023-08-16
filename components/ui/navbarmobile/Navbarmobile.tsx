@@ -31,7 +31,7 @@ export const Navbarmobile = () => {
           href='/apply'
         >
           <PiClipboard />
-          <span className=' text-xs'>Apply</span>
+          <span className=' text-xs'>Become Our Partner</span>
         </Link>
       </div>
     </nav>

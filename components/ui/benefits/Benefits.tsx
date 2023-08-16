@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const Benefits = () => {
     const [benefits, setBenefits] = useState(data);
-
+    
     return (
         <div className='flex flex-row w-[100%] pb-8 md:py-20 md:mb-0 items-center justify-center bg-zinc-100 text-center }' >
             <div className='flex flex-col  px-8 w-[90%] md:w-[75%] align-center  '>
@@ -15,8 +15,13 @@ export const Benefits = () => {
                 </div>
                 <div className=' lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 text-center w-[100%] flex flex-col gap-7'>
                     {benefits.map((benefit) => (
+<<<<<<< HEAD
                         <div className='flex flex-col-reverse items-center md:grid md:grid-rows-2 align-center md:items-start justify-items-center gap-7' key={benefit.title}>
                             <div className=' '>
+=======
+                        <div className='grid grid-rows-2  align-center  justify-items-center  m-6 p-8' key={benefit.title}>
+                            <div>
+>>>>>>> b4014342f17bf36f296ace293836df6f47879a5a
                                 <Image
                                     src={benefit.icon}
                                     alt={benefit.title}

@@ -2,36 +2,33 @@ export const data = {
   planes: [
     {
       id: 1,
-      name: 'Desarrollador',
-      description: 'La mejor selección de software para tu profesión',
+      name: 'Basic',
+      description: 'Begin with a strong start',
       price: 40,
-      herramientas: [
-        'IDE de programación',
-        'Control de versiones',
-        'Depurador',
-        'Herramientas de pruebas'
+      benefits: [
+        'two essential tools',
       ]
     },
     {
       id: 2,
-      name: 'Diseñador',
-      description: 'La mejor selección de software para tu profesión',
+      name: 'Advanced',
+      description:'Boost Your Productivity with Essential Tools',
       price: 35,
-      herramientas: [
-        'Software de diseño gráfico',
-        'Herramientas de prototipado',
+      benefits: [
+        'Four essential tools',
+        'Received 3 Upler Token',
         'Editor de imágenes',
         'Biblioteca de recursos visuales'
       ]
     },
     {
       id: 3,
-      name: 'Trader',
-      description: 'La mejor selección de software para tu profesión',
+      name: 'Expert',
+      description: 'Empower Your Business with Versatile Solutions',
       price: 55,
-      herramientas: [
-        'Plataforma de trading',
-        'Herramientas de análisis de mercado',
+      benefits: [
+        'Eight essential tools',
+        'Received 7 Upler Token',
         'Noticias financieras en tiempo real',
         'Herramientas de gestión de cartera'
       ]
@@ -40,10 +37,10 @@ export const data = {
   companias: [
     {
       id: 5,
-      name: 'StartUp',
-      description: 'La mejor selección de software para gestionar tu negocio',
+      name:'StartUp',
+      description: 'Unlock Growth with Advanced Software Solutions',
       price: 50,
-      herramientas: [
+      benefits: [
         'Herramientas de gestión de proyectos',
         'Plataforma de colaboración',
         'Herramientas de análisis de mercado',
@@ -52,10 +49,10 @@ export const data = {
     },
     {
       id: 6,
-      name: 'Empresa',
-      description: 'El plan justo para gestionar tu negocio',
+      name:'Company',
+      description:'Enhance Efficiency with Comprehensive Software',
       price: 70,
-      herramientas: [
+      benefits: [
         'Software de contabilidad',
         'Plataforma de gestión de recursos humanos',
         'Herramientas de análisis de datos',

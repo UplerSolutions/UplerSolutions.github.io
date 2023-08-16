@@ -60,13 +60,13 @@ export const CardPlan = () => {
                           El plan {plan.name} incluye
                         </h2>
                         <ul className='pb-6'>
-                          {plan.herramientas.map((herramienta) => (
+                          {plan.benefits.map((benefits) => (
                             <li
-                              key={herramienta}
+                              key={benefits}
                               className='text-neutral-500 py-3 flex items-center '
                             >
                               <FaCheck className='text-primary-color' />
-                              <span className='pl-3'>{herramienta}</span>
+                              <span className='pl-3'>{benefits}</span>
                             </li>
                           ))}
                         </ul>
@@ -134,13 +134,13 @@ export const CardPlan = () => {
                           El plan {companias.name} incluye
                         </h2>
                         <ul className='pb-6'>
-                          {companias.herramientas.map((herramienta) => (
+                          {companias.benefits.map((benefits) => (
                             <li
-                              key={herramienta}
+                              key={benefits}
                               className='text-neutral-500 py-3 flex items-center '
                             >
                               <FaCheck className='text-primary-color' />
-                              <span className='pl-3'>{herramienta}</span>
+                              <span className='pl-3'>{benefits}</span>
                             </li>
                           ))}
                         </ul>
