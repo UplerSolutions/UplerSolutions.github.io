@@ -29,7 +29,7 @@ export const CardPlan = () => {
                   <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
                     <div className='relative px-6 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
                       <div className='pb-4'>
-                        <h1 className=' text-4xl font-bold pb-4'>
+                        <h1 className=' text-4xl font-bold py-4'>
                           {plan.name}
                         </h1>
                         <p>{plan.description}</p>
@@ -93,7 +93,7 @@ export const CardPlan = () => {
           A Bundle for each
             <span className='text-primary-color'> company </span>
           </h1>
-          <ul className='  grid grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(2,_minmax(350px,500px))] gap-14 justify-center items-center py-10'>
+          <ul className='flex flex-col  lg:grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(2,_minmax(350px,500px))] gap-14 justify-center items-center py-10'>
             {companias.map((companias) => (
               <li
                 key={companias.name}
@@ -103,7 +103,7 @@ export const CardPlan = () => {
                   <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
                     <div className='pb-4 relative px-6 first-letter:w-full h-full flex flex-col justify-evenly items-center text-center'>
                       <div className='pb-4'>
-                        <h1 className=' text-4xl font-bold pb-3'>
+                        <h1 className=' text-4xl font-bold py-4'>
                           {companias.name}
                         </h1>
                         <p>{companias.description}</p>

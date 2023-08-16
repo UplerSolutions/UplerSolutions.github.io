@@ -9,10 +9,12 @@ import {
   FaTwitter
 } from 'react-icons/fa'
 import Image from 'next/image'
+import { Footermobile } from '@/components/ui/footermobile/Footermobile'
 
 export const Footer = () => {
   return (
-    <footer className='w-full bg-neutral-600 flex flex-col-reverse text-white items-center justify-evenly h-auto pb-20 pt-10 lg:flex-row lg:h-[350px] gap-6 lg:gap-0 lg:items-start'>
+    <div>
+    <footer className='hidden sm:flex w-full bg-neutral-600 flex-col-reverse text-white items-center justify-evenly h-auto pb-20 pt-10 lg:flex-row lg:h-[350px] gap-6 lg:gap-0 lg:items-start'>
       <div className='flex flex-col gap-2'>
         <Image height={150} width={150} src='/whitelogo.png' alt='' className='w-[200px]' />
         <h3 className='text-md pt-6 pb-2'>
@@ -77,6 +79,9 @@ export const Footer = () => {
           </button>
         </div>
       </div>
+      
     </footer>
+    <Footermobile/>
+  </div>
   )
 }

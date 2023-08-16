@@ -32,8 +32,8 @@ export const Carousel = () => {
 
         <Swiper
           // style={{
-          //   '--swiper-pagination-color': 'primary-color',
-          //   '--swiper-navigation-color': 'primary-color',
+          //   '--swiper-pagination-color': '#b06eca',
+          //   '--swiper-navigation-color': '#b06eca',
           //   '--swiper-navigation-position': 'absolute',
           //   '--swiper-pagination-bullet-size': '14px'
           // }}
@@ -129,11 +129,11 @@ export const Carousel = () => {
           autoplay={{
             delay: 4500
           }}
-          // style={{
-          //   '--swiper-navigation-color': '#b06eca',
-          //   '--swiper-pagination-color': '#b06eca',
-          //   '--swiper-pagination-bullet-size': '14px'
-          // }}
+           style={{
+             '--swiper-navigation-color': '#b06eca',
+             '--swiper-pagination-color': '#b06eca',
+             '--swiper-pagination-bullet-size': '14px'
+           }}
         >
           {companias.map((companias) => (
             <SwiperSlide key={companias.name} className='w-full'>
