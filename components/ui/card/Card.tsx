@@ -16,23 +16,23 @@ export const Card: FC<Props> = ({ title }) => {
         <div className='flex flex-col gap-10'>
           <div className='items-center flex-col sm:flex-row flex md:justify-between gap-4 text-center sm:gap-0 sm:text-left'>
             <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-bold '>
-              ¡Ya casi lo logras! Completa tu pedido
+              ¡Almost There! Finish order
             </h1>
-            <div className='mr-6 sm:mr-0 flex flex-row-reverse sm:flex-row items-center xl:ml-20 '>
+            {/* <div className='mr-6 sm:mr-0 flex flex-row-reverse sm:flex-row items-center xl:ml-20 '>
               <VerifiedUserOutlinedIcon className='text-primary-color scale-[2] md:mr-4' />
               <span className='w-[200px]'>
                 30 días de garantía de devolución del dinero
               </span>
-            </div>
+            </div> */}
           </div>
           <div>
             <h2 className='text-xl'>
-              Plan seleccionado:
+              Bundle choosen:
               <span className='text-primary-color font-semibold'> {title}</span>
             </h2>
           </div>
           <div className='flex flex-col sm:flex-row gap-5'>
-            <p>este plan incluye:</p>
+            <p>this bundle includes :</p>
             <ul>
               <li className='flex items-center gap-3'>
                 <FaCheck className='text-primary-color' />3 herramientas esenciales

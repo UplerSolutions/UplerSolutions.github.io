@@ -1,6 +1,6 @@
 export  const data = [
     {
-        title:"Simplified Centralization",
+        title:"Load Optimization",
         description:"Manage all your software licenses in one place, saving time and resources.",
         icon:"./benefitsIcons/VectorsimplifiedCentralization.svg",
     },

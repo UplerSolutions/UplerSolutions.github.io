@@ -31,12 +31,12 @@ export const Carousel = () => {
         </h1>
 
         <Swiper
-          style={{
-            '--swiper-pagination-color': 'primary-color',
-            '--swiper-navigation-color': 'primary-color',
-            '--swiper-navigation-position': 'absolute',
-            '--swiper-pagination-bullet-size': '14px'
-          }}
+          // style={{
+          //   '--swiper-pagination-color': 'primary-color',
+          //   '--swiper-navigation-color': 'primary-color',
+          //   '--swiper-navigation-position': 'absolute',
+          //   '--swiper-pagination-bullet-size': '14px'
+          // }}
           cssMode={true}
           navigation={true}
           pagination={true}
@@ -85,7 +85,7 @@ export const Carousel = () => {
                           El plan {plan.name} incluye
                         </h2>
                         <ul className='pb-6'>
-                          {plan.herramientas.map((herramienta) => (
+                          {plan.benefits.map((herramienta) => (
                             <li
                               key={herramienta}
                               className='text-neutral-500 py-3 flex items-center '
@@ -175,7 +175,7 @@ export const Carousel = () => {
                           El plan {companias.name} incluye
                         </h2>
                         <ul className='pb-6'>
-                          {companias.herramientas.map((herramienta) => (
+                          {companias.benefits.map((herramienta) => (
                             <li
                               key={herramienta}
                               className='text-neutral-500 py-3 flex items-center '

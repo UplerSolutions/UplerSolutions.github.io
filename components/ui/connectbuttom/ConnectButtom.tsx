@@ -1,5 +1,6 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { color } from 'framer-motion'
+import Image from 'next/image'
 
 export const ConnectButtom = () => {
   return (
@@ -88,7 +89,7 @@ export const ConnectButtom = () => {
                         }}
                       >
                         {chain.iconUrl && (
-                          <img
+                          <Image
                             alt={chain.name ?? 'Chain icon'}
                             src={chain.iconUrl}
                             style={{ width: 20, height: 20 }}
