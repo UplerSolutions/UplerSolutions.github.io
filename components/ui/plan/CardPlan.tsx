@@ -19,11 +19,11 @@ export const CardPlan = () => {
             A Bundle for each
             <span className='text-primary-color'> profesional </span>
           </h1>
-          <ul className=' grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))] gap-14 justify-center items-center pt-10'>
+          <ul className=' grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))] lg:flex gap-14 justify-center items-center pt-10'>
             {plans.map((plan) => (
               <li
                 key={plan.name}
-                className=' hover:scale-[1.07] transition duration-300 hover:delay-100 '
+                className=' hover:scale-[1.07] transition duration-300 hover:delay-100 lg:w-[30%]'
               >
                 <Link href={`/plans/${plan.name}`}>
                   <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
@@ -93,11 +93,11 @@ export const CardPlan = () => {
           A Bundle for each
             <span className='text-primary-color'> company </span>
           </h1>
-          <ul className='flex flex-col  lg:grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(auto-fill,_minmax(350px,400px))] gap-14 justify-center items-center py-10'>
+          <ul className='flex flex-col  lg:grid lg:grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:flex xl:flex-row gap-14 justify-center items-center py-10'>
             {companias.map((companias) => (
               <li
                 key={companias.name}
-                className=' hover:scale-[1.07] transition duration-300 hover:delay-100 '
+                className=' hover:scale-[1.07] transition duration-300 hover:delay-100 xl:w-[30%]'
               >
                 <Link href={`/plans/${companias.name}`}>
                   <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
