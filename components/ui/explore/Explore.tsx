@@ -59,7 +59,7 @@ export const Explore = () => {
               </div>
             </div>
           </Link>
-        </li>
+        </li> 
         <li className=''>
           <Link href=''>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
