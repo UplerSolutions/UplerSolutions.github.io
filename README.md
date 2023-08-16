@@ -1,69 +1,48 @@
-<h1 align="center">Latamplix - Plataforma de Crowdfunding para Startups en América Latina 🚀</h1>
 
-<p align="center">
-  <a href="https://freeimage.host/es"><img src="https://iili.io/Htwz5n2.jpg" alt="Htwz5n2.jpg" border="0"></a>
-</p>
+  # Upler - Simplifying Software License Management
 
-<p align="center">
-  ¡Bienvenido al repositorio oficial de Latamplix!
-</p>
+## Features
+<ul>
+    <li>Centralized Dashboard</li>
+    <li>Renewal Automation</li>
+    <li>Stablecoin Payments</li>
+    <li>"UP" Token Benefits</li>
+    <li>Customizable Bundles</li>
+    <li>User Reviews and Ratings</li>
+</ul>
 
-<p align="center">
-  <strong>Impulsando el Talento y la Innovación en América Latina 🌎💫</strong>
-</p>
+## Tech Stack
+<ul>
+    <li>Next.js</li>
+    <li>Tailwind CSS</li>
+    <li>Wagmi</li>
+    <li>Rainbow Kit</li>
+    <li>Truffle</li>
+</ul>
 
----
+## Installation
+<ol>
+    <li>Clone the repository:</li>
+    <code>git clone https://github.com/UplerSolutions/UplerSolutions.github.io.git </code>
+    <li>Navigate to the project directory:</li>
+    <code>cd Upler</code>
+    <li>Install dependencies:</li>
+    <code>npm install</code>
+    <li>Start the development server:</li>
+    <code>npm run dev</code>
+    <li>Open your browser and go to <a href="http://localhost:3000">http://localhost:3000</a> to explore Upler.</li>
+</ol>
 
-## Acerca de
+## Contribute
+<p>We welcome contributions from the community! Please follow the guidelines in <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
 
-Latamplix es una plataforma de crowdfunding que tiene como objetivo apoyar y potenciar startups de América Latina. Nuestra misión es brindar un espacio seguro y accesible para que emprendedores talentosos puedan convertir sus ideas innovadoras en realidades exitosas.
+## License
+<p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
 
-💡 ¿Qué hacemos?
+## Contact
+<p>For inquiries, contact us at <a href="mailto:contact@upler.com">contact@upler.com</a>.</p>
 
-- Facilitamos la conexión entre emprendedores y donantes entusiastas que desean respaldar proyectos prometedores en América Latina.
-- Fomentamos el crecimiento y la visibilidad de las startups, ofreciéndoles la oportunidad de crear colecciones personalizadas de NFTs y proporcionar beneficios exclusivos a sus donantes.
-- Impulsamos la diversidad y la inclusión al apoyar proyectos de diversos sectores y orígenes en toda la región.
+<p>Thank you for being a part of Upler and simplifying software license management!</p>
 
-## Características Clave
 
-- **Conexión de Emprendedores y Donantes:** Facilitamos el encuentro entre emprendedores talentosos y donantes entusiastas que desean apoyar proyectos prometedores.
 
-- **Colecciones Personalizadas de NFTs:** Ofrecemos a las startups la oportunidad de crear colecciones de NFTs exclusivas y proporcionar beneficios únicos a sus donantes.
-
-- **Transparencia y Seguridad:** Garantizamos un entorno seguro y transparente para todas las transacciones y donaciones realizadas en la plataforma.
-
-- **Crecimiento y Visibilidad:** Impulsamos el crecimiento y la visibilidad de las startups respaldadas en nuestra plataforma para que puedan alcanzar su máximo potencial.
-
-## Comenzar
-
-Para comenzar con Latamplix, sigue estos pasos:
-
-1. Clona el repositorio en tu máquina local:
-
-   git clone https://github.com/Latamplix/Latamplix.github.io.git
-
-2. Instala las dependencias necesarias:
-
-   cd Latamplix
-
-   $ npm install
-
-3. Inicia el servidor de desarrollo:
-
-   $ npm start
-
-4. ¡Explora y contribuye al crecimiento del emprendimiento en América Latina!
-
-## Contribuir
-
-Nos encanta recibir contribuciones de la comunidad. Si eres desarrollador, diseñador o tienes habilidades para aportar al proyecto, ¡te damos la bienvenida a colaborar con nosotros! Sigue las pautas de contribución en [CONTRIBUTING.md](CONTRIBUTING.md) para comenzar.
-
-## Licencia
-
-Este proyecto está licenciado bajo [MIT License](LICENSE).
-
-## Contacto
-
-¿Tienes alguna pregunta o sugerencia? No dudes en contactarnos en [contact@latamplix.com](mailto:contact@latamplix.com) o a través de nuestras redes sociales.
-
-¡Gracias por ser parte de Latamplix y contribuir al crecimiento del emprendimiento en América Latina! 🌎💫
