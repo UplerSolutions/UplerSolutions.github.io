@@ -31,18 +31,6 @@ export const Card: FC<Props> = ({ title }) => {
               <span className='text-primary-color font-semibold'> {title}</span>
             </h2>
           </div>
-          <div className='flex flex-col sm:flex-row gap-5'>
-            <p>this bundle includes :</p>
-            <ul>
-              <li className='flex items-center gap-3'>
-                <FaCheck className='text-primary-color' />3 herramientas esenciales
-              </li>
-              <li className='flex items-center gap-3'>
-                <FaCheck className='text-primary-color' />1 Token Upler para usar
-                en Startups
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
       <div className='bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-20 py-8 px-12 mb-8 rounded-xl lg:w-[75%] w-[90%]'>

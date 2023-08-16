@@ -7,6 +7,8 @@ export const data = {
       price: 40,
       benefits: [
         'two essential tools',
+        'Editor de imágenes',
+        'Biblioteca de recursos visuales'
       ]
     },
     {
@@ -18,7 +20,8 @@ export const data = {
         'Four essential tools',
         'Received 3 Upler Token',
         'Editor de imágenes',
-        'Biblioteca de recursos visuales'
+        'Biblioteca de recursos visuales',
+        'Gestion de Recursos'
       ]
     },
     {
@@ -44,7 +47,7 @@ export const data = {
         'Herramientas de gestión de proyectos',
         'Plataforma de colaboración',
         'Herramientas de análisis de mercado',
-        'Software de desarrollo ágil'
+        'Software for agile development'
       ]
     },
     {
@@ -57,6 +60,18 @@ export const data = {
         'Plataforma de gestión de recursos humanos',
         'Herramientas de análisis de datos',
         'Software de planificación financiera'
+      ]
+    },
+    {
+      id: 7,
+      name:'Enter Price',
+      description:'Get in contact to create to tailor the most suitable bundle for you',
+      price: "Contact Us",
+      benefits: [
+        'Talk with our professional',
+        'We analyze your project',
+        'Give you feedback about the most suitable tools',
+        'Find new ways to optimize work'
       ]
     }
   ]
