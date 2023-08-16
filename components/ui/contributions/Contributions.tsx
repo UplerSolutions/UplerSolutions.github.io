@@ -12,12 +12,6 @@ export const Contributions = () => {
         </div>
         <div className='flex flex-col  justify-center items-center h-20 w-full'>
           <span className=' text-3xl pt-2 pb-2 text-primary-color leading-5'>
-            U$D {0}
-          </span>
-          <span className='text-xl'>Destinados a creadores</span>
-        </div>
-        <div className='flex flex-col  justify-center items-center h-20 w-full'>
-          <span className=' text-3xl pt-2 pb-2 text-primary-color leading-5'>
           {32+"K+"}
           </span>
           <span className='text-xl'>Subscribers</span>

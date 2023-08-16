@@ -15,7 +15,7 @@ export const Benefits = () => {
                 </div>
                 <div className=' lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 text-center w-[100%] flex flex-col gap-7'>
                     {benefits.map((benefit) => (
-                        <div className='grid grid-rows-2  align-center  justify-items-center  m-6 p-8' key={benefit.title}>
+                        <div className='grid grid-rows-2  align-center  justify-items-center  m-6 md:p-8' key={benefit.title}>
                             <div>
                                 <Image
                                     src={benefit.icon}

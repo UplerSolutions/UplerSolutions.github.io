@@ -8,6 +8,9 @@
 	--background-end-rgb: 255, 255, 255;
 	--primary-color: #d720dd;
 	--secondary-color: #2c2c2c;
+    --swiper-pagination-color: '#b06eca' !important;
+	--swiper-navigation-color: '#b06eca' !important;
+	--swiper-pagination-bullet-size: '14px';
 }
 
 @media (prefers-color-scheme: dark) {

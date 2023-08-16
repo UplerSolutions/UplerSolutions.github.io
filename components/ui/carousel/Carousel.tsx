@@ -130,9 +130,9 @@ export const Carousel = () => {
             delay: 4500
           }}
            style={{
-             '--swiper-navigation-color': '#b06eca',
+            // '--swiper-navigation-color': '#b06eca',
              '--swiper-pagination-color': '#b06eca',
-             '--swiper-pagination-bullet-size': '14px'
+             //'--swiper-pagination-bullet-size': '14px'
            }}
         >
           {companias.map((companias) => (
