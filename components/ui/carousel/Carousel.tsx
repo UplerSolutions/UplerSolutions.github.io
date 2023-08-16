@@ -131,7 +131,7 @@ export const Carousel = () => {
           }}
            style={{
             // '--swiper-navigation-color': '#b06eca',
-             '--swiper-pagination-color': '#b06eca',
+             // '--swiper-pagination-color': '#b06eca',
              //'--swiper-pagination-bullet-size': '14px'
            }}
         >
