@@ -49,13 +49,6 @@ export const Explore = () => {
                   </p>
                   <p className='text-neutral-500 py-3'>equipo del proyecto</p>
                 </div>
-
-                <div>
-                  <hr className=' my-1 mx-1 h-2 bg-primary-color rounded border-0' />
-                  <p className='mx-1 text-primary-color font-semibold'>
-                    70% financiado
-                  </p>
-                </div>
               </div>
             </div>
           </Link>

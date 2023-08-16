@@ -16,7 +16,7 @@ export const CardPlan = () => {
       <section className='hidden max-w-[100%] w-full md:flex md:flex-col'>
         <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
-            Un plan para cada
+            A Bundle for each
             <span className='text-primary-color'> profesional </span>
           </h1>
           <ul className=' grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))] gap-14 justify-center items-center pt-10'>
@@ -38,7 +38,7 @@ export const CardPlan = () => {
                         <h3>
                           <span className=' line-through pr-3'>$ 84 USD</span>
                           <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
-                            AHORRÁ 68%
+                            SAVE 68%
                           </span>
                         </h3>
                       </div>
@@ -50,14 +50,14 @@ export const CardPlan = () => {
                         </span>
                       </h2>
                       <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                        Adquirir plan
+                      Acquired the Bundle
                       </button>
                     </div>
                     <div className='px-6 flex flex-col flex-1'>
                       <div>
                         <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          El plan {plan.name} incluye
+                          The Bundle {plan.name} includes
                         </h2>
                         <ul className='pb-6'>
                           {plan.benefits.map((benefits) => (
@@ -72,7 +72,7 @@ export const CardPlan = () => {
                         </ul>
                         <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          Programas populares
+                          Benefits
                         </h2>
                       </div>
 
@@ -90,8 +90,8 @@ export const CardPlan = () => {
         </div>
         <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8 b'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
-            Un plan para cada
-            <span className='text-primary-color'> empresa </span>
+          A Bundle for each
+            <span className='text-primary-color'> company </span>
           </h1>
           <ul className='  grid grid-cols-[repeat(auto-fill,_minmax(350px,1fr))] sm:grid-cols-[repeat(auto_fill,_minmax(390px,1fr))] xl:grid-cols-[repeat(2,_minmax(350px,500px))] gap-14 justify-center items-center py-10'>
             {companias.map((companias) => (
@@ -112,7 +112,7 @@ export const CardPlan = () => {
                         <h3>
                           <span className=' line-through pr-3'>$ 84 USD</span>
                           <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
-                            AHORRÁ 68%
+                            SAVE 68%
                           </span>
                         </h3>
                       </div>
@@ -124,14 +124,14 @@ export const CardPlan = () => {
                         </span>
                       </h2>
                       <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                        Adquirir plan
+                      Acquired the Bundle
                       </button>
                     </div>
                     <div className='px-6 flex flex-col flex-1'>
                       <div>
                         <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          El plan {companias.name} incluye
+                        The Bundle {companias.name} includes
                         </h2>
                         <ul className='pb-6'>
                           {companias.benefits.map((benefits) => (
@@ -146,7 +146,7 @@ export const CardPlan = () => {
                         </ul>
                         <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          Programas populares
+                          Benefits
                         </h2>
                       </div>
 

@@ -14,10 +14,10 @@ export const Navbarmobile = () => {
         </Link>
         <Link
           className='flex flex-col w-1/6 text-center items-center'
-          href='/startups'
+          href='/software'
         >
           <PiRocket />
-          <span className=' text-xs'>Startups</span>
+          <span className=' text-xs'>Software</span>
         </Link>
         <Link
           className='flex flex-col w-1/6 text-center items-center'

@@ -53,7 +53,6 @@ export const CustomForm = () => {
                                     UX/UI
                                 </label>
                                 </div>
-                               
                             </fieldset>
 
                             <fieldset className="flex flex-col gap-5">

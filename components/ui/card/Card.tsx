@@ -48,7 +48,7 @@ export const Card: FC<Props> = ({ title }) => {
       <div className='bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-20 py-8 px-12 mb-8 rounded-xl lg:w-[75%] w-[90%]'>
         <div className='text-2xl md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold w-full'>
           <h2 className='md:pb-10 pl-6 pt-6 text-neutral-600'>
-            1. Elige un período
+            1. Choose a Period
           </h2>
         </div>
         <div className='flex gap-10 pt-20 flex-wrap items-center justify-center'>

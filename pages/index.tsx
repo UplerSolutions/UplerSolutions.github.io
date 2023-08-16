@@ -33,20 +33,20 @@ const Home: NextPage = () => {
       </Head>
       <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700 lg:pt-28 pb-7'>
         <div className='text-[32px] text-center font-bold md:text-5xl lg:text-7xl'>
-          <h3 className='md:pb-4'>Tu suscripción</h3>
+          <h3 className='md:pb-4'>Your ultimate</h3>
           <span className='text-primary-color text-[35px] md:text-5xl lg:text-7xl'>
-            definitiva.
+            subscription
           </span>
         </div>
         <p className='pb-10 pt-6 lg:p-10 text-center w-11/12'>
-          Consigue cientos de softwares para tu carrera profesional. Todo en una
-          sola suscripción.
+        Gain accesss to hundreds of software tools. All in one
+          single subscription.
         </p>
         <button
           className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
           onClick={handleClick}
         >
-          Encontra Tu Plan
+          Find Your Bundle
         </button>
       </div>
       <Contributions />
