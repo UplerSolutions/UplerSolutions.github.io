@@ -141,7 +141,7 @@ export const Card: FC<Props> = ({ plan }) => {
               <span> <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]'/></span><p className='w-[150px]'>Encrypted and secure payments</p>
             </div>
             <div>
-              <h4 className='pt-6'>By completing the purchase, you agree to our Terms of Service and confirm that you've read our Privacy Policy. You can cancel recurring payments anytime.</h4>
+              <h4 className='pt-6'>By completing the purchase, you agree to our Terms of Service and confirm that you have read our Privacy Policy. You can cancel recurring payments anytime.</h4>
             </div>
             <span className='font-semibold pb-8 pt-10'>Need assistance? Check out our FAQs.</span>
           </div>
