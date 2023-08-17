@@ -3,7 +3,7 @@ import { CardPlan } from '@/components/ui/plan'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { data } from '../../public/plans'
+import { data } from '../api/plans'
 import { IPlan } from '@/components/interface/plan'
 import { Card } from '@/components/ui/card'
 

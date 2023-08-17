@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { data } from "../../../public/benefits"
+import { data } from "../../../pages/api/benefits"
 import Image from 'next/image';
 
 export const Benefits = () => {

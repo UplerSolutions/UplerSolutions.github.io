@@ -8,7 +8,8 @@ import { useRouter } from 'next/router'
 import { CardPlan } from '@/components/ui/plan'
 import { Globalplix } from '@/components/ui/globalplix'
 import { Benefits } from '@/components/ui/benefits'
-import {counts} from "@/public/contribution"
+import { contributions } from "@/pages/api/contribution"
+
 const inter = Inter({ subsets: ['latin'] })
 
 const Home: NextPage = () => {
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
     // Perform the redirect
     router.push('/plans') // Replace 'destination-page' with the actual URL
   }
-  
+
 
   return (
     <Layout title='Home'>
@@ -40,7 +41,7 @@ const Home: NextPage = () => {
           </span>
         </div>
         <p className='pb-10 pt-6 lg:p-10 text-center w-11/12'>
-        Gain accesss to hundreds of software tools. All in one
+          Gain accesss to hundreds of software tools. All in one
           single subscription.
         </p>
         <button
@@ -51,12 +52,12 @@ const Home: NextPage = () => {
         </button>
       </div>
       <main className=' pb-6 flex-wrap md:flex-nowrap md:flex md:flex-nowrap justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
-          <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-center md:flex-nowrap flex justify-center items-center py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
-             {counts.map(count => <Contributions key={count.id} count={count}/>)}
-          </div>
+        <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-center md:flex-nowrap flex justify-center items-center py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
+          {contributions.map(contribution => <Contributions key={contribution.id} count={contribution} />)}
+        </div>
       </main>
       <Globalplix />
-      <Benefits/>
+      <Benefits />
       <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
         <CardPlan />
       </div>
