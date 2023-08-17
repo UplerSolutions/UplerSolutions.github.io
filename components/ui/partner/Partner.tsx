@@ -7,11 +7,11 @@ export const Partner = () => {
         <div className='text-center flex items-center lg:text-left pb-10 w-full'>
           <div className='flex flex-col'>
             <h3 className='pb-4 text-xs md:text-base lg:text-lg'>
-              CONOCÉ QUIÉN CONFÍA EN NOSOTROS
+            GET TO KNOW WHO TRUSTS US
             </h3>
             <h2 className='text-2xl lg:text-4xl'>
-              Nuestros
-              <span className='text-primary-color'> partnerships oficiales</span>
+            Our Official
+              <span className='text-primary-color'> Partnerships</span>
             </h2>
           </div>
           <div className=' hidden lg:invisible'>

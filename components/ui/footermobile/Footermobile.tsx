@@ -45,11 +45,11 @@ export const Footermobile = () => {
           <span>Buenos Aires, Argentina</span>
           <span>10000</span>
         </div>
-        <div>        
-          <div className='pt-4 flex'>
+        <div className='flex items-center justify-between pt-6'>        
+          <div className='flex'>
             <span className=''>Upler © 2023</span>
           </div>
-          <div className='flex gap-6 text-2xl'>
+          <div className='flex gap-3 text-2xl'>
             <Link href='https://discord.com/'>
               <FaDiscord />
             </Link>

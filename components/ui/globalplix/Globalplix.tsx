@@ -16,7 +16,7 @@ export const Globalplix = () => {
             streamlined solution for software success.
           </p>
         </div>
-        <div className='relative pt-[40px] w-[90%]'>
+        <div className='relative pt-[40px] md:w-[90%] 2xl:w-[1200px]'>
           <Image
             height={950}
             width={950}

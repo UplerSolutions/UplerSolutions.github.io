@@ -46,7 +46,7 @@ export const CardPlan = () => {
                         <span className='text-xl'>$</span>
                         {plan.price}
                         <span className=' text-base text-neutral-600 font-normal'>
-                          USD /mes
+                          USD /month
                         </span>
                       </h2>
                       <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
@@ -113,7 +113,7 @@ export const CardPlan = () => {
                           <span className='text-xl'>$</span>
                           {companias.price}
                           <span className=' text-base text-neutral-600 font-normal'>
-                            USD /mes
+                            USD /month
                           </span>
                         </h2>
                         :

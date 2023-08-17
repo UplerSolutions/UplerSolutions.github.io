@@ -74,7 +74,7 @@ export const CustomForm = () => {
                         <section className="flex flex-col">
                             <h2 className="text-xl py-4 font-semibold">Attach File</h2>
                             <p className="pb-4">Share whit us your Company Profile</p>
-                            <button className=" bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600">
+                            <button className="bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color">
                                 Browse Files
                             </button>
                         </section>
@@ -95,7 +95,7 @@ export const CustomForm = () => {
                     </form>        
                 </div>
                 <div className="flex justify-center items-center">
-                    <button className="bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600 "> Submit</button>
+                    <button className="bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color "> Submit</button>
                 </div>
             </div>
         </div>
