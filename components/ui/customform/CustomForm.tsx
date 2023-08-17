@@ -5,7 +5,7 @@ export const CustomForm = () => {
         <div className="bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center">
             <div className="flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5">
                 <div className="w-[100%] text-center mb-4 pb-4 content-between text-neutral-700">
-                    <h1 className="text-5xl py-10">Do you want to sell your product?</h1>
+                    <h1 className="text-5xl py-10 font-semibold">Do you want to sell your product?</h1>
                     <p className="text-sm" >Please fill the form to recieve a qoute for your project. Feel
                         free to add as much detailed as needed</p>
                 </div>

@@ -37,9 +37,11 @@ export const Card: FC<Props> = ({ plan }) => {
                 Bundle choosen:
                 <span className='text-primary-color font-semibold'> {plan?.name}</span>
               </h2>
+              <div className='flex gap-5'>
               This Bundles includes : {plan?.benefits.map(benefit=>(
                 <p key={benefit}>{benefit}</p>
               ))}
+              </div>
             </div>
           </div>
         </div>
