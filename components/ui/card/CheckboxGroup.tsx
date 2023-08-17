@@ -26,7 +26,7 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ options, limit }) 
     };
 
     return (
-        <div className='grid grid-cols-3 max-h-max grid-rows-2   rounded-xl text-center text-dark'>
+        <div className='grid 2 xl:grid-cols-3  2xl:grid-rows-2   rounded-xl text-center text-dark'>
             {options.map(option => (
                 <Checkbox
                 
