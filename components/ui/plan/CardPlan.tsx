@@ -2,8 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { FaCheck } from 'react-icons/fa'
 import { Partner } from '../partner'
-import { data } from '../../../public/plans.js'
-import { useRouter } from 'next/router'
+import { data } from '../../../pages/api/plans'
 import { Carousel } from '../carousel/Carousel'
 
 export const CardPlan = () => {
@@ -17,7 +16,7 @@ export const CardPlan = () => {
         <div className='max-w-[75%] w-full m-auto px-2 md:py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             A Bundle for each
-            <span className='text-primary-color'> profesional </span>
+            <span className='text-primary-color'> professional </span>
           </h1>
           <ul className=' grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] sm:grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))] lg:flex gap-14 justify-center items-center pt-10'>
             {plans.map((plan) => (

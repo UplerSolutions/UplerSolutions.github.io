@@ -32,7 +32,7 @@ export const data = {
   ],
   companias: [
     {
-      id: 5,
+      id: 4,
       name: 'StartUp',
       description: 'Unlock Growth with Advanced Software Solutions',
       price: 50,
@@ -44,7 +44,7 @@ export const data = {
       ]
     },
     {
-      id: 6,
+      id: 5,
       name: 'Company',
       description: 'Enhance Efficiency with Comprehensive Software',
       price: 70,
@@ -56,7 +56,7 @@ export const data = {
       ]
     },
     {
-      id: 7,
+      id: 6,
       name: 'Enterprise',
       description: 'Get in contact to create to tailor the most suitable bundle for you',
       price: 111 ,

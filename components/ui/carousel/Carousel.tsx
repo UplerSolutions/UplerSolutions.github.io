@@ -17,7 +17,7 @@ import 'swiper/css'
 import { Partner } from '../partner'
 import { FaCheck } from 'react-icons/fa'
 import { useState } from 'react'
-import { data } from '../../../public/plans.js'
+import { data } from '../../../pages/api/plans'
 
 export const Carousel = () => {
   const [plans, setPlans] = useState(data.planes)

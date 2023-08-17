@@ -1,4 +1,4 @@
-export const counts = [
+export const contributions = [
         {
             "id": "001",
             "label": "Available Software",
