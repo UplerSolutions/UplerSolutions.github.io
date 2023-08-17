@@ -6,7 +6,7 @@ import { AiOutlineHome } from 'react-icons/ai'
 
 export const Navbarmobile = () => {
   return (
-    <nav className='flex items-center justify-center w-full h-[40px]'>
+    <nav className='flex lg:hidden items-center justify-center w-full h-[40px]'>
       <div className='flex z-10 w-full text-lg items-center justify-center font-mono lg:hidden bg-neutral-100 text-neutral-700 pt-3 pb-3 gap-3 fixed bottom-0 h-[50px]'>
         <Link className='flex flex-col w-1/6 text-center items-center' href='/'>
           <AiOutlineHome />
