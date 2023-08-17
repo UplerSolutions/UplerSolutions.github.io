@@ -15,8 +15,8 @@ export const Footermobile = () => {
     <footer className='w-full bg-neutral-600 flex flex-col items-center justify-center text-white h-auto pb-36 pt-10 gap-6 md:hidden'>
       <div className='flex flex-col w-[100%] px-[50px] gap-8'>
         <div className='flex flex-col gap-2 '>
-          <Image height={30} width={50} src='/whitelogo.png' alt='' className='w-[200px] h-[60px]' />
-          <h3 className='text-md pt-6 pb-2'>
+          <Image height={150} width={150} src='/whitelogo.png' alt='' className='' />
+          <h3 className='text-md pt-1 pb-2'>
             Providing everyone access to
             startup investment.
           </h3>
