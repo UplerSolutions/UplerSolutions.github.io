@@ -7,9 +7,7 @@ export const data = {
       price: 40,
       benefits: [
         'Two software to choose',
-        'Received 3 Upler Token',
-        
-      ]
+        'Received 3 Upler Token',]
     },
     {
       id: 2,
@@ -65,7 +63,7 @@ export const data = {
       benefits: [
         'Talk to our professionals',
         'We analyze your project',
-        'Provide feedback on the most suitable tools',
+        'Find most suitable tools',
         'Discover new ways to optimize work'
       ]
     }

@@ -14,20 +14,20 @@ const PlanPage: NextPage = () => {
     query: { name }
   } = router
 
-  // const planFilter = data.planes.filter((plan) => {
-  //    plan.name === name ?? plan
-  // })
-  // const dataFilter = data.companias.filter((compania) => {
-  //    compania.name === name ? compania : "";
-  // })
+  const planFilter = data.planes.filter((plan) => {
+    plan.name === name ?? plan
+  })
+  const dataFilter = data.companias.filter((compania) => {
+    compania.name === name ? compania : "";
+  })
 
-  // useEffect(() => {
-  //   if (planFilter) {
-  //     setPlan(planFilter!)
-  //   } else {
-  //     setPlan(dataFilter!)
-  //   }
-  // }, [name])
+  useEffect(() => {
+    if (planFilter) {
+      setPlan(planFilter!)
+    } else {
+      setPlan(dataFilter!)
+    }
+  }, [name, dataFilter, planFilter])
 
   return (
     <Layout title='Plan'>
