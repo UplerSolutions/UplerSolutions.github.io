@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   const handleClick = () => {
     // Perform the redirect
-    router.push('/startups') // Replace 'destination-page' with the actual URL
+    router.push('/plans') // Replace 'destination-page' with the actual URL
   }
   
 

@@ -8,30 +8,26 @@ import { IPlan } from '@/components/interface/plan'
 import { Card } from '@/components/ui/card'
 
 const PlanPage: NextPage = () => {
-  const router = useRouter()
-  const [plan, setPlan] = useState<IPlan | any>()
-  const {
-    query: { name }
-  } = router
+  const router = useRouter();
+  const { name } = router.query;
+  const [plan, setPlan] = useState<IPlan | null>(null);
 
-  // const planFilter = data.planes.filter((plan) => {
-  //    plan.name === name ?? plan
-  // })
-  // const dataFilter = data.companias.filter((compania) => {
-  //    compania.name === name ? compania : "";
-  // })
+  useEffect(() => {
+    if (typeof name === 'string') {
+      const planFilter = data.planes.find(plan => plan.name === name);
+      const dataFilter = data.companias.find(compania => compania.name === name);
 
-  // useEffect(() => {
-  //   if (planFilter) {
-  //     setPlan(planFilter!)
-  //   } else {
-  //     setPlan(dataFilter!)
-  //   }
-  // }, [name])
+      if (planFilter) {
+        setPlan(planFilter);
+      } else if (dataFilter) {
+        setPlan(dataFilter);
+      }
+    }
+  }, [name]);
 
   return (
     <Layout title='Plan'>
-      <Card title={name} />
+        {plan ? <Card plan={plan} /> : <p>Plan not found.</p>}
     </Layout>
   )
 }
