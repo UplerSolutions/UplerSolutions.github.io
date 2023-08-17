@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 export const Footermobile = () => {
   return (
-    <footer className='w-full bg-neutral-600 flex flex-col items-center justify-center text-white h-auto pb-20 pt-10 gap-6 md:hidden'>
+    <footer className='w-full bg-neutral-600 flex flex-col items-center justify-center text-white h-auto pb-36 pt-10 gap-6 md:hidden'>
       <div className='flex flex-col w-[100%] px-[50px] gap-8'>
         <div className='flex flex-col gap-2 '>
           <Image height={30} width={50} src='/whitelogo.png' alt='' className='w-[200px] h-[60px]' />
@@ -45,11 +45,11 @@ export const Footermobile = () => {
           <span>Buenos Aires, Argentina</span>
           <span>10000</span>
         </div>
-        <div>        
-          <div className='pt-4 flex'>
+        <div className='flex items-center justify-between pt-6'>        
+          <div className='flex'>
             <span className=''>Upler © 2023</span>
           </div>
-          <div className='flex gap-6 text-2xl'>
+          <div className='flex gap-3 text-2xl'>
             <Link href='https://discord.com/'>
               <FaDiscord />
             </Link>

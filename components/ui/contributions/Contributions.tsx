@@ -1,34 +1,55 @@
-import React from 'react'
-import { FaBeer } from 'react-icons/fa'
-export const Contributions = () => {
-  return (
-    <main className=' pb-6 md:flex md:flex-nowrap justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
-      <div className='flex-wrap gap-3 md-gap-0 w-full items-center justify-center md:flex-nowrap flex justify-center items-center py-4 md:w-4/5 lg:w-[74%] border rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
-        <div className='flex flex-col justify-center items-center h-20 w-[170px] text-center md:w-full'>
-          <span className=' text-3xl pt-2 pb-2 text-primary-color leading-5'>
-            {10+"K+"}
-          </span>
-          <span className='text-xl'>Available Software</span>
-        </div>
-        <div className='flex flex-col  justify-center items-center h-20 w-[170px] text-center md:w-full'>
-          <span className=' text-3xl pt-2 pb-2 text-primary-color leading-5'>
-          {32+"K+"}
-          </span>
-          <span className='text-xl'>Subscribers</span>
-        </div>
-        <div className='flex flex-col justify-center items-center h-20 w-[170px] text-center md:w-full'>
-          <span className=' text-3xl pt-2 pb-2 text-primary-color leading-5'>
-            {"$23k+"}
-          </span>
-          <span className='text-xl'>In Profits for Partners</span>
-        </div>
-        <div className='flex flex-col justify-center items-center h-20 w-[170px] text-center md:w-full'>
-        <span className=' text-3xl pt-2 pb-2 text-primary-color leading-5'>
-            {"$23k+"}
-          </span>
-          <span className='text-xl'>Total Saved by Users</span>
-        </div>
-      </div>
-    </main>
-  )
+import React, { useEffect, useState, FC } from 'react';
+//styling
+
+interface Count {
+  id: string;
+  label: string;
+  number: string;
+  duration: string;
 }
+interface Props {
+  count: Count
+
+}
+export const Contributions :FC<Props> =({count }) => {
+  // label of counter
+  // number to increment to
+  // duration of count in secondscounts
+  const {label, number, duration} = count;
+
+  // number displayed by component
+  const [counts, setCounts] = useState("0")
+
+  useEffect(() => {
+    let start = 0;
+    // first three numbers from props
+    const end = parseInt(number?.substring(0,3))
+    // if zero, return
+    if (start === end) return;
+
+    // find duration per increment
+    let totalMilSecDur = parseInt(duration);
+    let incrementTime = (totalMilSecDur / end) * 1000;
+
+    // timer increments start countser 
+    // then updates counts
+    // ends if start reaches end
+    let timer = setInterval(() => {
+      start += 1;
+      setCounts(String(start) + number.substring(3))
+      if (start === end) clearInterval(timer)       
+    }, incrementTime);
+
+    // dependency array
+  }, [number, duration]);
+
+  return (   
+    <div className='flex flex-col h-20 text-center md:w-full px-2'>
+      <span className=' text-2xl md:text-4xl text-primary-color'>{counts}
+      </span>
+      <span className=' text-md md:text-xl'>{label}
+      </span>
+    </div>
+  );
+}
+

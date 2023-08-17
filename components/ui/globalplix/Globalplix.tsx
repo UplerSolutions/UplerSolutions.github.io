@@ -16,13 +16,13 @@ export const Globalplix = () => {
             streamlined solution for software success.
           </p>
         </div>
-        <div className='relative pt-[40px]'>
+        <div className='relative pt-[40px] md:w-[90%] 2xl:w-[1200px]'>
           <Image
             height={950}
             width={950}
-            src='/box.png'
+            src='/boxes.png'
             alt=''
-            className='lg:ml-[75px] xl:w-full 2xl:[90px]'
+            className='lg:ml-[75px] w-full 2xl:[90px]'
           />
         </div>
       </div>
