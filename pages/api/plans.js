@@ -7,7 +7,9 @@ export const data = {
       price: 4,
       benefits: [
         'Two software to choose',
-        'Received 3 Upler Token',]
+        'Received an NFT to acceses more benefits'
+        ,
+      ]
     },
     {
       id: 2,
@@ -16,7 +18,7 @@ export const data = {
       price: 10,
       benefits: [
         'Four software to choose',
-        'Received 3 Upler Token',
+        'Received an NFT to acceses more benefits',
       ]
     },
     {
@@ -26,7 +28,7 @@ export const data = {
       price: 14,
       benefits: [
         'Eight software to choose',
-        'Received 7 Upler Token',
+        'Received an NFT to acceses more benefits'
       ]
     }
   ],

@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
 import { IPlan } from '@/components/interface/plan'
-import {} from "react-icons/"
+import { } from "react-icons/"
 import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
+import { FaCheck } from 'react-icons/fa';
 interface Props {
   plan?: undefined | IPlan
 }
@@ -27,7 +28,7 @@ export const Card: FC<Props> = ({ plan }) => {
                 ¡Almost There! Finish order
               </h1>
               <div className='flex gap-6'>
-                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]'/>
+                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
                 <span>30-day money-back guarantee</span>
               </div>
 
@@ -37,9 +38,23 @@ export const Card: FC<Props> = ({ plan }) => {
                 Bundle choosen:
                 <span className='text-primary-color font-semibold'> {plan?.name}</span>
               </h2>
-              This Bundles includes : {plan?.benefits.map(benefit=>(
-                <p key={benefit}>{benefit}</p>
-              ))}
+              <div>
+                <h2>This Bundles includes :
+
+                </h2>
+                <div>
+                  {plan?.benefits.map(benefit => (
+                    <div className='flex gap-4 pt-2' key={benefit} >
+                      <FaCheck />
+                      <span >
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -52,7 +67,7 @@ export const Card: FC<Props> = ({ plan }) => {
           <div className='flex gap-10 pt-6 flex-wrap md:flex-nowrap items-center justify-center'>
             <div className='flex flex-col py-8 px-14 sm:px-0 sm:p-8 bg-white rounded-xl items-center text-center md:w-[30%]'>
               <div className='flex flex-col items-center'>
-              <label htmlFor="period">
+                <label htmlFor="period">
                   <input
                     type='radio'
                     name='period'
@@ -74,7 +89,7 @@ export const Card: FC<Props> = ({ plan }) => {
             </div>
             <div className='flex flex-col py-8 px-14 sm:px-0 sm:p-8 bg-white rounded-xl items-center text-center md:w-[30%]'>
               <div className='flex flex-col items-center'>
-              <label htmlFor="period">
+                <label htmlFor="period">
                   <input
                     type='radio'
                     name='period'
@@ -140,13 +155,13 @@ export const Card: FC<Props> = ({ plan }) => {
           </div>
           <div className='flex flex-col md:pl-14'>
             <div className='gap-10 hidden md:flex'>
-              <span> <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]'/></span><p className='w-[150px]'>30-day money-back guarantee</p>
-              <span> <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]'/></span><p className='w-[150px]'>Encrypted and secure payments</p>
+              <span> <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /></span><p className='w-[150px]'>30-day money-back guarantee</p>
+              <span> <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /></span><p className='w-[150px]'>Encrypted and secure payments</p>
             </div>
             <div>
-              <h4 className='pt-6'>By completing the purchase, you agree to our Terms of Service and confirm that you have read our Privacy Policy. You can cancel recurring payments anytime.</h4>
+              <h4 className='pt-6 text-neutral-700'>By completing the purchase, you agree to our Terms of Service and confirm that you have read our Privacy Policy. You can cancel recurring payments anytime.</h4>
             </div>
-            <span className='font-semibold pb-8 pt-10'>Need assistance? Check out our FAQs.</span>
+            <span className='font-semibold pb-8 pt-10 text-neutral-700'>Need assistance? Check out our FAQs.</span>
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ export const CardPlan = () => {
     <>
       <Carousel />
       <section className='hidden max-w-[100%] w-full md:flex md:flex-col'>
-        <div className='max-w-[75%] w-full m-auto px-2 md:py-6 lg:py-8'>
+        <div className='max-w-[75%] w-full max-h-max m-auto px-2 md:py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             A Bundle for each
             <span className='text-primary-color'> professional </span>
