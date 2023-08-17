@@ -34,14 +34,6 @@ export const CardPlan = () => {
                         </h1>
                         <p>{plan.description}</p>
                       </div>
-                      <div>
-                        <h3>
-                          <span className=' line-through pr-3'>$ 84 USD</span>
-                          <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
-                            SAVE 68%
-                          </span>
-                        </h3>
-                      </div>
                       <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                         <span className='text-xl'>$</span>
                         {plan.price}
@@ -117,7 +109,7 @@ export const CardPlan = () => {
                           </span>
                         </h2>
                         :
-                          <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
+                        <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                           {companias.price}
                         </h2>}
                       <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>

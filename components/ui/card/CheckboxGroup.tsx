@@ -26,7 +26,7 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ options, limit }) 
     };
 
     return (
-        <div className='flex flex-col items-center text-dark'>
+        <div className='grid grid-cols-3 max-h-max grid-rows-2   rounded-xl text-center text-dark'>
             {options.map(option => (
                 <Checkbox
                 
@@ -35,6 +35,7 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ options, limit }) 
                     label={option.label}
                     isChecked={selectedOptions.includes(option.value)}
                     onChange={() => handleCheckboxChange(option.value)}
+
                 />
             ))}
         </div>
