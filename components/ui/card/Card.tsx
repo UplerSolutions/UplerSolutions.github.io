@@ -1,19 +1,15 @@
-import Link from 'next/link'
-import { CustomButton } from '@/components/ui/custombutton'
 import React, { FC } from 'react'
-import { FaCheck } from 'react-icons/fa'
-import { GoShieldCheck } from 'react-icons/go'
-import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined'
 import { CheckboxGroup } from './CheckboxGroup'
+import { IPlan } from '@/components/interface/plan'
 
 interface Props {
-  title?: string | undefined | string[]
+  plan?: undefined | IPlan
 }
 
-export const Card: FC<Props> = ({ title }) => {
+export const Card: FC<Props> = ({ plan }) => {
   const options = [
     { value: 'Software IA', label: 'Software IA' },
-    { value: '', label: 'Option 2' },
+    { value: 'JI', label: 'Option 2' },
     { value: 'option3', label: 'Option 3' },
     // Add more options here
   ];
@@ -30,7 +26,7 @@ export const Card: FC<Props> = ({ title }) => {
             <div>
               <h2 className='text-xl'>
                 Bundle choosen:
-                <span className='text-primary-color font-semibold'> {title}</span>
+                <span className='text-primary-color font-semibold'> {plan?.name}</span>
               </h2>
             </div>
           </div>
@@ -58,7 +54,7 @@ export const Card: FC<Props> = ({ title }) => {
                 </h1>
                 <div className='flex text-neutral-600 items-center pt-10'>
                   <span className='text-primary-color font-semibold text-xl'>$</span>
-                  <h3 className='text-primary-color text-7xl font-bold'>15</h3>
+                  <h3 className='text-primary-color text-7xl font-bold'>{plan?.price}</h3>
                   <span className='font-semibold'>USD</span>
                 </div>
                 {/* <h3 className='p-10 text-neutral-600 text-center'>
@@ -81,7 +77,7 @@ export const Card: FC<Props> = ({ title }) => {
                 </h1>
                 <div className='flex text-neutral-600 items-center pt-10'>
                   <span className='text-primary-color font-semibold text-xl'>$</span>
-                  <h3 className='text-primary-color text-7xl font-bold'>45</h3>
+                  <h3 className='text-primary-color text-7xl font-bold'>{plan?.price * 3 }</h3>
                   <span className='font-semibold'>USD</span>
                 </div>
                 {/* <h3 className='p-10 text-neutral-600 text-center'>
@@ -103,7 +99,7 @@ export const Card: FC<Props> = ({ title }) => {
                 </h1>
                 <div className='flex text-neutral-600 items-center pt-10'>
                   <span className='text-primary-color font-semibold text-xl'>$</span>
-                  <h3 className='text-primary-color text-7xl font-bold'>180</h3>
+                  <h3 className='text-primary-color text-7xl font-bold'>{plan?.price * 12 }</h3>
                   <span className='font-semibold'>USD</span>
                 </div>
                 {/* <h3 className='p-10 text-neutral-600 text-center'>

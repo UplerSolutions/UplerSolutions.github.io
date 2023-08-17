@@ -4,7 +4,7 @@ export const data = {
       id: 1,
       name: 'Basic',
       description: 'Begin with a strong start',
-      price: 40,
+      price: 4,
       benefits: [
         'Two software to choose',
         'Received 3 Upler Token',]
@@ -13,7 +13,7 @@ export const data = {
       id: 2,
       name: 'Advanced',
       description: 'Boost Your Productivity with Essential Tools',
-      price: 35,
+      price: 10,
       benefits: [
         'Four software to choose',
         'Received 3 Upler Token',
@@ -23,7 +23,7 @@ export const data = {
       id: 3,
       name: 'Expert',
       description: 'Empower Your Business with Versatile Solutions',
-      price: 55,
+      price: 14,
       benefits: [
         'Eight software to choose',
         'Received 7 Upler Token',
@@ -59,7 +59,7 @@ export const data = {
       id: 7,
       name: 'Enterprise',
       description: 'Get in contact to create to tailor the most suitable bundle for you',
-      price: "Contact Us",
+      price: 111 ,
       benefits: [
         'Talk to our professionals',
         'We analyze your project',
