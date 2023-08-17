@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   const handleClick = () => {
     // Perform the redirect
-    router.push('/software') // Replace 'destination-page' with the actual URL
+    router.push('/bundles') // Replace 'destination-page' with the actual URL
   }
   
 
