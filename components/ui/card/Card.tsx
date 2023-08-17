@@ -28,7 +28,7 @@ export const Card: FC<Props> = ({ plan }) => {
               </h1>
               <div className='flex gap-6'>
                 <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]'/>
-                <span>30 días de garantía de devolución del dinero</span>
+                <span>30 day money back guarantee</span>
               </div>
 
             </div>

@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       </Head>
       <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700 lg:pt-28 pb-7'>
         <div className='text-[32px] text-center font-bold md:text-5xl lg:text-7xl'>
-          <h3 className='md:pb-4'>Your ultimate</h3>
+          <h3 className='md:pb-4'>Your Ultimate</h3>
           <span className='text-primary-color text-[35px] md:text-5xl lg:text-7xl'>
             subscription
           </span>

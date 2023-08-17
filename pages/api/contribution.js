@@ -3,7 +3,7 @@ export const contributions = [
             "id": "001",
             "label": "Available Software",
             "number": "500+",
-            "duration": "3"
+            "duration": "2"
         },
         {
             "id": "002",

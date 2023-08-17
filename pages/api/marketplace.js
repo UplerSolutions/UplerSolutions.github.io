@@ -24,7 +24,7 @@ export const data =
     {
         "ID": 4,
         "title": "AIWriter Studio",
-        "description": "An AI-powered writing assistant that helps you generate high-quality content, provides suggestions, and checks for grammar and style errors.",
+        "description": "An AI-powered writing assistant that helps you generate high-quality content and checks for grammar and style errors.",
         "image": "https://example.com/images/aiwriter_studio.svg",
         "price": 8
     },

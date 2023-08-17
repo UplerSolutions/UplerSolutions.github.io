@@ -31,16 +31,16 @@ export const Explore = () => {
   const displayedProducts: Product[] = data.slice(startIndex, endIndex);
 
   return (
-    <div className='grid-cols-[repeat(auto-fill,_minmax(350,_1fr))] grid-rows-2 gap-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full m-auto px-4 py-4 lg:py-8 items-center'>
-      <ul className=''>
+    <div className='flex flex-col items-center justify-center'>
+      <ul className='grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] grid-rows-2 gap-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full m-auto px-4 py-4 lg:py-8 items-center'>
         {displayedProducts.map(product => (
-          <li key={product.ID} className=''>
+          <li key={product.ID} className='flex flex-col gap-8'>
             <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-full bg-primary-color rounded-xl'>
+              <div className='relative p-6 w-full h-[150px] bg-primary-color rounded-xl'>
                 {/* Render product image here */}
               </div>
-              <div className='p-4 flex flex-col flex-1'>
-                <div>
+              <div className=''>
+                <div className='p-4 flex flex-col flex-1 gap-1'>
                   <h2 className='text-2xl'>{product.title}</h2>
                   <p>${product.price} price </p>
                   <p>{product.description}</p>
