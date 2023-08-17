@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
   const handleClick = () => {
     // Perform the redirect
-    router.push('/plans') // Replace 'destination-page' with the actual URL
+    router.push('/software') // Replace 'destination-page' with the actual URL
   }
   
 
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
         </button>
       </div>
       <main className=' pb-6 flex-wrap md:flex-nowrap md:flex md:flex-nowrap justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
-          <div className='flex flex-wrap w-[170px] gap-3 md-gap-0 w-full items-center justify-center md:flex-nowrap flex justify-center items-center py-4 md:w-4/5 lg:w-[74%] border rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
+          <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-center md:flex-nowrap flex justify-center items-center py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
              {counts.map(count => <Contributions key={count.id} count={count}/>)}
           </div>
       </main>

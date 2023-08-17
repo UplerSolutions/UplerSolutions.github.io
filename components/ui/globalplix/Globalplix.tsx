@@ -20,7 +20,7 @@ export const Globalplix = () => {
           <Image
             height={950}
             width={950}
-            src='/box.png'
+            src='/boxes.png'
             alt=''
             className='lg:ml-[75px] xl:w-full 2xl:[90px]'
           />

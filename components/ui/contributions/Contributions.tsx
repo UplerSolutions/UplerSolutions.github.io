@@ -44,10 +44,10 @@ export const Contributions :FC<Props> =({count }) => {
   }, [number, duration]);
 
   return (   
-    <div className='flex flex-col justify-center items-center h-20 text-center md:w-full px-2'>
-      <span className='text-4xl text-primary-color'>{counts}
+    <div className='flex flex-col h-20 text-center md:w-full px-2'>
+      <span className=' text-2xl md:text-4xl text-primary-color'>{counts}
       </span>
-      <span className=' text-lg md:text-xl'>{label}
+      <span className=' text-md md:text-xl'>{label}
       </span>
     </div>
   );

@@ -73,10 +73,10 @@ export const CustomForm = () => {
                         </section>
                         <section className="flex flex-col">
                             <h2 className="text-xl py-4 font-semibold">Attach File</h2>
-                            <p>Share whit us your Company Profile</p>
-                            <label htmlFor="company-file" className="flex items-center bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600">
-                            <input type="file" name="company-file" placeholder="Browse Files" id="" className="pl-5 "/>    
-                            </label>
+                            <p className="pb-4">Share whit us your Company Profile</p>
+                            <button className=" bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600">
+                                Browse Files
+                            </button>
                         </section>
                         
                         <section>
@@ -94,9 +94,10 @@ export const CustomForm = () => {
                         </section>
                     </form>        
                 </div>
-                <button className="bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600 "> Submit</button>
+                <div className="flex justify-center items-center">
+                    <button className="bg-purple-600 h-12 w-48 rounded-xl text-white font-semibold hover:bg-purple-200 hover:text-purple-500 transition hover:delay-100 hover:border-2 hover:border-purple-600 "> Submit</button>
+                </div>
             </div>
         </div>
-
     )
 }
