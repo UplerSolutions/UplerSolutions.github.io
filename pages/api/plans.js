@@ -59,11 +59,11 @@ export const data = {
       id: 6,
       name: 'Enterprise',
       description: 'Get in contact to create to tailor the most suitable bundle for you',
-      price: 111 ,
+      price: 0,
       benefits: [
         'Talk to our professionals',
         'We analyze your project',
-        'Find most suitable tools',
+        'Find the most suitable tools',
         'Discover new ways to optimize work'
       ]
     }

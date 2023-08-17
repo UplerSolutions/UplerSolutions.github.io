@@ -5,7 +5,6 @@ import {
   FaInstagram,
   FaLinkedin,
   FaYoutube,
-  FaGreaterThan,
   FaTwitter
 } from 'react-icons/fa'
 import Image from 'next/image'
@@ -18,8 +17,8 @@ export const Footer = () => {
         <div className='flex flex-col gap-2'>
           <Image height={150} width={150} src='/whitelogo.png' alt='' className='w-[200px]' />
           <h3 className='text-md pt-6 pb-2'>
-            Providing everyone access to <br />
-            startup investment.
+            Tailored solutions  <br />
+            for builders.
           </h3>
           <div className='flex gap-6 text-2xl'>
             <Link href='https://discord.com/' target=' blank'>
@@ -68,16 +67,6 @@ export const Footer = () => {
           <span>Lorem ipsum sit amet No. 18,</span>
           <span>Buenos Aires, Argentina</span>
           <span>10000</span>
-          <div></div>
-          <div className='flex pt-8'>
-            <button className='bg-white text-black w-[85px] text-left mr-4 pl-2 items-center flex'>
-              English &nbsp; <FaGreaterThan className=' text-[10px]' />
-            </button>
-            <button className='bg-white text-black w-20 text-left pl-2 flex items-center'>
-              USD &nbsp; &nbsp;
-              <FaGreaterThan className=' text-[10px]' />
-            </button>
-          </div>
         </div>
       </footer>
       <Footermobile />

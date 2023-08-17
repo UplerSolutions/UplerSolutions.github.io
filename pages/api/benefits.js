@@ -6,7 +6,7 @@ export  const data = [
     },
     {
         title:"Efficient Automation",
-        description:"Forget about tracking expiration dates and renewals.Our platform does it for you.",
+        description:"Forget about tracking expiration dates and renewals. Our platform does it for you.",
         icon:"./benefitsIcons/GroupefficientAutomation.svg",
     },
     {
@@ -16,17 +16,17 @@ export  const data = [
     },
     {
         title:"Cost Reduction",
-        description:"Experiencies substantial savings by accessing our software bundles, allowing you to pay significantly less than you would for individual licenses.",
+        description:"Experience substantial savings by accessing our software bundles, allowing you to pay significantly less than you would for individual licenses.",
         icon:"./benefitsIcons/VectorcostReduction.svg",
     },    
     {
-        title:"Expectional Support",
+        title:"Exceptional Support",
         description:"We offer fast and efficient customer service to address your inquiries.",
         icon:"./benefitsIcons/Vectorsupport.svg",
     },
     {
         title:"Additional Benefits",
-        description:"Convert your purchase into UPLER tokens to access exclusive discounts and experiences",
+        description:"Get a unique NFT with your bundle subscription and enjoy a variety of exclusive benefits offered by our trusted partners.",
         icon:"./benefitsIcons/GroupadditionalBenefits.svg",
     },
 ]
