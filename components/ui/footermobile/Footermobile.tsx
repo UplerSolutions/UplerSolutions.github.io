@@ -17,8 +17,7 @@ export const Footermobile = () => {
         <div className='flex flex-col gap-2 '>
           <Image height={30} width={50} src='/whitelogo.png' alt='' className='w-[200px] h-[60px]' />
           <h3 className='text-md pt-6 pb-2'>
-            Providing everyone access to
-            startup investment.
+          Tailored solutions for builders.
           </h3>
         </div>
 

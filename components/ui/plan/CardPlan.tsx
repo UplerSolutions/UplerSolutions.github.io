@@ -41,14 +41,14 @@ export const CardPlan = () => {
                         </span>
                       </h2>
                       <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                        Acquired the Bundle
+                        Acquire the Bundle
                       </button>
                     </div>
                     <div className='px-6 flex flex-col flex-1'>
                       <div>
                         <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          The Bundle {plan.name} includes
+                          {plan.name} Bundle Includes
                         </h2>
                         <ul className='pb-6'>
                           {plan.benefits.map((benefits) => (
@@ -99,27 +99,27 @@ export const CardPlan = () => {
                         </h1>
                         <p>{companias.description}</p>
                       </div>
-                      {companias.name !== "Enter Price" ?
+                      {companias.name === "Enterprise" ?
+                        <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
+                          <span className='text-2xl'>Contact Us</span>
+                        </h2>
+                        :
                         <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                           <span className='text-xl'>$</span>
                           {companias.price}
                           <span className=' text-base text-neutral-600 font-normal'>
                             USD /month
                           </span>
-                        </h2>
-                        :
-                        <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
-                          {companias.price}
                         </h2>}
                       <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                        Acquired the Bundle
+                        Acquire the Bundle
                       </button>
                     </div>
                     <div className='px-6 flex flex-col flex-1'>
                       <div>
                         <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          The Bundle {companias.name} includes
+                          {companias.name} Bundle Includes
                         </h2>
                         <ul className='pb-6'>
                           {companias.benefits.map((benefits) => (

@@ -88,7 +88,7 @@ export const CustomForm = () => {
                                 <label htmlFor="email" className="text-xl py-4 font-semibold">Email</label>
                                 <input type="text" placeholder="jgonzales@gmail.com" name="email" className="py-3 px-3 border-2 rounded-2xl mr-10"/>
 
-                                <label htmlFor="position" className="text-xl py-4 font-semibold">What is your position whithin the Company?</label>
+                                <label htmlFor="position" className="text-xl py-4 font-semibold">What is your position within the Company</label>
                                 <input type="text" placeholder="CEO" name="company-position" className="py-3 px-3 border-2 mb-10 rounded-2xl mr-10"/>
                             </fieldset>
                         </section>

@@ -28,7 +28,7 @@ export const Card: FC<Props> = ({ plan }) => {
               </h1>
               <div className='flex gap-6'>
                 <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]'/>
-                <span>30 días de garantía de devolución del dinero</span>
+                <span>30-day money-back guarantee</span>
               </div>
 
             </div>
@@ -37,6 +37,9 @@ export const Card: FC<Props> = ({ plan }) => {
                 Bundle choosen:
                 <span className='text-primary-color font-semibold'> {plan?.name}</span>
               </h2>
+              This Bundles includes : {plan?.benefits.map(benefit=>(
+                <p key={benefit}>{benefit}</p>
+              ))}
             </div>
           </div>
         </div>
