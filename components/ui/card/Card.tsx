@@ -191,12 +191,16 @@ export const Card: FC<Props> = ({ plan }) => {
                 {' '}
                 <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
               </span>
-              <p className='w-[150px]'>30-day money-back guarantee</p>
+              <p className='w-[150px] text-neutral-700'>
+                30-day money-back guarantee
+              </p>
               <span>
                 {' '}
                 <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
               </span>
-              <p className='w-[150px]'>Encrypted and secure payments</p>
+              <p className='w-[150px] text-neutral-700'>
+                Encrypted and secure payments
+              </p>
             </div>
             <div>
               <h4 className='pt-6 text-neutral-700'>
