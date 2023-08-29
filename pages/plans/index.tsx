@@ -8,7 +8,6 @@ const Plans: NextPage = () => {
     <Layout title='Plans'>
       <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <CardPlan />
-        <Carousel />
       </div>
     </Layout>
   )

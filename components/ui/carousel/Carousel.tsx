@@ -26,8 +26,8 @@ export const Carousel = () => {
     <section className='max-w-[100%] w-full md:hidden'>
       <div className='max-w-[100%] w-full m-auto py-6 '>
         <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
-          Un plan para cada
-          <span className='text-[#b06eca]'> profesional </span>
+          A bundle for each
+          <span className='text-[#b06eca]'> professional </span>
         </h1>
 
         <Swiper
@@ -57,24 +57,16 @@ export const Carousel = () => {
                         </h1>
                         <p>{plan.description}</p>
                       </div>
-                      <div>
-                        <h3>
-                          <span className=' line-through pr-3'>$ 84 USD</span>
-                          <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
-                            AHORRÁ 68%
-                          </span>
-                        </h3>
-                      </div>
                       <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                         <span className='text-xl'>$</span>
                         {plan.price}
                         <span className=' text-base text-neutral-600 font-normal'>
-                          USD /mes
+                          USD /month
                         </span>
                       </h2>
                       <Link href={`/plans/${plan.name}`}>
                         <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                          Adquirir plan
+                          Acquire the Bundle
                         </button>
                       </Link>
                     </div>
@@ -82,7 +74,7 @@ export const Carousel = () => {
                       <div>
                         <hr className='mx-6 mb-6 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          El plan {plan.name} incluye
+                          {plan.name} Bundle Includes
                         </h2>
                         <ul className='pb-6'>
                           {plan.benefits.map((herramienta) => (
@@ -96,9 +88,7 @@ export const Carousel = () => {
                           ))}
                         </ul>
                         <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>
-                          Programas populares
-                        </h2>
+                        <h2 className='text-xl font-semibold'>Benefits</h2>
                       </div>
 
                       <div className='flex items-center justify-around pb-10 pt-2 '>
@@ -116,8 +106,8 @@ export const Carousel = () => {
       </div>
       <div className='max-w-[100%] w-full m-auto py-6 lg:py-8 b'>
         <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
-          Un plan para cada
-          <span className='text-primary-color'> empresa </span>
+          A bundle for each
+          <span className='text-primary-color'> Company </span>
         </h1>
 
         <Swiper
@@ -129,11 +119,13 @@ export const Carousel = () => {
           autoplay={{
             delay: 4500
           }}
-           style={{
-            // '--swiper-navigation-color': '#b06eca',
-             // '--swiper-pagination-color': '#b06eca',
-             //'--swiper-pagination-bullet-size': '14px'
-           }}
+          style={
+            {
+              // '--swiper-navigation-color': '#b06eca',
+              // '--swiper-pagination-color': '#b06eca',
+              //'--swiper-pagination-bullet-size': '14px'
+            }
+          }
         >
           {companias.map((companias) => (
             <SwiperSlide key={companias.name} className='w-full'>
@@ -147,24 +139,16 @@ export const Carousel = () => {
                         </h1>
                         <p>{companias.description}</p>
                       </div>
-                      <div>
-                        <h3>
-                          <span className=' line-through pr-3'>$ 84 USD</span>
-                          <span className='bg-fuchsia-100 text-primary-color py-1 px-2 rounded-md'>
-                            AHORRÁ 68%
-                          </span>
-                        </h3>
-                      </div>
                       <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                         <span className='text-xl'>$</span>
                         {companias.price}
                         <span className=' text-base text-neutral-600 font-normal'>
-                          USD /mes
+                          USD /month
                         </span>
                       </h2>
                       <Link href={`/plans/${companias.name}`}>
                         <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                          Adquirir plan
+                          Acquire the Bundle
                         </button>
                       </Link>
                     </div>
@@ -172,7 +156,7 @@ export const Carousel = () => {
                       <div>
                         <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
-                          El plan {companias.name} incluye
+                          {companias.name} Bundle Includes
                         </h2>
                         <ul className='pb-6'>
                           {companias.benefits.map((herramienta) => (
@@ -186,9 +170,7 @@ export const Carousel = () => {
                           ))}
                         </ul>
                         <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>
-                          Programas populares
-                        </h2>
+                        <h2 className='text-xl font-semibold'>Benefits</h2>
                       </div>
 
                       <div className='flex items-center justify-around pb-10 pt-4 '>
@@ -203,9 +185,8 @@ export const Carousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        <Partner />
       </div>
+      <Partner />
     </section>
   )
 }

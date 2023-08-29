@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 import { CardPlan } from '@/components/ui/plan'
 import { Globalplix } from '@/components/ui/globalplix'
 import { Benefits } from '@/components/ui/benefits'
-import { contributions } from "@/pages/api/contribution"
+import { contributions } from '@/pages/api/contribution'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +25,6 @@ const Home: NextPage = () => {
     router.push('/plans') // Replace 'destination-page' with the actual URL
   }
 
-
   return (
     <Layout title='Home'>
       <Head>
@@ -41,8 +40,8 @@ const Home: NextPage = () => {
           </span>
         </div>
         <p className='pb-10 pt-6 lg:p-10 text-center w-11/12'>
-          Gain accesss to hundreds of software tools. All in one
-          single subscription.
+          Gain accesss to hundreds of software tools. All in one single
+          subscription.
         </p>
         <button
           className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
@@ -51,9 +50,11 @@ const Home: NextPage = () => {
           Find Your Bundle
         </button>
       </div>
-      <main className=' pb-6 flex-wrap md:flex-nowrap md:flex md:flex-nowrap justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
-        <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-center md:flex-nowrap flex justify-center items-center py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
-          {contributions.map(contribution => <Contributions key={contribution.id} count={contribution} />)}
+      <main className=' pb-6 flex-wrap md:flex-nowrap md:flex justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
+        <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-center md:flex-nowrap py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
+          {contributions.map((contribution) => (
+            <Contributions key={contribution.id} count={contribution} />
+          ))}
         </div>
       </main>
       <Globalplix />
