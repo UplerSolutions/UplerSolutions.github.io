@@ -46,7 +46,7 @@ export const Partner = () => {
         <Image
           height={50}
           width={190}
-          src='/damke.png'
+          src='/Damke.png'
           alt='partner-logo'
           className='md:py-8 md:mx-8 flew-wrap w-[40%] md:w-[180px] md:flex-wrap 2xl:w-[230px]'
         />
