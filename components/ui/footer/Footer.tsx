@@ -15,10 +15,15 @@ export const Footer = () => {
     <div>
       <footer className='hidden md:flex w-full bg-neutral-600 flex-col-reverse text-white items-center justify-evenly h-auto pb-20 pt-10 lg:flex-row lg:h-[350px] gap-6 lg:gap-0 lg:items-start'>
         <div className='flex flex-col gap-2'>
-          <Image height={150} width={150} src='/whitelogo.png' alt='' className='w-[200px]' />
-          <h3 className='text-md pt-6 pb-2'>
-            Tailored solutions  <br />
-            for builders.
+          <Image
+            height={150}
+            width={150}
+            src='/whitelogo.png'
+            alt=''
+            className='w-[200px]'
+          />
+          <h3 className='text-md pt-6 pb-2 w-52'>
+            Everything you need for your profession in a single subscription.
           </h3>
           <div className='flex gap-6 text-2xl'>
             <Link href='https://discord.com/' target=' blank'>
@@ -46,7 +51,7 @@ export const Footer = () => {
         </div>
 
         <div className='flex flex-col gap-2 pt-4'>
-          <h1 className='font-bold text-lg pb-6'>CUSTOMER CARE</h1>
+          <h1 className='font-bold text-lg pb-6'>CUSTOMER SUPPORT</h1>
           <span>Help Center</span>
           <span>Transparency and Security</span>
           <span>Terms and Conditions</span>
@@ -55,15 +60,15 @@ export const Footer = () => {
         </div>
 
         <div className='flex flex-col gap-2 pt-4'>
-          <h1 className='font-bold text-lg pb-6'>ABOUT US</h1>
+          <h1 className='font-bold text-lg pb-6'>COMPANY</h1>
           <span>About Us</span>
-          <span>Our Charter</span>
           <span>Press</span>
           <span>Careers</span>
+          <span>Contact</span>
         </div>
 
         <div className='flex flex-col lg:text-right lg:items-end pr-3 gap-2 pt-4'>
-          <h1 className='font-bold text-lg pb-6'>WHERE WE ARE</h1>
+          <h1 className='font-bold text-lg pb-6'>LOCATION</h1>
           <span>Lorem ipsum sit amet No. 18,</span>
           <span>Buenos Aires, Argentina</span>
           <span>10000</span>
@@ -73,4 +78,3 @@ export const Footer = () => {
     </div>
   )
 }
-

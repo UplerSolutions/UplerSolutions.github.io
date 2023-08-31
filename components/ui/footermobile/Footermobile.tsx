@@ -15,14 +15,20 @@ export const Footermobile = () => {
     <footer className='w-full bg-neutral-600 flex flex-col items-center justify-center text-white h-auto pb-36 pt-10 gap-6 md:hidden'>
       <div className='flex flex-col w-[100%] px-[50px] gap-8'>
         <div className='flex flex-col gap-2 '>
-          <Image height={30} width={50} src='/whitelogo.png' alt='' className='w-[200px] h-[60px]' />
+          <Image
+            height={80}
+            width={180}
+            src='/whitelogo.png'
+            alt=''
+            className=''
+          />
           <h3 className='text-md pt-6 pb-2'>
-          Tailored solutions for builders.
+            Everything you need for your profession in a single subscription.
           </h3>
         </div>
 
         <div className='flex flex-col gap-2'>
-          <h1 className='font-bold text-lg pb-6'>CUSTOMER CARE</h1>
+          <h1 className='font-bold text-lg pb-6'>CUSTOMER SUPPORT</h1>
           <span>Help Center</span>
           <span>Transparency and Security</span>
           <span>Terms and Conditions</span>
@@ -31,7 +37,7 @@ export const Footermobile = () => {
         </div>
 
         <div className='flex flex-col gap-2'>
-          <h1 className='font-bold text-lg pb-6'>ABOUT US</h1>
+          <h1 className='font-bold text-lg pb-6'>COMPANY</h1>
           <span>About Us</span>
           <span>Our Charter</span>
           <span>Press</span>
@@ -44,7 +50,8 @@ export const Footermobile = () => {
           <span>Buenos Aires, Argentina</span>
           <span>10000</span>
         </div>
-        <div className='flex items-center justify-between pt-6'>        
+        <hr className='pt-6' />
+        <div className='flex items-center justify-between'>
           <div className='flex'>
             <span className=''>Upler © 2023</span>
           </div>
@@ -70,4 +77,3 @@ export const Footermobile = () => {
     </footer>
   )
 }
-
