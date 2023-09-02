@@ -69,7 +69,6 @@ export const Footer = () => {
 
         <div className='flex flex-col lg:text-right lg:items-end pr-3 gap-2 pt-4'>
           <h1 className='font-bold text-lg pb-6'>LOCATION</h1>
-          <span>Lorem ipsum sit amet No. 18,</span>
           <span>Buenos Aires, Argentina</span>
           <span>10000</span>
         </div>
