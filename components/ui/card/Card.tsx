@@ -100,17 +100,14 @@ export const Card: FC<Props> = ({ plan }) => {
                   1 MONTH
                 </h1>
                 <div className='flex text-neutral-600 items-center pt-10'>
-                  <span className='text-primary-color font-semibold text-xl'>
+                  <span className='text-primary-color font-semibold text-7xl'>
                     $
                   </span>
-                  <h3 className='text-primary-color text-3xl md:text-5xl lg:text-7xl font-semibold'>
+                  <h3 className='text-primary-color text-7xl md:text-7xl lg:text-7xl font-bold'>
                     {plan?.price}
                   </h3>
                   <span className='font-semibold'>USD</span>
                 </div>
-                {/* <h3 className='p-10 text-neutral-600 text-center'>
-                El plan se renueva a <br /> $55 USD/mes el 17/09/2023
-              </h3> */}
               </div>
             </div>
             <div className='flex flex-col py-8 px-14 sm:px-0 sm:p-8 bg-white rounded-xl items-center text-center md:w-[30%]'>
@@ -164,19 +161,19 @@ export const Card: FC<Props> = ({ plan }) => {
         </div>
       </section>
       <section className='flex flex-col justify-center  items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
-        <div className='rounded-xl flex flex-col p-6 sm:py-16 sm:pl-16 bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] text-neutral-700 lg:w-[75%]  '>
+        <div className='rounded-xl flex flex-col p-6 sm:py-16 sm:pl-16 bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] text-neutral-700 lg:w-[75%]'>
           <div className='text-2xl md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold w-full'>
             <h2 className='md:pb-10 md:pl-6 text-neutral-600'>
               2. Select your preferred tools
             </h2>
           </div>
-          <div className='text-center'>
+          <div className='text-center '>
             <CheckboxGroup options={options} limit={plan?.id!} />
           </div>
         </div>
       </section>
       <section className='flex flex-col justify-center  items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
-        <div className='text-center md:text-start bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-10 py-8 px-12 mb-8 rounded-xl lg:w-[75%] w-[90%]'>
+        <div className='text-center md:text-start bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-10 py-8 px-12 mb-8 rounded-xl lg:w-[75%] w-[90%] '>
           <div className='flex-col md:flex-row text-2xl md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold w-full flex items-center justify-between gap-6'>
             <h2 className='md:pb-8 md:pl-6 pt-6 text-neutral-600'>
               3. Proceed to secure payment

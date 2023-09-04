@@ -8,7 +8,6 @@ export const data = {
       benefits: [
         'Two software to choose',
         'Received an NFT to acceses more benefits'
-        ,
       ]
     },
     {
@@ -18,7 +17,7 @@ export const data = {
       price: 10,
       benefits: [
         'Four software to choose',
-        'Received an NFT to acceses more benefits',
+        'Received an NFT to acceses more benefits'
       ]
     },
     {
@@ -60,8 +59,9 @@ export const data = {
     {
       id: 6,
       name: 'Enterprise',
-      description: 'Get in contact to create to tailor the most suitable bundle for you',
-      price: 0,
+      description:
+        'Get in contact to create to tailor the most suitable bundle for you',
+      price: 'Contact Us',
       benefits: [
         'Talk to our professionals',
         'We analyze your project',
