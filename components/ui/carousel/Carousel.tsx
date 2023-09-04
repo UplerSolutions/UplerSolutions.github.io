@@ -130,56 +130,65 @@ export const Carousel = () => {
           {companias.map((companias) => (
             <SwiperSlide key={companias.name} className='w-full'>
               <div className=' w-full flex items-center justify-center pt-10'>
-                <li key={companias.name} className=' w-[80%] py-2'>
-                  <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3'>
-                    <div className='pb-4 relative px-6 first-letter:w-full h-full flex flex-col justify-evenly items-center text-center'>
-                      <div className='pb-4'>
-                        <h1 className=' text-4xl font-bold pb-3'>
-                          {companias.name}
-                        </h1>
-                        <p>{companias.description}</p>
-                      </div>
-                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
-                        <span className='text-xl'>$</span>
-                        {companias.price}
-                        <span className=' text-base text-neutral-600 font-normal'>
-                          USD /month
-                        </span>
-                      </h2>
-                      <Link href={`/plans/${companias.name}`}>
+                <li
+                  key={companias.name}
+                  className=' hover:scale-[1.07] transition duration-300 hover:delay-100 w-[80%]'
+                >
+                  <Link href={`/plans/${companias.name}`}>
+                    <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
+                      <div className='pb-4 relative px-6 first-letter:w-full h-full flex flex-col justify-evenly items-center text-center'>
+                        <div className='pb-4'>
+                          <h1 className=' text-4xl font-bold py-4'>
+                            {companias.name}
+                          </h1>
+                          <p>{companias.description}</p>
+                        </div>
+                        {companias.name === 'Enterprise' ? (
+                          <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
+                            <span className='text-2xl'>Contact Us</span>
+                          </h2>
+                        ) : (
+                          <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
+                            <span className='text-xl'>$</span>
+                            {companias.price}
+                            <span className=' text-base text-neutral-600 font-normal'>
+                              USD /month
+                            </span>
+                          </h2>
+                        )}
                         <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
                           Acquire the Bundle
                         </button>
-                      </Link>
-                    </div>
-                    <div className='px-6 flex flex-col flex-1'>
-                      <div>
-                        <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>
-                          {companias.name} Bundle Includes
-                        </h2>
-                        <ul className='pb-6'>
-                          {companias.benefits.map((herramienta) => (
-                            <li
-                              key={herramienta}
-                              className='text-neutral-500 py-3 flex items-center '
-                            >
-                              <FaCheck className='text-primary-color' />
-                              <span className='pl-3'>{herramienta}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>Benefits</h2>
                       </div>
+                      <div className='px-6 flex flex-col flex-1'>
+                        <div>
+                          <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
+                          <h2 className='text-xl font-semibold'>
+                            {companias.name} Bundle Includes
+                          </h2>
+                          <ul className='pb-6'>
+                            {companias.benefits.map((benefits) => (
+                              <li
+                                key={benefits}
+                                className='text-neutral-500 py-3 flex items-center '
+                              >
+                                <FaCheck className='text-primary-color' />
+                                <span className='pl-3'>{benefits}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
+                          <h2 className='text-xl font-semibold'>Benefits</h2>
+                        </div>
 
-                      <div className='flex items-center justify-around pb-10 pt-4 '>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
+                        <div className='flex items-center justify-around pb-10 pt-4 '>
+                          <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
+                          <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
+                          <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </li>
               </div>
             </SwiperSlide>
