@@ -29,11 +29,11 @@ export const Footer = () => {
             <Link href='https://discord.com/' target=' blank'>
               <FaDiscord />
             </Link>
-            <Link href='https://www.instagram.com/latamplix/' target=' blank'>
+            <Link href='https://www.instagram.com/upler.ok/' target=' blank'>
               <FaInstagram />
             </Link>
             <Link
-              href='https://www.linkedin.com/company/latamplix/about/'
+              href='https://www.linkedin.com/company/upler/'
               target=' blank'
             >
               <FaLinkedin />
@@ -41,7 +41,7 @@ export const Footer = () => {
             <Link href='https://youtube.com' target=' blank'>
               <FaYoutube />
             </Link>
-            <Link href='https://twitter.com/latamplix' target=' blank'>
+            <Link href='https://twitter.com/UplerOfficial' target=' blank'>
               <FaTwitter />
             </Link>
           </div>

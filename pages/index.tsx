@@ -6,9 +6,9 @@ import { Layout } from '@/components/layout/Layout'
 import { Contributions } from '@/components/ui/contributions'
 import { useRouter } from 'next/router'
 import { CardPlan } from '@/components/ui/plan'
-import { Globalplix } from '@/components/ui/globalplix'
 import { Benefits } from '@/components/ui/benefits'
 import { contributions } from '@/pages/api/contribution'
+import { Upler } from '@/components/ui/upler/Upler'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           ))}
         </div>
       </main>
-      <Globalplix />
+      <Upler />
       <Benefits />
       <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
         <CardPlan />
