@@ -27,7 +27,7 @@ export const WALLET_CONNECT_PROJECT_ID = '7301c27df5004880e903a97f361f6e8f'
 
 export const SITE_NAME = 'Upler'
 export const SITE_DESCRIPTION =
-  '¡Upler - Aqui podras encontrar cientos de softwares para tu carrera profesional/independiente '
+  '¡Upler - Here you can find hundreds of software for your professional/independent career'
 //TODO: completar url de la pagina
 export const SITE_URL = ''
 
