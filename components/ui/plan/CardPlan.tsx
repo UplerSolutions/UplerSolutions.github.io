@@ -62,9 +62,7 @@ export const CardPlan = () => {
                           ))}
                         </ul>
                         <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>
-                          Benefits
-                        </h2>
+                        <h2 className='text-xl font-semibold'>Benefits</h2>
                       </div>
 
                       <div className='flex items-center justify-around pb-10 pt-4 '>
@@ -80,7 +78,7 @@ export const CardPlan = () => {
           </ul>
         </div>
         <div className='max-w-[75%] w-full m-auto px-2 py-6 lg:py-8 b'>
-          <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
+          <h1 className='px-4 lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             A Bundle for each
             <span className='text-primary-color'> company </span>
           </h1>
@@ -99,18 +97,19 @@ export const CardPlan = () => {
                         </h1>
                         <p>{companias.description}</p>
                       </div>
-                      {companias.name === "Enterprise" ?
+                      {companias.name === 'Enterprise' ? (
                         <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                           <span className='text-2xl'>Contact Us</span>
                         </h2>
-                        :
+                      ) : (
                         <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
                           <span className='text-xl'>$</span>
                           {companias.price}
                           <span className=' text-base text-neutral-600 font-normal'>
                             USD /month
                           </span>
-                        </h2>}
+                        </h2>
+                      )}
                       <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
                         Acquire the Bundle
                       </button>
@@ -133,9 +132,7 @@ export const CardPlan = () => {
                           ))}
                         </ul>
                         <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>
-                          Benefits
-                        </h2>
+                        <h2 className='text-xl font-semibold'>Benefits</h2>
                       </div>
 
                       <div className='flex items-center justify-around pb-10 pt-4 '>

@@ -5,17 +5,19 @@ export const Partner = () => {
     <section className='flex items-center  md:items-stretch  justify-center flex-col pb-6 pt-8  text-neutral-600 font-semibold '>
       <div className='flex flex-col text-left lg:w-[100%]'>
         <div className='text-center flex items-center lg:text-left pb-10 w-full'>
-          <div className='flex flex-col'>
-            <h3 className='pb-4 text-xs md:text-base lg:text-lg'>
+          <div className='flex flex-col pb-3'>
+            <h3 className='pb-4 text-sm md:text-base lg:text-lg'>
               GET TO KNOW WHO TRUSTS US
             </h3>
-            <h2 className='text-2xl lg:text-4xl'>
+            <h2 className='text-3xl lg:text-4xl text-neutral-700 font-bold'>
               Our Official
               <span className='text-primary-color'> Partnerships</span>
             </h2>
           </div>
           <div className=' hidden lg:invisible'>
-            <h3 className=''>CONOCE QUIEN CONFIA EN NOSOTROS</h3>
+            <h3 className='text-neutral-700'>
+              CONOCE QUIEN CONFIA EN NOSOTROS
+            </h3>
             <h2 className='text-4xl'>
               Nuestros
               <span className='text-primary-color0'>
@@ -53,10 +55,10 @@ export const Partner = () => {
 
         <Image
           height={120}
-          width={220}
+          width={200}
           src='/vincapital.png'
           alt='partner-logo'
-          className='lg:md-8 flew-wrap w-[40%] md:w-[180px] md:flex-wrap 2xl:w-[230px]'
+          className='lg:md-8 flew-wrap w-[40%] md:w-[180px] md:flex-wrap 2xl:w-[260px] h-[270px]'
         />
       </div>
     </section>
