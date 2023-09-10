@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <Layout title='Home'>
+    <Layout title='Upler '>
       <Head>
         <title>{SITE_NAME}</title>
         <meta name='description' content={SITE_DESCRIPTION} />

@@ -5,7 +5,7 @@ import { Carousel } from '../../components/ui/carousel/Carousel'
 
 const Plans: NextPage = () => {
   return (
-    <Layout title='Plans'>
+    <Layout title='Upler - Plans'>
       <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <CardPlan />
       </div>

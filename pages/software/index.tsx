@@ -15,7 +15,7 @@ const Startups: NextPage = () => {
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
   return (
-    <Layout title='startups'>
+    <Layout title='Upler - Softwares'>
       <section className='flex flex-col justify-center items-center pt-10 pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <div className='flex flex-col gap-8 pb-4 items-center text-center'>
           <h1 className='text-[32px] text-center font-bold md:text-5xl lg:text-6xl text-neutral-700'>
