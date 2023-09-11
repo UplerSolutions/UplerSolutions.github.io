@@ -4,7 +4,7 @@ import { CustomForm } from '@/components/ui/customform/CustomForm'
 
 const Apply: NextPage = () => {
   return (
-    <Layout title='Apply'>
+    <Layout title='Upler - Apply'>
       <CustomForm />
     </Layout>
   )

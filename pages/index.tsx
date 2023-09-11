@@ -9,6 +9,7 @@ import { CardPlan } from '@/components/ui/plan'
 import { Benefits } from '@/components/ui/benefits'
 import { contributions } from '@/pages/api/contribution'
 import { Upler } from '@/components/ui/upler/Upler'
+import { Partner } from '../components/ui/partner/Partner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <Layout title='Home'>
+    <Layout title='Upler '>
       <Head>
         <title>{SITE_NAME}</title>
         <meta name='description' content={SITE_DESCRIPTION} />
@@ -61,8 +62,10 @@ const Home: NextPage = () => {
       <Benefits />
       <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
         <CardPlan />
+        <Partner />
       </div>
     </Layout>
   )
 }
+
 export default Home

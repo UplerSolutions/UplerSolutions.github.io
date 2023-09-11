@@ -13,8 +13,6 @@ import {
 import { Card } from '@/components/ui/card/Card'
 import Link from 'next/link'
 // Import Swiper styles
-import 'swiper/css'
-import { Partner } from '../partner'
 import { FaCheck } from 'react-icons/fa'
 import { useState } from 'react'
 import { data } from '../../../pages/api/plans'
@@ -31,19 +29,19 @@ export const Carousel = () => {
         </h1>
 
         <Swiper
-          // style={{
-          //   '--swiper-pagination-color': '#b06eca',
-          //   '--swiper-navigation-color': '#b06eca',
-          //   '--swiper-navigation-position': 'absolute',
-          //   '--swiper-pagination-bullet-size': '14px'
-          // }}
+          //style={{
+          //'--swiper-pagination-color': '#b06eca',
+          //'--swiper-navigation-color': '#b06eca',
+          //'--swiper-navigation-position': 'absolute',
+          //'--swiper-pagination-bullet-size': '14px'
+          //}}
           cssMode={true}
           navigation={true}
           pagination={true}
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className='mySwiper'
+          className='mySwiper '
         >
           {plans.map((plan) => (
             <SwiperSlide key={plan.name} className='w-full'>
@@ -119,20 +117,18 @@ export const Carousel = () => {
           autoplay={{
             delay: 4500
           }}
-          style={
-            {
-              // '--swiper-navigation-color': '#b06eca',
-              // '--swiper-pagination-color': '#b06eca',
-              //'--swiper-pagination-bullet-size': '14px'
-            }
-          }
+          //style={{
+          //'--swiper-navigation-color': '#b06eca',
+          //'--swiper-pagination-color': '#b06eca',
+          //'--swiper-pagination-bullet-size': '14px'
+          //}}
         >
           {companias.map((companias) => (
             <SwiperSlide key={companias.name} className='w-full'>
               <div className=' w-full flex items-center justify-center pt-10'>
                 <li
                   key={companias.name}
-                  className=' hover:scale-[1.07] transition duration-300 hover:delay-100 w-[80%]'
+                  className='transition duration-300 w-[80%]'
                 >
                   <Link href={`/plans/${companias.name}`}>
                     <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600'>
@@ -195,7 +191,6 @@ export const Carousel = () => {
           ))}
         </Swiper>
       </div>
-      <Partner />
     </section>
   )
 }
