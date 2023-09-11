@@ -33,33 +33,41 @@ export const Partner = () => {
         <div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-between sm:flex-row gap-8 md:gap-8'>
           <Image
             height={120}
-            width={320}
-            src='/Bybit.png'
+            width={800}
+            src='/todos.png'
             alt='partner-logo'
-            className='md:py-24 flew-wrap w-[40%] md:w-[180px] md:flex-wrap 2xl:w-[330px]'
-          />
-          <Image
-            height={80}
-            width={400}
-            src='/prex.png'
-            alt='partner-logo'
-            className='md:py-24 flew-wrap w-[40%] md:w-[180px] md:flex-wrap 2xl:w-[300px] '
-          />
-
-          <Image
-            height={50}
-            width={190}
-            src='/Damke.png'
-            alt='partner-logo'
-            className='md:py-8 md:mx-8 flew-wrap w-[40%] md:w-[180px] md:flex-wrap 2xl:w-[230px]'
+            className='hidden md:block w-full'
           />
 
           <Image
             height={120}
-            width={200}
+            width={180}
+            src='/bybit.png'
+            alt='partner-logo'
+            className='md:hidden w-[150px] h-[60px]'
+          />
+          <Image
+            height={80}
+            width={180}
+            src='/prex.png'
+            alt='partner-logo'
+            className='md:hidden w-[150px] h-[70px]'
+          />
+
+          <Image
+            height={80}
+            width={180}
+            src='/damke.png'
+            alt='partner-logo'
+            className='md:hidden w-[150px] h-[100px]'
+          />
+
+          <Image
+            height={80}
+            width={180}
             src='/vincapital.png'
             alt='partner-logo'
-            className='lg:md-8 flew-wrap w-[40%] md:w-[180px] md:flex-wrap 2xl:w-[260px] h-[270px]'
+            className='md:hidden w-[150px] h-[110px]'
           />
         </div>
       </div>
