@@ -13,7 +13,7 @@ import { Footermobile } from '@/components/ui/footermobile/Footermobile'
 export const Footer = () => {
   return (
     <div>
-      <footer className='hidden md:flex w-full bg-neutral-600 flex-col-reverse text-white items-center justify-evenly h-auto pb-20 pt-10 lg:flex-row lg:h-[350px] gap-6 lg:gap-0 lg:items-start'>
+      <footer className='hidden md:flex w-full bg-neutral-600 flex-col-reverse text-white items-center justify-evenly h-auto pb-20 pt-10 md:flex-row lg:h-[350px] gap-6 lg:gap-0 md:items-start'>
         <div className='flex flex-col gap-2'>
           <Image
             height={150}

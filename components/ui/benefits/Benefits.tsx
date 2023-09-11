@@ -7,9 +7,9 @@ export const Benefits = () => {
 
   return (
     <div className='flex flex-row w-[100%] pb-8 2xl:py-20 md:mb-0 items-center justify-center bg-zinc-100 text-center }'>
-      <div className='flex flex-col  px-8 w-[90%] md:w-[75%] align-center  '>
-        <div className='max-w-fit h-fit'>
-          <h2 className='py-8 text-3xl md:ml-12 lg:ml-0 lg:px-0   md:text:5xl lg:text-6xl md:pb-4 lg:pb-10 font-bold text-neutral-700 '>
+      <div className='flex flex-col  px-8 w-[90%] md:w-[75%] items-center text-center bg-zinc-50 rounded-3xl lg:pt-5 pb-5'>
+        <div className='flex max-w-fit h-fit text-center'>
+          <h2 className='py-8 text-3xl md:ml-12 lg:ml-0 lg:px-0 md:text:5xl lg:text-6xl md:pb-4 lg:pb-10 font-bold text-neutral-700 '>
             Why customers choose Upler?
           </h2>
         </div>

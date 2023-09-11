@@ -8,11 +8,17 @@
   --background-end-rgb: 255, 255, 255;
   --primary-color: #b96fe7;
   --secondary-color: #2c2c2c;
-  --swiper-pagination-color: '#b06eca' !important;
-  --swiper-navigation-color: '#b06eca' !important;
-  --swiper-pagination-bullet-size: '14px';
+  --swiper-pagination-color: #b96fe7 !important;
+  --swiper-navigation-color: #b96fe7 !important;
+  --swiper-pagination-bullet-size: 14px !important;
+  --swiper-pagination: relative !important;
 }
-
+@media (max-width: 420px) {
+  .swiper-pagination {
+    position: relative !important;
+    padding-top: 3px;
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -39,4 +45,9 @@ body {
 
 [data-rk] [aria-labelledby='rk_connect_title'] {
   z-index: 2147483645 !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  padding-top: 10px;
 }
