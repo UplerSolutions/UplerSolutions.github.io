@@ -42,7 +42,7 @@ export const Partner = () => {
           <Image
             height={120}
             width={180}
-            src='/bybit.png'
+            src='/Bybit.png'
             alt='partner-logo'
             className='md:hidden w-[150px] h-[60px]'
           />
@@ -57,7 +57,7 @@ export const Partner = () => {
           <Image
             height={80}
             width={180}
-            src='/damke.png'
+            src='/Damke.png'
             alt='partner-logo'
             className='md:hidden w-[150px] h-[100px]'
           />
