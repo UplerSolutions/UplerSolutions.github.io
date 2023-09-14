@@ -33,8 +33,8 @@ export const Partner = () => {
         <div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-between sm:flex-row gap-8 md:gap-8'>
           <Image
             height={120}
-            width={800}
-            src='/todos.png'
+            width={1200}
+            src='/Todos.png'
             alt='partner-logo'
             className='hidden md:block w-full'
           />
