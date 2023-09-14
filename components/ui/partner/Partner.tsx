@@ -34,7 +34,7 @@ export const Partner = () => {
           <Image
             height={120}
             width={1200}
-            src='/todos.png'
+            src='/Todos.png'
             alt='partner-logo'
             className='hidden md:block w-full'
           />
