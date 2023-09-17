@@ -2,12 +2,11 @@
   "name": "upler",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "http://upler.tech",
+  "homepage": "https://upler.tech",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "export": "next build && next export",
     "lint": "next lint"
   },
   "dependencies": {
