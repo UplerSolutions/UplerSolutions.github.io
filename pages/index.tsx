@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         <div className='text-[32px] text-center font-bold md:text-5xl lg:text-7xl'>
           <h3 className='md:pb-4'>Your Ultimate</h3>
           <span className='text-primary-color text-[35px] md:text-5xl lg:text-7xl'>
-            subscription
+            Subscription
           </span>
         </div>
         <p className='pb-10 pt-6 lg:p-10 text-center w-11/12'>
