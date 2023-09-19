@@ -50,7 +50,7 @@ export const CardPlan = () => {
                           {plan.name} Bundle Includes
                         </h2>
                         <ul className='pb-6'>
-                          {plan.benefits.map((benefits) => (
+                          {plan.benefits.map((benefits ) => (
                             <li
                               key={benefits}
                               className='text-neutral-500 py-3 flex items-center '

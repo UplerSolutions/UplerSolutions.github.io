@@ -1,4 +1,12 @@
-export const data = {
+import { IPlan } from "@/interface/plan"
+
+
+interface Data {
+  planes: IPlan[]
+  companias: IPlan[]
+}
+
+export const data: Data = {
   planes: [
     {
       id: 1,

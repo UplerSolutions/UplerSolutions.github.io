@@ -27,7 +27,7 @@ const PlanPage: NextPage = () => {
 
   return (
     <Layout title='Plan'>
-        {plan ? <Card plan={plan} /> : <p>Plan not found.</p>}
+      {plan ? <Card plan={plan} /> : <p>Plan not found.</p>}
     </Layout>
   )
 }

@@ -3,6 +3,7 @@ import { data } from '../../../pages/api/benefits'
 import Image from 'next/image'
 
 export const Benefits = () => {
+  
   const [benefits, setBenefits] = useState(data)
 
   return (
