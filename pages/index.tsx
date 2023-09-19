@@ -9,7 +9,7 @@ import { CardPlan } from '@/components/ui/plan'
 import { Benefits } from '@/components/ui/benefits'
 import { contributions } from '@/pages/api/contribution'
 import { Upler } from '@/components/ui/upler/Upler'
-import { Partner } from '../components/ui/partner/Partner'
+import { Partner } from '@/components/ui/partner/Partner'
 
 const inter = Inter({ subsets: ['latin'] })
 

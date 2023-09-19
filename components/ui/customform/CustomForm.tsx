@@ -8,6 +8,7 @@ interface FormData {
   companyName: string;
   companyWebsite: string
   companyEmail: string;
+  companyAddress:string;
   file: any;
   fullName: string;
   email: string;

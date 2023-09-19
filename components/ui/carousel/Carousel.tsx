@@ -15,7 +15,7 @@ import Link from 'next/link'
 // Import Swiper styles
 import { FaCheck } from 'react-icons/fa'
 import { useState } from 'react'
-import { data } from '../../../pages/api/plans'
+import { data } from '@/pages/api/plans'
 
 export const Carousel = () => {
   const [plans, setPlans] = useState(data.planes)

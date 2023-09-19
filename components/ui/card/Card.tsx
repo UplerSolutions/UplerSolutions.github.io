@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
-import { IPlan } from '@/components/interface/plan'
+import { IPlan } from '@/interface/plan'
 import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined'
 import { FaCheck } from 'react-icons/fa'
 interface Props {

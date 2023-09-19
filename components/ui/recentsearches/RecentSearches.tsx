@@ -10,7 +10,7 @@ import {
   ListItemIcon,
   ListItemText
 } from '@mui/material'
-import { useRecentSearches } from '../../../hooks/useRecentSearches'
+import { useRecentSearches } from '@/hooks/useRecentSearches'
 import { AccessTime, Close } from '@mui/icons-material'
 import { useOnClickOutside } from 'usehooks-ts'
 import { useRef } from 'react'
