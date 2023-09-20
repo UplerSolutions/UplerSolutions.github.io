@@ -2,9 +2,15 @@ import React, { useState } from 'react'
 import Pagination from '@mui/material/Pagination'
 import Link from 'next/link'
 import Image from "next/image"
-import { Product, data } from '@/pages/api/marketplace';
+import { data } from '@/pages/api/marketplace';
 
-
+interface Product {
+  ID: number;
+  title: string;
+  price: number;
+  description: string;
+  // Add other properties as needed
+}
 
 export const Explore = () => {
   const pageSize = 6;
@@ -45,7 +51,7 @@ export const Explore = () => {
         ))}
       </ul>
       <Pagination
-        count={totalPages}
+        count={totalPages }
         page={currentPage}
         onChange={handlePaginationChange}
         className='pt-10'

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { FaCheck } from 'react-icons/fa'
-import { data } from '@/pages/api/plans'
+import { data } from '../../../pages/api/plans'
 import { Carousel } from '../carousel/Carousel'
 
 export const CardPlan = () => {
@@ -50,7 +50,7 @@ export const CardPlan = () => {
                           {plan.name} Bundle Includes
                         </h2>
                         <ul className='pb-6'>
-                          {plan.benefits.map((benefits ) => (
+                          {plan.benefits.map((benefits) => (
                             <li
                               key={benefits}
                               className='text-neutral-500 py-3 flex items-center '

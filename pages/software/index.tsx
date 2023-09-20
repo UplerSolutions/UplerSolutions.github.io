@@ -2,11 +2,11 @@ import type { NextPage } from 'next'
 import { Box, Typography } from '@mui/material'
 import { SearchBar } from '@/components/ui/searchbar'
 import { useRouter } from 'next/router'
-import { useRecentSearches } from '@/hooks/useRecentSearches'
+import { useRecentSearches } from '@/components/hooks/useRecentSearches'
 import { RecentSearches } from '@/components/ui/recentsearches'
 import { useRef, useState } from 'react'
 import { Layout } from '@/components/layout/Layout'
-import { Explore } from '@/components/ui/explore/Explore'
+import { Explore } from '../../components/ui/explore/Explore'
 
 const Startups: NextPage = () => {
   const router = useRouter()
