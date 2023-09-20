@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { ConnectButtom } from '@/components/ui/connectbuttom/ConnectButtom'
 import Link from 'next/link'
 
 export const Navbar = () => {
@@ -16,22 +15,28 @@ export const Navbar = () => {
             height={100}
           />
         </Link>
-        <div className='hidden text-lg lg:w-auto lg:flex gap-9 '>
+        <div className='hidden text-lg lg:w-auto lg:flex gap-9'>
           <Link className='group relative inline-block ' href='/software'>
-            Software
+            SOFTWARE
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className=' group relative inline-block ' href='/plans'>
-            Bundles
+            BUNDLES
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className=' group relative inline-block ' href='/apply'>
-            Become Our Partner
+            BECOME OUR PARTNER
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
         </div>
         <div>
-          <ConnectButtom />
+          <button className='group relative inline-block overflow-hidden rounded-xl border border-fuchsia-100 bg-fuchsia-200 px-2 lg:px-6 py-3 text-sm font-semibold text-primary-color hover:text-primary-color focus:outline-none focus:ring active:bg-primary-color active:text-white'>
+            <span className='ease absolute left-0 top-0 h-0 w-0 border-t-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
+            <span className='ease absolute right-0 top-0 h-0 w-0 border-r-2 border-primary-color transition-all duration-500 group-hover:h-full'></span>
+            <span className='ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
+            <span className='ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-primary-color transition-all duration-500 group-hover:h-full'></span>
+            Login
+          </button>
         </div>
       </div>
     </nav>

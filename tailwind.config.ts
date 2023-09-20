@@ -14,10 +14,10 @@ module.exports = {
         background: 'linear-gradient(180deg, #FFAAF8 0%, #FFF6AE 100%)'
       },
       colors: {
-        "primary-color": "var(--primary-color)",
-        "secondary-color": "var(--secondary-color)"
-      },
-    },
+        'primary-color': 'var(--primary-color)',
+        'secondary-color': 'var(--secondary-color)'
+      }
+    }
   },
   darkMode: 'class',
   plugins: [nextui()]
