@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { ConnectButtom } from '@/components/ui/connectbuttom/ConnectButtom'
 import Link from 'next/link'
 
 export const Navbar = () => {
@@ -31,7 +30,6 @@ export const Navbar = () => {
           </Link>
         </div>
         <div>
-          <ConnectButtom />
         </div>
       </div>
     </nav>
