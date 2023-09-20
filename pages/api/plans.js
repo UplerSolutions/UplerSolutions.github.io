@@ -1,12 +1,4 @@
-import { IPlan } from "@/interface/plan"
-
-
-interface Data {
-  planes: IPlan[]
-  companias: IPlan[]
-}
-
-export const data: Data = {
+export const data = {
   planes: [
     {
       id: 1,

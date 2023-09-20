@@ -4,7 +4,7 @@ import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { data } from '../api/plans'
-import { IPlan } from '@/interface/plan'
+import { IPlan } from '@/components/interface/plan'
 import { Card } from '@/components/ui/card'
 
 const PlanPage: NextPage = () => {
@@ -27,7 +27,7 @@ const PlanPage: NextPage = () => {
 
   return (
     <Layout title='Plan'>
-      {plan ? <Card plan={plan} /> : <p>Plan not found.</p>}
+        {plan ? <Card plan={plan} /> : <p>Plan not found.</p>}
     </Layout>
   )
 }

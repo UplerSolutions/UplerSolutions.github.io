@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
-import { IPlan } from '@/interface/plan'
+import { IPlan } from '@/components/interface/plan'
+import {} from 'react-icons/'
 import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined'
 import { FaCheck } from 'react-icons/fa'
 interface Props {
@@ -41,7 +42,6 @@ export const Card: FC<Props> = ({ plan }) => {
     }
     // Add more options here
   ]
-  
   return (
     <>
       <section className='flex flex-col justify-center items-center w-full pt-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
