@@ -9,6 +9,7 @@ import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
 import { getSoftwares } from '@/service/software/software-service';
 import { ISoftware } from '@/interface/software'
+
 // interface Props {
 //   software: ISoftware[]
 // }
@@ -16,7 +17,7 @@ import { ISoftware } from '@/interface/software'
 const Startups: NextPage = () => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
-  // track state for showing RecentSearches
+
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
   return (
