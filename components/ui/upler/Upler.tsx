@@ -21,7 +21,7 @@ export const Upler = () => {
             height={950}
             width={950}
             src='/boxes.png'
-            alt=''
+            alt='main-picture'
             className='md:mt-8 lg:mt-0 md:ml-9 lg:ml-[75px] w-full 2xl:[90px]'
           />
         </div>

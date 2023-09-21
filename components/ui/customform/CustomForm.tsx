@@ -1,6 +1,34 @@
 import React from 'react'
+import { useForm } from "react-hook-form";
+
+
+interface FormData {
+  companyType: string;
+  companySector: string
+  companyName: string;
+  companyWebsite: string
+  companyEmail: string;
+  companyAddress:string;
+  file: any;
+  fullName: string;
+  email: string;
+  position: string;
+}
 
 export const CustomForm = () => {
+
+  const {  register, handleSubmit, formState: { errors }, control, } = useForm<FormData>();
+
+  const onSubmit = (data: any) => {
+    const postData = {
+      ...data,
+      file: data.file[0].name
+    }
+    console.log(postData)
+  }
+
+  
+
   return (
     <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center'>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
@@ -15,22 +43,24 @@ export const CustomForm = () => {
         </div>
 
         <div className='flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center'>
-          <form className='flex flex-col pt-8 pl-10 w-[100%]'>
+          <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col pt-8 pl-10 w-[100%]'>
             <h2 className='text-3xl pb-8 font-semibold'>Company details</h2>
             <section className=''>
               <fieldset className='flex flex-col '>
                 <h3 className='text-xl py-4 font-semibold'>Company Type*</h3>
-                <label htmlFor='type' className='flex gap-4'>
+                <label htmlFor='companyType' className='flex gap-4'>
                   <input
+                    {...register("companyType",{ required: "This input is required" })}
                     value='independent-consultant'
-                    name='type'
+                    name='companyType'
                     type='radio'
                   />
                   Independent Consultant
                 </label>
-                <label htmlFor='type' className='flex gap-4'>
+                <label htmlFor='companyType' className='flex gap-4'>
                   <input
-                    name='type'
+                    {...register("companyType",{ required: "This input is required" })}
+                    name='companyType'
                     value='incorporated-company'
                     type='radio'
                   />
@@ -43,45 +73,51 @@ export const CustomForm = () => {
                 </h3>
                 <div className='flex flex-wrap justify-between gap-5 '>
                   <label
-                    htmlFor='sector'
+                    htmlFor='companySector'
                     className='flex gap-4 w-[40%] md:w-[150px] lg:w-[200px] xl:w-[30%]'
                   >
-                    <input value='developmnet-it' name='sector' type='radio' />
+                    <input
+                      {...register("companySector",{ required: "This input is required" })} value='developmnet-it' name='companySector' type='radio' />
                     Development & IT
                   </label>
                   <label
-                    htmlFor='sector'
+                    htmlFor='companySector'
                     className='flex gap-4 w-[40%] md:w-[150px] lg:w-[200px] xl:w-[30%]'
                   >
-                    <input value='media' name='sector' type='radio' />
+                    <input
+                      {...register("companySector",{ required: "This input is required" })} value='media' name='companySector' type='radio' />
                     Media
                   </label>
                   <label
-                    htmlFor='sector'
+                    htmlFor='companySector'
                     className='flex gap-4 w-[40%] md:w-[150px] lg:w-[200px] xl:w-[30%]'
                   >
-                    <input value='sales' name='sector' type='radio' />
+                    <input
+                      {...register("companySector",{ required: "This input is required" })} value='sales' name='companySector' type='radio' />
                     Sales
                   </label>
                   <label
-                    htmlFor='sector'
+                    htmlFor='companySector'
                     className='flex gap-4 w-[40%] md:w-[150px] lg:w-[200px] xl:w-[30%]'
                   >
-                    <input value='marketing' name='sector' type='radio' />
+                    <input
+                      {...register("companySector")} value='marketing' name='companySector' type='radio' />
                     Marketing
                   </label>
                   <label
-                    htmlFor='sector'
+                    htmlFor='companySector'
                     className='flex gap-4 w-[40%] md:w-[150px] lg:w-[200px] xl:w-[30%]'
                   >
-                    <input value='operations' name='sector' type='radio' />
+                    <input
+                      {...register("companySector")} value='operations' name='companySector' type='radio' />
                     Operations
                   </label>
                   <label
-                    htmlFor='sector'
+                    htmlFor='companySector'
                     className='flex gap-4 w-[40%] md:w-[150px] lg:w-[200px] xl:w-[30%]'
                   >
-                    <input value='UX/UI' name='sector' type='radio' />
+                    <input
+                      {...register("companySector")} value='UX/UI' name='companySector' type='radio' />
                     UX/UI
                   </label>
                 </div>
@@ -89,54 +125,58 @@ export const CustomForm = () => {
 
               <fieldset className='flex flex-col gap-5'>
                 <label
-                  htmlFor='company-name'
+                  htmlFor='companyName'
                   className='text-xl pt-10 pb-4 font-semibold'
                 >
                   Company Name*
                 </label>
                 <input
+                  {...register("companyName",{ required: "This input is required" })}
                   type='text'
                   placeholder='Uplix'
-                  name='company-name'
+                  name='companyName'
                   className='py-3 px-3 border-2 rounded-2xl mr-10'
                 />
 
                 <label
-                  htmlFor='company-address'
+                  htmlFor='companyAddress'
                   className='text-xl py-4 font-semibold'
                 >
                   Company Registered Address*
                 </label>
                 <input
+                  {...register("companyAddress",{ required: "This input is required" })}
                   type='text'
                   placeholder='Avenue 123, Argentina'
-                  name='company-address'
+                  name='companyAddress'
                   className='py-3 px-3  border-2 rounded-2xl mr-10'
                 />
 
                 <label
-                  htmlFor='company-name'
+                  htmlFor='companyWebsite'
                   className='text-xl py-4 font-semibold'
                 >
                   Company Website*
                 </label>
                 <input
+                  {...register("companyWebsite",{ required: "This input is required" })}
                   type='text'
                   placeholder='https://upler.com'
-                  name='https://company-website.com'
+                  name='companyWebsite'
                   className='py-3 px-3 border-2 rounded-2xl mr-10'
                 />
 
                 <label
-                  htmlFor='company-email'
+                  htmlFor='companyEmail'
                   className='text-xl py-4 font-semibold'
                 >
                   Company Email*
                 </label>
                 <input
+                  {...register("companyEmail",{ required: "This input is required" })}
                   type='text'
                   placeholder='company@gmail.com'
-                  name='company-email'
+                  name='companyEmail'
                   className='py-3 px-3 mb-4 border-2 rounded-2xl mr-10'
                 />
               </fieldset>
@@ -144,9 +184,10 @@ export const CustomForm = () => {
             <section className='flex flex-col'>
               <h2 className='text-xl py-4 font-semibold'>Attach File</h2>
               <p className='pb-4'>Share whit us your Company Profile</p>
-              <button className='bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                Browse Files
-              </button>
+              <input 
+                  type="file"
+                  {...register("file",{ required: "This input is required" })}
+                  />               
             </section>
 
             <section>
@@ -155,12 +196,13 @@ export const CustomForm = () => {
                   Personal Information
                 </h2>
                 <label htmlFor='name' className='text-xl py-4 font-semibold'>
-                  Name{' '}
+                  Full Name
                 </label>
                 <input
+                  {...register("fullName",{ required: "This input is required" })}
                   type='text'
-                  placeholder='Jesus'
-                  name='name'
+                  placeholder='Jesus Rodriguez'
+                  name='fullName'
                   className='py-3 px-3 border-2 rounded-2xl mr-10'
                 />
 
@@ -168,6 +210,7 @@ export const CustomForm = () => {
                   Email
                 </label>
                 <input
+                  {...register("email",{ required: "This input is required" })}
                   type='text'
                   placeholder='jgonzales@gmail.com'
                   name='email'
@@ -181,21 +224,23 @@ export const CustomForm = () => {
                   What is your position within the Company
                 </label>
                 <input
+                  {...register("position",{ required: "This input is required" })}
                   type='text'
                   placeholder='CEO'
-                  name='company-position'
+                  name='position'
                   className='py-3 px-3 border-2 mb-10 rounded-2xl mr-10'
                 />
               </fieldset>
             </section>
-          </form>
-        </div>
-        <div className='flex justify-center items-center'>
-          <button className='bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color '>
-            {' '}
+            <div className='flex justify-center items-center'>
+          <button type="submit" className='bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color '>
+            
             Submit
           </button>
         </div>
+          </form>
+        </div>
+
       </div>
     </div>
   )

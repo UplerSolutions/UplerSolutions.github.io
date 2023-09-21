@@ -1,20 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, FC } from 'react'
 import Pagination from '@mui/material/Pagination'
 import Link from 'next/link'
 import Image from "next/image"
-import { data } from '@/pages/api/marketplace';
+import { ISoftware } from '@/interface/software';
 
-interface Product {
-  ID: number;
-  title: string;
-  price: number;
-  description: string;
-  // Add other properties as needed
+
+interface Props {
+  software: ISoftware[]
 }
 
-export const Explore = () => {
+
+export const Explore: FC<Props> = ({ software }) => {
   const pageSize = 6;
-  const totalProducts = data.length;
+  const totalProducts = software.length;
   const totalPages = Math.ceil(totalProducts / pageSize);
 
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -28,7 +26,7 @@ export const Explore = () => {
 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const displayedProducts: Product[] = data.slice(startIndex, endIndex);
+  const displayedProducts: ISoftware[] = software.slice(startIndex, endIndex);
 
   return (
     <div className='flex flex-col items-center justify-center'>
@@ -51,7 +49,7 @@ export const Explore = () => {
         ))}
       </ul>
       <Pagination
-        count={totalPages }
+        count={totalPages}
         page={currentPage}
         onChange={handlePaginationChange}
         className='pt-10'
