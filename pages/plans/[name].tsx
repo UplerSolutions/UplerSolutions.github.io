@@ -3,7 +3,7 @@ import { CardPlan } from '@/components/ui/plan'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
-import { data } from '../api/plans'
+import { data } from '@/data/plans'
 import { IPlan } from '@/interface/plan'
 import { Card } from '@/components/ui/card'
 
@@ -14,15 +14,11 @@ const PlanPage: NextPage = () => {
 
   useEffect(() => {
     if (typeof name === 'string') {
-      const planFilter = data.planes.find(plan => plan.name === name);
-      const dataFilter = data.companias.find(compania => compania.name === name);
-
+      const planFilter = data.find(plan => plan.name === name);
       if (planFilter) {
-        setPlan(planFilter);
-      } else if (dataFilter) {
-        setPlan(dataFilter);
-      }
+        setPlan(planFilter)
     }
+  }
   }, [name]);
 
   return (

@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
 import { IPlan } from '@/interface/plan'
 import { } from 'react-icons/'
-import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined'
+// import {VerifiedUserOutlinedIcon} from '@mui/icons-material/VerifiedUserOutlined'
 import { FaCheck } from 'react-icons/fa'
 interface Props {
   plan?: undefined | IPlan
@@ -53,7 +53,7 @@ export const Card: FC<Props> = ({ plan }) => {
                 ¡Almost There! Finish order
               </h1>
               <div className='flex gap-6'>
-                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
+                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
                 <span>30-day money-back guarantee</span>
               </div>
             </div>
@@ -187,14 +187,14 @@ export const Card: FC<Props> = ({ plan }) => {
             <div className='gap-10 hidden md:flex'>
               <span>
                 {' '}
-                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
+                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
               </span>
               <p className='w-[150px] text-neutral-700'>
                 30-day money-back guarantee
               </p>
               <span>
                 {' '}
-                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
+                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
               </span>
               <p className='w-[150px] text-neutral-700'>
                 Encrypted and secure payments
