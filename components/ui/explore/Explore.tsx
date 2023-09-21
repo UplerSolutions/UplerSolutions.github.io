@@ -3,14 +3,15 @@ import Pagination from '@mui/material/Pagination'
 import Link from 'next/link'
 import Image from "next/image"
 import { ISoftware } from '@/interface/software';
+import {software} from "@/data/software"
 
 
-interface Props {
-  software: ISoftware[]
-}
+// interface Props {
+//   software: ISoftware[]
+// }
 
 
-export const Explore: FC<Props> = ({ software }) => {
+export const Explore:  = () => {
   const pageSize = 6;
   const totalProducts = software.length;
   const totalPages = Math.ceil(totalProducts / pageSize);
