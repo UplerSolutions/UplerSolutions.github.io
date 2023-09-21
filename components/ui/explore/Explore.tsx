@@ -11,7 +11,7 @@ import {software} from "@/data/software"
 // }
 
 
-export const Explore:  = () => {
+export const Explore = () => {
   const pageSize = 6;
   const totalProducts = software.length;
   const totalPages = Math.ceil(totalProducts / pageSize);
