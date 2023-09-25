@@ -9,14 +9,15 @@ import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
 import { getSoftwares } from '@/service/software/software-service';
 import { ISoftware } from '@/interface/software'
-interface Props {
-  software: ISoftware[]
-}
 
-const Startups: NextPage<Props> = ({software}) => {
+// interface Props {
+//   software: ISoftware[]
+// }
+
+const Startups: NextPage = () => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
-  // track state for showing RecentSearches
+
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
   return (
@@ -74,7 +75,7 @@ const Startups: NextPage<Props> = ({software}) => {
             </Box>
           </Box>
         </div>
-        <Explore software={software} />
+        <Explore  />
       </section>
     </Layout>
   )
@@ -82,11 +83,11 @@ const Startups: NextPage<Props> = ({software}) => {
 
 export default Startups
 
-export const getStaticProps: GetStaticProps =  async () =>{
-  const software = await getSoftwares()
-  return {
-    props:{
-      software
-    }
-  }
-}
+// export const getStaticProps: GetStaticProps =  async () =>{
+//   const software = await getSoftwares()
+//   return {
+//     props:{
+//       software
+//     }
+//   }
+// }
