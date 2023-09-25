@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import Link from 'next/link'
 import { FaCheck } from 'react-icons/fa'
-import { data } from '../../../pages/api/plans'
-import { Carousel } from '../carousel/Carousel'
+import { data } from '@/data/plans'
+import { Carousel } from '@/components/ui/carousel/Carousel'
+import { IPlan } from '@/interface/plan'
 
 export const CardPlan = () => {
-  const [plans, setPlans] = useState(data.planes)
-  const [companias, setCompanias] = useState(data.companias)
+  const [plans, setPlans] = useState(data)
 
   return (
     <>
@@ -18,7 +18,7 @@ export const CardPlan = () => {
             <span className='text-primary-color'> professional </span>
           </h1>
           <ul className='flex flex-wrap gap-5 2xl:gap-14 justify-center items-center pt-10'>
-            {plans.map((plan) => (
+            {plans.map((plan: IPlan) => (
               <li
                 key={plan.name}
                 className=' hover:scale-[1.07] transition duration-300 hover:delay-100 lg:w-[30%]'

@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { NextPage,GetStaticProps} from 'next'
 import Head from 'next/head'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/utils/config'
 import { Inter } from 'next/font/google'
@@ -7,13 +7,19 @@ import { Contributions } from '@/components/ui/contributions'
 import { useRouter } from 'next/router'
 import { CardPlan } from '@/components/ui/plan'
 import { Benefits } from '@/components/ui/benefits'
-import { contributions } from '@/pages/api/contribution'
+import { contributions } from '@/data/contribution'
 import { Upler } from '@/components/ui/upler/Upler'
-import { Partner } from '../components/ui/partner/Partner'
+import { Partner } from '@/components/ui/partner/Partner'
+import { ISoftware } from '@/interface/software'
+import { getSoftwares } from './../service/software/software-service';
 
 const inter = Inter({ subsets: ['latin'] })
 
-const Home: NextPage = () => {
+interface Props{
+  softwares: ISoftware[]
+}
+
+const Home: NextPage<Props> = ({softwares}) => {
   const router = useRouter()
 
   const origin =
@@ -22,8 +28,7 @@ const Home: NextPage = () => {
       : SITE_URL
 
   const handleClick = () => {
-    // Perform the redirect
-    router.push('/plans') // Replace 'destination-page' with the actual URL
+    router.push('/plans')
   }
 
   return (
@@ -55,13 +60,14 @@ const Home: NextPage = () => {
         <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-around md:justify-center md:flex-nowrap py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
           {contributions.map((contribution) => (
             <Contributions key={contribution.id} count={contribution} />
-          ))}
+          ))
+          }
         </div>
       </main>
       <Upler />
       <Benefits />
       <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
-        <CardPlan />
+        <CardPlan  />
         <Partner />
       </div>
     </Layout>
@@ -69,3 +75,4 @@ const Home: NextPage = () => {
 }
 
 export default Home
+

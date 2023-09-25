@@ -15,11 +15,12 @@ import Link from 'next/link'
 // Import Swiper styles
 import { FaCheck } from 'react-icons/fa'
 import { useState } from 'react'
-import { data } from '../../../pages/api/plans'
+import { data } from '@/data/plans'
+import { IPlan } from '@/interface/plan'
 
 export const Carousel = () => {
-  const [plans, setPlans] = useState(data.planes)
-  const [companias, setCompanias] = useState(data.companias)
+  const [plans, setPlans] = useState(data)
+  const [companias, setCompanias] = useState(data)
   return (
     <section className='max-w-[100%] w-full md:hidden'>
       <div className='max-w-[100%] w-full m-auto py-6 '>
@@ -43,7 +44,7 @@ export const Carousel = () => {
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           className='mySwiper '
         >
-          {plans.map((plan) => (
+          {plans.map((plan : IPlan) => (
             <SwiperSlide key={plan.name} className='w-full'>
               <ul className=' w-full flex items-center justify-center pt-10'>
                 <li key={plan.name} className='w-[80%]'>

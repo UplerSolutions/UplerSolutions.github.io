@@ -1,17 +1,23 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import { Box, Typography } from '@mui/material'
 import { SearchBar } from '@/components/ui/searchbar'
 import { useRouter } from 'next/router'
-import { useRecentSearches } from '@/components/hooks/useRecentSearches'
+import { useRecentSearches } from '@/hooks/useRecentSearches'
 import { RecentSearches } from '@/components/ui/recentsearches'
 import { useRef, useState } from 'react'
 import { Layout } from '@/components/layout/Layout'
-import { Explore } from '../../components/ui/explore/Explore'
+import { Explore } from '@/components/ui/explore/Explore'
+import { getSoftwares } from '@/service/software/software-service';
+import { ISoftware } from '@/interface/software'
+
+// interface Props {
+//   software: ISoftware[]
+// }
 
 const Startups: NextPage = () => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
-  // track state for showing RecentSearches
+
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
   return (
@@ -69,10 +75,19 @@ const Startups: NextPage = () => {
             </Box>
           </Box>
         </div>
-        <Explore />
+        <Explore  />
       </section>
     </Layout>
   )
 }
 
 export default Startups
+
+// export const getStaticProps: GetStaticProps =  async () =>{
+//   const software = await getSoftwares()
+//   return {
+//     props:{
+//       software
+//     }
+//   }
+// }

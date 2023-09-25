@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
-import { IPlan } from '@/components/interface/plan'
-import {} from 'react-icons/'
-import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined'
+import { IPlan } from '@/interface/plan'
+import { } from 'react-icons/'
+// import {VerifiedUserOutlinedIcon} from '@mui/icons-material/VerifiedUserOutlined'
 import { FaCheck } from 'react-icons/fa'
 interface Props {
   plan?: undefined | IPlan
@@ -42,6 +42,7 @@ export const Card: FC<Props> = ({ plan }) => {
     }
     // Add more options here
   ]
+  
   return (
     <>
       <section className='flex flex-col justify-center items-center w-full pt-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
@@ -52,7 +53,7 @@ export const Card: FC<Props> = ({ plan }) => {
                 ¡Almost There! Finish order
               </h1>
               <div className='flex gap-6'>
-                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
+                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
                 <span>30-day money-back guarantee</span>
               </div>
             </div>
@@ -128,7 +129,7 @@ export const Card: FC<Props> = ({ plan }) => {
                     $
                   </span>
                   <h3 className='text-primary-color text-7xl font-bold'>
-                    {plan?.price * 3}
+                    {plan?.price ? plan.price * 3 : "No hay precio disponible"}
                   </h3>
                   <span className='font-semibold'>USD</span>
                 </div>
@@ -151,7 +152,7 @@ export const Card: FC<Props> = ({ plan }) => {
                     $
                   </span>
                   <h3 className='text-primary-color text-7xl font-bold'>
-                    {plan?.price * 12}
+                    {plan?.price ? plan.price * 12 : "No hay precio disponible"}
                   </h3>
                   <span className='font-semibold'>USD</span>
                 </div>
@@ -186,14 +187,14 @@ export const Card: FC<Props> = ({ plan }) => {
             <div className='gap-10 hidden md:flex'>
               <span>
                 {' '}
-                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
+                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
               </span>
               <p className='w-[150px] text-neutral-700'>
                 30-day money-back guarantee
               </p>
               <span>
                 {' '}
-                <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' />
+                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
               </span>
               <p className='w-[150px] text-neutral-700'>
                 Encrypted and secure payments
