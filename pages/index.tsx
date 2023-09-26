@@ -1,4 +1,4 @@
-import type { NextPage,GetStaticProps} from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/utils/config'
 import { Inter } from 'next/font/google'
@@ -11,15 +11,15 @@ import { contributions } from '@/data/contribution'
 import { Upler } from '@/components/ui/upler/Upler'
 import { Partner } from '@/components/ui/partner/Partner'
 import { ISoftware } from '@/interface/software'
-import { getSoftwares } from './../service/software/software-service';
+import { getSoftwares } from './../service/software/software-service'
 
 const inter = Inter({ subsets: ['latin'] })
 
-interface Props{
+interface Props {
   softwares: ISoftware[]
 }
 
-const Home: NextPage<Props> = ({softwares}) => {
+const Home: NextPage<Props> = ({ softwares }) => {
   const router = useRouter()
 
   const origin =
@@ -60,14 +60,13 @@ const Home: NextPage<Props> = ({softwares}) => {
         <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-around md:justify-center md:flex-nowrap py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
           {contributions.map((contribution) => (
             <Contributions key={contribution.id} count={contribution} />
-          ))
-          }
+          ))}
         </div>
       </main>
       <Upler />
       <Benefits />
       <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
-        <CardPlan  />
+        <CardPlan />
         <Partner />
       </div>
     </Layout>
@@ -75,4 +74,3 @@ const Home: NextPage<Props> = ({softwares}) => {
 }
 
 export default Home
-
