@@ -1,9 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
 interface FormData {
   emailOrUsername: string
   password: string
+  rememberMe: boolean
 }
 
 export const Login = () => {
@@ -21,8 +23,8 @@ export const Login = () => {
   return (
     <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center'>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
-        <div className='w-[100%] text-center mb-0 pb-0 content-between text-neutral-700'>
-          <h1 className='text-4xl lg:text-5xl py-10 font-semibold'>
+        <div className='w-[100%] text-center content-between text-neutral-700'>
+          <h1 className='text-4xl lg:text-5xl py-4 md:py-10 font-semibold'>
             Log in to your account
           </h1>
         </div>
@@ -61,13 +63,41 @@ export const Login = () => {
               className='py-3 px-3 border-2 mb-4 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
             />
           </form>
-          <div className='flex justify-center items-center'>
+          <div className='flex flex-col justify-center items-center mt-4 w-full pb-10'>
+            <div className='flex items-center justify-between pb-6 px-4 md:px-12 w-full'>
+              <label className='flex items-center'>
+                <input
+                  type='checkbox'
+                  {...register('rememberMe')}
+                  className='mr-2 text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                />
+                Remember Me
+              </label>
+              <a
+                href='/forgot-password'
+                className='text-primary-color hover:underline'
+              >
+                Forgot Password?
+              </a>
+            </div>
+
             <button
               type='submit'
               className='bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
             >
-              Log In
+              Login
             </button>
+            <div className='mt-4'>
+              <p className=''>
+                Don't have an account yet?{'  '}
+                <Link
+                  href='/register'
+                  className='text-primary-color hover:underline'
+                >
+                  Register here
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>

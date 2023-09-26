@@ -4,9 +4,9 @@ import { Register } from '@/components/ui/register/Register'
 
 const Signup: NextPage = () => {
   return (
-    <Layout title='Upler - Register'>
+    <main title='Upler - Register'>
       <Register />
-    </Layout>
+    </main>
   )
 }
 
