@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -26,7 +27,7 @@ export const Register = () => {
   }
 
   return (
-    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center'>
+    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full h-[1000px]'>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
         <div className='w-[100%] text-center content-between text-neutral-700'>
           <h1 className='text-4xl lg:text-5xl py-6 font-semibold'>
@@ -104,13 +105,24 @@ export const Register = () => {
               className='py-3 px-3 border-2 mb-4 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
             />
           </form>
-          <div className='flex justify-center items-center'>
+          <div className='flex flex-col justify-center items-center pb-10'>
             <button
               type='submit'
               className='bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
             >
               Register
             </button>
+            <div className='mt-4'>
+              <p className=''>
+                have an account yet?{'  '}
+                <Link
+                  href='/login'
+                  className='text-primary-color hover:underline'
+                >
+                  Login here
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>
