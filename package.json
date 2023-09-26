@@ -6,8 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build ",
-    "export": "npm export",
+    "build": "next build",
     "lint": "next lint"
   },
   "dependencies": {
