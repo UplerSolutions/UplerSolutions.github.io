@@ -1,25 +1,27 @@
-import type { NextPage, GetStaticProps } from 'next'
+import type { NextPage, GetStaticProps, GetServerSideProps } from 'next'
 import { Box, Typography } from '@mui/material'
 import { SearchBar } from '@/components/ui/searchbar'
 import { useRouter } from 'next/router'
 import { useRecentSearches } from '@/hooks/useRecentSearches'
 import { RecentSearches } from '@/components/ui/recentsearches'
-import { useRef, useState } from 'react'
+import { useRef, useState ,useEffect } from 'react'
 import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
 import { getSoftwares } from '@/service/software/software-service';
 import { ISoftware } from '@/interface/software'
 
-// interface Props {
-//   software: ISoftware[]
-// }
+interface Props{
+  software: ISoftware[]
+}
 
-const Startups: NextPage = () => {
+const Softwares: NextPage<Props> = ({software}) => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
 
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
+
+
   return (
     <Layout title='Upler - Softwares'>
       <section className='flex flex-col justify-center items-center pt-10 pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
@@ -75,19 +77,27 @@ const Startups: NextPage = () => {
             </Box>
           </Box>
         </div>
-        <Explore  />
+        <Explore software={software} />
       </section>
     </Layout>
   )
 }
 
-export default Startups
+export default Softwares;
 
-// export const getStaticProps: GetStaticProps =  async () =>{
-//   const software = await getSoftwares()
-//   return {
-//     props:{
-//       software
-//     }
-//   }
-// }
+
+export const getServerSideProps: GetServerSideProps = async ({req, res}) => {
+  const software = await getSoftwares();
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+  return {
+    props: {
+      software
+    }
+  }
+}
+
+
+

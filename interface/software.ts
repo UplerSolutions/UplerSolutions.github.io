@@ -1,7 +1,9 @@
 export interface ISoftware {
-    ID: number;
-    title: string;
+    id: string;
+    created_at: string;
+    productName: string;
     description: string;
-    image: string;
     price: number;
+    updated_at: string;
+
 }

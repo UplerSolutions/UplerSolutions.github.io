@@ -1,6 +1,13 @@
 import { ISoftware } from '@/interface/software'
+
 const url = process.env.API_ROUTE;
-export const getSoftwares = async () : Promise<any> =>{
-    const res = await fetch("http://localhost:3000/api/software")
+
+export const getSoftwares = async (): Promise<ISoftware[]> => {
+    const res = await fetch("https://uplerbackend-production.up.railway.app/api/products/")
+    return await res.json()
+}
+
+export const getSoftware = async (id: string): Promise<ISoftware> => {
+    const res = await fetch("https://uplerbackend-production.up.railway.app/api/product/" + id )
     return await res.json()
 }
