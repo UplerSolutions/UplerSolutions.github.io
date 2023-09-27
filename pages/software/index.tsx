@@ -9,18 +9,32 @@ import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
 import { getSoftwares } from '@/service/software/software-service';
 import { ISoftware } from '@/interface/software'
+import { ICategory } from '@/interface/category'
+import { getCategories } from '@/service/categories/categories-service'
 
 interface Props{
   software: ISoftware[]
 }
 
-const Softwares: NextPage<Props> = ({software}) => {
+const Softwares: NextPage<Props> = ({ software }) => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
-
+  const [categories, setCategories] = useState<ICategory[]>()
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
 
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await getCategories();
+        setCategories(res);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
     <Layout title='Upler - Softwares'>

@@ -19,7 +19,7 @@ export const contributions = [
         },
         {
             "id": "004",
-            "label": "Total Saved by Userss",
+            "label": "Total Saved by Users",
             "number": "37.000+",
             "duration": "3"
         }
