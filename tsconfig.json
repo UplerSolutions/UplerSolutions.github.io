@@ -23,7 +23,8 @@
     "**/*.tsx",
     "types/**/*.d.ts",
     "components/ui/recentsearches/index.ts",
-    "pages/_app.jsx"
+    "pages/_app.jsx",
+    "pages/auth/nextauth.js"
   ],
   "exclude": ["node_modules"]
 }
