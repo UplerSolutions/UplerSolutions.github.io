@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
 interface FormData {
   name: string
@@ -14,7 +15,7 @@ interface FormData {
   number_phone: string
 }
 
-export const Register = () => {
+export const Signup = () => {
   const {
     register,
     handleSubmit,
@@ -27,10 +28,10 @@ export const Register = () => {
   }
 
   return (
-    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full h-[1000px]'>
+    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full md:h-[100vh] '>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
         <div className='w-[100%] text-center content-between text-neutral-700'>
-          <h1 className='text-4xl lg:text-5xl py-6 font-semibold'>
+          <h1 className='text-4xl lg:text-5xl my-6 font-semibold'>
             Create an Account
           </h1>
         </div>
@@ -123,6 +124,12 @@ export const Register = () => {
                 </Link>
               </p>
             </div>
+            <Link
+              href='/'
+              className='block text-center text-sm text-gray-500 underline pt-6'
+            >
+              Go Back Home
+            </Link>
           </div>
         </div>
       </div>

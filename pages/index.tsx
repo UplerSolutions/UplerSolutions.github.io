@@ -12,7 +12,7 @@ import { Upler } from '@/components/ui/upler/Upler'
 import { Partner } from '@/components/ui/partner/Partner'
 import { ISoftware } from '@/interface/software'
 import { getSoftwares } from './../service/software/software-service'
-
+import { useSession, signIn, signOut } from 'next-auth/react'
 const inter = Inter({ subsets: ['latin'] })
 
 interface Props {

@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
-import { Register } from '@/components/ui/register/Register'
+import { Signup } from '@/components/ui/signup/Signup'
 
-const Signup: NextPage = () => {
+const SignUp: NextPage = () => {
   return (
     <main title='Upler - Register'>
-      <Register />
+      <Signup />
     </main>
   )
 }
 
-export default Signup
+export default SignUp

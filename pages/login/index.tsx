@@ -4,9 +4,9 @@ import { Login } from '@/components/ui/login/Login'
 
 const LogIn: NextPage = () => {
   return (
-    <Layout title='Upler - Login'>
+    <main title='Upler - Login'>
       <Login />
-    </Layout>
+    </main>
   )
 }
 

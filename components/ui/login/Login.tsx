@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import GoogleButton from '../googlebutton/GoogleButton'
 
 interface FormData {
   emailOrUsername: string
@@ -21,7 +22,7 @@ export const Login = () => {
   }
 
   return (
-    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center'>
+    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full h-[100vh] '>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
         <div className='w-[100%] text-center content-between text-neutral-700'>
           <h1 className='text-4xl lg:text-5xl py-4 md:py-10 font-semibold'>
@@ -63,7 +64,7 @@ export const Login = () => {
               className='py-3 px-3 border-2 mb-4 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
             />
           </form>
-          <div className='flex flex-col justify-center items-center mt-4 w-full pb-10'>
+          <div className='flex flex-col justify-center items-center mt-4 w-full pb-10 gap-4'>
             <div className='flex items-center justify-between pb-6 px-4 md:px-12 w-full'>
               <label className='flex items-center'>
                 <input
@@ -87,17 +88,24 @@ export const Login = () => {
             >
               Login
             </button>
+            <GoogleButton />
             <div className='mt-4'>
               <p className=''>
                 Don&apos;t have an account yet?{'  '}
                 <Link
-                  href='/register'
+                  href='/signup'
                   className='text-primary-color hover:underline'
                 >
                   Register here
                 </Link>
               </p>
             </div>
+            <Link
+              href='/'
+              className='block text-center text-sm text-gray-500 underline'
+            >
+              Go Back Home
+            </Link>
           </div>
         </div>
       </div>
