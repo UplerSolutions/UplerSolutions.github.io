@@ -28,7 +28,7 @@ const Home: NextPage<Props> = ({ softwares }) => {
       : SITE_URL
 
   const handleClick = () => {
-    router.push('/plans')
+    router.push('#plans')
   }
 
   return (
@@ -65,7 +65,7 @@ const Home: NextPage<Props> = ({ softwares }) => {
       </main>
       <Upler />
       <Benefits />
-      <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]'>
+      <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]' id='plans'>
         <CardPlan />
         <Partner />
       </div>
