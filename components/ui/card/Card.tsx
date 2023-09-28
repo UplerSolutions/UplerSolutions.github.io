@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
 import { IPlan } from '@/interface/plan'
-import { } from 'react-icons/'
-// import {VerifiedUserOutlinedIcon} from '@mui/icons-material/VerifiedUserOutlined'
+import { GoShieldCheck } from 'react-icons/go'
 import { FaCheck } from 'react-icons/fa'
+import { RxLockClosed } from 'react-icons/rx'
+import CreditCard from '../creditcard/CreditCard'
 interface Props {
   plan?: undefined | IPlan
 }
@@ -42,7 +43,7 @@ export const Card: FC<Props> = ({ plan }) => {
     }
     // Add more options here
   ]
-  
+
   return (
     <>
       <section className='flex flex-col justify-center items-center w-full pt-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
@@ -52,8 +53,8 @@ export const Card: FC<Props> = ({ plan }) => {
               <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-bold '>
                 ¡Almost There! Finish order
               </h1>
-              <div className='flex gap-6'>
-                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
+              <div className='flex gap-6 items-center'>
+                <GoShieldCheck className='text-primary-color scale-[1.8]' />
                 <span>30-day money-back guarantee</span>
               </div>
             </div>
@@ -94,7 +95,7 @@ export const Card: FC<Props> = ({ plan }) => {
                   <input
                     type='radio'
                     name='period'
-                    className='ml-[-150px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] accent-primary-color'
+                    className='hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ml-[-150px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] text-primary-color accent-primary-color'
                   />
                 </label>
                 <h1 className='font-semibold text-3xl text-neutral-700'>
@@ -117,7 +118,7 @@ export const Card: FC<Props> = ({ plan }) => {
                   <input
                     type='radio'
                     name='period'
-                    className='ml-[-200px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] accent-primary-color'
+                    className='hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ml-[-200px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] accent-primary-color text-primary-color'
                   />
                 </label>
 
@@ -129,7 +130,7 @@ export const Card: FC<Props> = ({ plan }) => {
                     $
                   </span>
                   <h3 className='text-primary-color text-7xl font-bold'>
-                    {plan?.price ? plan.price * 3 : "No hay precio disponible"}
+                    {plan?.price ? plan.price * 3 : 'No hay precio disponible'}
                   </h3>
                   <span className='font-semibold'>USD</span>
                 </div>
@@ -141,7 +142,7 @@ export const Card: FC<Props> = ({ plan }) => {
                   <input
                     type='radio'
                     name='period'
-                    className='ml-[-200px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] accent-primary-color'
+                    className='hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-primary-color ml-[-200px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] accent-primary-color'
                   />
                 </label>
                 <h1 className='font-semibold text-3xl text-neutral-700'>
@@ -152,7 +153,7 @@ export const Card: FC<Props> = ({ plan }) => {
                     $
                   </span>
                   <h3 className='text-primary-color text-7xl font-bold'>
-                    {plan?.price ? plan.price * 12 : "No hay precio disponible"}
+                    {plan?.price ? plan.price * 12 : 'No hay precio disponible'}
                   </h3>
                   <span className='font-semibold'>USD</span>
                 </div>
@@ -184,21 +185,21 @@ export const Card: FC<Props> = ({ plan }) => {
             </button>
           </div>
           <div className='flex flex-col md:pl-14'>
-            <div className='gap-10 hidden md:flex'>
+            <div className='gap-6 hidden md:flex items-center'>
               <span>
-                {' '}
-                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
+                <GoShieldCheck className='text-primary-color scale-[1.8]' />
               </span>
               <p className='w-[150px] text-neutral-700'>
                 30-day money-back guarantee
               </p>
-              <span>
-                {' '}
-                {/* <VerifiedUserOutlinedIcon className='text-primary-color scale-[1.8]' /> */}
-              </span>
-              <p className='w-[150px] text-neutral-700'>
-                Encrypted and secure payments
-              </p>
+              <div className='pl-7 flex items-center gap-6'>
+                <span>
+                  <RxLockClosed className='text-primary-color scale-[1.8]' />
+                </span>
+                <p className='w-[150px] text-neutral-700'>
+                  Encrypted and secure payments
+                </p>
+              </div>
             </div>
             <div>
               <h4 className='pt-6 text-neutral-700'>
@@ -212,6 +213,7 @@ export const Card: FC<Props> = ({ plan }) => {
             </span>
           </div>
         </div>
+        <CreditCard />
       </section>
     </>
   )

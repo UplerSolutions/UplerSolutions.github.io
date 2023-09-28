@@ -27,7 +27,7 @@ export const Footermobile = () => {
           </h3>
         </div>
 
-        <div className='flex justify-center gap-6 items-start pt-4 w-[110%]'>
+        <div className='flex justify-start gap-6 items-center pt-4 w-[110%] sm:w-full'>
           <Link className='group relative inline-block ' href='/software'>
             Software
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[65px]'></span>

@@ -1,13 +1,18 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
-import { Register } from '@/components/ui/register/Register'
+import { Signup } from '@/components/ui/signup/Signup'
+import { Navbar } from '@/components/ui/navbar'
 
-const Signup: NextPage = () => {
+const SignUp: NextPage = () => {
   return (
-    <main title='Upler - Register'>
-      <Register />
+    <main
+      title='Upler - Register'
+      className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'
+    >
+      <Navbar />
+      <Signup />
     </main>
   )
 }
 
-export default Signup
+export default SignUp

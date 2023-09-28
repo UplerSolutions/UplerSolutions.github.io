@@ -21,10 +21,10 @@ export const CardPlan = () => {
             {plans.map((plan: IPlan) => (
               <li
                 key={plan.name}
-                className=' hover:scale-[1.07] transition duration-300 hover:delay-100 lg:w-[30%]'
+                className='relative inline-block hover:scale-[1.07] transition duration-300 hover:delay-100 lg:w-[30%]'
               >
                 <Link href={`/plans/${plan.name}`}>
-                  <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 hover:border-2 hover:border-gray-600 w-[100%]'>
+                  <div className=' flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 border-2 hover:border-2 hover:border-gray-600 w-[100%]'>
                     <div className='relative px-6 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
                       <div className='pb-4'>
                         <h1 className=' text-4xl font-bold py-4'>

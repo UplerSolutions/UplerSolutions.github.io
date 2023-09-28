@@ -12,6 +12,8 @@
   --swiper-navigation-color: #b96fe7 !important;
   --swiper-pagination-bullet-size: 14px !important;
   --swiper-pagination: relative !important;
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
 @media (max-width: 420px) {
   .swiper-pagination {

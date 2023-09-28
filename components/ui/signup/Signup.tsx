@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
 interface FormData {
   name: string
@@ -14,7 +15,7 @@ interface FormData {
   number_phone: string
 }
 
-export const Register = () => {
+export const Signup = () => {
   const {
     register,
     handleSubmit,
@@ -27,15 +28,15 @@ export const Register = () => {
   }
 
   return (
-    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full h-[1000px]'>
-      <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
+    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center pb-20 w-full min-h-screen'>
+      <div className='flex flex-col w-[90%] rounded-lg md:w-[75%]  gap-5 justify-center items-center'>
         <div className='w-[100%] text-center content-between text-neutral-700'>
-          <h1 className='text-4xl lg:text-5xl py-6 font-semibold'>
+          <h1 className='text-4xl lg:text-5xl my-6 font-semibold pt-24 2xl:pt-28 '>
             Create an Account
           </h1>
         </div>
 
-        <div className='flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center'>
+        <div className='flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center '>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className='flex flex-col pt-8 pl-10 w-[100%]'
