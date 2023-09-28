@@ -25,6 +25,7 @@
     "next-auth": "^4.1.1",
     "postcss": "8.4.30",
     "react": "18.2.0",
+    "react-credit-cards-2": "^1.0.1",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.2",
     "react-icons": "^4.11.0",

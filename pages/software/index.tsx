@@ -4,29 +4,28 @@ import { SearchBar } from '@/components/ui/searchbar'
 import { useRouter } from 'next/router'
 import { useRecentSearches } from '@/hooks/useRecentSearches'
 import { RecentSearches } from '@/components/ui/recentsearches'
-import { useRef, useState ,useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
-import { getSoftwares } from '@/service/software/software-service';
+import { getSoftwares } from '@/service/software/software-service'
 import { ISoftware } from '@/interface/software'
 
-interface Props{
+interface Props {
   software: ISoftware[]
 }
 
-const Softwares: NextPage<Props> = ({software}) => {
+const Softwares: NextPage<Props> = ({ software }) => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
 
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
 
-
   return (
     <Layout title='Upler - Softwares'>
       <section className='flex flex-col justify-center items-center pt-10 pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <div className='flex flex-col gap-8 pb-4 items-center text-center'>
-          <h1 className='text-[32px] text-center font-bold md:text-5xl lg:text-6xl text-neutral-700'>
+          <h1 className='text-[32px] text-center font-bold md:text-5xl lg:text-6xl text-neutral-700 pt-24'>
             Softwares
           </h1>
           <p className='text-xl text-neutral-700'>
@@ -83,11 +82,10 @@ const Softwares: NextPage<Props> = ({software}) => {
   )
 }
 
-export default Softwares;
+export default Softwares
 
-
-export const getServerSideProps: GetServerSideProps = async ({req, res}) => {
-  const software = await getSoftwares();
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  const software = await getSoftwares()
   res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
@@ -98,6 +96,3 @@ export const getServerSideProps: GetServerSideProps = async ({req, res}) => {
     }
   }
 }
-
-
-

@@ -34,7 +34,7 @@ export const CustomForm = () => {
     <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center '>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
         <div className='w-[100%] text-center mb-4 pb-4 content-between text-neutral-700'>
-          <h1 className='text-4xl lg:text-5xl py-10 font-semibold '>
+          <h1 className='text-4xl lg:text-5xl xl:text-6xl py-10 font-bold pt-36'>
             Do you want to sell your product?
           </h1>
           <p className='text-md'>
