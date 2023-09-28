@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export const Partner = () => {
   return (
-    <section className='flex items-center justify-center flex-col pb-6 pt-8  text-neutral-600 font-semibold w-[100%]'>
-      <div className=' flex items-left justify-center flex-col w-[90%] 2xl:w-[75%]'>
+    <section className='flex items-center justify-center flex-col pb-6 pt-32  text-neutral-600 font-semibold w-[100%]'>
+      <div className=' flex items-center md:items-left justify-center flex-col w-full md:w-[88%] xl:w-[78%]'>
         <div className='flex flex-col text-left lg:w-[100%]'>
           <div className='text-center flex items-center lg:text-left pb-10 w-full'>
             <div className='flex flex-col pb-3'>

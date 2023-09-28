@@ -13,6 +13,7 @@ import { Partner } from '@/components/ui/partner/Partner'
 import { ISoftware } from '@/interface/software'
 import { getSoftwares } from './../service/software/software-service'
 import { useSession, signIn, signOut } from 'next-auth/react'
+import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 interface Props {
@@ -27,10 +28,6 @@ const Home: NextPage<Props> = ({ softwares }) => {
       ? window.location.origin
       : SITE_URL
 
-  const handleClick = () => {
-    router.push('#plans')
-  }
-
   return (
     <Layout title='Upler '>
       <Head>
@@ -38,7 +35,7 @@ const Home: NextPage<Props> = ({ softwares }) => {
         <meta name='description' content={SITE_DESCRIPTION} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700 lg:pt-28 pb-7'>
+      <div className='relative flex flex-col place-items-center bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700 pt-24 lg:pt-48 pb-7'>
         <div className='text-[32px] text-center font-bold md:text-5xl lg:text-7xl'>
           <h3 className='md:pb-4'>Your Ultimate</h3>
           <span className='text-primary-color text-[35px] md:text-5xl lg:text-7xl'>
@@ -49,12 +46,11 @@ const Home: NextPage<Props> = ({ softwares }) => {
           Gain accesss to hundreds of software tools. All in one single
           subscription.
         </p>
-        <button
-          className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
-          onClick={handleClick}
-        >
-          Find Your Bundle
-        </button>
+        <Link href='#plans' scroll={false} className='scroll-smooth'>
+          <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
+            Find Your Bundle
+          </button>
+        </Link>
       </div>
       <main className=' pb-6 flex-wrap md:flex-nowrap md:flex justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
         <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-around md:justify-center md:flex-nowrap py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>

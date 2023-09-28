@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 export const Navbar = () => {
   return (
-    <nav className='px-2 flex flex-col items-center justify-between w-full bg-gradient-to-r from-[#ffcffc] to-[#fff7c4]'>
-      <div className='flex z-10 w-full items-center justify-between font-mono text-sm pt-10 pb-10 lg:w-[75%] text-neutral-600'>
+    <nav className='px-2 mb-10 flex flex-col items-center justify-between w-full bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] fixed z-50 h-[80px]'>
+      <div className='flex z-10 w-full items-center justify-between font-mono text-sm pt-4 pb-4 md:w-[90%] xl:w-[80%] text-neutral-600'>
         <Link className='' href='/'>
           <Image
             className=' w-[150px] md:w-40 min-w-full'
@@ -20,7 +20,7 @@ export const Navbar = () => {
             SOFTWARE
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
-          <Link className=' group relative inline-block ' href='/plans'>
+          <Link className='group relative inline-block ' href='/#plans'>
             BUNDLES
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
@@ -41,7 +41,7 @@ export const Navbar = () => {
           </Link>
 
           <Link className='' href='/signup'>
-            <button className='group relative px-2 lg:px-6 bg-primary-color h-11 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
+            <button className='group relative px-2 lg:px-6 bg-primary-color h-11 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 border-2 border-primary-color hover:border-2 hover:border-primary-color'>
               Signup
             </button>
           </Link>

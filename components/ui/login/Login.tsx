@@ -22,10 +22,10 @@ export const Login = () => {
   }
 
   return (
-    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full h-[100vh] '>
+    <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full min-h-screen '>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
         <div className='w-[100%] text-center content-between text-neutral-700'>
-          <h1 className='text-4xl lg:text-5xl py-4 md:py-10 font-semibold'>
+          <h1 className='text-4xl lg:text-5xl pt-24 pb-6 font-semibold'>
             Log in to your account
           </h1>
         </div>
