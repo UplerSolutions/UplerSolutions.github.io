@@ -32,7 +32,11 @@ const CreditCard: React.FC = () => {
       setState((prev) => ({ ...prev, [name]: formattedValue }))
     } else if (name === 'expiry') {
       // Restrict date to 4 digits (MM/YY)
-      const formattedValue = value.replace(/\s/g, '').slice(0, 4)
+      const formattedValue = value
+        .replace(/\s/g, '')
+        .slice(0, 5)
+        .replace(/(\d{2})(\d{0,2})/, '$1/$2')
+        .replace(/\/+/g, '/')
       setState((prev) => ({ ...prev, [name]: formattedValue }))
     } else if (name === 'cvc') {
       // Restrict CVC to 3 digits
@@ -51,7 +55,7 @@ const CreditCard: React.FC = () => {
   // For example, you can check the length of card number, expiry, and CVC
 
   return (
-    <div className='flex gap-4 py-8 items-center justify-center'>
+    <div className='flex flex-col xl:flex-row gap-4 py-4 md:px-12 items-center '>
       <Cards
         number={state.number}
         expiry={state.expiry}
@@ -59,8 +63,8 @@ const CreditCard: React.FC = () => {
         name={state.name}
         focused={state.focus as ReactCreditCardsProps['focused']}
       />
-      <div className=''>
-        <form className='text-black flex flex-col gap-4'>
+      <div className='flex items-center flex-col'>
+        <form className='text-black flex flex-col gap-4 w-4/5 sm:w-full'>
           <input
             type='text'
             name='number'
@@ -79,15 +83,15 @@ const CreditCard: React.FC = () => {
             onFocus={handleInputFocus}
             className='rounded-md '
           />
-          <div className='flex gap-4'>
+          <div className='flex gap-4 items-center justify-center '>
             <input
               type='text'
               name='expiry'
-              placeholder='MM/YY Expiry'
+              placeholder='MM/YY'
               value={state.expiry}
               onChange={handleInputChange}
               onFocus={handleInputFocus}
-              className='rounded-md '
+              className='rounded-md w-4/5'
             />
             <input
               type='text'
@@ -96,7 +100,7 @@ const CreditCard: React.FC = () => {
               value={state.cvc}
               onChange={handleInputChange}
               onFocus={handleInputFocus}
-              className='rounded-md '
+              className='rounded-md w-4/5'
             />
           </div>
         </form>
