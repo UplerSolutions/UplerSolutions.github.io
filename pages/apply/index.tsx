@@ -11,3 +11,21 @@ const Apply: NextPage = () => {
 }
 
 export default Apply
+
+// export const getServerSideProps = async (ctx) => {
+//   const { auth } = cookies(ctx);
+
+//   if (!auth) {
+//       const { res } = ctx;
+//       res.setHeader("location", "/login");
+//       res.statusCode = 302;
+//       res.end();
+//       return;
+//   }
+
+//   return {
+//       props: {
+//           user: auth,
+//       },
+//   };
+// };
