@@ -10,8 +10,9 @@ export const data: IPlan[] = [
     price: 4,
     benefits: [
       'Two software to choose',
-      'Received an NFT to acceses more benefits'
-    ]
+      
+    ],
+    amount: 2
   },
   {
     id: 2,
@@ -20,8 +21,8 @@ export const data: IPlan[] = [
     price: 10,
     benefits: [
       'Four software to choose',
-      'Received an NFT to acceses more benefits'
-    ]
+    ],
+    amount: 4
   },
   {
     id: 3,
@@ -30,8 +31,8 @@ export const data: IPlan[] = [
     price: 14,
     benefits: [
       'Eight software to choose',
-      'Received an NFT to acceses more benefits'
-    ]
+    ],
+    amount: 8
   }
 
 ]

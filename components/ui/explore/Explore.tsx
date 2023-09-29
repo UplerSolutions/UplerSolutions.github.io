@@ -5,12 +5,14 @@ import Image from "next/image"
 import { ISoftware } from '@/interface/software';
 // import {software} from "@/data/software"
 import { useRouter } from 'next/router'
+import CardSoftware from '../cardsoftware/CardSoftware';
 
 
 interface Props {
   software: ISoftware[]
+  category: string | undefined
 }
-export const Explore: FC<Props> = ({ software }) => {
+export const Explore: FC<Props> = ({ software, category }) => {
 
   // const router = useRouter();
 
@@ -34,24 +36,19 @@ export const Explore: FC<Props> = ({ software }) => {
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
   const displayedProducts: ISoftware[] = software?.slice(startIndex, endIndex);
+  const filterProducts = displayedProducts.filter(software => (software.productName === category))
+  const displayFilterProducts: ISoftware[] = category === undefined ? displayedProducts : filterProducts;
+
 
   return (
     <div className='flex flex-col items-center justify-center'>
       <ul className='grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] grid-rows-2 gap-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full m-auto px-4 py-4 lg:py-8 items-center'>
         {displayedProducts?.map(product => (
-          <li  key={product.id} className='flex flex-col gap-12 lg:gap-8'>
-            <div className='border flex flex-col h-full bg-white text-neutral-950 rounded-xl'>
-              <div className='relative p-6 w-full h-[150px] bg-primary-color rounded-xl'>
-                {/* Render product image here */}
-              </div>
-              <div className=''>
-                <div className='p-4 flex flex-col flex-1 gap-1'>
-                  <h2 className='text-2xl'>{product.productName}</h2>
-                  <p>${product.price} price </p>
-                  <p>{product.description}</p>
-                </div>
-              </div>
-            </div>
+          <li key={product.id} className='flex flex-col gap-12 lg:gap-8'>
+            <CardSoftware
+              productName={product.productName} 
+              description={product.description} 
+              price={product.price} />
           </li>
         ))}
       </ul>
