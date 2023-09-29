@@ -1,4 +1,3 @@
-import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/utils/config'
 import { Inter } from 'next/font/google'
@@ -14,15 +13,9 @@ import { ISoftware } from '@/interface/software'
 import { getSoftwares } from './../service/software/software-service'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from 'next/link'
-const inter = Inter({ subsets: ['latin'] })
 
-interface Props {
-  softwares: ISoftware[]
-}
-
-const Home: NextPage<Props> = ({ softwares }) => {
-  const router = useRouter()
-
+export default function Home() {
+  const { data: session } = useSession()
   const origin =
     typeof window !== 'undefined' && window.location.origin
       ? window.location.origin
@@ -68,5 +61,3 @@ const Home: NextPage<Props> = ({ softwares }) => {
     </Layout>
   )
 }
-
-export default Home
