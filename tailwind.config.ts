@@ -18,7 +18,5 @@ module.exports = {
         'secondary-color': 'var(--secondary-color)'
       }
     }
-  },
-  darkMode: 'class',
-  plugins: [require('@tailwindcss/forms'), nextui()]
+  }
 }

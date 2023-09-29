@@ -35,7 +35,7 @@ export const Footer = () => {
             Software
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[62px]'></span>
           </Link>
-          <Link className=' group relative inline-block ' href='/plans'>
+          <Link className=' group relative inline-block ' href='#plans'>
             Bundles
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[57px]'></span>
           </Link>

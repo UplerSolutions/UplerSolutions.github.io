@@ -21,7 +21,7 @@ export const Navbarmobile = () => {
         </Link>
         <Link
           className='flex flex-col w-1/6 text-center items-center'
-          href='/plans'
+          href='#plans'
         >
           <BiPackage />
           <span className=' text-xs'>Plans</span>

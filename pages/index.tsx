@@ -10,7 +10,7 @@ import { contributions } from '@/data/contribution'
 import { Upler } from '@/components/ui/upler/Upler'
 import { Partner } from '@/components/ui/partner/Partner'
 import { ISoftware } from '@/interface/software'
-import { getSoftwares } from './../service/software/software-service'
+import { getSoftwares } from '../service/software/software-service'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from 'next/link'
 
@@ -36,7 +36,7 @@ export default function Home() {
           </span>
         </div>
         <p className='pb-10 pt-6 lg:p-10 text-center w-11/12'>
-          Gain accesss to hundreds of software tools. All in one single
+          Gain access to hundreds of software tools. All in one single
           subscription.
         </p>
         <Link href='#plans' scroll={false} className='scroll-smooth'>

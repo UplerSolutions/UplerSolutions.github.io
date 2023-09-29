@@ -4,9 +4,11 @@ import Image from 'next/image'
 
 interface CheckboxProps {
   value: string
+  price: number
   icon?: string
   label: string
   isChecked: boolean
+  description: string
   onChange: () => void
 }
 
@@ -15,6 +17,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
   label,
   isChecked,
   onChange,
+  price,
+  description,
   icon
 }) => {
   return isChecked ? (
@@ -40,9 +44,11 @@ const Checkbox: React.FC<CheckboxProps> = ({
       <div>
         <h2 className='text-2xl pb-5'>{label}</h2>
         <p>
-          Proyect description Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Ducimus numquam
+          {description}
         </p>
+        <span>
+          {price}
+        </span>
       </div>
     </div>
   ) : (
@@ -68,9 +74,11 @@ const Checkbox: React.FC<CheckboxProps> = ({
       <div>
         <h2 className='text-2xl pb-5'>{label}</h2>
         <p>
-          Proyect description Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Ducimus numquam
+          {description}
         </p>
+        <span>
+          {price}
+        </span>
       </div>
     </div>
   )
