@@ -23,7 +23,7 @@
     "**/*.tsx",
     "types/**/*.d.ts",
     "components/ui/recentsearches/index.ts",
-    "pages/_app.jsx",
+    "pages/_app.tsx",
     "pages/auth/nextauth.js",
     "pages/api/auth/[...nextauth].js"
   ],
