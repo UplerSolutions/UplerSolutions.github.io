@@ -4,4 +4,5 @@ export interface IPlan {
   description: string;
   price: number;
   benefits: string[];
+  amount: number
 }

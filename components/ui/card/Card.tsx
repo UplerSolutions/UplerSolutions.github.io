@@ -1,16 +1,33 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
 import { IPlan } from '@/interface/plan'
 import { GoShieldCheck } from 'react-icons/go'
 import { FaCheck } from 'react-icons/fa'
 import { RxLockClosed } from 'react-icons/rx'
 import CreditCard from '../creditcard/CreditCard'
+import { ISoftware } from '@/interface/software'
+import { getSoftwares } from '@/service/software/software-service'
 interface Props {
   plan?: undefined | IPlan
 }
 
 export const Card: FC<Props> = ({ plan }) => {
-  const options = [
+
+  const [products, setProducts] = useState<ISoftware[]>();
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await getSoftwares();
+        setProducts(res);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const options: any[] = [
     {
       value: 'option1',
       label: 'Option 1',
@@ -170,7 +187,9 @@ export const Card: FC<Props> = ({ plan }) => {
             </h2>
           </div>
           <div className='text-center '>
-            <CheckboxGroup options={options} limit={plan?.id!} />
+            <CheckboxGroup
+              options={products}
+              limit={plan?.amount!} />
           </div>
         </div>
       </section>
