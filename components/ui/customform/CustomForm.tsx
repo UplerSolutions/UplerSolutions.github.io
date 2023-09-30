@@ -22,7 +22,7 @@ export const CustomForm = () => {
     control
   } = useForm<FormData>()
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormData) => {
     const postData = {
       ...data,
       file: data.file[0].name
@@ -38,19 +38,20 @@ export const CustomForm = () => {
             Do you want to sell your product?
           </h1>
           <p className='text-md'>
-            Please fill the form to recieve a qoute for your project. Feel free
-            to add as much detailed as needed
+            Please fill the form to receive a quote for your project. Feel free
+            to add as much detail as needed
           </p>
         </div>
 
-        <div className='text-center md:text-start flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center'>
+        <div className='text-start flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center'>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className='flex flex-col pt-8 pl-4 md:pl-10 w-[100%] md:items-start items-center'
           >
             <h2 className='text-3xl pb-8 font-semibold'>Company details</h2>
-            <section className='flex items-center flex-col md:items-start'>
-              <fieldset className='flex flex-col items-center md:items-start'>
+
+            <section className='w-full'>
+              <fieldset className='flex flex-col gap-5 w-full'>
                 <h3 className='text-xl py-4 font-semibold'>Company Type*</h3>
                 <label
                   htmlFor='companyType'
@@ -63,7 +64,7 @@ export const CustomForm = () => {
                     value='independent-consultant'
                     name='companyType'
                     type='radio'
-                    className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                    className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                   />
                   Independent Consultant
                 </label>
@@ -78,12 +79,13 @@ export const CustomForm = () => {
                     name='companyType'
                     value='incorporated-company'
                     type='radio'
-                    className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                    className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                   />
                   Incorporated Company
                 </label>
               </fieldset>
-              <fieldset className='flex flex-col'>
+
+              <fieldset className='flex flex-col gap-5 w-full'>
                 <h3 className='text-xl pt-8 pb-4 font-semibold'>
                   Company Sector*
                 </h3>
@@ -96,10 +98,10 @@ export const CustomForm = () => {
                       {...register('companySector', {
                         required: 'This input is required'
                       })}
-                      value='developmnet-it'
+                      value='development-it'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                     />
                     Development & IT
                   </label>
@@ -114,7 +116,7 @@ export const CustomForm = () => {
                       value='media'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                     />
                     Media
                   </label>
@@ -129,7 +131,7 @@ export const CustomForm = () => {
                       value='sales'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                     />
                     Sales
                   </label>
@@ -142,7 +144,7 @@ export const CustomForm = () => {
                       value='marketing'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                     />
                     Marketing
                   </label>
@@ -155,7 +157,7 @@ export const CustomForm = () => {
                       value='operations'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                     />
                     Operations
                   </label>
@@ -168,14 +170,14 @@ export const CustomForm = () => {
                       value='UX/UI'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                     />
                     UX/UI
                   </label>
                 </div>
               </fieldset>
 
-              <fieldset className='flex flex-col gap-5'>
+              <fieldset className='flex flex-col gap-5 w-full'>
                 <label
                   htmlFor='companyName'
                   className='text-xl pt-10 pb-4 font-semibold items-center '
@@ -189,7 +191,7 @@ export const CustomForm = () => {
                   type='text'
                   placeholder='Uplix'
                   name='companyName'
-                  className='py-3 px-3 border-2 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                  className='py-3 px-3 border-2 rounded-2xl mr-4 md:mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                 />
 
                 <label
@@ -205,7 +207,7 @@ export const CustomForm = () => {
                   type='text'
                   placeholder='Avenue 123, Argentina'
                   name='companyAddress'
-                  className='py-3 px-3  border-2 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                  className='py-3 px-3  border-2 rounded-2xl mr-4 md:mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                 />
 
                 <label
@@ -221,7 +223,7 @@ export const CustomForm = () => {
                   type='text'
                   placeholder='https://upler.com'
                   name='companyWebsite'
-                  className='py-3 px-3 border-2 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                  className='py-3 px-3 border-2 rounded-2xl mr-4 md:mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                 />
 
                 <label
@@ -237,21 +239,22 @@ export const CustomForm = () => {
                   type='text'
                   placeholder='company@gmail.com'
                   name='companyEmail'
-                  className='py-3 px-3 mb-4 border-2 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                  className='py-3 px-3 mb-4 border-2 rounded-2xl mr-4 md:mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                 />
               </fieldset>
             </section>
-            <section className='flex flex-col'>
+            <section className='flex flex-col w-full '>
               <h2 className='text-xl py-4 font-semibold'>Attach File</h2>
-              <p className='pb-4'>Share whit us your Company Profile</p>
+              <p className='pb-4'>Share with us your Company Profile</p>
               <input
                 type='file'
                 {...register('file', { required: 'This input is required' })}
+                className='accent-primary-color'
               />
             </section>
 
-            <section>
-              <fieldset className='flex flex-col gap-5'>
+            <section className='w-full'>
+              <fieldset className='flex flex-col gap-5 w-full'>
                 <h2 className='text-3xl pt-14 pb-4 font-semibold'>
                   Personal Information
                 </h2>
@@ -265,7 +268,7 @@ export const CustomForm = () => {
                   type='text'
                   placeholder='Jesus Rodriguez'
                   name='fullName'
-                  className='py-3 px-3 border-2 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                  className='py-3 px-3 border-2 rounded-2xl mr-4 md:mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                 />
 
                 <label
@@ -279,7 +282,7 @@ export const CustomForm = () => {
                   type='text'
                   placeholder='jgonzales@gmail.com'
                   name='email'
-                  className='py-3 px-3 border-2 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                  className='py-3 px-3 mb-4 border-2 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
                 />
 
                 <label
@@ -295,19 +298,19 @@ export const CustomForm = () => {
                   type='text'
                   placeholder='CEO'
                   name='position'
-                  className='py-3 px-3 border-2 mb-10 rounded-2xl mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+                  className='py-3 px-3 border-2 mb-10 rounded-2xl mr-4 md:mr-10 focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
                 />
               </fieldset>
             </section>
-            <div className='flex justify-center items-center'>
-              <button
-                type='submit'
-                className='bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color '
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+          </form>{' '}
+          <div className='flex justify-center items-center'>
+            <button
+              type='submit'
+              className='bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+            >
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     </div>
