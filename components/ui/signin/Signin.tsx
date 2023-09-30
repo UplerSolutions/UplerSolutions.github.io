@@ -17,7 +17,7 @@ const SigninButton = () => {
   if (session && session.user) {
     return (
       <div className='flex gap-4 ml-auto items-center justify-center'>
-        <p className='text-primary-color'>{session.user.name}</p>
+        <p className='hidden md:flex text-primary-color'>{session.user.name}</p>
         <button
           onClick={() => signOut()}
           className='group relative px-2 lg:px-6 bg-primary-color h-11 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 border-2 border-primary-color hover:border-2 hover:border-primary-color'

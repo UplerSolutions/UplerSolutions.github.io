@@ -4,7 +4,7 @@ import React from 'react'
 const GoogleButton: React.FC = () => {
   return (
     <button
-      className='flex w-[300px] justify-center gap-5 rounded bg-white py-4 px-4 text-sm font-bold drop-shadow-md hover:bg-gray-50'
+      className='flex w-60 justify-center gap-5 rounded-xl bg-white py-4 px-4 text-sm font-bold  shadow-[#b96fe7] shadow-md hover:border-[#9072a8]'
       onClick={() => signIn('google')}
     >
       <GoogleLogo />

@@ -114,7 +114,7 @@ export const Card: FC<Props> = ({ plan }) => {
                   <input
                     type='radio'
                     name='period'
-                    className='hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ml-[-150px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] text-primary-color accent-primary-color'
+                    className=' hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 ml-[-150px] sm:ml-0 md:mr-[100px] lg:mr-[160px] xl:mr-[220px] 2xl:mr-[280px] scale-[2] text-primary-color accent-primary-color'
                   />
                 </label>
                 <h1 className='font-semibold text-3xl text-neutral-700'>
