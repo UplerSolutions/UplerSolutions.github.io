@@ -64,7 +64,7 @@ const CreditCard: React.FC = () => {
         focused={state.focus as ReactCreditCardsProps['focused']}
       />
       <div className='flex items-center flex-col'>
-        <form className='text-black flex flex-col gap-4 w-4/5 sm:w-full'>
+        <form className='text-black flex flex-col gap-4 w-[98%] sm:w-full'>
           <input
             type='text'
             name='number'
@@ -72,7 +72,7 @@ const CreditCard: React.FC = () => {
             value={state.number}
             onChange={handleInputChange}
             onFocus={handleInputFocus}
-            className='rounded-md '
+            className='rounded-md px-3 py-1'
           />
           <input
             type='text'
@@ -81,7 +81,7 @@ const CreditCard: React.FC = () => {
             value={state.name}
             onChange={handleInputChange}
             onFocus={handleInputFocus}
-            className='rounded-md '
+            className='rounded-md px-3 py-1'
           />
           <div className='flex gap-4 items-center justify-center '>
             <input
@@ -91,7 +91,7 @@ const CreditCard: React.FC = () => {
               value={state.expiry}
               onChange={handleInputChange}
               onFocus={handleInputFocus}
-              className='rounded-md w-4/5'
+              className='rounded-md w-4/5 px-3 py-1'
             />
             <input
               type='text'
@@ -100,7 +100,7 @@ const CreditCard: React.FC = () => {
               value={state.cvc}
               onChange={handleInputChange}
               onFocus={handleInputFocus}
-              className='rounded-md w-4/5'
+              className='rounded-md w-4/5 px-3 py-1'
             />
           </div>
         </form>
