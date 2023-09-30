@@ -31,7 +31,7 @@ export const Signup = () => {
     <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center pb-20 w-full min-h-screen'>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%]  gap-5 justify-center items-center'>
         <div className='w-[100%] text-center content-between text-neutral-600'>
-          <h1 className='text-4xl lg:text-5xl xl:text-6xl my-6 font-semibold pt-24 2xl:pt-28'>
+          <h1 className='text-4xl lg:text-5xl xl:text-6xl my-6 font-bold md:font-semibold pt-24 2xl:pt-28'>
             Create an Account
           </h1>
         </div>
