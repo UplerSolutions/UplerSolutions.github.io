@@ -12,20 +12,19 @@ interface Props {
 }
 
 export const Card: FC<Props> = ({ plan }) => {
-
-  const [products, setProducts] = useState<ISoftware[]>();
+  const [products, setProducts] = useState<ISoftware[]>()
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await getSoftwares();
-        setProducts(res);
+        const res = await getSoftwares()
+        setProducts(res)
       } catch (error) {
-        console.error("Error fetching categories:", error);
+        console.error('Error fetching categories:', error)
       }
     }
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   const options: any[] = [
     {
@@ -64,8 +63,8 @@ export const Card: FC<Props> = ({ plan }) => {
   return (
     <>
       <section className='pt-32 flex flex-col justify-center items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
-        <div className='first-letter:rounded-xl flex flex-row p-6 sm:py-10 sm:pl-16 bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] text-neutral-700 lg:w-[75%] '>
-          <div className='flex flex-col gap-10'>
+        <div className='w-[90%] first-letter:rounded-xl flex flex-row p-6 sm:py-10 rounded-xl sm:pl-16 bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] text-neutral-700 lg:w-[75%] '>
+          <div className='flex flex-col gap-6 w-full '>
             <div className='items-center flex-col sm:flex-row flex  gap-4 text-center sm:gap-0 sm:text-left md:gap-[150px]'>
               <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-[42px] font-bold '>
                 ¡Almost There! Finish order
@@ -75,20 +74,23 @@ export const Card: FC<Props> = ({ plan }) => {
                 <span>30-day money-back guarantee</span>
               </div>
             </div>
-            <div>
-              <h2 className='text-xl'>
+            <div className='flex-col flex items-center justify-center md:justify-start md:items-start gap-4'>
+              <h2 className='text-xl text-center'>
                 Bundle choosen:
                 <span className='text-primary-color font-semibold'>
                   {' '}
                   {plan?.name}
                 </span>
               </h2>
-              <div className='flex gap-5'>
-                <div className='flex'>
+              <div className='flex gap-5 text-center items-center justify-center'>
+                <div className='flex flex-col md:flex-row items-center justify-center'>
                   <h2>This Bundles includes :</h2>
-                  <div className='pl-5'>
+                  <div className='pl-5 flex items-center'>
                     {plan?.benefits.map((benefit) => (
-                      <div className='flex gap-4 pt-2' key={benefit}>
+                      <div
+                        className='flex gap-4 flex-row-reverse items-center'
+                        key={benefit}
+                      >
                         <FaCheck className='text-primary-color ' />
                         <span>{benefit}</span>
                       </div>
@@ -99,14 +101,14 @@ export const Card: FC<Props> = ({ plan }) => {
             </div>
           </div>
         </div>
-        <div className='bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-8   py-8 px-12 mb-8 rounded-xl lg:w-[75%] w-[90%]'>
+        <div className='bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-8   py-8 px-6 mb-8 rounded-xl lg:w-[75%] w-[90%]'>
           <div className='text-2xl md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold w-full'>
             <h2 className='md:pb-10 pl-6 pt-6 text-neutral-600'>
               1. Choose a Period
             </h2>
           </div>
-          <div className='flex gap-10 pt-6 flex-wrap md:flex-nowrap items-center justify-center'>
-            <div className='flex flex-col py-8 px-14 sm:px-0 sm:p-8 bg-white rounded-xl items-center text-center w-[100%] md:w-[30%]'>
+          <div className='flex gap-10 pt-6 flex-wrap md:flex-nowrap items-center justify-center w-full'>
+            <div className='flex flex-col py-8 px-6 sm:px-0 sm:p-8 bg-white rounded-xl items-center text-center w-[100%] md:w-[30%]'>
               <div className='flex flex-col items-center'>
                 <label htmlFor='period'>
                   <input
@@ -187,9 +189,7 @@ export const Card: FC<Props> = ({ plan }) => {
             </h2>
           </div>
           <div className='text-center '>
-            <CheckboxGroup
-              options={products}
-              limit={plan?.amount!} />
+            <CheckboxGroup options={products} limit={plan?.amount!} />
           </div>
         </div>
       </section>

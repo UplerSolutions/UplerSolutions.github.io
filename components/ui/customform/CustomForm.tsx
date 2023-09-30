@@ -43,18 +43,18 @@ export const CustomForm = () => {
           </p>
         </div>
 
-        <div className='flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center'>
+        <div className='text-center md:text-start flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center'>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className='flex flex-col pt-8 pl-10 w-[100%]'
+            className='flex flex-col pt-8 pl-4 md:pl-10 w-[100%] md:items-start items-center'
           >
             <h2 className='text-3xl pb-8 font-semibold'>Company details</h2>
-            <section className=''>
-              <fieldset className='flex flex-col '>
+            <section className='flex items-center flex-col md:items-start'>
+              <fieldset className='flex flex-col items-center md:items-start'>
                 <h3 className='text-xl py-4 font-semibold'>Company Type*</h3>
                 <label
                   htmlFor='companyType'
-                  className='flex gap-4 items-center'
+                  className='flex gap-4 items-center md:text-start'
                 >
                   <input
                     {...register('companyType', {

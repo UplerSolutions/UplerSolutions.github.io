@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import Checkbox from './Checkbox'
 import { ISoftware } from '@/interface/software'
 
-
-
 interface CheckboxGroupProps {
   options: ISoftware[] | undefined
   limit: number
@@ -27,7 +25,7 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
   }
 
   return (
-    <div className='xl:grid 2 xl:grid-cols-3  2xl:grid-rows-2   rounded-xl text-center text-dark flex flex-row flex-wrap justify-center items-center pt-8'>
+    <div className='w-[100%] md:gap-4 xl:grid 2 xl:grid-cols-3  2xl:grid-rows-2   rounded-xl text-center text-dark flex flex-row flex-wrap justify-center items-center pt-8'>
       {options?.map((product) => (
         <>
           <Checkbox

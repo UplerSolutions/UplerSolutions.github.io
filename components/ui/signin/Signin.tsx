@@ -1,20 +1,18 @@
 import Link from 'next/link'
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 
 const SigninButton = () => {
   const { data: session } = useSession()
   const router = useRouter()
-  const [hasRedirected, setHasRedirected] = useState(false)
 
   useEffect(() => {
-    if (session && session.user && !hasRedirected) {
-      // Redirect to '/' only once when the user is signed in
+    // Redirect to '/' if the user is signed in and on a different page
+    if (session && session.user && router.pathname == '/login') {
       router.push('/')
-      setHasRedirected(true)
     }
-  }, [session, router, hasRedirected])
+  }, [session, router])
 
   if (session && session.user) {
     return (

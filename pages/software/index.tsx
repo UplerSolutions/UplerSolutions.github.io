@@ -24,18 +24,17 @@ const Softwares: NextPage<Props> = ({ software }) => {
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
 
-
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await getCategories();
-        setCategories(res);
+        const res = await getCategories()
+        setCategories(res)
       } catch (error) {
-        console.error("Error fetching categories:", error);
+        console.error('Error fetching categories:', error)
       }
     }
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   const onClickFilterByCategory = (categoryName: string) => {
     setCategoryFilter(categoryName)
@@ -43,34 +42,20 @@ const Softwares: NextPage<Props> = ({ software }) => {
 
   console.log(categoryFilter)
 
-
   return (
     <Layout title='Upler - Softwares'>
-      <section className='flex flex-col justify-center items-center pt-10 pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
+      <section className='w-full flex flex-col justify-center items-center pt-10 pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <div className='flex flex-col gap-8 pb-4 items-center text-center'>
           <h1 className='text-[32px] text-center font-bold md:text-5xl lg:text-6xl text-neutral-700 pt-24'>
             Softwares
           </h1>
           <p className='text-xl text-neutral-700'>
             Explore our collection and find your solution.
-          </p>|
-        </div>
-        <div className='flex gap-5 xl:gap-[240px] py-8'>
-          {
-            categories?.map((category) => (
-              <button
-                onClick={() => onClickFilterByCategory(category?.categoryName)}
-                key={category?.id}
-                className='group relative inline-block overflow-hidden rounded-xl border border-fuchsia-100 bg-fuchsia-200 px-2 lg:px-6 py-3 text-sm font-semibold text-primary-color hover:text-primary-color focus:outline-none focus:ring active:bg-primary-color active:text-white'
-              >
-                {category?.categoryName}
-              </button>
-            ))
-          }
+          </p>
         </div>
 
         <div className=' flex justify-center w-full'>
-          <Box maxWidth={'sm'} margin='auto' className=' xl:w-[100%]'>
+          <Box maxWidth={'sm'} margin='auto' className='w-[82%] xl:w-[100%]'>
             <Typography textAlign='center' my={2}></Typography>
             <Box ref={anchorEl}>
               <SearchBar
@@ -99,6 +84,17 @@ const Softwares: NextPage<Props> = ({ software }) => {
               />
             </Box>
           </Box>
+        </div>
+        <div className='flex gap-5 xl:gap-8 py-8 flex-wrap items-center justify-center'>
+          {categories?.map((category) => (
+            <button
+              onClick={() => onClickFilterByCategory(category?.categoryName)}
+              key={category?.id}
+              className=' w-36 md:w-48 group relative inline-block overflow-hidden rounded-xl border border-fuchsia-100 bg-fuchsia-200 px-2 lg:px-6 py-3 text-sm font-semibold text-primary-color hover:text-primary-color focus:outline-none focus:ring active:bg-primary-color active:text-white'
+            >
+              {category?.categoryName}
+            </button>
+          ))}
         </div>
         <Explore category={categoryFilter} software={software} />
       </section>

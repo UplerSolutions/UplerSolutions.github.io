@@ -22,7 +22,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
   icon
 }) => {
   return isChecked ? (
-    <div className=' border-3 border-primary-color flex flex-col w-[90%] max-w-fit h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
+    <div className=' border-3 border-primary-color flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
       <div>
         <label>
           <input
@@ -43,16 +43,12 @@ const Checkbox: React.FC<CheckboxProps> = ({
       </div>
       <div>
         <h2 className='text-2xl pb-5'>{label}</h2>
-        <p>
-          {description}
-        </p>
-        <span>
-          {price}
-        </span>
+        <p>{description}</p>
+        <span>{price}</span>
       </div>
     </div>
   ) : (
-    <div className='flex flex-col w-[90%] max-w-fit h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
+    <div className='flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
       <div className=''>
         <label>
           <input
@@ -73,12 +69,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
       </div>
       <div>
         <h2 className='text-2xl pb-5'>{label}</h2>
-        <p>
-          {description}
-        </p>
-        <span>
-          {price}
-        </span>
+        <p>{description}</p>
+        <span>{price}</span>
       </div>
     </div>
   )
