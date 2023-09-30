@@ -25,7 +25,7 @@ export const Login = () => {
     <div className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] flex justify-center items-center w-full min-h-screen '>
       <div className='flex flex-col w-[90%] rounded-lg md:w-[75%] pb-10 gap-5 justify-center items-center'>
         <div className='w-[100%] text-center content-between text-neutral-600 '>
-          <h1 className='text-4xl lg:text-5xl xl:text-6xl pt-24 pb-6 font-bold md:font-semibold'>
+          <h1 className='text-4xl lg:text-5xl xl:text-  6xl pt-24 pb-6 font-bold md:font-semibold'>
             Log in to your account
           </h1>
         </div>
@@ -33,7 +33,7 @@ export const Login = () => {
         <div className='drop-shadow-md flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 lg:w-[75%] justify-center items-center'>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className='flex flex-col px-3 pt-8 w-[100%]'
+            className='flex flex-col px-3 pt-8 w-[95%] md:w-full'
           >
             <label
               htmlFor='emailOrUsername'
