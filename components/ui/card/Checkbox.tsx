@@ -1,36 +1,36 @@
 // Checkbox.tsx
-import React from 'react'
+import React,{FC} from 'react'
 import Image from 'next/image'
+import { useFormContext } from 'react-hook-form';
 
 interface CheckboxProps {
   value: string
+  position: number
   price: number
   icon?: string
   label: string
   isChecked: boolean
   description: string
-  onChange: () => void
+  onChange: (value: string) => void
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({
-  value,
-  label,
-  isChecked,
-  onChange,
-  price,
-  description,
-  icon
-}) => {
+const Checkbox: FC<CheckboxProps> = ({ value, position, label, isChecked, onChange, price, description, icon }) => {
+
+  const { register, formState } = useFormContext();
+
+  
+
   return isChecked ? (
     <div className=' border-3 border-primary-color flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
       <div>
         <label>
           <input
+            {...register(`purchaseProducts.${position}`)}
             className='h-8 w-8 accent-primary-color text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
             type='checkbox'
             value={value}
             checked={isChecked}
-            onChange={onChange}
+            onChange={() => onChange(value)}
           />
         </label>
         <Image
@@ -49,14 +49,15 @@ const Checkbox: React.FC<CheckboxProps> = ({
     </div>
   ) : (
     <div className='flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
-      <div className=''>
+      <div>
         <label>
           <input
+            {...register("purchaseProducts.0")}
             className='h-8 w-8 accent-primary-color'
             type='checkbox'
             value={value}
             checked={isChecked}
-            onChange={onChange}
+            onChange={() => onChange(value)}
           />
         </label>
         <Image

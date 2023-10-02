@@ -14,7 +14,7 @@ interface FormData {
   position: string
 }
 
-export const CustomForm = () => {
+export const ContactForm = () => {
   const {
     register,
     handleSubmit,
