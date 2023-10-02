@@ -17,17 +17,17 @@ export const Navbar = () => {
             height={100}
           />
         </Link>
-        <div className='hidden text-lg lg:w-auto lg:flex gap-9'>
+        <div className='hidden text-lg lg:w-auto lg:flex gap-9 font-lato font-medium'>
           <Link className='group relative inline-block ' href='/software'>
-            SOFTWARE
+            Software
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className='group relative inline-block ' href='/#plans'>
-            BUNDLES
+            Bundles
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
           <Link className=' group relative inline-block ' href='/apply'>
-            BECOME OUR PARTNER
+            Become Our Partner
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
         </div>

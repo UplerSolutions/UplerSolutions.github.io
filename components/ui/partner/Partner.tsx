@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const Partner = () => {
   return (
-    <section className='flex items-center justify-center flex-col pb-6 pt-32  text-neutral-600 font-semibold w-[100%]'>
+    <section className='flex items-center justify-center flex-col pb-6 pt-28  text-neutral-600 font-semibold w-[100%]'>
       <div className=' flex items-center md:items-left justify-center flex-col w-full md:w-[88%] xl:w-[78%]'>
         <div className='flex flex-col text-left lg:w-[100%]'>
           <div className='text-center flex items-center lg:text-left pb-10 w-full'>
@@ -10,7 +10,7 @@ export const Partner = () => {
               <h3 className='pb-4 text-sm md:text-base lg:text-lg'>
                 GET TO KNOW WHO TRUSTS US
               </h3>
-              <h2 className='text-3xl lg:text-4xl text-neutral-700 font-bold'>
+              <h2 className='text-3xl lg:text-4xl xl:text-5xl text-neutral-700 font-bold'>
                 Our Official
                 <span className='text-primary-color'> Partnerships</span>
               </h2>
@@ -30,7 +30,7 @@ export const Partner = () => {
           </div>
         </div>
 
-        <div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-between sm:flex-row gap-8 md:gap-8'>
+        <div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-between sm:flex-row gap-8 md:gap-8 pb-14'>
           <Image
             height={120}
             width={1200}
