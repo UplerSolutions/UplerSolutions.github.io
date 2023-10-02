@@ -9,7 +9,6 @@ const SignUp: NextPage = () => {
       title='Upler - Register'
       className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'
     >
-      <Navbar />
       <Signup />
     </main>
   )

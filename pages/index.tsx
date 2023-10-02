@@ -54,7 +54,7 @@ export default function Home() {
       </main>
       <Upler />
       <Benefits />
-      <div className='bg-gradient-to-t from-[#ffcefb] to-[#fffbdf]' id='plans'>
+      <div className='bg-gradient-to-t to-[#ffcefb] from-[#fffbdf]' id='plans'>
         <CardPlan />
         <Partner />
       </div>
