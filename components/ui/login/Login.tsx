@@ -1,8 +1,10 @@
 import Link from 'next/link'
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
 import Image from 'next/image'
+import React, { useEffect } from 'react'
+import { signIn, signOut, useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 
 interface FormData {
   emailOrUsername: string
@@ -11,6 +13,16 @@ interface FormData {
 }
 
 export const Login = () => {
+  const { data: session } = useSession()
+  const router = useRouter()
+
+  useEffect(() => {
+    // Redirect to '/' if the user is signed in and on a different page
+    if (session && session.user && router.pathname == '/login') {
+      router.push('/')
+    }
+  }, [session, router])
+
   const {
     register,
     handleSubmit,

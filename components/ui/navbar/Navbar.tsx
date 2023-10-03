@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 import Signin from '../signin/Signin'
+import { Hamburguer } from './hamburguer/Hamburguer'
 
 export const Navbar = () => {
   return (
@@ -31,9 +32,10 @@ export const Navbar = () => {
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full'></span>
           </Link>
         </div>
-        <div className='flex gap-3'>
+        <div className='gap-3 hidden md:flex'>
           <Signin />
         </div>
+        <Hamburguer />
       </div>
     </nav>
   )
