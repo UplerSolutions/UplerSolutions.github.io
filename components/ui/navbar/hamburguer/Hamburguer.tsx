@@ -16,46 +16,46 @@ export const Hamburguer = () => {
     <div className='relative md:hidden'>
       {isOpen && (
         <div>
-          <nav className='bg-white absolute top-[-2.2rem] right-[-0.5rem] h-screen w-64 p-4'>
-            <ul className='flex flex-col gap-4 pt-16'>
-              <li>
-                <Link
-                  className='flex flex-row  text-center items-center gap-2'
-                  href='/'
-                >
-                  <AiOutlineHome />
-                  <span className='text-md'>Home</span>
-                </Link>
-              </li>
+          <nav className='bg-[#e6cef5] absolute top-[-2.2rem] right-[-1rem] h-screen w-64 p-4'>
+            <ul className='flex flex-col gap-6 pt-16 text-right items-end'>
               <li>
                 <Link
                   className='flex flex-row  text-center items-center gap-2'
                   href='/software'
                 >
-                  <PiRocket />
-                  <span className=' text-md'>Software</span>
+                  <span className=' text-lg'>Software</span>
                 </Link>
               </li>
+              <hr className='h-[2px] w-full bg-primary-color' />
               <li>
                 <Link
                   className='flex flex-row text-center items-center gap-2'
-                  href='#plans'
+                  href='/#plans'
                 >
-                  <BiPackage />
-                  <span className=' text-md'>Plans</span>
+                  <span className=' text-lg'>Plans</span>
                 </Link>
               </li>
-              <li className='flex'>
+              <hr className='h-[2px] w-full bg-primary-color' />
+              <li className=''>
                 <Link
                   className='flex text-center items-center gap-2'
                   href='/apply'
                 >
-                  <PiClipboard />
-                  <span className=' text-md'>Partner</span>
+                  <span className=' text-lg'>Partner</span>
                 </Link>
               </li>
+              <hr className='h-[2px] w-full bg-primary-color' />{' '}
+              <li>
+                <Link
+                  className='flex flex-col text-center items-center gap-2'
+                  href='/panel'
+                >
+                  <span className='text-lg'>Dashboard</span>
+                </Link>
+              </li>
+              <hr className='h-[2px] w-full bg-primary-color' />
             </ul>
-            <div className='absolute bottom-14 right-10'>
+            <div className='absolute bottom-[13vh] '>
               <Signin />
             </div>
           </nav>
