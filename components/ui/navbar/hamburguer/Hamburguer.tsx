@@ -55,7 +55,7 @@ export const Hamburguer = () => {
                 </Link>
               </li>
             </ul>
-            <div className='absolute bottom-10 right-10'>
+            <div className='absolute bottom-14 right-10'>
               <Signin />
             </div>
           </nav>
