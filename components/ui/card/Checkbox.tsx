@@ -16,16 +16,16 @@ interface CheckboxProps {
 
 const Checkbox: FC<CheckboxProps> = ({ value, position, label, isChecked, onChange, price, description, icon }) => {
 
-  const { register, formState } = useFormContext();
+  const { register, formState : errors} = useFormContext();
 
-  
+    
 
   return isChecked ? (
     <div className=' border-3 border-primary-color flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
       <div>
         <label>
           <input
-            {...register(`purchaseProducts.${position}`)}
+            {...register(`products`)}
             className='h-8 w-8 accent-primary-color text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
             type='checkbox'
             value={value}
@@ -52,7 +52,7 @@ const Checkbox: FC<CheckboxProps> = ({ value, position, label, isChecked, onChan
       <div>
         <label>
           <input
-            {...register("purchaseProducts.0")}
+            {...register("products")}
             className='h-8 w-8 accent-primary-color'
             type='checkbox'
             value={value}

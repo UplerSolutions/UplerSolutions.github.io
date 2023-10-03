@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useEffect, useState, ChangeEvent, FocusEvent } from 'react'
 import { CheckboxGroup } from './CheckboxGroup'
 import { IPlan } from '@/interface/plan'
 import { GoShieldCheck } from 'react-icons/go'
@@ -14,27 +14,70 @@ interface Props {
   plan: IPlan
 }
 
+interface PaymentForm {
+  number: string
+  name: string
+  expiry: string
+  cvc: string
+}
+
+interface PaymentFormState {
+  number: string
+  name: string
+  expiry: string
+  cvc: string
+  focus: string
+}
+
 interface FormData {
-  period: number | string;
-  purchaseProducts: string[];
-  customer: string;
+  status: string;
+  paymentMethod: PaymentForm;
+  user: string;
+  plan: string;
+  period: string;
+  products: string[];
+  totalPrice: number
 }
 
 export const Card: FC<Props> = ({ plan }) => {
 
   const [products, setProducts] = useState<ISoftware[]>()
+  const [purchaseProducts, setPurchaseProducts] = useState<string[]>([]);
+  const [state, setState] = useState<PaymentFormState>({
+    cvc: "",
+    expiry: "",
+    name: "",
+    number: "",
+    focus:""
+  })
+  console.log(purchaseProducts)
 
   const methods = useForm<FormData>({
     defaultValues: {
-      customer: "",
+      status: "PENDING",
+      paymentMethod: {
+        cvc: "",
+        expiry: "",
+        name: "",
+        number: ""
+      },
+      user: "",
+      plan: plan.name,
       period: "",
-      purchaseProducts: [""]
+      products:[],
+      totalPrice: plan.price
     }
   });
 
   const onSubmit = (data: any) => {
-    console.log(data)
-  };
+    const formatData = {
+      ...data,
+      paymentMethod: { ...state },
+      user: "",
+    }
+    console.log(formatData)
+  }
+
 
   useEffect(() => {
     async function fetchData() {
@@ -48,11 +91,6 @@ export const Card: FC<Props> = ({ plan }) => {
     fetchData()
   }, [])
 
-
-  const [purchaseProducts, setPurchaseProducts] = useState<string[]>([]);
-  
-  console.log(purchaseProducts)
-  
   const handleCheckboxChange = (value: string) => {
     if (purchaseProducts.includes(value)) {
       setPurchaseProducts(purchaseProducts.filter((option) => option !== value));
@@ -61,11 +99,42 @@ export const Card: FC<Props> = ({ plan }) => {
         setPurchaseProducts((prevProducts) => [...prevProducts, value]);
       }
     }
-    
-    // Flatten the purchaseProducts array
+
+
     setPurchaseProducts((prevProducts) => prevProducts.flat());
   };
 
+  const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = evt.target
+
+    if (name === 'number') {
+      // Restrict card number to 16 digits
+      const formattedValue = value
+        .replace(/\s/g, '')
+        .slice(0, 16)
+        .replace(/(\d{4})/g, '$1 ')
+        .trim()
+      setState((prev) => ({ ...prev, [name]: formattedValue }))
+    } else if (name === 'expiry') {
+      // Restrict date to 4 digits (MM/YY)
+      const formattedValue = value
+        .replace(/\s/g, '')
+        .slice(0, 5)
+        .replace(/(\d{2})(\d{0,2})/, '$1/$2')
+        .replace(/\/+/g, '/')
+      setState((prev) => ({ ...prev, [name]: formattedValue }))
+    } else if (name === 'cvc') {
+      // Restrict CVC to 3 digits
+      const formattedValue = value.replace(/\s/g, '').slice(0, 3)
+      setState((prev) => ({ ...prev, [name]: formattedValue }))
+    } else {
+      setState((prev) => ({ ...prev, [name]: value }))
+    }
+  }
+
+  const handleInputFocus = (evt: FocusEvent<HTMLInputElement>) => {
+    setState((prev) => ({ ...prev, focus: evt.target.name }))
+  }
 
   return (
     <FormProvider {...methods}>
@@ -135,9 +204,9 @@ export const Card: FC<Props> = ({ plan }) => {
               <CheckboxGroup
                 options={products}
                 limit={plan?.amount!}
-                selectedOptions={purchaseProducts} 
-                onChange={handleCheckboxChange} 
-                />
+                selectedOptions={purchaseProducts}
+                onChange={handleCheckboxChange}
+              />
             </div>
           </div>
         </section>
@@ -178,16 +247,16 @@ export const Card: FC<Props> = ({ plan }) => {
                 Need assistance? Check out our FAQs.
               </span>
             </div>
-            <CreditCard />
-            
+            <CreditCard state={state} handleInputFocus={handleInputFocus} handleInputChange={handleInputChange} />
+
           </div>
           <div className='xl:pl-[3.2rem]'>
-              <button type="submit" className=' text-lg bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                Buy now
-              </button>
-            </div>
+            <button type="submit" className=' text-lg bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
+              Buy now
+            </button>
+          </div>
         </section>
-        
+
       </form>
     </FormProvider>
   )

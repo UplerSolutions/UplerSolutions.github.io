@@ -16,7 +16,6 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ options, limit, se
   return (
     <div className='w-[100%] md:gap-4 xl:grid 2 xl:grid-cols-3  2xl:grid-rows-2   rounded-xl text-center text-dark flex flex-row flex-wrap justify-center items-center pt-8'>
       {options?.map((product, index) => (
-        <>
           <Checkbox
             key={product.id}
             position={index}
@@ -27,7 +26,6 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({ options, limit, se
             isChecked={selectedOptions.includes(product.id)}
             onChange={onChange}
           />
-        </>
       ))}
     </div>
   )

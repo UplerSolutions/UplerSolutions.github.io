@@ -8,7 +8,7 @@ interface Props {
 
 const Period: FC<Props> = ({ price, duration }) => {
 
-    const { register } = useFormContext();
+    const { register, formState: errors,  } = useFormContext();
 
     return (
         <div className='flex flex-col py-8 px-14 sm:px-0 sm:p-8 bg-white rounded-xl items-center text-center w-[100%] md:w-[30%]'>
