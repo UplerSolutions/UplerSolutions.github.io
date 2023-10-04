@@ -15,11 +15,6 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from 'next/link'
 
 export default function Home() {
-  const { data: session } = useSession()
-  const origin =
-    typeof window !== 'undefined' && window.location.origin
-      ? window.location.origin
-      : SITE_URL
 
   return (
     <Layout title='Upler '>

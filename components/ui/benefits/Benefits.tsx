@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { data } from '../../../data/benefits'
+import { data } from '@/data/benefits'
 import Image from 'next/image'
 
 export const Benefits = () => {

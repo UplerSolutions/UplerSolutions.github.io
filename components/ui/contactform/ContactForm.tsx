@@ -19,7 +19,7 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    control
+    
   } = useForm<FormData>()
 
   const onSubmit = (data: FormData) => {

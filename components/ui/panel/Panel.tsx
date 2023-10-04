@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 export const Panel = () => {
   const { data: session } = useSession()
   const router = useRouter()
+  
   useEffect(() => {
     // Redirect to '/' if the user is signed in and on a different page
     if (session && session.user && router.pathname == '/login') {
