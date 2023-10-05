@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
-import { CustomForm } from '@/components/ui/customform/CustomForm'
+import { ContactForm } from '@/components/ui/contactform/ContactForm'
 
 const Apply: NextPage = () => {
   return (
     <Layout title='Upler - Apply'>
-      <CustomForm />
+      <ContactForm />
     </Layout>
   )
 }

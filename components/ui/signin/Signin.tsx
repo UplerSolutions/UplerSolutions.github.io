@@ -87,14 +87,6 @@ const SigninButton = () => {
                 >
                   Dashboard
                 </Link>
-                <Link
-                  href='/'
-                  className='hover:text-white text-gray-700 block px-4 py-2 text-sm hover:bg-primary-color'
-                  role='menuitem'
-                  id='menu-item-2'
-                >
-                  License
-                </Link>
 
                 <button
                   onClick={() => signOut()}

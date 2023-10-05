@@ -11,6 +11,7 @@ import { getSoftwares } from '@/service/software/software-service'
 import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
 import { getCategories } from '@/service/categories/categories-service'
+import CustomAccordion from '@/components/ui/accordion/CustomAccordion'
 
 interface Props {
   software: ISoftware[]
@@ -54,10 +55,10 @@ const Softwares: NextPage<Props> = ({ software }) => {
           </p>
         </div>
 
-        <div className=' flex justify-center w-full'>
+        <div className=' flex justify-center w-[90%] flex-col gap-6'>
           <Box maxWidth={'sm'} margin='auto' className='w-[82%] xl:w-[100%]'>
             <Typography textAlign='center' my={2}></Typography>
-            <Box ref={anchorEl}>
+            <Box className='flex flex-col gap-6' ref={anchorEl}>
               <SearchBar
                 onSubmit={(searchTerm: string) => {
                   // when the user submits the form, we only modify the router query parameters
@@ -83,19 +84,12 @@ const Softwares: NextPage<Props> = ({ software }) => {
                 }}
               />
             </Box>
+            <div className='pt-6'>
+              <CustomAccordion />
+            </div>
           </Box>
         </div>
-        <div className='flex gap-5 xl:gap-8 py-8 flex-wrap items-center justify-center'>
-          {categories?.map((category) => (
-            <button
-              onClick={() => onClickFilterByCategory(category?.categoryName)}
-              key={category?.id}
-              className=' w-36 md:w-48 group relative inline-block overflow-hidden rounded-xl border border-fuchsia-100 bg-fuchsia-200 px-2 lg:px-6 py-3 text-sm font-semibold text-primary-color hover:text-primary-color focus:outline-none focus:ring active:bg-primary-color active:text-white'
-            >
-              {category?.categoryName}
-            </button>
-          ))}
-        </div>
+
         <Explore category={categoryFilter} software={software} />
       </section>
     </Layout>

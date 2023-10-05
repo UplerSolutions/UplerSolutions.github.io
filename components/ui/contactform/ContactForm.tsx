@@ -14,12 +14,12 @@ interface FormData {
   position: string
 }
 
-export const CustomForm = () => {
+export const ContactForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    control
+    
   } = useForm<FormData>()
 
   const onSubmit = (data: FormData) => {
