@@ -1,7 +1,6 @@
-// Checkbox.tsx
-import React,{FC} from 'react'
+import React, { FC } from 'react'
 import Image from 'next/image'
-import { useFormContext } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form'
 
 interface CheckboxProps {
   value: string
@@ -14,16 +13,22 @@ interface CheckboxProps {
   onChange: (value: string) => void
 }
 
-const Checkbox: FC<CheckboxProps> = ({ value, position, label, isChecked, onChange, price, description, icon }) => {
-
-  const { register, formState : errors} = useFormContext();
-
-    
+const Checkbox: FC<CheckboxProps> = ({
+  value,
+  position,
+  label,
+  isChecked,
+  onChange,
+  price,
+  description,
+  icon
+}) => {
+  const { register, formState: errors } = useFormContext()
 
   return isChecked ? (
-    <div className=' border-3 border-primary-color flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
+    <div className='border-2 border-primary-color flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
       <div>
-        <label>
+        <label htmlFor={`checkbox-${value}`}>
           <input
             {...register(`products`)}
             className='h-8 w-8 accent-primary-color text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
@@ -31,10 +36,12 @@ const Checkbox: FC<CheckboxProps> = ({ value, position, label, isChecked, onChan
             value={value}
             checked={isChecked}
             onChange={() => onChange(value)}
+            id={`checkbox-${value}`}
           />
+          {label}
         </label>
         <Image
-          className=' w-[150px] md:w-40 min-w-full'
+          className='w-[150px] md:w-40 min-w-full'
           src='/uplerlogo.png'
           alt='global Logo'
           width={100}
@@ -48,20 +55,22 @@ const Checkbox: FC<CheckboxProps> = ({ value, position, label, isChecked, onChan
       </div>
     </div>
   ) : (
-    <div className='flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
+    <div className='border-2 flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center '>
       <div>
-        <label>
+        <label htmlFor={`checkbox-${value}`}>
           <input
-            {...register("products")}
+            {...register('products')}
             className='h-8 w-8 accent-primary-color'
             type='checkbox'
             value={value}
             checked={isChecked}
             onChange={() => onChange(value)}
+            id={`checkbox-${value}`}
           />
+          {label}
         </label>
         <Image
-          className=' w-[150px] md:w-40 min-w-full'
+          className='w-[150px] md:w-40 min-w-full'
           src='/uplerlogo.png'
           alt='global Logo'
           width={100}

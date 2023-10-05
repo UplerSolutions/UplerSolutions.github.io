@@ -7,8 +7,9 @@ import { RxLockClosed } from 'react-icons/rx'
 import CreditCard from '../creditcard/CreditCard'
 import { ISoftware } from '@/interface/software'
 import { getSoftwares } from '@/service/software/software-service'
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
+import { useForm, FormProvider, useFormContext } from 'react-hook-form'
 import Period from './Period'
+import Pagination from '@mui/material/Pagination'
 
 interface Props {
   plan: IPlan
@@ -30,54 +31,55 @@ interface PaymentFormState {
 }
 
 interface FormData {
-  status: string;
-  paymentMethod: PaymentForm;
-  user: string;
-  plan: string;
-  period: string;
-  products: string[];
+  status: string
+  paymentMethod: PaymentForm
+  user: string
+  plan: string
+  period: string
+  products: string[]
   totalPrice: number
 }
 
 export const Card: FC<Props> = ({ plan }) => {
-
   const [products, setProducts] = useState<ISoftware[]>()
-  const [purchaseProducts, setPurchaseProducts] = useState<string[]>([]);
+  const [purchaseProducts, setPurchaseProducts] = useState<string[]>([])
   const [state, setState] = useState<PaymentFormState>({
-    cvc: "",
-    expiry: "",
-    name: "",
-    number: "",
-    focus:""
+    cvc: '',
+    expiry: '',
+    name: '',
+    number: '',
+    focus: ''
   })
-  console.log(purchaseProducts)
+  const [currentPage, setCurrentPage] = useState<number>(1)
+  const pageSize = 6 // Number of products per page
+  const totalProducts = products?.length || 0
+  const totalPages = Math.ceil(totalProducts / pageSize)
 
   const methods = useForm<FormData>({
     defaultValues: {
-      status: "PENDING",
+      status: 'PENDING',
       paymentMethod: {
-        cvc: "",
-        expiry: "",
-        name: "",
-        number: ""
+        cvc: '',
+        expiry: '',
+        name: '',
+        number: ''
       },
-      user: "",
+      user: '',
       plan: plan.name,
-      period: "",
-      products:[],
+      period: '',
+      products: [],
       totalPrice: plan.price
     }
-  });
+  })
 
   const onSubmit = (data: any) => {
     const formatData = {
       ...data,
       paymentMethod: { ...state },
-      user: "",
+      user: ''
     }
     console.log(formatData)
   }
-
 
   useEffect(() => {
     async function fetchData() {
@@ -93,16 +95,15 @@ export const Card: FC<Props> = ({ plan }) => {
 
   const handleCheckboxChange = (value: string) => {
     if (purchaseProducts.includes(value)) {
-      setPurchaseProducts(purchaseProducts.filter((option) => option !== value));
+      setPurchaseProducts(purchaseProducts.filter((option) => option !== value))
     } else {
       if (purchaseProducts.length < plan.amount!) {
-        setPurchaseProducts((prevProducts) => [...prevProducts, value]);
+        setPurchaseProducts((prevProducts) => [...prevProducts, value])
       }
     }
 
-
-    setPurchaseProducts((prevProducts) => prevProducts.flat());
-  };
+    setPurchaseProducts((prevProducts) => prevProducts.flat())
+  }
 
   const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = evt.target
@@ -136,12 +137,29 @@ export const Card: FC<Props> = ({ plan }) => {
     setState((prev) => ({ ...prev, focus: evt.target.name }))
   }
 
+  const onPageChange = (page: number) => {
+    setCurrentPage(page)
+  }
+
+  const handlePaginationChange = (
+    event: React.ChangeEvent<unknown>,
+    page: number
+  ) => {
+    onPageChange(page)
+  }
+
+  // Calculate the start and end indexes for the current page
+  const startIndex = (currentPage - 1) * pageSize
+  const endIndex = startIndex + pageSize
+
+  // Slice the products array to display only the products for the current page
+  const displayedProducts: ISoftware[] =
+    products?.slice(startIndex, endIndex) || []
+
   return (
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(onSubmit)} >
+      <form onSubmit={methods.handleSubmit(onSubmit)}>
         <section className='pt-32 flex flex-col justify-center items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
-
-
           <div className='first-letter:rounded-xl flex flex-row p-6 sm:py-10 sm:pl-16 bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] text-neutral-700 lg:w-[75%] '>
             <div className='flex flex-col gap-10'>
               <div className='items-center flex-col sm:flex-row flex  gap-4 text-center sm:gap-0 sm:text-left md:gap-[150px]'>
@@ -155,18 +173,18 @@ export const Card: FC<Props> = ({ plan }) => {
               </div>
               <div>
                 <h2 className='text-xl'>
-                  Bundle choosen:
+                  Bundle chosen:
                   <span className='text-primary-color font-semibold'>
                     {' '}
                     {plan?.name}
                   </span>
                 </h2>
                 <div className='flex gap-5'>
-                  <div className='flex'>
-                    <h2>This Bundles includes :</h2>
+                  <div className='flex items-center pt-2'>
+                    <h2>This Bundle includes :</h2>
                     <div className='pl-5'>
                       {plan?.benefits.map((benefit) => (
-                        <div className='flex gap-4 pt-2' key={benefit}>
+                        <div className='flex gap-4 items-center' key={benefit}>
                           <FaCheck className='text-primary-color ' />
                           <span>{benefit}</span>
                         </div>
@@ -190,10 +208,8 @@ export const Card: FC<Props> = ({ plan }) => {
               <Period duration='12 Months' price={plan?.price * 12} />
             </div>
           </div>
-
         </section>
-
-        <section className='flex flex-col justify-center  items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
+        <section className=' flex flex-col justify-center items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
           <div className='rounded-xl flex flex-col p-6 sm:py-16 sm:pl-16 bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] text-neutral-700 w-[90%] lg:w-[75%]'>
             <div className='text-2xl md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold w-full'>
               <h2 className='md:pb-10 md:pl-6 text-neutral-600'>
@@ -202,61 +218,71 @@ export const Card: FC<Props> = ({ plan }) => {
             </div>
             <div className='text-center '>
               <CheckboxGroup
-                options={products}
-                limit={plan?.amount!}
-                selectedOptions={purchaseProducts}
-                onChange={handleCheckboxChange}
+                software={displayedProducts} // Pass the displayed products to CheckboxGroup
+                category={undefined} // You can specify the category if needed
               />
             </div>
+            <Pagination
+              count={totalPages}
+              page={currentPage}
+              onChange={handlePaginationChange}
+              className='pt-10 flex justify-center items-center'
+            />
           </div>
         </section>
 
-
-        <section className='flex flex-col justify-center  items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
-          <div className='flex flex-col justify-center items-center xl:items-start text-center xl:text-start bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-10 py-8 px-12 mb-8 rounded-xl lg:w-[75%] w-[90%] '>
-            <div className='flex-col xl:flex-row text-2xl md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold w-full flex items-center justify-between gap-6'>
-              <h2 className='md:pb-8 md:pl-6 pt-6 text-neutral-600'>
-                3. Proceed to secure payment
-              </h2>
-            </div>
-            <div className='flex flex-col md:pl-[3.2rem]'>
-              <div className='gap-6 hidden xl:flex items-center'>
-                <span>
-                  <GoShieldCheck className='text-primary-color scale-[1.8]' />
-                </span>
-                <p className='w-[150px] text-neutral-700'>
-                  30-day money-back guarantee
-                </p>
-                <div className='pl-7 flex items-center gap-6'>
+        <div className='flex flex-col justify-center  items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
+          <section className='flex flex-col justify-center  items-center w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] '>
+            <div className='flex flex-col justify-center items-center xl:items-start text-center xl:text-start bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] mt-10 py-8 px-12 mb-8 rounded-xl lg:w-[75%] w-[90%] '>
+              <div className='flex-col xl:flex-row text-2xl md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold w-full flex items-center justify-between gap-6'>
+                <h2 className='md:pb-8 md:pl-6 pt-6 text-neutral-600'>
+                  3. Proceed to secure payment
+                </h2>
+              </div>
+              <div className='flex flex-col md:pl-[3.2rem]'>
+                <div className='gap-6 hidden xl:flex items-center'>
                   <span>
-                    <RxLockClosed className='text-primary-color scale-[1.8]' />
+                    <GoShieldCheck className='text-primary-color scale-[1.8]' />
                   </span>
                   <p className='w-[150px] text-neutral-700'>
-                    Encrypted and secure payments
+                    30-day money-back guarantee
                   </p>
+                  <div className='pl-7 flex items-center gap-6'>
+                    <span>
+                      <RxLockClosed className='text-primary-color scale-[1.8]' />
+                    </span>
+                    <p className='w-[150px] text-neutral-700'>
+                      Encrypted and secure payments
+                    </p>
+                  </div>
                 </div>
+                <div>
+                  <h4 className='pt-6 text-neutral-700'>
+                    By completing the purchase, you agree to our Terms of
+                    Service and confirm that you have read our Privacy Policy.
+                    You can cancel recurring payments anytime.
+                  </h4>
+                </div>
+                <span className='font-semibold pb-8 pt-10 text-neutral-700'>
+                  Need assistance? Check out our FAQs.
+                </span>
               </div>
-              <div>
-                <h4 className='pt-6 text-neutral-700'>
-                  By completing the purchase, you agree to our Terms of Service
-                  and confirm that you have read our Privacy Policy. You can
-                  cancel recurring payments anytime.
-                </h4>
-              </div>
-              <span className='font-semibold pb-8 pt-10 text-neutral-700'>
-                Need assistance? Check out our FAQs.
-              </span>
+              <CreditCard
+                state={state}
+                handleInputFocus={handleInputFocus}
+                handleInputChange={handleInputChange}
+              />
             </div>
-            <CreditCard state={state} handleInputFocus={handleInputFocus} handleInputChange={handleInputChange} />
-
-          </div>
-          <div className='xl:pl-[3.2rem]'>
-            <button type="submit" className=' text-lg bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-              Buy now
-            </button>
-          </div>
-        </section>
-
+            <div className='pb-20'>
+              <button
+                type='submit'
+                className=' text-lg bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+              >
+                Buy now
+              </button>
+            </div>
+          </section>
+        </div>
       </form>
     </FormProvider>
   )

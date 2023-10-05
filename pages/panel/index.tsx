@@ -8,7 +8,7 @@ import { Panel } from '@/components/ui/panel/Panel'
 const panel: NextPage = () => {
   return (
     <Layout title='Upler - Panel'>
-      <main className='pt-40 h-[90vh] bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'>
+      <main className='pt-24 h-[90vh] bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'>
         <Panel />
       </main>
     </Layout>
