@@ -26,7 +26,7 @@ const Checkbox: FC<CheckboxProps> = ({
   const { register, formState: errors } = useFormContext()
 
   return isChecked ? (
-    <div className='border-2 border-primary-color flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
+    <div className='h-[33vh] border-2 border-primary-color flex flex-col w-full bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center'>
       <div>
         <label htmlFor={`checkbox-${value}`}>
           <input
@@ -55,7 +55,7 @@ const Checkbox: FC<CheckboxProps> = ({
       </div>
     </div>
   ) : (
-    <div className='border-2 flex flex-col w-full h-auto bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center '>
+    <div className='h-[40vh] 2xl:h-[33vh] border-2 flex flex-col w-full bg-white rounded-xl p-6 gap-10 mb-10 items-center text-center '>
       <div>
         <label htmlFor={`checkbox-${value}`}>
           <input

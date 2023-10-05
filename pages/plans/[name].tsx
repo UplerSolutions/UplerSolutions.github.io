@@ -1,11 +1,10 @@
 import { Layout } from '@/components/layout/Layout'
-import { CardPlan } from '@/components/ui/plan'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import { data } from '@/data/plans'
 import { IPlan } from '@/interface/plan'
-import { Card } from '@/components/ui/card'
+import PurchaseForm from '@/components/ui/purchaseform/PurchaseForm';
 
 const PlanPage: NextPage = () => {
   const router = useRouter();
@@ -23,7 +22,7 @@ const PlanPage: NextPage = () => {
 
   return (
     <Layout title='Plan'>
-        {plan ? <Card plan={plan} /> : <p>Plan not found.</p>}
+        {plan && <PurchaseForm plan={plan} /> }
     </Layout>
   )
 }

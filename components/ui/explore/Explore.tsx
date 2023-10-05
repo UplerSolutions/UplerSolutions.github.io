@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { ISoftware } from '@/interface/software'
 // import {software} from "@/data/software"
 import { useRouter } from 'next/router'
-import CardSoftware from '../cardsoftware/CardSoftware'
+import CardSoftware from '@/components/ui/cardsoftware/CardSoftware'
 
 interface Props {
   software: ISoftware[]

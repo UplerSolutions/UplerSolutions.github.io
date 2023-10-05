@@ -5,12 +5,10 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import {
   Navigation,
-  Autoplay,
   Mousewheel,
   Keyboard,
   Pagination
 } from 'swiper/modules'
-import { Card } from '@/components/ui/card/Card'
 import Link from 'next/link'
 // Import Swiper styles
 import { FaCheck } from 'react-icons/fa'
@@ -20,7 +18,7 @@ import { IPlan } from '@/interface/plan'
 
 export const Carousel = () => {
   const [plans, setPlans] = useState(data)
-  const [companias, setCompanias] = useState(data)
+  
   return (
     <section className='max-w-[100%] w-full md:hidden'>
       <div className='max-w-[100%] w-full m-auto py-6 '>
