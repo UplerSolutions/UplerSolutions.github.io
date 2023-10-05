@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { PiHandCoinsDuotone } from 'react-icons/pi'
 import { MdOutlineDashboard } from 'react-icons/md'
 import { TfiHeadphoneAlt } from 'react-icons/tfi'
-import { LuSettings } from 'react-icons/Lu'
+import { LuSettings } from 'react-icons/lu'
 import { AiOutlineLaptop } from 'react-icons/ai'
 import Pagination from '@mui/material/Pagination'
 
