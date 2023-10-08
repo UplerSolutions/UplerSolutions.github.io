@@ -5,11 +5,12 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
+import { postLogin } from '@/service/login/login-service';
 
 interface FormData {
-  emailOrUsername: string
+  username: string
   password: string
-  rememberMe: boolean
+  
 }
 
 export const Login = () => {
@@ -31,7 +32,7 @@ export const Login = () => {
 
   const onSubmit = (data: FormData) => {
     // Handle login submission here
-    console.log(data)
+    postLogin(data)
   }
 
   return (
@@ -43,28 +44,25 @@ export const Login = () => {
               <Image src='/uplerlogo.png' alt={''} width={200} height={50} />
             </div>
           </Link>
-          <div className='drop-shadow-md flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 xl:w-[80%] justify-center items-center'>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className='flex flex-col px-8 pt-8 w-[100%]'
-            >
+          <form onSubmit={handleSubmit(onSubmit)} className='drop-shadow-md flex flex-col w-[100%] border-1 rounded-3xl bg-white p-2 text-neutral-600 xl:w-[80%] justify-center items-center'>
+            <div className='flex flex-col px-8 pt-8 w-[100%]'>
               <h1 className='text-3xl  pb-6  md:font-medium'>Welcome !</h1>
               <h1 className='text-4xl  pb-6 font-bold md:font-semibold'>
                 Log In
               </h1>
               <label
-                htmlFor='emailOrUsername'
+                htmlFor='username'
                 className='text-xl py-4 font-semibold'
               >
                 Email or Username
               </label>
               <input
-                {...register('emailOrUsername', {
+                {...register('username', {
                   required: 'This field is required'
                 })}
                 type='text'
                 placeholder='johndoe@example.com'
-                name='emailOrUsername'
+                name='username'
                 className='py-3 px-3 border-2 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
               <label htmlFor='password' className='text-xl py-4 font-semibold'>
@@ -79,9 +77,9 @@ export const Login = () => {
                 name='password'
                 className='py-3 px-3 border-2 mb-4 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
-            </form>
+            </div>
             <div className='flex flex-col justify-center items-center px-8 mt-4 w-full pb-10 gap-4'>
-              <div className='flex items-center justify-between pb-6 w-full gap-2'>
+              {/* <div className='flex items-center justify-between pb-6 w-full gap-2'>
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -96,7 +94,7 @@ export const Login = () => {
                 >
                   Forgot Password?
                 </a>
-              </div>
+              </div> */}
 
               <button
                 type='submit'
@@ -118,7 +116,8 @@ export const Login = () => {
                 </p>
               </div>
             </div>
-          </div>
+
+          </form>
         </div>
         <div className='hidden md:flex'>
           <Image src='/globo1.png' alt={''} width={400} height={400} />
