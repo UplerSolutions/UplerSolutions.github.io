@@ -11,7 +11,8 @@ import { getSoftwares } from '@/service/software/software-service'
 import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
 import { getCategories } from '@/service/categories/categories-service'
-import CustomAccordion from '@/components/ui/accordion/CustomAccordion'
+import Filter from '@/components/ui/filter/Filter'
+import FilterMobile from '@/components/ui/filter/FilterMobile'
 
 interface Props {
   software: ISoftware[]
@@ -45,17 +46,17 @@ const Softwares: NextPage<Props> = ({ software }) => {
 
   return (
     <Layout title='Upler - Softwares'>
-      <section className='w-full flex flex-col justify-center items-center pt-10 pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
+      <div className='flex flex-col items-center justify-center pt-20  bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <div className='flex flex-col gap-8 pb-4 items-center text-center'>
-          <h1 className='text-[32px] text-center font-bold md:text-5xl lg:text-6xl text-neutral-700 pt-24'>
+          <h1 className='text-[32px] text-center font-bold md:text-5xl lg:text-6xl text-neutral-700 pt-12'>
             Softwares
           </h1>
-          <p className='text-xl text-neutral-700'>
+          <p className='text-xl text-neutral-700 w-[90%]'>
             Explore our collection and find your solution.
           </p>
         </div>
 
-        <div className=' flex justify-center w-[90%] flex-col gap-6'>
+        <div className=' flex justify-center w-full md:w-[90%] flex-col gap-6'>
           <Box maxWidth={'sm'} margin='auto' className='w-[82%] xl:w-[100%]'>
             <Typography textAlign='center' my={2}></Typography>
             <Box className='flex flex-col gap-6' ref={anchorEl}>
@@ -84,13 +85,20 @@ const Softwares: NextPage<Props> = ({ software }) => {
                 }}
               />
             </Box>
-            <div className='pt-6'>
-              <CustomAccordion />
+            <div className='pt-6 w-[200] lg:hidden'>
+              <FilterMobile />
             </div>
           </Box>
         </div>
+      </div>
 
-        <Explore category={categoryFilter} software={software} />
+      <section className='w-full flex  md:pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
+        <div className=' items-start justify-start pl-4 hidden lg:flex pt-20'>
+          <Filter />
+        </div>
+        <div className='w-full flex flex-col justify-center items-center pt-10 pb-20'>
+          <Explore category={categoryFilter} software={software} />
+        </div>
       </section>
     </Layout>
   )

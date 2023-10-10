@@ -45,9 +45,12 @@ export const Explore: FC<Props> = ({ software, category }) => {
 
   return (
     <div className='flex flex-col items-center justify-center'>
-      <ul className='grid grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))] grid-rows-2 gap-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full m-auto px-4 py-4 lg:py-8 items-center'>
+      <ul className='flex flex-wrap w-full m-auto md:px-4 pb-4 md:py-4 lg:py-8 gap-2 md:gap-8 justify-center items-center'>
         {displayedProducts?.map((product) => (
-          <li key={product.id} className='flex flex-col gap-12 lg:gap-8'>
+          <li
+            key={product.id}
+            className='flex flex-col gap-12 lg:gap-8 h-[35vh] w-[45%] xl:w-[30%]'
+          >
             <CardSoftware
               productName={product.productName}
               description={product.description}
