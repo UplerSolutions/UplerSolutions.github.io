@@ -11,8 +11,8 @@ import { getSoftwares } from '@/service/software/software-service'
 import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
 import { getCategories } from '@/service/categories/categories-service'
-import Filter from '@/components/ui/accordion/Filter'
-import FilterMobile from '@/components/ui/accordion/FilterMobile'
+import Filter from '@/components/ui/filter/Filter'
+import FilterMobile from '@/components/ui/filter/FilterMobile'
 
 interface Props {
   software: ISoftware[]
@@ -51,12 +51,12 @@ const Softwares: NextPage<Props> = ({ software }) => {
           <h1 className='text-[32px] text-center font-bold md:text-5xl lg:text-6xl text-neutral-700 pt-12'>
             Softwares
           </h1>
-          <p className='text-xl text-neutral-700'>
+          <p className='text-xl text-neutral-700 w-[90%]'>
             Explore our collection and find your solution.
           </p>
         </div>
 
-        <div className=' flex justify-center w-[90%] flex-col gap-6'>
+        <div className=' flex justify-center w-full md:w-[90%] flex-col gap-6'>
           <Box maxWidth={'sm'} margin='auto' className='w-[82%] xl:w-[100%]'>
             <Typography textAlign='center' my={2}></Typography>
             <Box className='flex flex-col gap-6' ref={anchorEl}>
@@ -92,7 +92,7 @@ const Softwares: NextPage<Props> = ({ software }) => {
         </div>
       </div>
 
-      <section className='w-full flex  pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
+      <section className='w-full flex  md:pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <div className=' items-start justify-start pl-4 hidden lg:flex pt-20'>
           <Filter />
         </div>

@@ -17,7 +17,7 @@ const CardSoftware: FC<Props> = ({ productName, price, description }) => {
         <div className='p-4 flex flex-col flex-1 gap-1'>
           <h2 className='text-2xl'>{productName}</h2>
           <p>${price} price </p>
-          <p>{description}</p>
+          <p className='hidden md:flex'>{description}</p>
         </div>
       </div>
     </div>

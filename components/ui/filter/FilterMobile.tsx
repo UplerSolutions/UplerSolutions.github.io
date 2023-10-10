@@ -168,16 +168,18 @@ export default function Filter() {
           </nav>
         </div>
       )}
-      <button
-        onClick={handleClick}
-        className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm shadow-[#5c5c5c] bg-[#ffffff]${
-          isOpen ? '' : '' // we can add styles when is open
-        }`}
-      >
-        <div className=' flex text-black items-center pl-3 font-medium gap-3 rounded w-full h-[40px]'>
-          <BsSliders className='scale-[1.5]' /> Filter
-        </div>
-      </button>
+      <div className='flex justify-center items-center'>
+        <button
+          onClick={handleClick}
+          className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm ${
+            isOpen ? '' : '' // we can add styles when is open
+          }`}
+        >
+          <div className=' flex text-neutral-600 items-center pl-3 font-medium gap-3 rounded w-full h-[40px]'>
+            <BsSliders className='scale-[1.5] z-0' /> FILTER
+          </div>
+        </button>
+      </div>
     </div>
   )
 }
