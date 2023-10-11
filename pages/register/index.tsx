@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
-import { Signup } from '@/components/ui/signup/Signup'
 import { Navbar } from '@/components/ui/navbar'
+import { Signup } from '@/components/ui/signup/SignUp'
 
-const SignUp: NextPage = () => {
+const Register: NextPage = () => {
   return (
     <main
       title='Upler - Register'
@@ -14,4 +14,4 @@ const SignUp: NextPage = () => {
   )
 }
 
-export default SignUp
+export default Register

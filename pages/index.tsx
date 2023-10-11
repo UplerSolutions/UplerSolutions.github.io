@@ -15,7 +15,8 @@ import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from 'next/link'
 
 export default function Home() {
-
+  const { data: session } = useSession()
+  console.log(session)
   return (
     <Layout title='Upler '>
       <Head>

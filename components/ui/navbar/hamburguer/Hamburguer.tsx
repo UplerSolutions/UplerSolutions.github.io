@@ -48,7 +48,7 @@ export const Hamburguer = () => {
               <li>
                 <Link
                   className='flex flex-col text-center items-center gap-2'
-                  href='/panel'
+                  href='/dashboard'
                 >
                   <span className='text-lg'>Dashboard</span>
                 </Link>

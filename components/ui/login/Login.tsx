@@ -1,3 +1,4 @@
+"use client";
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
@@ -10,11 +11,12 @@ import { postLogin } from '@/service/login/login-service';
 interface FormData {
   username: string
   password: string
-  
+
 }
 
 export const Login = () => {
   const { data: session } = useSession()
+  
   const router = useRouter()
 
   useEffect(() => {
@@ -27,12 +29,19 @@ export const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
+  
   } = useForm<FormData>()
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
+    const { username, password } = data
     // Handle login submission here
-    postLogin(data)
+    const responseNextAuth = await signIn("credentials", {
+      username,
+      password,
+      redirect: false,
+    });
+    console.log(responseNextAuth)
   }
 
   return (
@@ -108,7 +117,7 @@ export const Login = () => {
                 <p className=''>
                   Don&apos;t have an account yet?{'  '}
                   <Link
-                    href='/signup'
+                    href='/register'
                     className='text-primary-color hover:underline'
                   >
                     Register

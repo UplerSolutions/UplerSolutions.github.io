@@ -56,7 +56,7 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
     number: '',
     focus: ''
   })
-  console.log(purchaseProducts)
+
 
   const [currentPage, setCurrentPage] = useState<number>(1)
   const pageSize = 6 // Number of products per page

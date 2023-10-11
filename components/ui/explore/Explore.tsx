@@ -12,12 +12,6 @@ interface Props {
   category: string | undefined
 }
 export const Explore: FC<Props> = ({ software, category }) => {
-  // const router = useRouter();
-
-  // const redirect = (id : string) =>{
-  //     router.push(`software/${id}`)
-  // };
-
   const pageSize = 6
   const totalProducts = software?.length
   const totalPages = Math.ceil(totalProducts / pageSize)
@@ -27,10 +21,7 @@ export const Explore: FC<Props> = ({ software, category }) => {
   const onPageChange = (page: number) => {
     setCurrentPage(page)
   }
-  const handlePaginationChange = (
-    event: React.ChangeEvent<unknown>,
-    page: number
-  ) => {
+  const handlePaginationChange = (event: React.ChangeEvent<unknown>, page: number) => {
     onPageChange(page)
   }
 
@@ -52,6 +43,7 @@ export const Explore: FC<Props> = ({ software, category }) => {
             className='flex flex-col gap-12 lg:gap-8 h-[35vh] w-[45%] xl:w-[30%]'
           >
             <CardSoftware
+              id={product.id}
               productName={product.productName}
               description={product.description}
               price={product.price}

@@ -45,7 +45,7 @@ export const Panel = () => {
             <div className='pl-2 lg:pl-8 flex flex-col w-full text-lg  justify-center font-mono  text-neutral-700 pt-12 pb-3 gap-6  '>
               <Link
                 className='flex  text-center items-center gap-3 justify-start pl-6 py-3 w-[66px] md:w-[180px] lg:w-[270px] rounded-3xl bg-[#d1b8dc] hover:bg-[#bda0cc] hover:rounded-3xl'
-                href='/panel'
+                href='/dashboard'
               >
                 <MdOutlineDashboard />
                 <span className='hidden md:flex  text-md'>Dashboard</span>

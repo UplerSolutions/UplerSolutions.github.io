@@ -42,7 +42,7 @@ const Softwares: NextPage<Props> = ({ software }) => {
     setCategoryFilter(categoryName)
   }
 
-  console.log(categoryFilter)
+  
 
   return (
     <Layout title='Upler - Softwares'>
