@@ -56,7 +56,7 @@ export default function Filter() {
   }
 
   return (
-    <div className='grid  lg:w-[200px] mx-auto text-black mb-60'>
+    <div className='grid lg:w-[300px] pl-[3rem] mx-auto text-black mb-60'>
       <h2 className='text-lg font-semibold'>Filter By</h2>
 
       <div className='py-5'>
