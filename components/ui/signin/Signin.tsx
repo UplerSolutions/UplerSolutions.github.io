@@ -38,13 +38,13 @@ const SigninButton = () => {
           <div>
             <button
               onClick={handleClick}
-              className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#ffcffc] px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-[#eedcec] ${
+              className={`inline-flex w-full justify-center gap-x-1.5 rounded-md hover:text-white bg-purple-200 px-3 py-2 text-sm font-semibold  text-primary-color shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color ${
                 isOpen ? '' : '' // we can add styles when is open
               }`}
               aria-expanded='true'
               aria-haspopup='true'
             >
-              <p className=' flex text-primary-color items-center gap-2 '>
+              <p className=' flex items-center gap-2 '>
                 <BiUser />
                 {session.user.user.username}
               </p>
@@ -64,7 +64,7 @@ const SigninButton = () => {
           </div>
           {isOpen && (
             <div
-              className='absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-[#f9def8]  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
+              className='absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-purple-200  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
               role='menu'
               aria-orientation='vertical'
               aria-labelledby='menu-button'
