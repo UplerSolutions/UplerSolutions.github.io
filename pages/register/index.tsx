@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
 import { Navbar } from '@/components/ui/navbar'
-import { Signup } from '@/components/ui/signup/SignUp'
+import { Signup}  from '@/components/ui/signup'
+
 
 const Register: NextPage = () => {
   return (
@@ -9,7 +10,7 @@ const Register: NextPage = () => {
       title='Upler - Register'
       className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'
     >
-      <Signup />
+      <Signup/>
     </main>
   )
 }
