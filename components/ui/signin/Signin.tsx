@@ -107,7 +107,7 @@ const SigninButton = () => {
         <span className='text-primary-color'>Log in</span>
       </Link>
 
-    <button onClick={()=>signIn()}>signIn</button>
+    
 
       <Link href='/register'>
         <button className='w-24 border-2 border-primary-color group relative px-2  bg-primary-color h-9 rounded-xl text-white hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
