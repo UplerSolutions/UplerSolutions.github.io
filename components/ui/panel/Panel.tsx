@@ -94,7 +94,7 @@ export const Panel = () => {
 
                 <div className='flex items-center'>
                   <p className=' flex text-center text-xl '>
-                    {session.user.name}
+                    {session.user.user.name}
                   </p>
                 </div>
               </div>
