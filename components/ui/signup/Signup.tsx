@@ -6,11 +6,15 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-
+import { yupResolver } from '@hookform/resolvers/yup';
+import { singup } from '@/rules'
+import { ErrorMessage } from '@hookform/error-message';
+import Typography from "@mui/material/Typography";
 interface FormData {
   username: string
+  email: string
   password: string
-
+  confirmPassword: string
 }
 
 export const Signup = () => {
@@ -27,7 +31,7 @@ export const Signup = () => {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<FormData>()
+  } = useForm<FormData>({ resolver: yupResolver(singup), reValidateMode: "onChange" })
 
   const onSubmit = async (data: FormData) => {
     const { username, password } = data;
@@ -77,50 +81,70 @@ export const Signup = () => {
                 Sign Up
               </h1>
               <label
+                htmlFor='email'
+                className='text-xl py-4 font-semibold'
+              >
+                Email
+              </label>
+              <input
+                {...register('email')}
+                type='text'
+                placeholder='johndoe@example.com'
+                name='email'
+                className='py-3 px-3 border-2 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
+              />
+              <Typography variant="caption" color="red">
+                <ErrorMessage errors={errors} name="email" />
+              </Typography>
+              <label
                 htmlFor='username'
                 className='text-xl py-4 font-semibold'
               >
-                Email or Username
+                Username
               </label>
               <input
-                {...register('username', {
-                  required: 'This field is required'
-                })}
+                {...register('username')}
                 type='text'
-                placeholder='johndoe@example.com'
+                placeholder='johndoe'
                 name='username'
                 className='py-3 px-3 border-2 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
+              <Typography variant="caption" color="red">
+                <ErrorMessage errors={errors} name="username" />
+              </Typography>
               <label htmlFor='password' className='text-xl py-4 font-semibold'>
                 Password
               </label>
               <input
-                {...register('password', {
-                  required: 'This field is required'
-                })}
+                {...register('password')}
                 type='password'
                 placeholder='Enter your password'
                 name='password'
                 className='py-3 px-3 border-2 mb-4 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
+              <Typography variant="caption" color="red">
+                <ErrorMessage errors={errors} name="password" />
+              </Typography>
               <label htmlFor='password' className='text-xl py-4 font-semibold'>
                 Confirm Password
               </label>
               <input
-                {...register('password', {
-                  required: 'This field is required'
-                })}
+                {...register('confirmPassword')}
                 type='password'
-                placeholder='Enter your password'
-                name='password'
+                placeholder='Repeat password'
+                name='confirmPassword'
                 className='py-3 px-3 border-2 mb-4 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
+              <Typography variant="caption" color="red">
+                <ErrorMessage errors={errors} name="confirmPassword" />
+              </Typography>
               <button
                 type='submit'
                 className='bg-primary-color h-14 w-full rounded-md text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
               >
                 Signup
               </button>
+
               <h3 className=' text-neutral-400'>or continue with</h3>
               <GoogleButton />
 
