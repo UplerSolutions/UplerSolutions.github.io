@@ -21,10 +21,7 @@ export const Explore: FC<Props> = ({ software, category }) => {
   const onPageChange = (page: number) => {
     setCurrentPage(page)
   }
-  const handlePaginationChange = (
-    event: React.ChangeEvent<unknown>,
-    page: number
-  ) => {
+  const handlePaginationChange = (event: React.ChangeEvent<unknown>, page: number) => {
     onPageChange(page)
   }
 

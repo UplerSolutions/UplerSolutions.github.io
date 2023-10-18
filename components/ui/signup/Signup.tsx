@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
@@ -7,9 +8,9 @@ import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 
 interface FormData {
-  emailOrUsername: string
+  username: string
   password: string
-  rememberMe: boolean
+
 }
 
 export const Signup = () => {
@@ -18,7 +19,7 @@ export const Signup = () => {
 
   useEffect(() => {
     // Redirect to '/' if the user is signed in and on a different page
-    if (session && session.user && router.pathname == '/signup') {
+    if (session && session.user && router.pathname == '/register') {
       router.push('/')
     }
   }, [session, router])
@@ -28,9 +29,32 @@ export const Signup = () => {
     formState: { errors }
   } = useForm<FormData>()
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
+    const { username, password } = data;
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/createUser`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: "Joaquin",
+          lastname: "Marmol",
+          username,
+          email: "joaquinmarmolnecochea@gmail.com",
+          password,
+          city: "necochea",
+          province: "buenos aires",
+          street_adrees: "87-784",
+          number_phone: 659056,
+        }),
+      }
+    );
+
+
     // Handle login submission here
-    console.log(data)
+    console.log(await res.json())
   }
 
   return (
@@ -53,18 +77,18 @@ export const Signup = () => {
                 Sign Up
               </h1>
               <label
-                htmlFor='emailOrUsername'
+                htmlFor='username'
                 className='text-xl py-4 font-semibold'
               >
                 Email or Username
               </label>
               <input
-                {...register('emailOrUsername', {
+                {...register('username', {
                   required: 'This field is required'
                 })}
                 type='text'
                 placeholder='johndoe@example.com'
-                name='emailOrUsername'
+                name='username'
                 className='py-3 px-3 border-2 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
               <label htmlFor='password' className='text-xl py-4 font-semibold'>
@@ -91,9 +115,18 @@ export const Signup = () => {
                 name='password'
                 className='py-3 px-3 border-2 mb-4 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
+              <button
+                type='submit'
+                className='bg-primary-color h-14 w-full rounded-md text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+              >
+                Signup
+              </button>
+              <h3 className=' text-neutral-400'>or continue with</h3>
+              <GoogleButton />
+
             </form>
             <div className='flex flex-col justify-center items-center px-8 mt-4 w-full pb-10 gap-4'>
-              <div className='flex items-center justify-between pb-6 w-full gap-2'>
+              {/* <div className='flex items-center justify-between pb-6 w-full gap-2'>
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -108,16 +141,9 @@ export const Signup = () => {
                 >
                   Forgot Password?
                 </a>
-              </div>
+              </div> */}
 
-              <button
-                type='submit'
-                className='bg-primary-color h-14 w-full rounded-md text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
-              >
-                Signup
-              </button>
-              <h3 className=' text-neutral-400'>or continue with</h3>
-              <GoogleButton />
+
               <div className='mt-4'>
                 <p className=''>
                   Don&apos;t have an account yet?{'  '}
@@ -139,3 +165,5 @@ export const Signup = () => {
     </div>
   )
 }
+
+
