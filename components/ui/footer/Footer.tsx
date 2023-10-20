@@ -52,9 +52,6 @@ export const Footer = () => {
           <div>
             <h1 className='font-semibold text-lg py-3 '> Follow Us</h1>
             <div className='flex gap-6 text-2xl'>
-              <Link href='https://discord.com/' target=' blank'>
-                <FaDiscord className=' hover:scale-[1.05] hover:text-neutral-300' />
-              </Link>
               <Link href='https://www.instagram.com/upler.ok/' target=' blank'>
                 <FaInstagram className=' hover:scale-[1.05] hover:text-neutral-300' />
               </Link>
