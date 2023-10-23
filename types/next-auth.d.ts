@@ -1,12 +1,8 @@
-import { User2 } from "@/interface/login";
-import "next-auth";
-import { User } from "next-auth";
+import 'next-auth'
+import { User } from '@/interface/login'
 
-declare module "next-auth" {
-    interface Session {
-        user: {
-            user: User2 | User;
-            token: string;
-        }
-    }
+declare module 'next-auth' {
+  interface Session {
+    user: User & { name: string }
+  }
 }

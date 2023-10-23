@@ -30,7 +30,7 @@ export const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
         <Checkbox
           key={product.id}
           position={index}
-          description={product.description}
+          description={product.lowDescription}
           value={product.id}
           label={''}
           price={product.price}

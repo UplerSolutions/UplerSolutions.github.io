@@ -21,7 +21,10 @@ export const Explore: FC<Props> = ({ software, category }) => {
   const onPageChange = (page: number) => {
     setCurrentPage(page)
   }
-  const handlePaginationChange = (event: React.ChangeEvent<unknown>, page: number) => {
+  const handlePaginationChange = (
+    event: React.ChangeEvent<unknown>,
+    page: number
+  ) => {
     onPageChange(page)
   }
 
@@ -45,8 +48,19 @@ export const Explore: FC<Props> = ({ software, category }) => {
             <CardSoftware
               id={product.id}
               productName={product.productName}
-              description={product.description}
+              lowDescription={product.lowDescription}
               price={product.price}
+              created_at={''}
+              longDescription={''}
+              updated_at={''}
+              seller={''}
+              directLink={''}
+              imageUrl={product.imageUrl}
+              rating={0}
+              category={{
+                id: '',
+                categoryName: ''
+              }}
             />
           </li>
         ))}
