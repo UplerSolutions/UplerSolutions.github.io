@@ -39,11 +39,11 @@ export const Explore: FC<Props> = ({ software, category }) => {
 
   return (
     <div className='flex flex-col items-center justify-center'>
-      <ul className='flex flex-wrap w-full m-auto md:px-4 pb-4 md:py-4 lg:py-8 gap-2 md:gap-8 justify-center items-center'>
+      <ul className='flex flex-wrap w-full m-auto md:px-4 md:pb-4 md:py-4 lg:py-8 gap-2 md:gap-8 justify-center items-center'>
         {displayedProducts?.map((product) => (
           <li
             key={product.id}
-            className='flex flex-col gap-12 lg:gap-8 h-[35vh] w-[45%] xl:w-[30%]'
+            className='flex flex-col gap-12 lg:gap-8 w-[45%] xl:w-[30%] md:min-w-[300px] xl:min-w-[350px]'
           >
             <CardSoftware
               id={product.id}

@@ -16,7 +16,7 @@ export const Hamburguer = () => {
     <div className='relative md:hidden'>
       {isOpen && (
         <div>
-          <nav className='bg-purple-200 absolute top-[-2.2rem] right-[-1rem] h-screen w-64 p-4'>
+          <nav className='bg-purple-200 absolute top-[-2.2rem] right-[-1rem] h-screen w-64 p-4 z-20'>
             <ul className='flex flex-col gap-6 pt-16 text-right items-end'>
               <li>
                 <Link
@@ -86,6 +86,10 @@ export const Hamburguer = () => {
                     }`}
         ></span>
       </button>
+      <div
+        onClick={handleClick}
+        className={` ${isOpen ? 'h-screen w-full absolute left-0 z-10' : ''}`}
+      ></div>
     </div>
   )
 }

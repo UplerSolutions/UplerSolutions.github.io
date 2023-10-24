@@ -42,8 +42,6 @@ const Softwares: NextPage<Props> = ({ software }) => {
     setCategoryFilter(categoryName)
   }
 
-  
-
   return (
     <Layout title='Upler - Softwares'>
       <div className='flex flex-col items-center justify-center pt-20  bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
