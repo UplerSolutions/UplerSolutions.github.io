@@ -6,8 +6,10 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import { postLogin } from '@/service/login/login-service';
-
+import { yupResolver } from '@hookform/resolvers/yup';
+import { login } from '@/rules'
+import { ErrorMessage } from '@hookform/error-message';
+import Typography from "@mui/material/Typography";
 interface FormData {
   username: string
   password: string
@@ -31,7 +33,7 @@ export const Login = () => {
     handleSubmit,
     formState: { errors },
   
-  } = useForm<FormData>()
+  } = useForm<FormData>({resolver: yupResolver(login),reValidateMode:"onChange"})
 
   const onSubmit = async (data: FormData) => {
     const { username, password } = data
@@ -66,26 +68,28 @@ export const Login = () => {
                 Email or Username
               </label>
               <input
-                {...register('username', {
-                  required: 'This field is required'
-                })}
+                {...register('username')}
                 type='text'
                 placeholder='johndoe@example.com'
                 name='username'
                 className='py-3 px-3 border-2 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
+              <Typography variant="caption" color="red">
+                <ErrorMessage errors={errors} name="username" />
+              </Typography>
               <label htmlFor='password' className='text-xl py-4 font-semibold'>
                 Password
               </label>
               <input
-                {...register('password', {
-                  required: 'This field is required'
-                })}
+                {...register('password')}
                 type='password'
                 placeholder='Enter your password'
                 name='password'
                 className='py-3 px-3 border-2 mb-4 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
+              <Typography variant="caption" color="red">
+                <ErrorMessage errors={errors} name="password" />
+              </Typography>
             </div>
             <div className='flex flex-col justify-center items-center px-8 mt-4 w-full pb-10 gap-4'>
               {/* <div className='flex items-center justify-between pb-6 w-full gap-2'>
