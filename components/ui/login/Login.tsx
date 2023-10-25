@@ -3,13 +3,14 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
 import Image from 'next/image'
-import React, { useEffect } from 'react'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import React, { useEffect, useState } from 'react'
+import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { yupResolver } from '@hookform/resolvers/yup';
 import { login } from '@/rules'
 import { ErrorMessage } from '@hookform/error-message';
 import Typography from "@mui/material/Typography";
+
 interface FormData {
   username: string
   password: string
@@ -18,7 +19,7 @@ interface FormData {
 
 export const Login = () => {
   const { data: session } = useSession()
-  
+  const [errorsApi, setErrorsApi] = useState<string>()
   const router = useRouter()
 
   useEffect(() => {
@@ -43,7 +44,9 @@ export const Login = () => {
       password,
       redirect: false,
     });
-    console.log(responseNextAuth)
+    if(!responseNextAuth?.ok){
+      setErrorsApi("Username or Password incorrect")
+    }
   }
 
   return (
@@ -115,6 +118,11 @@ export const Login = () => {
               >
                 Login
               </button>
+              {errorsApi && 
+                <Typography variant="caption" color="red">
+                  {errorsApi}
+                </Typography>
+              }
               <h3 className=' text-neutral-400'>or continue with</h3>
               <GoogleButton />
               <div className='mt-4'>
