@@ -4,6 +4,7 @@ import { FaCheck } from 'react-icons/fa'
 import { data } from '@/data/plans'
 import { Carousel } from '@/components/ui/carousel/Carousel'
 import { IPlan } from '@/interface/plan'
+import Image from 'next/image'
 
 export const CardPlan = () => {
   const [plans, setPlans] = useState(data)
@@ -64,10 +65,25 @@ export const CardPlan = () => {
                         <h2 className='text-xl font-semibold'>Benefits</h2>
                       </div>
 
-                      <div className='flex items-center justify-around pb-10 pt-4 '>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
+                      <div className='flex items-center justify-between pb-10 pt-4 '>
+                        <Image
+                          src='https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2020/02/adobe-logo.jpg?fit=840%2C473&ssl=1'
+                          alt={''}
+                          width={100}
+                          height={70}
+                        />
+                        <Image
+                          src='https://estaticos-cdn.elperiodico.com/clip/ec639019-0fde-42e1-ba01-9598859c2d28_alta-libre-aspect-ratio_default_0.jpg'
+                          alt={''}
+                          width={100}
+                          height={70}
+                        />
+                        <Image
+                          src='https://www.fathym.com/img/Figma2.png'
+                          alt={''}
+                          width={100}
+                          height={70}
+                        />
                       </div>
                     </div>
                   </div>
