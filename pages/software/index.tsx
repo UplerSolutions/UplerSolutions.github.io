@@ -13,6 +13,7 @@ import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
 import { getSoftwareByName, getSoftwares } from '@/service/software/software-service'
 import { getCategories } from '@/service/categories/categories-service'
+import { MarketCarousel } from '@/components/ui/marketcarousel/MarketCarousel'
 
 interface Props {
   software: ISoftware[]

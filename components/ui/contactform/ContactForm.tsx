@@ -18,8 +18,7 @@ export const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-    
+    formState: { errors }
   } = useForm<FormData>()
 
   const onSubmit = (data: FormData) => {
@@ -55,7 +54,7 @@ export const ContactForm = () => {
                 <h3 className='text-xl py-4 font-semibold'>Company Type*</h3>
                 <label
                   htmlFor='companyType'
-                  className='flex gap-4 items-center md:text-start'
+                  className='flex gap-4 items-center md:text-start pl-2'
                 >
                   <input
                     {...register('companyType', {
@@ -64,13 +63,13 @@ export const ContactForm = () => {
                     value='independent-consultant'
                     name='companyType'
                     type='radio'
-                    className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                    className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                   />
                   Independent Consultant
                 </label>
                 <label
                   htmlFor='companyType'
-                  className='flex gap-4 items-center'
+                  className='flex gap-4 items-center pl-2'
                 >
                   <input
                     {...register('companyType', {
@@ -79,7 +78,7 @@ export const ContactForm = () => {
                     name='companyType'
                     value='incorporated-company'
                     type='radio'
-                    className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                    className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                   />
                   Incorporated Company
                 </label>
@@ -89,7 +88,7 @@ export const ContactForm = () => {
                 <h3 className='text-xl pt-8 pb-4 font-semibold'>
                   Company Sector*
                 </h3>
-                <div className='flex flex-wrap justify-between gap-5 '>
+                <div className='flex flex-wrap justify-between gap-5 pl-2'>
                   <label
                     htmlFor='companySector'
                     className='flex gap-4 w-[40%] md:w-[150px] lg:w-[200px] xl:w-[30%] items-center '
@@ -101,7 +100,7 @@ export const ContactForm = () => {
                       value='development-it'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                      className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                     />
                     Development & IT
                   </label>
@@ -116,7 +115,7 @@ export const ContactForm = () => {
                       value='media'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                      className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                     />
                     Media
                   </label>
@@ -131,7 +130,7 @@ export const ContactForm = () => {
                       value='sales'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                      className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                     />
                     Sales
                   </label>
@@ -144,7 +143,7 @@ export const ContactForm = () => {
                       value='marketing'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                      className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                     />
                     Marketing
                   </label>
@@ -157,7 +156,7 @@ export const ContactForm = () => {
                       value='operations'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                      className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                     />
                     Operations
                   </label>
@@ -170,7 +169,7 @@ export const ContactForm = () => {
                       value='UX/UI'
                       name='companySector'
                       type='radio'
-                      className='text-primary-color hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50 accent-primary-color'
+                      className='text-primary-color hover:text-primary-color scale-[1.5] accent-primary-color'
                     />
                     UX/UI
                   </label>
