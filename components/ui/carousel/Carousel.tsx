@@ -3,12 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import {
-  Navigation,
-  Mousewheel,
-  Keyboard,
-  Pagination
-} from 'swiper/modules'
+import { Navigation, Mousewheel, Keyboard, Pagination } from 'swiper/modules'
 import Link from 'next/link'
 // Import Swiper styles
 import { FaCheck } from 'react-icons/fa'
@@ -18,7 +13,7 @@ import { IPlan } from '@/interface/plan'
 
 export const Carousel = () => {
   const [plans, setPlans] = useState(data)
-  
+
   return (
     <section className='max-w-[100%] w-full md:hidden'>
       <div className='max-w-[100%] w-full m-auto py-6 '>
@@ -42,7 +37,7 @@ export const Carousel = () => {
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           className='mySwiper '
         >
-          {plans.map((plan : IPlan) => (
+          {plans.map((plan: IPlan) => (
             <SwiperSlide key={plan.name} className='w-full'>
               <ul className=' w-full flex items-center justify-center pt-10'>
                 <li key={plan.name} className='w-[80%]'>

@@ -13,6 +13,7 @@ import { ICategory } from '@/interface/category'
 import { getCategories } from '@/service/categories/categories-service'
 import Filter from '@/components/ui/filter/Filter'
 import FilterMobile from '@/components/ui/filter/FilterMobile'
+import { MarketCarousel } from '@/components/ui/marketcarousel/MarketCarousel'
 
 interface Props {
   software: ISoftware[]

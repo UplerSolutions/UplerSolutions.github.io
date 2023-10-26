@@ -45,8 +45,8 @@ const CardSoftware: FC<Props> = ({
               className=' md-[200px] flex items-center justify-center md:mt-4'
             />
           </div>
-          <div className='lg:px-4'>
-            <div className='p-4 flex flex-col flex-1 gap-1 group/item'>
+          <div className='lg:px-0'>
+            <div className=' flex flex-col flex-1 gap-1 group/item'>
               <h2 className='text-2xl'>{productName}</h2>
               <p className='hidden md:flex'>{lowDescription}</p>
               <p className='text-neutral-600 font-semibold text-[22px] pt-6'>
