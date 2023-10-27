@@ -51,7 +51,7 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
             </button>
           </Link>
         </div>
-        <div className='w-full lg:w-[60%] flex items-center justify-center flex-col relative overflow-hidden lg:pr-8 pb-10 lg:pl-[7%]'>
+        <div className='w-full lg:w-[60%] flex items-center justify-center flex-col relative overflow-hidden pb-10 lg:pr-[7%]'>
           <ScrollCarousel software={softwareData} category={undefined} />
           <div className=' text-primary-color flex justify-center lg:justify-end lg:items-end w-full pt-2 font-semibold'>
             <Link href={'/software'}>View all</Link>
