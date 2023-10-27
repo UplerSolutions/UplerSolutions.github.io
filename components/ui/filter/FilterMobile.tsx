@@ -1,13 +1,17 @@
+import { ICategory } from '@/interface/category'
 import { Rating, Slider } from '@mui/material'
 import Box from '@mui/material/Box'
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import { BsSliders } from 'react-icons/bs'
 
 function valuetext(value: number) {
   return `${value}°C`
 }
 const minDistance = 10
-export default function Filter() {
+interface Props {
+  categories: ICategory[]
+}
+const FilterMobile: FC<Props> = ({ categories }) => {
   const [value1, setValue1] = React.useState<number[]>([20, 37])
   const [value, setValue] = React.useState<number | null>(2)
   const [isOpen, setIsOpen] = useState(false)
@@ -83,22 +87,12 @@ export default function Filter() {
                     </span>
                   </summary>
                   <div className='flex flex-col'>
-                    <div className='flex gap-2'>
-                      <input type='checkbox' className='accent-primary-color' />
-                      <p>Developer</p>
-                    </div>
-                    <div className='flex gap-2'>
-                      <input type='checkbox' className='accent-primary-color' />
-                      <p>Design</p>
-                    </div>
-                    <div className='flex gap-2'>
-                      <input type='checkbox' className='accent-primary-color' />
-                      <p>AI</p>
-                    </div>
-                    <div className='flex gap-2'>
-                      <input type='checkbox' className='accent-primary-color' />
-                      <p>Trading</p>
-                    </div>
+                    {categories.map(category => (
+                      <div key={category.id} className='flex gap-2'>
+                        <input type='checkbox' name={category.categoryName} className='accent-primary-color' />
+                        <p>{category.categoryName}</p>
+                      </div>
+                    ))}
                   </div>
                 </details>
               </div>
@@ -171,9 +165,8 @@ export default function Filter() {
       <div className='flex justify-center items-center'>
         <button
           onClick={handleClick}
-          className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm ${
-            isOpen ? '' : '' // we can add styles when is open
-          }`}
+          className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm ${isOpen ? '' : '' // we can add styles when is open
+            }`}
         >
           <div className=' flex text-neutral-600 items-center pl-3 font-medium gap-3 rounded w-full h-[40px]'>
             <BsSliders className='scale-[1.5] z-0' /> FILTER
@@ -183,3 +176,4 @@ export default function Filter() {
     </div>
   )
 }
+export default FilterMobile 

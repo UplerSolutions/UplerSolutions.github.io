@@ -35,7 +35,7 @@ export const Signup = () => {
 
   const onSubmit = async (data: FormData) => {
     const { username, password } = data;
-    const res = await fetch(
+    const post = await fetch(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/createUser`,
       {
         method: "POST",
@@ -55,10 +55,18 @@ export const Signup = () => {
         }),
       }
     );
-
-
+    const res = await post.json()
+    console.log(res)
     // Handle login submission here
-    console.log(await res.json())
+
+    if (res.status === 200) {
+      await signIn("credentials", {
+        username,
+        password,
+        redirect: false,
+      }
+      )
+    }
   }
 
   return (

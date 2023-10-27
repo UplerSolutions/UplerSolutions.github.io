@@ -1,18 +1,19 @@
-import type { NextPage, GetStaticProps, GetServerSideProps } from 'next'
-import { Box, Typography } from '@mui/material'
-import { SearchBar } from '@/components/ui/searchbar'
+import { useRef, useState, useEffect } from 'react'
+import type { NextPage, GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { useRecentSearches } from '@/hooks/useRecentSearches'
+import { Box, Typography } from '@mui/material'
+import { SearchBar } from '@/components/ui/searchbar'
 import { RecentSearches } from '@/components/ui/recentsearches'
-import { useRef, useState, useEffect } from 'react'
 import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
-import { getSoftwares } from '@/service/software/software-service'
+import FilterMobile from '@/components/ui/filter/FilterMobile'
+import Filter from '@/components/ui/filter/Filter'
 import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
+import { getSoftwareByName, getSoftwares } from '@/service/software/software-service'
 import { getCategories } from '@/service/categories/categories-service'
-import Filter from '@/components/ui/filter/Filter'
-import FilterMobile from '@/components/ui/filter/FilterMobile'
+import { MarketCarousel } from '@/components/ui/marketcarousel/MarketCarousel'
 
 interface Props {
   software: ISoftware[]
@@ -21,8 +22,9 @@ interface Props {
 const Softwares: NextPage<Props> = ({ software }) => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
-  const [categories, setCategories] = useState<ICategory[]>()
-  const [categoryFilter, setCategoryFilter] = useState<string>()
+
+
+  const [categories, setCategories] = useState<ICategory[]>([])
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
 
@@ -37,10 +39,6 @@ const Softwares: NextPage<Props> = ({ software }) => {
     }
     fetchData()
   }, [])
-
-  const onClickFilterByCategory = (categoryName: string) => {
-    setCategoryFilter(categoryName)
-  }
 
   return (
     <Layout title='Upler - Softwares'>
@@ -59,8 +57,7 @@ const Softwares: NextPage<Props> = ({ software }) => {
             <Typography textAlign='center' my={2}></Typography>
             <Box className='flex flex-col gap-6' ref={anchorEl}>
               <SearchBar
-                onSubmit={(searchTerm: string) => {
-                  // when the user submits the form, we only modify the router query parameters
+                onSubmit={async (searchTerm: string) => {
                   router.push({
                     query: {
                       search: searchTerm
@@ -84,7 +81,7 @@ const Softwares: NextPage<Props> = ({ software }) => {
               />
             </Box>
             <div className='pt-6 w-[200] lg:hidden'>
-              <FilterMobile />
+              <FilterMobile categories={categories} />
             </div>
           </Box>
         </div>
@@ -92,10 +89,10 @@ const Softwares: NextPage<Props> = ({ software }) => {
 
       <section className='w-full flex  md:pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
         <div className=' items-start justify-start pl-4 hidden lg:flex pt-20'>
-          <Filter />
+          <Filter categories={categories} />
         </div>
         <div className='w-full flex flex-col justify-center items-center pt-10 pb-20'>
-          <Explore category={categoryFilter} software={software} />
+          <Explore software={software} />
         </div>
       </section>
     </Layout>
@@ -104,8 +101,12 @@ const Softwares: NextPage<Props> = ({ software }) => {
 
 export default Softwares
 
-export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
-  const software = await getSoftwares()
+export const getServerSideProps: GetServerSideProps = async ({ req, res, params, query }) => {
+
+  const { search } : any = query;
+  const name : string = typeof search === 'string' ? search : '';
+  
+  const software = await getSoftwareByName(name);
   res.setHeader(
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'

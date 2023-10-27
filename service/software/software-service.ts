@@ -9,3 +9,8 @@ export const getSoftware = async (id: string): Promise<ISoftware> => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/product/${id}`)
     return await res.json()
 }
+
+export const getSoftwareByName = async (name: string): Promise<ISoftware[]> => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/productsByName?name=${name}`)
+    return await res.json()
+}
