@@ -8,7 +8,7 @@ import { Hamburguer } from './hamburguer/Hamburguer'
 export const Navbar = () => {
   return (
     <nav className='px-4 mb-10 flex flex-col items-center justify-between w-full bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] fixed z-50 h-[80px]'>
-      <div className='flex z-10 w-full items-center justify-between font-mono text-sm pt-4 pb-4 md:w-[90%] xl:w-[80%] text-neutral-600'>
+      <div className='flex z-10 w-full items-center justify-between font-mono text-sm pt-4 pb-4 md:w-[90%] xl:w-[88%] text-neutral-600'>
         <Link className='' href='/'>
           <Image
             className=' w-[150px] md:w-40 min-w-full'

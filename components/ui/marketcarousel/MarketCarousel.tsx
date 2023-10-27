@@ -2,11 +2,18 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Navigation, Mousewheel, Keyboard, Pagination } from 'swiper/modules'
+import {
+  Navigation,
+  Mousewheel,
+  Keyboard,
+  Pagination,
+  EffectCoverflow
+} from 'swiper/modules'
 import Link from 'next/link'
-import React, { useState, FC } from 'react'
-import CardSoftware from '@/components/ui/cardsoftware/CardSoftware'
+import React, { useState, FC, useEffect } from 'react'
 import { ISoftware } from '@/interface/software'
+import MarketSoftware from '../cardsoftware/MarketSoftware'
+import ScrollCarousel from 'scroll-carousel-react'
 
 interface Props {
   software: ISoftware[]
@@ -14,18 +21,33 @@ interface Props {
 }
 
 export const MarketCarousel: FC<Props> = ({ software, category }) => {
-  const itemsPerSlide = 3 // Cantidad de elementos por diapositiva
-  const totalProducts = software ? software.length : 0
-  const totalSlides = Math.ceil(totalProducts / itemsPerSlide)
+  const [itemsPerSlide, setItemsPerSlide] = useState(3)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth
+      if (windowWidth < 600) {
+        setItemsPerSlide(1)
+      } else if (windowWidth < 1400) {
+        setItemsPerSlide(2)
+      } else {
+        setItemsPerSlide(3)
+      }
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const spaceBetween = 30 // Espacio entre diapositivas
 
   const renderSlides = () => {
     const slides = []
-    for (let i = 0; i < totalSlides; i++) {
-      const startIndex = i * itemsPerSlide
-      const endIndex = Math.min(startIndex + itemsPerSlide, totalProducts)
-      const displayedProducts: ISoftware[] = software
-        ? software.slice(startIndex, endIndex)
-        : []
+    for (let i = 0; i < 1; i++) {
+      const displayedProducts: ISoftware[] = software ? software.slice() : []
       const filterProducts = displayedProducts.filter(
         (software) => software.productName === category
       )
@@ -34,11 +56,16 @@ export const MarketCarousel: FC<Props> = ({ software, category }) => {
         : displayedProducts
 
       slides.push(
-        <SwiperSlide key={i} className=''>
+        <ScrollCarousel
+          autoplay
+          autoplaySpeed={8}
+          speed={7}
+          onReady={() => console.log('I am ready')}
+        >
           <ul className='  '></ul>
-          <div className='flex justify-between gap-8 mx-14'>
+          <div className='flex xl:justify-between gap-8 mx-14'>
             {displayFilterProducts.map((product) => (
-              <CardSoftware
+              <MarketSoftware
                 key={product.id}
                 id={product.id}
                 productName={product.productName}
@@ -58,7 +85,7 @@ export const MarketCarousel: FC<Props> = ({ software, category }) => {
               />
             ))}
           </div>
-        </SwiperSlide>
+        </ScrollCarousel>
       )
     }
     return slides
@@ -72,10 +99,11 @@ export const MarketCarousel: FC<Props> = ({ software, category }) => {
           navigation
           mousewheel
           keyboard
-          modules={[Navigation, Mousewheel, Keyboard]}
+          loop={true}
+          modules={[Navigation, Mousewheel, Keyboard, EffectCoverflow]}
           className='mySwiper '
           slidesPerView={1}
-          spaceBetween={30} // Espacio entre diapositivas
+          spaceBetween={spaceBetween} // Espacio entre diapositivas
         >
           {renderSlides()}
         </Swiper>
@@ -83,3 +111,4 @@ export const MarketCarousel: FC<Props> = ({ software, category }) => {
     </section>
   )
 }
+export default MarketCarousel

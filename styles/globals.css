@@ -54,3 +54,21 @@ body {
   position: relative !important;
   padding-top: 10px;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px; /* Ajusta el color de fondo según tus necesidades */
+  color: #000; /* Ajusta el color del texto según tus necesidades */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px; /* Ajusta el tamaño del ícono según tus necesidades */
+}
+
+/* Otros estilos personalizados según tus necesidades */
