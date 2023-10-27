@@ -63,7 +63,7 @@ export const MarketCarousel: FC<Props> = ({ software, category }) => {
           onReady={() => console.log('I am ready')}
         >
           <ul className='  '></ul>
-          <div className='flex xl:justify-between gap-8 mx-14'>
+          <div className='flex xl:justify-between gap-8 mx-14 '>
             {displayFilterProducts.map((product) => (
               <MarketSoftware
                 key={product.id}
@@ -93,7 +93,7 @@ export const MarketCarousel: FC<Props> = ({ software, category }) => {
 
   return (
     <section className='flex items-center justify-center w-[100%] '>
-      <div className=' max-w-[100%] '>
+      <div className=' max-w-[100%]'>
         <Swiper
           cssMode
           navigation
