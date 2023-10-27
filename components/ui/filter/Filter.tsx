@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC, useState } from 'react'
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
@@ -6,14 +6,27 @@ import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Rating, Slider } from '@mui/material'
 import Box from '@mui/material/Box'
+import { ICategory } from '@/interface/category'
 
 function valuetext(value: number) {
   return `${value}°C`
 }
 const minDistance = 10
-export default function Filter() {
-  const [value1, setValue1] = React.useState<number[]>([20, 37])
-  const [value, setValue] = React.useState<number | null>(2)
+
+interface Props {
+  categories: ICategory[]
+}
+
+const Filter: FC<Props> = ({ categories }) => {
+  const [categoryFilter, setCategoryFilter] = useState<string>()
+
+  const onClickFilterByCategory = (categoryName: string) => {
+    setCategoryFilter(categoryName)
+  }
+
+
+  const [value1, setValue1] = useState<number[]>([20, 37])
+  const [value, setValue] = useState<number | null>(2)
 
   const handleChange1 = (
     event: Event,
@@ -31,7 +44,7 @@ export default function Filter() {
     }
   }
 
-  const [value2, setValue2] = React.useState<number[]>([20, 37])
+  const [value2, setValue2] = useState<number[]>([20, 37])
 
   const handleChange2 = (
     event: Event,
@@ -80,22 +93,12 @@ export default function Filter() {
             </span>
           </summary>
           <div className='flex flex-col'>
-            <div className='flex gap-2'>
-              <input type='checkbox' className='accent-primary-color' />
-              <p>Developer</p>
-            </div>
-            <div className='flex gap-2'>
-              <input type='checkbox' className='accent-primary-color' />
-              <p>Design</p>
-            </div>
-            <div className='flex gap-2'>
-              <input type='checkbox' className='accent-primary-color' />
-              <p>AI</p>
-            </div>
-            <div className='flex gap-2'>
-              <input type='checkbox' className='accent-primary-color' />
-              <p>Trading</p>
-            </div>
+            {categories.map(category => (
+              <div key={category.id} className='flex gap-2'>
+                <input type='checkbox' name={category.categoryName} className='accent-primary-color' />
+                <p>{category.categoryName}</p>
+              </div>
+            ))}
           </div>
         </details>
       </div>
@@ -164,3 +167,4 @@ export default function Filter() {
     </div>
   )
 }
+export default Filter
