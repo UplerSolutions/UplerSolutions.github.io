@@ -35,7 +35,7 @@ const MarketSoftware: FC<Props> = ({
   }
 
   return (
-    <div className='relative w-[30%] h-[370px]'>
+    <div className='relative w-[30%] h-[370px]  hover:scale-[0.97] transition'>
       <div className='h-[370px] w-[285px] flex flex-col md:pb-1 max-md:pt-2 p-4 md:text-center bg-white text-neutral-950 rounded-xl cursor-pointer z-30'>
         <div
           onClick={redirect}
