@@ -35,9 +35,9 @@ const CardSoftware: FC<Props> = ({
   }
 
   return (
-    <div className='relative h-full'>
+    <div className=' relative h-full w-full'>
       <div className='flex grow flex-col md:pb-1 max-md:pt-2 md:p-4 md:text-center bg-white text-neutral-950 rounded-xl w-full cursor-pointer z-30'>
-        <div onClick={redirect} className='group/item '>
+        <div onClick={redirect} className='group/item w-full'>
           <div className='relative w-full rounded-xl flex items-center justify-center'>
             <img
               src={imageUrl}
@@ -45,17 +45,19 @@ const CardSoftware: FC<Props> = ({
               className=' md-[200px] flex items-center justify-center md:mt-4'
             />
           </div>
-          <div className='lg:px-0'>
-            <div className=' flex flex-col flex-1 gap-1 group/item'>
+          <div className='lg:px-0 w-full '>
+            <div className=' flex flex-col flex-1 gap-1 group/item items-center justify-center md:justify-start md:items-start'>
               <h2 className='text-2xl'>{productName}</h2>
-              <p className='hidden md:flex'>{lowDescription}</p>
+              <p className='line-clamp-2 md:line-clamp-0 text-center px-2 md:text-left md:px-0'>
+                {lowDescription}
+              </p>
               <p className='text-neutral-600 font-semibold text-[22px] pt-6'>
                 ${price}
               </p>
             </div>
           </div>
         </div>
-        <div className='flex items-center justify-center w-full px-3 lg:px-8 pb-8 z-40'>
+        <div className='flex items-center justify-center w-full px-3 md:px-0 pb-8 z-40 pt-2'>
           <Link href={directLink} target='_blank ' className='w-full'>
             <button
               type='submit'
