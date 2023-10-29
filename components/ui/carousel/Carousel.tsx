@@ -40,7 +40,10 @@ export const Carousel = () => {
           {plans.map((plan: IPlan) => (
             <SwiperSlide key={plan.name} className='w-full'>
               <ul className=' w-full flex items-center justify-center pt-10'>
-                <li key={plan.name} className='w-[80%]'>
+                <li
+                  key={plan.name}
+                  className='w-[80%] hover:opacity-40 cursor-not-allowed'
+                >
                   <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-1 '>
                     <div className='relative px-2 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
                       <div className='pb-4'>
@@ -56,11 +59,11 @@ export const Carousel = () => {
                           USD /month
                         </span>
                       </h2>
-                      <Link href={`/plans/${plan.name}`}>
-                        <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                          Acquire the Bundle
-                        </button>
-                      </Link>
+                      {/* <Link href={`/plans/${plan.name}`}>*/}
+                      <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
+                        Acquire the Bundle
+                      </button>
+                      {/*</Link> */}
                     </div>
                     <div className='px-6 flex flex-col flex-1'>
                       <div>
