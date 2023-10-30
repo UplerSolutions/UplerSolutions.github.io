@@ -5,7 +5,6 @@ import CardSoftware from '@/components/ui/cardsoftware/CardSoftware'
 
 interface Props {
   software: ISoftware[]
-
 }
 export const Explore: FC<Props> = ({ software }) => {
   const pageSize = 6
@@ -28,7 +27,6 @@ export const Explore: FC<Props> = ({ software }) => {
   const endIndex = startIndex + pageSize
   const displayedProducts: ISoftware[] = software?.slice(startIndex, endIndex)
 
-
   return (
     <div className='flex flex-col items-center justify-center'>
       <ul className='flex flex-wrap w-full m-auto md:px-4 md:pb-4 md:py-4 lg:py-8 gap-2 md:gap-8 justify-center items-center'>
@@ -46,12 +44,12 @@ export const Explore: FC<Props> = ({ software }) => {
               longDescription={''}
               updated_at={''}
               seller={''}
-              directLink={''}
+              directLink={product.directLink}
               imageUrl={product.imageUrl}
               rating={0}
               category={{
-                id: "",
-                categoryName: ""
+                id: '',
+                categoryName: ''
               }}
             />
           </li>
