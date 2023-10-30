@@ -45,7 +45,7 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
             Gain access to hundreds of software tools. All in one single
             subscription.
           </p>
-          <Link href='#plans' scroll={false} className='scroll-smooth'>
+          <Link href='/software' scroll={false} className='scroll-smooth'>
             <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
               Find Your Software
             </button>
@@ -58,6 +58,7 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
           </div>
         </div>
       </div>
+
       {/*       CONTRIBUTIONS BANNER
       <main className=' pb-6 flex-wrap md:flex-nowrap md:flex justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
         <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-around md:justify-center md:flex-nowrap py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
