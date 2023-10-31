@@ -139,12 +139,7 @@ const Software: NextPage<Props> = ({ software }) => {
 
 export default Software
 
-export const getServerSideProps: GetServerSideProps = async ({
-  req,
-  res,
-  params,
-  query
-}) => {
+export const getServerSideProps: GetServerSideProps = async ({ res, params, }) => {
   const id: string = typeof params?.id === 'string' ? params.id : ''
 
   const software = await getSoftware(id)

@@ -1,12 +1,8 @@
-import React, { FC, useState } from 'react'
-import Accordion from '@mui/material/Accordion'
-import AccordionSummary from '@mui/material/AccordionSummary'
-import AccordionDetails from '@mui/material/AccordionDetails'
-import Typography from '@mui/material/Typography'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import React, { FC, useEffect, useState } from 'react'
 import { Rating, Slider } from '@mui/material'
 import Box from '@mui/material/Box'
 import { ICategory } from '@/interface/category'
+import { useRouter } from 'next/router'
 
 function valuetext(value: number) {
   return `${value}°C`
@@ -15,20 +11,18 @@ const minDistance = 10
 
 interface Props {
   categories: ICategory[]
+  onClickFilterByCategory: (categoryName: string) => void
 }
 
-const Filter: FC<Props> = ({ categories }) => {
-  const [categoryFilter, setCategoryFilter] = useState<string>()
-
-  const onClickFilterByCategory = (categoryName: string) => {
-    setCategoryFilter(categoryName)
-  }
+const Filter: FC<Props> = ({ categories, onClickFilterByCategory}) => {
 
 
-  const [value1, setValue1] = useState<number[]>([20, 37])
+  const router = useRouter();
+
+  const [value1, setValue1] = useState<number[]>([0, 1000])
   const [value, setValue] = useState<number | null>(2)
 
-  const handleChange1 = (
+  const handleChange = (
     event: Event,
     newValue: number | number[],
     activeThumb: number
@@ -42,31 +36,21 @@ const Filter: FC<Props> = ({ categories }) => {
     } else {
       setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)])
     }
+
   }
 
-  const [value2, setValue2] = useState<number[]>([20, 37])
-
-  const handleChange2 = (
-    event: Event,
-    newValue: number | number[],
-    activeThumb: number
-  ) => {
-    if (!Array.isArray(newValue)) {
-      return
-    }
-
-    if (newValue[1] - newValue[0] < minDistance) {
-      if (activeThumb === 0) {
-        const clamped = Math.min(newValue[0], 100 - minDistance)
-        setValue2([clamped, clamped + minDistance])
-      } else {
-        const clamped = Math.max(newValue[1], minDistance)
-        setValue2([clamped - minDistance, clamped])
+  useEffect(() => {
+    router.push({
+      query: {
+        low: value1[0],
+        high: value1[1]
       }
-    } else {
-      setValue2(newValue as number[])
-    }
+    })
   }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    , [value1])
+
+
 
   return (
     <div className='grid lg:w-[300px] pl-[3rem] mx-auto text-black mb-60'>
@@ -94,7 +78,7 @@ const Filter: FC<Props> = ({ categories }) => {
           </summary>
           <div className='flex flex-col'>
             {categories.map(category => (
-              <div key={category.id} className='flex gap-2'>
+              <div key={category.id} className='flex gap-2' onClick={() => onClickFilterByCategory(category.categoryName)}>
                 <input type='checkbox' name={category.categoryName} className='accent-primary-color' />
                 <p>{category.categoryName}</p>
               </div>
@@ -156,12 +140,14 @@ const Filter: FC<Props> = ({ categories }) => {
           <Slider
             getAriaLabel={() => 'Minimum distance'}
             value={value1}
-            onChange={handleChange1}
+            onChange={handleChange}
             valueLabelDisplay='auto'
             getAriaValueText={valuetext}
             disableSwap
+            max={1000}
             color='secondary'
           />
+
         </Box>
       </div>
     </div>
