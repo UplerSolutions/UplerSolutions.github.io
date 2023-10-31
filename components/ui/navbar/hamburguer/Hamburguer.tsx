@@ -39,7 +39,7 @@ export const Hamburguer = () => {
               <li className=''>
                 <Link
                   className='flex text-center items-center gap-2'
-                  href='/apply'
+                  href='/partners'
                 >
                   <span className=' text-lg'>Partner</span>
                 </Link>
