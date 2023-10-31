@@ -19,7 +19,7 @@ const Partner: NextPage = () => {
           </div>
           <p className='pb-10 pt-8 text-center lg:text-left lg:w-[90%] font-semibold'>
             Your portal to a world of digital opportunities, where showcasing
-            your products to potential customers won't cost you a dime.
+            your products to potential customers won&apos;t cost you a dime.
           </p>
           <Link href='/apply' scroll={false} className='scroll-smooth'>
             <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
@@ -188,8 +188,9 @@ const Partner: NextPage = () => {
           </button>
         </Link>
         <p className='w-[90%] lg:w-1/3 text-center pb-12 text-neutral-600'>
-          Don't see your digital product listed? That's okay, all products are
-          welcome! List for free and we'll let you know if it's a fit.
+          Don&apos;t see your digital product listed? That&apos;s okay, all
+          products are welcome! List for free and we&apos;ll let you know if
+          it&apos;s a fit.
         </p>
       </div>
       <hr className='bg-primary-color border-4 border-primary-color w-[80px] absolute m-auto left-0 right-0 rotate-90' />
@@ -238,7 +239,8 @@ const Partner: NextPage = () => {
                 2. Spread the word
               </h4>
               <p className='text-neutral-600 w-[90%] '>
-                We'll spread the word with you, telling our 1M+ entrepreneurs
+                We&apos;ll spread the word with you, telling our 1M+
+                entrepreneurs
               </p>
             </div>
           </div>
