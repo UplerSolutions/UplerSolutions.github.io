@@ -33,11 +33,11 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
         <meta name='description' content={SITE_DESCRIPTION} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 pt-24 lg:pt-48 w-full bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] xl:h-[74vh]'>
+      <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 pt-24 lg:pt-48 w-full bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] xl:pb-18 2xl:pb-20'>
         <div className='w-[80%] lg:w-[40%] lg:ml-[7%] relative  flex flex-col items-center place-items-center lg:items-start lg:place-items-start  text-neutral-700  pb-7'>
-          <div className='text-[32px] font-bold md:text-5xl  xl:text-7xl'>
+          <div className='text-[40px] text-center md:text-left font-bold md:text-5xl xl:text-6xl 2xl:text-7xl'>
             <h3 className='md:pb-4 '>Your Ultimate</h3>
-            <span className='text-primary-color text-[35px] md:text-5xl xl:text-7xl'>
+            <span className='text-primary-color text-[35px] md:text-5xl xl:text-6xl 2xl:text-7xl'>
               Subscription.
             </span>
           </div>
