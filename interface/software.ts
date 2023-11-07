@@ -10,6 +10,10 @@ export interface ISoftware {
   directLink: string
   imageUrl: string
   rating: number
+  founderName: string
+  founderDescription: string
+  founderImage: string
+  linkdin: string
   category: {
     id: string
     categoryName: string

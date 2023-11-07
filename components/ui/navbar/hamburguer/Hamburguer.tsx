@@ -16,8 +16,8 @@ export const Hamburguer = () => {
     <div className='relative md:hidden'>
       {isOpen && (
         <div>
-          <nav className='bg-purple-200 absolute top-[-2.2rem] right-[-1rem] h-screen w-64 p-4'>
-            <ul className='flex flex-col gap-6 pt-16 text-right items-end'>
+          <nav className='bg-pink-50 absolute top-[-2.2rem] right-[-1rem] h-screen w-64 p-4'>
+            <ul className='flex flex-col gap-6 pt-16 text-right items-end text-primary-color font-[600]'>
               <li>
                 <Link
                   className='flex flex-row  text-center items-center gap-2'

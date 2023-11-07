@@ -13,7 +13,11 @@ import { MarketCarousel } from '@/components/ui/marketcarousel/MarketCarousel'
 
 import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
-import { getSoftwareByName, getSoftwares, getSoftwaresByRange } from '@/service/software/software-service'
+import {
+  getSoftwareByName,
+  getSoftwares,
+  getSoftwaresByCategory
+} from '@/service/software/software-service'
 import { getCategories } from '@/service/categories/categories-service'
 
 interface Props {
@@ -21,26 +25,52 @@ interface Props {
   categories: ICategory[]
 }
 
+const minDistance = 10
+
 const Softwares: NextPage<Props> = ({ software, categories }) => {
   const router = useRouter()
   const { recentSearches, setRecentSearches } = useRecentSearches()
 
-  const [categoryFilter, setCategoryFilter] = useState<string[]>([])
-
+  const [categoryFilter, setCategoryFilter] = useState<string>()
+  //price
+  const [value1, setValue1] = useState<number[]>([0, 1000])
 
   const onClickFilterByCategory = (categoryName: string) => {
-    const categoryIndex = categoryFilter.indexOf(categoryName);
-    if (categoryIndex !== -1) {
-      categoryFilter.splice(categoryIndex, 1);
-      setCategoryFilter([...categoryFilter]);
+    setCategoryFilter(categoryName)
+  }
+
+  const handleRouterPush = () => {
+    router.push({
+      query: {
+        categoryName: categoryFilter ? categoryFilter : ''
+      }
+    })
+  }
+
+  const handleRouterClear = () => {
+    router.push({
+      query: {}
+    })
+  }
+
+  const handleChange = (
+    event: Event,
+    newValue: number | number[],
+    activeThumb: number
+  ) => {
+    if (!Array.isArray(newValue)) {
+      return
+    }
+
+    if (activeThumb === 0) {
+      setValue1([Math.min(newValue[0], value1[1] - minDistance), value1[1]])
     } else {
-      setCategoryFilter([...categoryFilter, categoryName]);
+      setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)])
     }
   }
 
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
-
 
   return (
     <Layout title='Upler - Softwares'>
@@ -82,19 +112,49 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
                 }}
               />
             </Box>
-            <div className='pt-6 w-[200] lg:hidden'>
-              <FilterMobile categories={categories} />
+            <div className='pt-6 w-full lg:hidden'>
+              <Filter
+                handleChange={handleChange}
+                value1={value1}
+                onClickFilterByCategory={onClickFilterByCategory}
+                categories={categories}
+              />
+              <div className=' w-full'>
+                <button
+                  className='bg-primary-color  h-12 w-[100%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+                  type='submit'
+                  onClick={handleRouterPush}
+                >
+                  {' '}
+                  Search
+                </button>
+              </div>
             </div>
           </Box>
         </div>
       </div>
 
       <section className='w-full flex  md:pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
-        <div className=' items-start justify-start pl-4 hidden lg:flex pt-20'>
-          <Filter onClickFilterByCategory={onClickFilterByCategory} categories={categories} />
+        <div className='flex-col items-center  justify-start pl-4 hidden lg:flex pt-20'>
+          <Filter
+            handleChange={handleChange}
+            value1={value1}
+            onClickFilterByCategory={onClickFilterByCategory}
+            categories={categories}
+          />
+          <div className='pl-[2.8rem] w-full'>
+            <button
+              className='bg-primary-color  h-12 w-[100%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+              type='submit'
+              onClick={handleRouterPush}
+            >
+              {' '}
+              Search
+            </button>
+          </div>
         </div>
         <div className='w-full flex flex-col justify-center items-center pt-10 pb-20'>
-          <Explore categoryFilter={categoryFilter} software={software} />
+          <Explore software={software} />
         </div>
       </section>
     </Layout>
@@ -103,20 +163,22 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 
 export default Softwares
 
-
-export const getServerSideProps: GetServerSideProps = async ({ req, res, params, query }) => {
-
-  let software: ISoftware[] = [];
-  const { search, low, high }: any = query;
+export const getServerSideProps: GetServerSideProps = async ({
+  req,
+  res,
+  params,
+  query
+}) => {
+  let software: ISoftware[] = []
+  const { search, low, high, categoryName }: any = query
   if (search) {
-    const name: string = typeof search === 'string' ? search : '';
-    software = await getSoftwareByName(name);
-    // } 
-    // else if (low && high) {
-    //   software = await getSoftwaresByRange(low, high);
+    const name: string = typeof search === 'string' ? search : ''
+    software = await getSoftwareByName(name)
+  } else if (categoryName) {
+    software = await getSoftwaresByCategory(categoryName)
   } else {
-    software = await getSoftwares();
-  };
+    software = await getSoftwares()
+  }
 
   const categories = await getCategories()
 
@@ -124,6 +186,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res, params,
     'Cache-Control',
     'public, s-maxage=10, stale-while-revalidate=59'
   )
+
   return {
     props: { software, categories }
   }

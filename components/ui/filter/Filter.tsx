@@ -1,59 +1,36 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { Rating, Slider } from '@mui/material'
 import Box from '@mui/material/Box'
 import { ICategory } from '@/interface/category'
 import { useRouter } from 'next/router'
 
-function valuetext(value: number) {
-  return `${value}°C`
-}
-const minDistance = 10
-
 interface Props {
   categories: ICategory[]
   onClickFilterByCategory: (categoryName: string) => void
-}
-
-const Filter: FC<Props> = ({ categories, onClickFilterByCategory}) => {
-
-
-  const router = useRouter();
-
-  const [value1, setValue1] = useState<number[]>([0, 1000])
-  const [value, setValue] = useState<number | null>(2)
-
-  const handleChange = (
+  handleChange: (
     event: Event,
     newValue: number | number[],
     activeThumb: number
-  ) => {
-    if (!Array.isArray(newValue)) {
-      return
-    }
+  ) => void
+  value1: number[]
+}
 
-    if (activeThumb === 0) {
-      setValue1([Math.min(newValue[0], value1[1] - minDistance), value1[1]])
-    } else {
-      setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)])
-    }
+function valuetext(value: number) {
+  return `${value}°C`
+}
+const Filter: FC<Props> = ({
+  categories,
+  onClickFilterByCategory,
+  handleChange,
+  value1
+}) => {
+  //price
 
-  }
+  //rating
 
-  useEffect(() => {
-    router.push({
-      query: {
-        low: value1[0],
-        high: value1[1]
-      }
-    })
-  }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    , [value1])
-
-
-
+  const [value, setValue] = useState<number | null>(2)
   return (
-    <div className='grid lg:w-[300px] pl-[3rem] mx-auto text-black mb-60'>
+    <div className='grid lg:w-[300px] lg:pl-[3rem] mx-auto text-black mb-6'>
       <h2 className='text-lg font-semibold'>Filter By</h2>
 
       <div className='py-5'>
@@ -77,9 +54,17 @@ const Filter: FC<Props> = ({ categories, onClickFilterByCategory}) => {
             </span>
           </summary>
           <div className='flex flex-col'>
-            {categories.map(category => (
-              <div key={category.id} className='flex gap-2' onClick={() => onClickFilterByCategory(category.categoryName)}>
-                <input type='checkbox' name={category.categoryName} className='accent-primary-color' />
+            {categories.map((category) => (
+              <div
+                key={category.id}
+                className='flex gap-2'
+                onClick={() => onClickFilterByCategory(category.categoryName)}
+              >
+                <input
+                  type='radio'
+                  name='category'
+                  className='accent-primary-color'
+                />
                 <p>{category.categoryName}</p>
               </div>
             ))}
@@ -147,7 +132,6 @@ const Filter: FC<Props> = ({ categories, onClickFilterByCategory}) => {
             max={1000}
             color='secondary'
           />
-
         </Box>
       </div>
     </div>

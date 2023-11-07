@@ -29,9 +29,7 @@ const Partner: NextPage = () => {
         </div>
         <div className='w-full lg:w-[60%] flex items-center justify-center flex-col relative overflow-hidden pb-10 lg:pr-[7%]'>
           <Image
-            src={
-              'https://roktech.net/wp-content/uploads/2022/11/softwaree-mange-3-x@3x.png'
-            }
+            src={'./partnerpurple.webp'}
             alt={''}
             width={500}
             height={500}

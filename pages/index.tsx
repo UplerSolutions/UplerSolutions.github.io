@@ -46,7 +46,7 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
             subscription.
           </p>
           <Link href='/software' scroll={false} className='scroll-smooth'>
-            <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
+            <button className='bg-primary-color  h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
               Find Your Software
             </button>
           </Link>

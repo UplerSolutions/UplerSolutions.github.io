@@ -87,9 +87,13 @@ const FilterMobile: FC<Props> = ({ categories }) => {
                     </span>
                   </summary>
                   <div className='flex flex-col'>
-                    {categories.map(category => (
+                    {categories.map((category) => (
                       <div key={category.id} className='flex gap-2'>
-                        <input type='checkbox' name={category.categoryName} className='accent-primary-color' />
+                        <input
+                          type='checkbox'
+                          name={category.categoryName}
+                          className='accent-primary-color'
+                        />
                         <p>{category.categoryName}</p>
                       </div>
                     ))}
@@ -165,8 +169,9 @@ const FilterMobile: FC<Props> = ({ categories }) => {
       <div className='flex justify-center items-center'>
         <button
           onClick={handleClick}
-          className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm ${isOpen ? '' : '' // we can add styles when is open
-            }`}
+          className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm ${
+            isOpen ? '' : '' // we can add styles when is open
+          }`}
         >
           <div className=' flex text-neutral-600 items-center pl-3 font-medium gap-3 rounded w-full h-[40px]'>
             <BsSliders className='scale-[1.5] z-0' /> FILTER
@@ -176,4 +181,4 @@ const FilterMobile: FC<Props> = ({ categories }) => {
     </div>
   )
 }
-export default FilterMobile 
+export default FilterMobile

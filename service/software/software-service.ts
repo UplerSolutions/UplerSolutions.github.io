@@ -19,3 +19,8 @@ export const getSoftwaresByRange = async (low: number, high: number): Promise<IS
     const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/productsByName?low=${low}&high=${high}`)
     return await res.json()
 }
+
+export const getSoftwaresByCategory = async (category: string): Promise<ISoftware[]> => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/getProductsByCategory?categoryName=${category}`)
+    return await res.json()
+}
