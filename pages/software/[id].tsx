@@ -103,8 +103,39 @@ const Software: NextPage<Props> = ({ software }) => {
     <Layout title='Upler - Software'>
       <div className='flex flex-col md:flex-row items-center md:items-start  justify-center pt-28  bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] h-[90vh] md:gap-8 pb-10'>
         <div className='w-[90%] md:w-[30%] flex flex-col  text-neutral-950 rounded-xl mt-9'>
-          <div className='relative w-full  md:h-[58vh]'>
+          <div className='relative w-full '>
             <img src={software.imageUrl} alt='' className='w-full rounded-xl' />
+          </div>
+          <div>
+            <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
+              From the founders
+            </h1>
+            <div className='flex gap-2 items-center'>
+              <Image
+                src={software.founderImage}
+                alt={''}
+                width={100}
+                height={100}
+                className='w-20 h-20 rounded-full'
+              ></Image>
+              <div>
+                <p className='text-neutral-600 font-semibold'>
+                  {software.founderName}
+                </p>
+                <Link
+                  className='text-neutral-500'
+                  target='_blank'
+                  href={software.linkdin}
+                >
+                  website
+                </Link>
+              </div>
+            </div>
+            <div>
+              <h2 className='text-neutral-600 pt-6'>
+                {software.founderDescription}
+              </h2>
+            </div>
           </div>
         </div>
         <div className='w-full md:w-[30%] h-[70vh] p-6 rounded-md'>
@@ -124,11 +155,12 @@ const Software: NextPage<Props> = ({ software }) => {
               </Link>
             </p>
           </div>
-
-          <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
-            Description
-          </h1>
-          <p className='text-neutral-500'>{software.longDescription}</p>
+          <div>
+            <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
+              Description
+            </h1>
+            <p className='text-neutral-500'>{software.longDescription}</p>
+          </div>
         </div>
       </div>
     </Layout>
@@ -139,7 +171,10 @@ const Software: NextPage<Props> = ({ software }) => {
 
 export default Software
 
-export const getServerSideProps: GetServerSideProps = async ({ res, params, }) => {
+export const getServerSideProps: GetServerSideProps = async ({
+  res,
+  params
+}) => {
   const id: string = typeof params?.id === 'string' ? params.id : ''
 
   const software = await getSoftware(id)
