@@ -106,7 +106,7 @@ const Software: NextPage<Props> = ({ software }) => {
           <div className='relative w-full '>
             <img src={software.imageUrl} alt='' className='w-full rounded-xl' />
           </div>
-          <div>
+          {/* <div>
             <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
               From the founders
             </h1>
@@ -136,7 +136,7 @@ const Software: NextPage<Props> = ({ software }) => {
                 {software.founderDescription}
               </h2>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className='w-full md:w-[30%] h-[70vh] p-6 rounded-md'>
           <div className='flex flex-col flex-1 gap-1'>
