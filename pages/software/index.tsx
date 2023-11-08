@@ -48,6 +48,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
     router.push({
       query: {}
     })
+    setCategoryFilter("")
   }
 
   const handleChange = (
@@ -111,7 +112,8 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
               />
             </Box>
             <div className='pt-6 w-[200] lg:hidden'>
-              <FilterMobile categories={categories} />
+              <FilterMobile handleRouterClear={handleRouterClear} handleRouterPush={handleRouterPush} handleChange={handleChange} value1={value1} onClickFilterByCategory={onClickFilterByCategory} categories={categories}  />
+
             </div>
           </Box>
         </div>
@@ -121,6 +123,8 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
         <div className='flex flex-col items-center  items-start justify-start pl-4 hidden lg:flex pt-20'>
           <Filter handleChange={handleChange} value1={value1} onClickFilterByCategory={onClickFilterByCategory} categories={categories} />
           <button className='bg-primary-color  h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color' type='submit' onClick={handleRouterPush}> Search</button>
+          <button className='bg-primary-color mt-4 h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color' type='submit' onClick={handleRouterClear}> Clear Filters</button>
+
         </div>
         <div className='w-full flex flex-col justify-center items-center pt-10 pb-20'>
           <Explore software={software} />

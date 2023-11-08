@@ -57,7 +57,7 @@ export const Explore: FC<Props> = ({ software }) => {
             </li>
           ))
           :
-            <h3>We Don´t Have Softwares Availible for this Category</h3>
+            <h3 className='text-neutral-700'>We Don´t Have Softwares Availible for this Category</h3>
         }
       </ul>
       <Pagination
