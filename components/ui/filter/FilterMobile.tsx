@@ -125,8 +125,6 @@ const FilterMobile: FC<Props> = ({ categories, handleRouterPush, handleRouterCle
                     color='secondary'
                   />
                 </Box>
-
-
               </div>
 
               <div className='flex flex-row w-[100%] justify-evenly'>
@@ -140,8 +138,9 @@ const FilterMobile: FC<Props> = ({ categories, handleRouterPush, handleRouterCle
       <div className='flex justify-center items-center'>
         <button
           onClick={handleClick}
-          className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm ${isOpen ? '' : '' // we can add styles when is open
-            }`}
+          className={`flex flex-col justify-center items-center w-full rounded-md shadow-sm ${
+            isOpen ? '' : '' // we can add styles when is open
+          }`}
         >
           <div className=' flex text-neutral-600 items-center pl-3 font-medium gap-3 rounded w-full h-[40px]'>
             <BsSliders className='scale-[1.5] z-0' /> FILTER
@@ -150,5 +149,5 @@ const FilterMobile: FC<Props> = ({ categories, handleRouterPush, handleRouterCle
       </div>
     </div>
   )
-}
-export default FilterMobile 
+        }
+export default FilterMobile

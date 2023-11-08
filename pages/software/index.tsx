@@ -13,14 +13,17 @@ import { MarketCarousel } from '@/components/ui/marketcarousel/MarketCarousel'
 
 import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
-import { getSoftwareByName, getSoftwares, getSoftwaresByCategory } from '@/service/software/software-service'
+import {
+  getSoftwareByName,
+  getSoftwares,
+  getSoftwaresByCategory
+} from '@/service/software/software-service'
 import { getCategories } from '@/service/categories/categories-service'
 
 interface Props {
   software: ISoftware[]
   categories: ICategory[]
 }
-
 
 const minDistance = 10
 
@@ -39,7 +42,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
   const handleRouterPush = () => {
     router.push({
       query: {
-        categoryName: categoryFilter ? categoryFilter : "",
+        categoryName: categoryFilter ? categoryFilter : ''
       }
     })
   }
@@ -65,7 +68,6 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
     } else {
       setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)])
     }
-
   }
 
   const [open, setOpen] = useState(false)
@@ -111,19 +113,56 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
                 }}
               />
             </Box>
-            <div className='pt-6 w-[200] lg:hidden'>
-              <FilterMobile handleRouterClear={handleRouterClear} handleRouterPush={handleRouterPush} handleChange={handleChange} value1={value1} onClickFilterByCategory={onClickFilterByCategory} categories={categories}  />
+            <div className='pt-6 w-full lg:hidden'>
+              <Filter
+                handleChange={handleChange}
+                value1={value1}
+                onClickFilterByCategory={onClickFilterByCategory}
+                categories={categories}
+              />
 
+            </div>
+            <div className=' flex w-full lg:hidden justify-around mt-4'>
+              <button
+                className='bg-primary-color  h-12 w-[30%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+                type='submit'
+                onClick={handleRouterPush}
+              >
+                {' '}
+                Search
+              </button>
+              <button className='bg-primary-color  h-12 h-12 w-[30%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color' type='submit' onClick={handleRouterClear}> Clear Filters</button>
             </div>
           </Box>
         </div>
       </div>
 
       <section className='w-full flex  md:pb-20 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0]'>
-        <div className='flex flex-col items-center  items-start justify-start pl-4 hidden lg:flex pt-20'>
-          <Filter handleChange={handleChange} value1={value1} onClickFilterByCategory={onClickFilterByCategory} categories={categories} />
-          <button className='bg-primary-color  h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color' type='submit' onClick={handleRouterPush}> Search</button>
-          <button className='bg-primary-color mt-4 h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color' type='submit' onClick={handleRouterClear}> Clear Filters</button>
+        <div className='flex-col items-center  justify-start pl-4 hidden lg:flex pt-20'>
+          <Filter
+            handleChange={handleChange}
+            value1={value1}
+            onClickFilterByCategory={onClickFilterByCategory}
+            categories={categories}
+          />
+          <div className='pl-[2.8rem] w-full'>
+            <button
+              className='bg-primary-color  h-12 w-[100%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+              type='submit'
+              onClick={handleRouterPush}
+            >
+              {' '}
+              Search
+            </button>
+            <button
+              className='bg-primary-color mt-4 h-12 h-12 w-[100%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+              type='submit'
+              onClick={handleRouterClear}
+            >
+              {' '}
+              Clear Filters
+            </button>
+          </div>
 
         </div>
         <div className='w-full flex flex-col justify-center items-center pt-10 pb-20'>
@@ -136,21 +175,22 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 
 export default Softwares
 
-
-export const getServerSideProps: GetServerSideProps = async ({ req, res, params, query }) => {
-
-  let software: ISoftware[] = [];
-  const { search, low, high, categoryName }: any = query;
+export const getServerSideProps: GetServerSideProps = async ({
+  req,
+  res,
+  params,
+  query
+}) => {
+  let software: ISoftware[] = []
+  const { search, low, high, categoryName }: any = query
   if (search) {
-    const name: string = typeof search === 'string' ? search : '';
-    software = await getSoftwareByName(name);
+    const name: string = typeof search === 'string' ? search : ''
+    software = await getSoftwareByName(name)
+  } else if (categoryName) {
+    software = await getSoftwaresByCategory(categoryName)
+  } else {
+    software = await getSoftwares()
   }
-  else if (categoryName) {
-    software = await getSoftwaresByCategory(categoryName);
-  }
-  else {
-    software = await getSoftwares();
-  };
 
   const categories = await getCategories()
 

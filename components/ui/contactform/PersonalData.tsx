@@ -38,7 +38,7 @@ const PersonalData: FC<Props> = ({ handlerCustomer, handleNext }) => {
         control={control}
         defaultValue=''
         type='text'
-        label='name'
+        label='Name'
         required={true}
       />
 
@@ -48,7 +48,7 @@ const PersonalData: FC<Props> = ({ handlerCustomer, handleNext }) => {
 
       <CustomTextField
         name='lastname'
-        label='lastname'
+        label='Lastname'
         type='text'
         control={control}
         defaultValue=''
@@ -61,7 +61,7 @@ const PersonalData: FC<Props> = ({ handlerCustomer, handleNext }) => {
 
       <CustomTextField
         name='email'
-        label='email'
+        label='Email'
         type='email'
         control={control}
         defaultValue=''

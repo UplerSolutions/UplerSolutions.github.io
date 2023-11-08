@@ -4,27 +4,33 @@ import Box from '@mui/material/Box'
 import { ICategory } from '@/interface/category'
 import { useRouter } from 'next/router'
 
-
-
 interface Props {
   categories: ICategory[]
   onClickFilterByCategory: (categoryName: string) => void
-  handleChange: (event: Event,newValue: number | number[],activeThumb: number) => void;
+  handleChange: (
+    event: Event,
+    newValue: number | number[],
+    activeThumb: number
+  ) => void
   value1: number[]
 }
 
 function valuetext(value: number) {
   return `${value}°C`
 }
-const Filter: FC<Props> = ({ categories, onClickFilterByCategory, handleChange, value1}) => {
-
+const Filter: FC<Props> = ({
+  categories,
+  onClickFilterByCategory,
+  handleChange,
+  value1
+}) => {
   //price
 
   //rating
 
   const [value, setValue] = useState<number | null>(2)
   return (
-    <div className='grid lg:w-[300px] pl-[3rem] mx-auto text-black mb-6'>
+    <div className='grid lg:w-[300px] lg:pl-[3rem] mx-auto text-black mb-6'>
       <h2 className='text-lg font-semibold'>Filter By</h2>
 
       <div className='py-5'>
@@ -48,9 +54,17 @@ const Filter: FC<Props> = ({ categories, onClickFilterByCategory, handleChange, 
             </span>
           </summary>
           <div className='flex flex-col'>
-            {categories.map(category => (
-              <div key={category.id} className='flex gap-2' onClick={() => onClickFilterByCategory(category.categoryName)}>
-                <input type='radio' name="category" className='accent-primary-color' />
+            {categories.map((category) => (
+              <div
+                key={category.id}
+                className='flex gap-2'
+                onClick={() => onClickFilterByCategory(category.categoryName)}
+              >
+                <input
+                  type='radio'
+                  name='category'
+                  className='accent-primary-color'
+                />
                 <p>{category.categoryName}</p>
               </div>
             ))}
@@ -118,7 +132,6 @@ const Filter: FC<Props> = ({ categories, onClickFilterByCategory, handleChange, 
             max={1000}
             color='secondary'
           />
-
         </Box>
       </div>
     </div>
