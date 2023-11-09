@@ -18,6 +18,7 @@ import { ISoftware } from '@/interface/software'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
 import Script from 'next/script'
+import ScrollButton from '@/components/ui/scrollbutton/ScrollButton'
 const ScrollCarousel = dynamic(
   () => import('@/components/ui/marketcarousel/MarketCarousel'),
   { ssr: false }
@@ -32,7 +33,6 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
         <title>{SITE_NAME}</title>
         <meta name='description' content={SITE_DESCRIPTION} />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-
       </Head>
       <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 pt-24 lg:pt-48 w-full bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] xl:pb-18 2xl:pb-20'>
         <div className='w-[80%] lg:w-[40%] lg:ml-[7%] relative  flex flex-col items-center place-items-center lg:items-start lg:place-items-start  text-neutral-700  pb-7'>
@@ -75,7 +75,7 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
         <CardPlan />
         <Partner />
       </div>
-
+      <ScrollButton />
     </Layout>
   )
 }
