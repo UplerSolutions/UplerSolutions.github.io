@@ -87,13 +87,13 @@ const SigninButton = () => {
           </div>
           {isOpen && (
             <div
-              className='absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-purple-200  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
+              className='absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md hover:rounded-md bg-purple-200  shadow-lg ring-1 ring-black ring-opacity-5 '
               role='menu'
               aria-orientation='vertical'
               aria-labelledby='menu-button'
             >
               <div className='' role='none'>
-                <Link
+                {/*    <Link
                   href='/dashboard'
                   className='hover:text-white text-gray-700 block px-4 py-2 text-sm hover:bg-primary-color '
                   role='menuitem'
@@ -108,11 +108,11 @@ const SigninButton = () => {
                   id='menu-item-1'
                 >
                   Dashboard
-                </Link>
+                </Link> */}
 
                 <button
                   onClick={() => signOut()}
-                  className='hover:text-white text-gray-700 w-full px-4 py-2 text-left text-sm hover:bg-primary-color flex items-center gap-2'
+                  className='inline-flex w-full justify-center gap-x-1.5 rounded-md hover:text-white bg-purple-200 px-3 py-2 text-sm font-semibold  text-primary-color shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color'
                 >
                   Sign out <FaSignOutAlt />
                 </button>
@@ -130,7 +130,7 @@ const SigninButton = () => {
             <p className=' flex text-primary-color'>{session.user.name}</p>
             <button
               onClick={() => signOut()}
-              className='group relative px-2 lg:px-6 bg-primary-color h-11 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 border-2 border-primary-color hover:border-2 hover:border-primary-color'
+              className='group relative px-2 lg:px-6 bg-primary-color h-11 rounded-xl  hover:rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 border-2 border-primary-color hover:border-2 hover:border-primary-color'
             >
               Sign Out
             </button>
@@ -172,7 +172,7 @@ const SigninButton = () => {
               aria-labelledby='menu-button'
             >
               <div className='' role='none'>
-                <Link
+                {/* <Link
                   href='/dashboard'
                   className='hover:text-white text-gray-700 block px-4 py-2 text-sm hover:bg-primary-color '
                   role='menuitem'
@@ -188,6 +188,7 @@ const SigninButton = () => {
                 >
                   Dashboard
                 </Link>
+                  */}
 
                 <button
                   onClick={() => signOut()}

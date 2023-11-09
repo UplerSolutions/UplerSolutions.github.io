@@ -45,7 +45,7 @@ export const Hamburguer = () => {
                 </Link>
               </li>
               <hr className='h-[2px] w-full bg-primary-color' />{' '}
-              <li>
+              {/*              <li>
                 <Link
                   className='flex flex-col text-center items-center gap-2'
                   href='/dashboard'
@@ -53,7 +53,7 @@ export const Hamburguer = () => {
                   <span className='text-lg'>Dashboard</span>
                 </Link>
               </li>
-              <hr className='h-[2px] w-full bg-primary-color' />
+              <hr className='h-[2px] w-full bg-primary-color' /> */}
             </ul>
             <div className='absolute top-[85vh] '>
               <Signin />
