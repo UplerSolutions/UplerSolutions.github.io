@@ -19,6 +19,7 @@ import {
   getSoftwaresByCategory
 } from '@/service/software/software-service'
 import { getCategories } from '@/service/categories/categories-service'
+import { AiOutlineClear } from 'react-icons/ai'
 
 interface Props {
   software: ISoftware[]
@@ -51,6 +52,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
     router.push({
       query: {}
     })
+    setCategoryFilter('')
   }
 
   const handleChange = (
@@ -119,16 +121,25 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
                 onClickFilterByCategory={onClickFilterByCategory}
                 categories={categories}
               />
-              <div className=' w-full'>
-                <button
-                  className='bg-primary-color  h-12 w-[100%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
-                  type='submit'
-                  onClick={handleRouterPush}
-                >
-                  {' '}
-                  Search
-                </button>
-              </div>
+            </div>
+            <div className=' flex w-full lg:hidden justify-around mt-4'>
+              <button
+                className='flex items-center justify-center gap-2 h-12 w-[100%] rounded-xl  font-semibold  hover:text-primary-color text-primary-color transition  hover:border-primary-color'
+                type='submit'
+                onClick={handleRouterClear}
+              >
+                Clear{' '}
+                <p>
+                  <AiOutlineClear />
+                </p>
+              </button>
+              <button
+                className='bg-primary-color  h-12 w-[100%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
+                type='submit'
+                onClick={handleRouterPush}
+              >
+                Search
+              </button>
             </div>
           </Box>
         </div>
@@ -142,13 +153,22 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
             onClickFilterByCategory={onClickFilterByCategory}
             categories={categories}
           />
-          <div className='pl-[2.8rem] w-full'>
+          <div className='pl-[2.8rem] w-full justify-center items-center flex gap-2'>
+            <button
+              className='flex items-center justify-center gap-2 h-12 w-[100%] rounded-xl  font-semibold  hover:text-primary-color text-primary-color transition  hover:border-primary-color'
+              type='submit'
+              onClick={handleRouterClear}
+            >
+              Clear{' '}
+              <p>
+                <AiOutlineClear />
+              </p>
+            </button>
             <button
               className='bg-primary-color  h-12 w-[100%] rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
               type='submit'
               onClick={handleRouterPush}
             >
-              {' '}
               Search
             </button>
           </div>

@@ -35,7 +35,7 @@ const CardSoftware: FC<Props> = ({
   }
 
   return (
-    <div className=' relative h-full w-full'>
+    <div className='z-10 relative h-full w-full'>
       <div className='flex grow flex-col md:pb-1 max-md:pt-2 md:p-4 md:text-center bg-white text-neutral-950 rounded-xl w-full cursor-pointer z-30'>
         <div onClick={redirect} className='group/item w-full'>
           <div className='relative w-full rounded-xl flex items-center justify-center'>

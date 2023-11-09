@@ -8,63 +8,31 @@ function valuetext(value: number) {
   return `${value}°C`
 }
 const minDistance = 10
+
 interface Props {
   categories: ICategory[]
+  onClickFilterByCategory: (categoryName: string) => void
+  handleRouterPush: () => void
+  handleRouterClear: () => void
+  handleChange: (event: Event, newValue: number | number[], activeThumb: number) => void;
+  value1: number[]
 }
-const FilterMobile: FC<Props> = ({ categories }) => {
-  const [value1, setValue1] = React.useState<number[]>([20, 37])
-  const [value, setValue] = React.useState<number | null>(2)
+
+const FilterMobile: FC<Props> = ({ categories, handleRouterPush, handleRouterClear, onClickFilterByCategory, handleChange, value1 }) => {
+
+
   const [isOpen, setIsOpen] = useState(false)
 
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
-
-  const handleChange1 = (
-    event: Event,
-    newValue: number | number[],
-    activeThumb: number
-  ) => {
-    if (!Array.isArray(newValue)) {
-      return
-    }
-
-    if (activeThumb === 0) {
-      setValue1([Math.min(newValue[0], value1[1] - minDistance), value1[1]])
-    } else {
-      setValue1([value1[0], Math.max(newValue[1], value1[0] + minDistance)])
-    }
-  }
-
-  const [value2, setValue2] = React.useState<number[]>([20, 37])
-
-  const handleChange2 = (
-    event: Event,
-    newValue: number | number[],
-    activeThumb: number
-  ) => {
-    if (!Array.isArray(newValue)) {
-      return
-    }
-
-    if (newValue[1] - newValue[0] < minDistance) {
-      if (activeThumb === 0) {
-        const clamped = Math.min(newValue[0], 100 - minDistance)
-        setValue2([clamped, clamped + minDistance])
-      } else {
-        const clamped = Math.max(newValue[1], minDistance)
-        setValue2([clamped - minDistance, clamped])
-      }
-    } else {
-      setValue2(newValue as number[])
-    }
-  }
+  const [value, setValue] = useState<number | null>(2)
 
   return (
     <div className='relative lg:hidden z-20'>
       {isOpen && (
         <div className='z-20 shadow-sm shadow-[#5c5c5c]'>
-          <nav className='bg-[#f5e4ff] absolute pt-10 h-[420px] w-full p-4 rounded-md shadow-sm shadow-[#5c5c5c]'>
+          <nav className='bg-[#f5e4ff] absolute pt-10 h-max max-h-[600px] w-full p-4 rounded-md shadow-sm shadow-[#5c5c5c]'>
             <div className='grid  lg:w-[200px] mx-auto text-black mb-60'>
               <div className='py-5'>
                 <details className='group'>
@@ -87,13 +55,9 @@ const FilterMobile: FC<Props> = ({ categories }) => {
                     </span>
                   </summary>
                   <div className='flex flex-col'>
-                    {categories.map((category) => (
-                      <div key={category.id} className='flex gap-2'>
-                        <input
-                          type='checkbox'
-                          name={category.categoryName}
-                          className='accent-primary-color'
-                        />
+                    {categories.map(category => (
+                      <div key={category.id} className='flex gap-2' onClick={() => onClickFilterByCategory(category.categoryName)}>
+                        <input type='radio' name="category" className='accent-primary-color' />
                         <p>{category.categoryName}</p>
                       </div>
                     ))}
@@ -154,7 +118,7 @@ const FilterMobile: FC<Props> = ({ categories }) => {
                   <Slider
                     getAriaLabel={() => 'Minimum distance'}
                     value={value1}
-                    onChange={handleChange1}
+                    onChange={handleChange}
                     valueLabelDisplay='auto'
                     getAriaValueText={valuetext}
                     disableSwap
@@ -162,6 +126,11 @@ const FilterMobile: FC<Props> = ({ categories }) => {
                   />
                 </Box>
               </div>
+
+              <div className='flex flex-row w-[100%] justify-evenly'>
+                  <button className='bg-primary-color mt-6 h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color' type='submit' onClick={handleRouterPush}> Search</button>
+                  <button className='bg-primary-color mt-6  h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color' type='submit' onClick={handleRouterClear}> Clear Filters</button>
+                </div>
             </div>
           </nav>
         </div>
@@ -180,5 +149,5 @@ const FilterMobile: FC<Props> = ({ categories }) => {
       </div>
     </div>
   )
-}
+        }
 export default FilterMobile
