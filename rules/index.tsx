@@ -32,15 +32,15 @@ export const login = yup.object().shape({
 export const schemaCustomer = yup.object({
   name: yup
     .string()
-    .required('Este campo es requerido')
-    .min(2, 'Mínimo 2 caracteres'),
+    .required('This field is required')
+    .min(2, 'Minimum 2 characters'),
   lastname: yup
     .string()
-    .required('Este campo es requerido')
-    .min(2, 'Mínimo 2 caracteres'),
+    .required('This field is required')
+    .min(2, 'Minimum 2 characters'),
   email: yup
     .string()
-    .email('El correo no es válido')
-    .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Debe ser un email valido')
-    .required('Este campo es requerido')
+    .email('Invalid email format')
+    .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Must be a valid email')
+    .required('This field is required')
 })

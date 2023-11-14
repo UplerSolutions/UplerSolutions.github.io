@@ -7,7 +7,11 @@ import { FormProvider, useForm } from 'react-hook-form'
 import { ContactForm } from './ContactForm'
 import CustomForm from './CustomForm'
 
-const steps = ['Personal Information', 'Company Information']
+const steps = [
+  'Personal Information',
+  'Company Information',
+  'Company Features'
+]
 
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = useState(0)

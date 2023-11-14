@@ -31,9 +31,9 @@ export const RecentSearches = ({ open, anchorEl, onClose }: Props) => {
   useOnClickOutside(paperRef, onClose)
   if (!anchorEl) return null
   return (
-    <Popper className='z-50' anchorEl={anchorEl} open={open} disablePortal>
+    <Popper className='z-50 ' anchorEl={anchorEl} open={open} disablePortal>
       {/* set the width the same as the anchorElement */}
-      <Paper sx={{ width: el.clientWidth }} ref={paperRef}>
+      <Paper className='mt-2' sx={{ width: el.clientWidth }} ref={paperRef}>
         <MenuList>
           {!recentSearches.length ? (
             <>

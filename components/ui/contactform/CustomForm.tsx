@@ -15,6 +15,8 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import * as yup from 'yup'
 import CompanyData from './CompanyData'
+import CompanyInfo from './CompanyFeatures'
+import CompanyFeatures from './CompanyFeatures'
 
 interface Props {
   activeStep: number
@@ -129,9 +131,28 @@ const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
               handlerAddress={handlerAddress}
             />
           )}
+          {activeStep === 2 && (
+            <CompanyFeatures
+              handleNext={handleNext}
+              handlerAddress={handlerAddress}
+            />
+          )}
+
+          <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+            {activeStep === 1 && (
+              <div className='flex justify-start w-full'>
+                <Button
+                  onClick={handleBack}
+                  className='text-primary-color hover:bg-white'
+                >
+                  Back
+                </Button>
+              </div>
+            )}
+          </Box>
 
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            {activeStep >= 1 && (
+            {activeStep === 2 && (
               <div className='flex justify-between w-full'>
                 <Button
                   onClick={handleBack}
