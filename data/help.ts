@@ -1,4 +1,4 @@
-export const contributions = [
+export const help = [
   {
     id: '001',
     label: 'Available Software',

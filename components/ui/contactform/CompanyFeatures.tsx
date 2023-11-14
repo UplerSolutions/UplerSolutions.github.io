@@ -11,7 +11,7 @@ interface Props {
   handleNext: () => void
 }
 
-const DataDireccionEntrega: FC<Props> = ({ handlerAddress, handleNext }) => {
+const CompanyFeatures: FC<Props> = ({ handlerAddress, handleNext }) => {
   const {
     control,
     formState: { errors },
@@ -25,7 +25,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress, handleNext }) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Typography sx={{ paddingBottom: '1rem' }} variant='h4' align='center'>
-        Company Information
+        Company Features
       </Typography>
 
       <Typography variant='caption' color='red'>
@@ -62,17 +62,8 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress, handleNext }) => {
         defaultValue=''
         required={true}
       />
-
-      <div className='flex justify-end [300px] pt-4'>
-        <Button
-          type='submit'
-          className='bg-primary-color hover:bg-purple-500 text-white absolute '
-        >
-          next
-        </Button>
-      </div>
     </form>
   )
 }
 
-export default DataDireccionEntrega
+export default CompanyFeatures
