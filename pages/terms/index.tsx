@@ -17,9 +17,9 @@ const terms: NextPage = () => (
           marketplace where you can buy, sell, and engage with thousands of
           incredible products and entrepreneurs. But... here are our
           super-boring (but according to our lawyer, super-important) terms of
-          use. They'll walk you through how our business operates, what you can
-          expect from us, and what we expect from you. : Enjoy and thanks for
-          being an awesome Upler user!
+          use. They&apos;ll walk you through how our business operates, what you
+          can expect from us, and what we expect from you. : Enjoy and thanks
+          for being an awesome Upler user!
         </p>
 
         <p>Thanks, Upler Team</p>
@@ -407,10 +407,10 @@ const terms: NextPage = () => (
         <p>
           You shall indemnify, hold harmless, and defend Upler and its officers,
           directors, employees, agents, affiliates, successors, and permitted
-          assigns (collectively, "Indemnified Parties") against any and all
-          losses, damages, liabilities, deficiencies, claims, actions,
+          assigns (collectively, &ldquo;Indemnified Parties&ldquo;) against any
+          and all losses, damages, liabilities, deficiencies, claims, actions,
           judgments, settlements, interest, awards, penalties, fines, costs, or
-          expenses of whatever kind, including attorneys' fees, that are
+          expenses of whatever kind, including attorneys&apos; fees, that are
           incurred by Indemnified Parties, arising out of or related to any
           third-party claim alleging or relating to (i) your violation of the
           these Terms (including the Other Documents listed in Section 2 that
@@ -505,10 +505,11 @@ const terms: NextPage = () => (
         <p>
           Upler reserves the right to update or modify these Terms at any time
           without prior notice. If we make any revisions that materially change
-          the terms, we will update the "Effective Date" at the top of these
-          Terms. Your continued use of the Services following the posting of
-          changes constitutes your acceptance of such changes. Please regularly
-          review these Terms to stay informed of any updates or changes.
+          the terms, we will update the &ldquo;Effective Date&ldquo; at the top
+          of these Terms. Your continued use of the Services following the
+          posting of changes constitutes your acceptance of such changes. Please
+          regularly review these Terms to stay informed of any updates or
+          changes.
         </p>
 
         <h2 className='text-4xl text-primary-color font-semibold py-4'>
