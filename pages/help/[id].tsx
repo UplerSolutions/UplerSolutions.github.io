@@ -55,9 +55,9 @@ const HelpDetailPage = () => {
           </div>
         </div>
       </nav>
-      <div className='w-full bg-purple-50 flex justify-center text-neutral-600'>
-        <div className='flex pt-24 h-[100vh] w-[67%]'>
-          <div className='w-1/4 mr-8'>
+      <div className='w-full bg-purple-50  flex justify-center text-neutral-600'>
+        <div className='flex flex-col-reverse md:flex-row pt-24 h-[100vh] justify-end items-center md:items-start w-[100%] md:w-[67%]'>
+          <div className='md:w-1/4 md:mr-8 flex justify-start w-[80%]  pb-10'>
             <ul className='list-none'>
               <h1 className='text-2xl pb-4 pt-10'>CATEGORIES</h1>
               <li
@@ -108,7 +108,7 @@ const HelpDetailPage = () => {
             </ul>
           </div>
 
-          <div className='w-3/4 bg-purple-100 p-10 h-[530px] pb-20'>
+          <div className='md:w-3/4 w-[85%] bg-purple-100 px-4 py-5 md:p-10 md:h-[530px] md:pb-20'>
             {selectedCategory && !selectedTitle && (
               <ul className='list-none'>
                 <h1 className='text-4xl font-bold mb-4'>

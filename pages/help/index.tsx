@@ -39,7 +39,7 @@ const Help: NextPage = () => {
           </div>
         </div>
       </nav>
-      <div className='bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] h-[350px] pt-48'>
+      <div className='bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] h-[225px] md:h-[350px] pt-28 md:pt-48'>
         <Box maxWidth={'sm'} margin='auto' className='w-[82%] xl:w-[100%]'>
           <Typography textAlign='center' my={2}></Typography>
           <Box className='flex flex-col gap-2' ref={anchorEl}>

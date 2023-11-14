@@ -63,7 +63,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress, handleNext }) => {
         required={true}
       />
 
-      <div className='flex justify-end [300px] pt-4'>
+      <div className='flex justify-end [300px]  pt-4'>
         <Button
           type='submit'
           className='bg-primary-color hover:bg-purple-500 text-white absolute '
