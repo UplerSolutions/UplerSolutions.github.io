@@ -3,10 +3,10 @@ import Image from 'next/image'
 export const Partner = () => {
   return (
     <section className='flex items-center justify-center flex-col pb-6 pt-14 md:pt-28  text-neutral-600 font-semibold w-[100%]'>
-      <div className=' flex items-center md:items-left justify-center flex-col w-full md:w-[88%] xl:w-[78%]'>
-        <div className='flex flex-col text-left lg:w-[100%]'>
-          <div className='text-center flex items-center lg:text-left pb-10 w-full'>
-            <div className='flex flex-col pb-3'>
+      <div className=' flex items-center justify-center flex-col w-full md:w-[88%] xl:w-[78%]'>
+        <div className='flex flex-col items-center justify-center'>
+          <div className='text-center flex items-center pb-10 w-full'>
+            <div className='flex flex-col items-center justify-center pb-3'>
               <h3 className='pb-4 text-sm md:text-base lg:text-lg'>
                 GET TO KNOW WHO TRUSTS US
               </h3>
@@ -30,13 +30,13 @@ export const Partner = () => {
           </div>
         </div>
 
-        <div className='flex flex-wrap lg:flex-nowrap justify-center lg:justify-between sm:flex-row gap-8 md:gap-8 pb-14'>
+        <div className='flex flex-wrap lg:flex-nowrap justify-center items-center sm:flex-row gap-8 md:gap-8 pb-14 '>
           <Image
             height={120}
-            width={1200}
+            width={600}
             src='/Todos.png'
             alt='partner-logo'
-            className='hidden md:block w-full'
+            className='hidden lg:block w-[60%]'
           />
 
           <Image
@@ -44,14 +44,14 @@ export const Partner = () => {
             width={180}
             src='/Bybit.png'
             alt='partner-logo'
-            className='md:hidden w-[150px] h-[60px]'
+            className='lg:hidden w-[120px] h-[42px]'
           />
           <Image
             height={80}
             width={180}
             src='/prex.png'
             alt='partner-logo'
-            className='md:hidden w-[150px] h-[70px]'
+            className='lg:hidden w-[120px] h-[45px]'
           />
 
           <Image
@@ -59,7 +59,7 @@ export const Partner = () => {
             width={180}
             src='/Damke.png'
             alt='partner-logo'
-            className='md:hidden w-[150px] h-[100px]'
+            className='lg:hidden w-[120px] h-[65px]'
           />
 
           <Image
@@ -67,7 +67,7 @@ export const Partner = () => {
             width={180}
             src='/vincapital.png'
             alt='partner-logo'
-            className='md:hidden w-[150px] h-[110px]'
+            className='lg:hidden w-[120px] h-[100px] '
           />
         </div>
       </div>
