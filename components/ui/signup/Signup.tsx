@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
@@ -6,10 +6,10 @@ import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from '@hookform/resolvers/yup'
 import { singup } from '@/rules'
-import { ErrorMessage } from '@hookform/error-message';
-import Typography from "@mui/material/Typography";
+import { ErrorMessage } from '@hookform/error-message'
+import Typography from '@mui/material/Typography'
 interface FormData {
   username: string
   email: string
@@ -31,41 +31,43 @@ export const Signup = () => {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm<FormData>({ resolver: yupResolver(singup), reValidateMode: "onChange" })
+  } = useForm<FormData>({
+    resolver: yupResolver(singup),
+    reValidateMode: 'onChange'
+  })
 
   const onSubmit = async (data: FormData) => {
-    const { username, password } = data;
+    const { username, password } = data
     const post = await fetch(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/createUser`,
       {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          name: "Joaquin",
-          lastname: "Marmol",
+          name: 'Joaquin',
+          lastname: 'Marmol',
           username,
-          email: "joaquinmarmolnecochea@gmail.com",
+          email: 'joaquinmarmolnecochea@gmail.com',
           password,
-          city: "necochea",
-          province: "buenos aires",
-          street_adrees: "87-784",
-          number_phone: 659056,
-        }),
+          city: 'necochea',
+          province: 'buenos aires',
+          street_adrees: '87-784',
+          number_phone: 659056
+        })
       }
-    );
+    )
     const res = await post.json()
     console.log(res)
     // Handle login submission here
 
     if (res.status === 200) {
-      await signIn("credentials", {
+      await signIn('credentials', {
         username,
         password,
-        redirect: false,
-      }
-      )
+        redirect: false
+      })
     }
   }
 
@@ -88,10 +90,7 @@ export const Signup = () => {
               <h1 className='text-4xl  pb-4 font-bold md:font-semibold'>
                 Sign Up
               </h1>
-              <label
-                htmlFor='email'
-                className='text-xl py-4 font-semibold'
-              >
+              <label htmlFor='email' className='text-xl py-4 font-semibold'>
                 Email
               </label>
               <input
@@ -101,13 +100,10 @@ export const Signup = () => {
                 name='email'
                 className='py-3 px-3 border-2 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
-              <Typography variant="caption" color="red">
-                <ErrorMessage errors={errors} name="email" />
+              <Typography variant='caption' color='red'>
+                <ErrorMessage errors={errors} name='email' />
               </Typography>
-              <label
-                htmlFor='username'
-                className='text-xl py-4 font-semibold'
-              >
+              <label htmlFor='username' className='text-xl py-4 font-semibold'>
                 Username
               </label>
               <input
@@ -117,8 +113,8 @@ export const Signup = () => {
                 name='username'
                 className='py-3 px-3 border-2 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
-              <Typography variant="caption" color="red">
-                <ErrorMessage errors={errors} name="username" />
+              <Typography variant='caption' color='red'>
+                <ErrorMessage errors={errors} name='username' />
               </Typography>
               <label htmlFor='password' className='text-xl py-4 font-semibold'>
                 Password
@@ -130,8 +126,8 @@ export const Signup = () => {
                 name='password'
                 className='py-3 px-3 border-2 mb-4 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
-              <Typography variant="caption" color="red">
-                <ErrorMessage errors={errors} name="password" />
+              <Typography variant='caption' color='red'>
+                <ErrorMessage errors={errors} name='password' />
               </Typography>
               <label htmlFor='password' className='text-xl py-4 font-semibold'>
                 Confirm Password
@@ -143,8 +139,8 @@ export const Signup = () => {
                 name='confirmPassword'
                 className='py-3 px-3 border-2 mb-4 rounded-md  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
               />
-              <Typography variant="caption" color="red">
-                <ErrorMessage errors={errors} name="confirmPassword" />
+              <Typography variant='caption' color='red'>
+                <ErrorMessage errors={errors} name='confirmPassword' />
               </Typography>
               <button
                 type='submit'
@@ -152,10 +148,6 @@ export const Signup = () => {
               >
                 Signup
               </button>
-
-              <h3 className=' text-neutral-400'>or continue with</h3>
-              <GoogleButton />
-
             </form>
             <div className='flex flex-col justify-center items-center px-8 mt-4 w-full pb-10 gap-4'>
               {/* <div className='flex items-center justify-between pb-6 w-full gap-2'>
@@ -175,9 +167,14 @@ export const Signup = () => {
                 </a>
               </div> */}
 
-
-              <div className='mt-4'>
-                <p className=''>
+              <div className=' w-full'>
+                <h3 className=' text-neutral-400 text-center py-2'>
+                  or continue with
+                </h3>
+                <div className='w-full'>
+                  <GoogleButton />
+                </div>
+                <p className=' text-center pt-4'>
                   Don&apos;t have an account yet?{'  '}
                   <Link
                     href='/login'
@@ -197,5 +194,3 @@ export const Signup = () => {
     </div>
   )
 }
-
-

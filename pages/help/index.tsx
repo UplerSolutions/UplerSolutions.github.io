@@ -19,7 +19,7 @@ const Help: NextPage = () => {
   const [open, setOpen] = useState(false)
   const anchorEl = useRef<HTMLDivElement>(null)
   return (
-    <div className='w-full'>
+    <div className='w-full selection:text-white selection:bg-primary-color'>
       <nav className='px-4 mb-10 flex flex-col items-center justify-between  w-full  bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] fixed z-50 h-[80px]'>
         <div className='flex z-10 w-full items-center justify-between font-mono text-sm pt-4 pb-4 lg:w-[70%] text-neutral-600'>
           <Link className='' href='/'>
