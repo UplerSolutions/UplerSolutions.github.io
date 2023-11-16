@@ -56,7 +56,7 @@ const HelpDetailPage = () => {
         </div>
       </nav>
       <div className='w-full bg-purple-50  flex justify-center text-neutral-600'>
-        <div className='flex flex-col-reverse md:flex-row pt-24 h-[100vh] justify-end items-center md:items-start w-[100%] md:w-[67%]'>
+        <div className='flex flex-col-reverse md:flex-row pt-24 min-h-[100vh] justify-end items-center md:items-start w-[100%] md:w-[67%]'>
           <div className='md:w-1/4 md:mr-8 flex justify-start w-[80%]  pb-10'>
             <ul className='list-none'>
               <h1 className='text-2xl pb-4 pt-10'>CATEGORIES</h1>
