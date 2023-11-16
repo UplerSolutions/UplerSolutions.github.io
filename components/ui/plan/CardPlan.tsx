@@ -62,7 +62,7 @@ export const CardPlan = () => {
                       <h2 className='text-xl font-semibold'>Benefits</h2>
                     </div>
 
-                    <div className='flex items-center justify-between pb-10 pt-4 '>
+                    <div className='flex items-center justify-between pb-10 pt-4 lg:w-[30%]'>
                       <Image
                         src='https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2020/02/adobe-logo.jpg?fit=840%2C473&ssl=1'
                         alt={''}
