@@ -37,8 +37,8 @@ export const CardPlan = () => {
       <section className='hidden max-w-[100%] w-full md:flex md:flex-col'>
         <div className='2xl:max-w-[75%] w-full max-h-max m-auto px-2 md:py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
-            A Bundle for each
-            <span className='text-primary-color'> professional </span>
+            A bundle for each
+            <span className='text-primary-color'> need </span>
           </h1>
           <ul className='flex flex-wrap gap-5 2xl:gap-14 justify-center items-center pt-10'>
             {plans.map((plan: IPlan) => (

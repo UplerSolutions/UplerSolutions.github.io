@@ -45,7 +45,7 @@ export const Carousel = () => {
       <div className='max-w-[100%] w-full m-auto py-6 '>
         <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
           A bundle for each
-          <span className='text-[#b06eca]'> professional </span>
+          <span className='text-[#b06eca]'> need </span>
         </h1>
 
         <Swiper
