@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { LiaGreaterThanSolid } from 'react-icons/lia'
 import { FaGreaterThan } from 'react-icons/fa'
 import { BsChevronRight } from 'react-icons/bs'
-import { BiChevronRight } from 'react-icons/bi'
+import { BiArrowBack, BiChevronRight } from 'react-icons/bi'
 
 const HelpDetailPage = () => {
   const router = useRouter()
@@ -57,9 +57,16 @@ const HelpDetailPage = () => {
       </nav>
       <div className='w-full bg-purple-50  flex justify-center text-neutral-600'>
         <div className='flex flex-col-reverse md:flex-row pt-24 min-h-[100vh] justify-end items-center md:items-start w-[100%] md:w-[67%]'>
-          <div className='md:w-1/4 md:mr-8 flex justify-start w-[80%]  pb-10'>
-            <ul className='list-none'>
-              <h1 className='text-2xl pb-4 pt-10'>CATEGORIES</h1>
+          <div className='md:w-1/4 md:mr-8 flex flex-col justify-start w-[80%]  pb-10'>
+            <Link
+              href='/help'
+              className='flex items-center font-semibold uppercase text-xs pt-2 gap-2'
+            >
+              <BiArrowBack className='text-primary-color scale-[1.3]' /> help/
+              {selectedCategory}
+            </Link>
+            <ul className='list-none pl-5'>
+              <h1 className='text-2xl pb-4 pt-4'>CATEGORIES</h1>
               <li
                 onClick={() => handleCategoryClick('GeneralInfo')}
                 className={`cursor-pointer text-neutral-500 font-semibold mb-4 hover:text-neutral-900 ${
