@@ -10,9 +10,35 @@ import { FaCheck } from 'react-icons/fa'
 import { useState } from 'react'
 import { data } from '@/data/plans'
 import { IPlan } from '@/interface/plan'
+import Image from 'next/image'
+
+const ComingSoonMessage = () => {
+  return (
+    <div className='flex w-[100%] items-center justify-center'>
+      <div className='rounded-3xl absolute m-auto top-0  w-[80%] h-full bg-neutral-700 bg-opacity-80 text-white flex items-center justify-center duration-300 z-[1000]'>
+        <Image
+          src='./comingsoon.png'
+          alt='coming soon'
+          width={200}
+          height={200}
+          className='w-full '
+        ></Image>
+      </div>
+    </div>
+  )
+}
 
 export const Carousel = () => {
   const [plans, setPlans] = useState(data)
+  const [hoveredPlan, setHoveredPlan] = useState('')
+
+  const handleHover = (planName: string) => {
+    setHoveredPlan(planName)
+  }
+
+  const handleLeave = () => {
+    setHoveredPlan('')
+  }
 
   return (
     <section className='max-w-[100%] w-full md:hidden'>
@@ -39,15 +65,18 @@ export const Carousel = () => {
         >
           {plans.map((plan: IPlan) => (
             <SwiperSlide key={plan.name} className='w-full'>
-              <ul className=' w-full flex items-center justify-center pt-10'>
+              <ul className='flex flex-wrap gap-5 2xl:gap-14 justify-center items-center pt-10'>
                 <li
                   key={plan.name}
-                  className='w-[80%] hover:opacity-40 cursor-not-allowed'
+                  className='relative justify-center  transition duration-300  cursor-not-allowed w-full flex'
+                  onMouseEnter={() => handleHover(plan.name)}
+                  onMouseLeave={handleLeave}
                 >
-                  <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-1 '>
-                    <div className='relative px-2 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
+                  <div className='cursor-not-allowed flex flex-col items-center justify-center h-full bg-white text-neutral-700 rounded-3xl pt-8  border-2 hover:border-2 hover:border-gray-600 w-[80%]'>
+                    {hoveredPlan === plan.name && <ComingSoonMessage />}
+                    <div className='relative px-6 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
                       <div className='pb-4'>
-                        <h1 className=' text-4xl font-bold pb-4'>
+                        <h1 className=' text-4xl font-bold py-4'>
                           {plan.name}
                         </h1>
                         <p>{plan.description}</p>
@@ -59,26 +88,24 @@ export const Carousel = () => {
                           USD /month
                         </span>
                       </h2>
-                      {/* <Link href={`/plans/${plan.name}`}>*/}
-                      <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
+                      <button className='cursor-not-allowed bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
                         Acquire the Bundle
                       </button>
-                      {/*</Link> */}
                     </div>
                     <div className='px-6 flex flex-col flex-1'>
                       <div>
-                        <hr className='mx-6 mb-6 h-[2px] rounded border-o bg-neutral-400' />
+                        <hr className='mb-6 h-[2px] rounded border-o bg-neutral-400' />
                         <h2 className='text-xl font-semibold'>
                           {plan.name} Bundle Includes
                         </h2>
                         <ul className='pb-6'>
-                          {plan.benefits.map((herramienta) => (
+                          {plan.benefits.map((benefits) => (
                             <li
-                              key={herramienta}
+                              key={benefits}
                               className='text-neutral-500 py-3 flex items-center '
                             >
                               <FaCheck className='text-primary-color' />
-                              <span className='pl-3'>{herramienta}</span>
+                              <span className='pl-3'>{benefits}</span>
                             </li>
                           ))}
                         </ul>
@@ -86,10 +113,25 @@ export const Carousel = () => {
                         <h2 className='text-xl font-semibold'>Benefits</h2>
                       </div>
 
-                      <div className='flex items-center justify-around pb-10 pt-2 '>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
+                      <div className='flex items-center justify-between pb-10 pt-4 w-[35%]'>
+                        <Image
+                          src='https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2020/02/adobe-logo.jpg?fit=840%2C473&ssl=1'
+                          alt={''}
+                          width={100}
+                          height={70}
+                        />
+                        <Image
+                          src='https://estaticos-cdn.elperiodico.com/clip/ec639019-0fde-42e1-ba01-9598859c2d28_alta-libre-aspect-ratio_default_0.jpg'
+                          alt={''}
+                          width={100}
+                          height={70}
+                        />
+                        <Image
+                          src='https://www.fathym.com/img/Figma2.png'
+                          alt={''}
+                          width={100}
+                          height={70}
+                        />
                       </div>
                     </div>
                   </div>
