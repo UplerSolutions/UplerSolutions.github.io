@@ -12,8 +12,8 @@ export const Team = () => {
           </h2>
           <p className='mt-4 text-lg leading-6 text-gray-500 pb-8'>
             A dedicated group passionate about simplifying software management.
-            With diverse expertise, we're committed to delivering streamlined
-            solutions for effortless software success
+            With diverse expertise, we&apos;re committed to delivering
+            streamlined solutions for effortless software success
           </p>
         </div>
         <div className='mt-8'>
