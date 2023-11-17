@@ -1,117 +1,66 @@
-import Image from 'next/image'
-import { FaFlagCheckered } from 'react-icons/fa'
-import LiaFlagCheckeredSolid from 'react-icons/lia'
-import { PiFlagPennant, PiFlagPennantFill } from 'react-icons/pi'
+import React from 'react'
+
 export const Roadmap = () => {
   return (
-    <div className='flex flex-col items-center justify-center py-24 bg-purple-50 w-full'>
-      <h1 className='text-5xl text-primary-color font-semibold'>Roadmap</h1>
-      <div className='w-1/2 items-center justify-center'>
-        <div className='flex flex-col gap-10 pt-20  items-center justify-center'>
-          <div className=' justify-end items-center text-primary-color font-semibold flex gap-10 w-full'>
-            <div className='absolute right-[55%]'>
-              <Image src={'./globo1.png'} alt={''} width={200} height={200} />
-            </div>
-            <div className='flex flex-col justify-center items-left '>
-              <h1 className='pb-6 pl-8'>MVP</h1>
-              <div className='flex items-center'>
-                <PiFlagPennantFill className='text-5xl m-6' />
-                <div className='flex flex-col'>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                </div>
-              </div>{' '}
-              <div className='flex items-center'>
-                <PiFlagPennantFill className='text-5xl m-6' />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-            </div>
-          </div>
-          <div className='text-primary-color items-center font-semibold flex gap-10 w-full py-24'>
-            <div className='absolute left-[55%]'>
-              {' '}
-              <Image
-                src={'https://cdn-icons-png.flaticon.com/512/8846/8846948.png'}
-                alt={''}
-                width={150}
-                height={150}
-              />
-            </div>
-            <div className='flex flex-col justify-center items-left '>
-              <h1 className='pb-6'>STEP 2</h1>
-              <div className='flex items-center'>
-                <div className='flex flex-col'>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                </div>
-                <PiFlagPennant className='text-5xl m-6' />
-              </div>{' '}
-              <div className='flex items-center'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <PiFlagPennant className='text-5xl m-6' />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='flex flex-col gap-10 pt-20  items-center justify-center'>
-          <div className=' justify-end items-center text-primary-color font-semibold flex gap-10 w-full'>
-            <div className='absolute right-[55%]'>
-              <Image
-                src={'https://cdn-icons-png.flaticon.com/512/8846/8846948.png'}
-                alt={''}
-                width={150}
-                height={150}
-              />
-            </div>
-            <div className='flex flex-col justify-center items-left '>
-              <h1 className='pb-6 pl-8'>STEP 3</h1>
-              <div className='flex items-center'>
-                <PiFlagPennant className='text-5xl m-6' />
-                <div className='flex flex-col'>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                </div>
-              </div>{' '}
-              <div className='flex items-center'>
-                <PiFlagPennant className='text-5xl m-6' />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-            </div>
-          </div>
+    <div className='bg-purple-100 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto'>
+        <h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-8 text-center'>
+          Roadmap
+        </h2>
 
-          <div className='text-primary-color items-center font-semibold flex gap-10 w-full py-24'>
-            <div className='absolute left-[55%]'>
-              <Image
-                src={'https://cdn-icons-png.flaticon.com/512/8846/8846948.png'}
-                alt={''}
-                width={150}
-                height={150}
-              />
-            </div>
-            <div className='flex flex-col justify-center items-left '>
-              <h1 className='pb-6'>STEP 4</h1>
-              <div className='flex items-center'>
-                <div className='flex flex-col'>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                </div>
-                <PiFlagPennant className='text-5xl m-6' />
-              </div>{' '}
-              <div className='flex items-center'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <PiFlagPennant className='text-5xl m-6' />
+        <div className='flex justify-center'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {roadmapData.map((item, index) => (
+              <div key={index} className='bg-white rounded-lg shadow-md p-6 '>
+                <h3 className='text-gray-800 text-xl sm:text-2xl font-semibold mb-4'>
+                  {item.title}
+                </h3>
+                <ul className='list-disc ml-6'>
+                  {item.tasks.map((task, taskIndex) => (
+                    <li key={taskIndex} className='text-gray-700'>
+                      {task}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          </div>
-          <div className='text-primary-color'>
-            <FaFlagCheckered className='text-5xl m-6' />
+            ))}
           </div>
         </div>
       </div>
     </div>
   )
 }
+
+const roadmapData = [
+  {
+    title: 'Q4 2023',
+    tasks: ['MVP Development']
+  },
+  {
+    title: 'Q1 2024',
+    tasks: [
+      'Referral System Integration',
+      'Packages & Payment Gateway',
+      'Functional Marketplace & User Panel',
+      'Upler Referral Program'
+    ]
+  },
+  {
+    title: 'Q2 2024',
+    tasks: ['AI Software Advisory', 'Balance Implementation']
+  },
+  {
+    title: 'Q3 2024',
+    tasks: ['Payment Streaming']
+  },
+  {
+    title: 'Q4 2024 - Q4 2025',
+    tasks: [
+      'Enhancements & Iterations',
+      'Market Expansion',
+      'Partnerships & Collaborations'
+    ]
+  }
+]
+
+export default Roadmap
