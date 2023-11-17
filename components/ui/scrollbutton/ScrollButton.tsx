@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BsFillArrowUpSquareFill } from 'react-icons/bs'
 import { FaArrowCircleUp } from 'react-icons/fa'
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false)
@@ -37,12 +38,12 @@ const ScrollButton = () => {
 
   return (
     <button
-      className='fixed w-full flex items-center justify-center left-0 right-0 m-auto bottom-5 lg:left-[90%] lg:bottom-[40px] h-20 text-3xl z-40 cursor-pointer text-green'
+      className='hidden  fixed w-full md:flex items-center justify-center left-0 right-0 m-auto bottom-5 lg:left-[98%] lg:bottom-[0px] h-20 text-3xl z-40 cursor-pointer text-green'
       onClick={scrollToTop}
       style={{ display: visible ? 'inline' : 'none' }}
     >
-      <div className='text-primary-color w-full flex justify-center lg:justify-stretch'>
-        <FaArrowCircleUp />
+      <div className='hidden  text-primary-color w-full md:flex justify-center lg:justify-stretch'>
+        <BsFillArrowUpSquareFill />
       </div>
     </button>
   )

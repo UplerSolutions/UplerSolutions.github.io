@@ -6,8 +6,30 @@ import { Carousel } from '@/components/ui/carousel/Carousel'
 import { IPlan } from '@/interface/plan'
 import Image from 'next/image'
 
+const ComingSoonMessage = () => {
+  return (
+    <div className='rounded-3xl absolute top-0 left-0 w-full h-full bg-neutral-700 bg-opacity-80 text-white flex items-center justify-center duration-300 z-[30]'>
+      <Image
+        src='./comingsoon.png'
+        alt='coming soon'
+        width={300}
+        height={300}
+        className='w-full '
+      ></Image>
+    </div>
+  )
+}
 export const CardPlan = () => {
   const [plans, setPlans] = useState(data)
+  const [hoveredPlan, setHoveredPlan] = useState('')
+
+  const handleHover = (planName: string) => {
+    setHoveredPlan(planName)
+  }
+
+  const handleLeave = () => {
+    setHoveredPlan('')
+  }
 
   return (
     <>
@@ -15,16 +37,19 @@ export const CardPlan = () => {
       <section className='hidden max-w-[100%] w-full md:flex md:flex-col'>
         <div className='2xl:max-w-[75%] w-full max-h-max m-auto px-2 md:py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
-            A Bundle for each
-            <span className='text-primary-color'> professional </span>
+            A bundle for each
+            <span className='text-primary-color'> need </span>
           </h1>
           <ul className='flex flex-wrap gap-5 2xl:gap-14 justify-center items-center pt-10'>
             {plans.map((plan: IPlan) => (
               <li
                 key={plan.name}
-                className='relative inline-block  transition duration-300 hover:opacity-40 cursor-not-allowed lg:w-[30%]'
+                className='relative inline-block  transition duration-300  cursor-not-allowed lg:w-[30%]'
+                onMouseEnter={() => handleHover(plan.name)}
+                onMouseLeave={handleLeave}
               >
                 <div className='cursor-not-allowed flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 border-2 hover:border-2 hover:border-gray-600 w-[100%]'>
+                  {hoveredPlan === plan.name && <ComingSoonMessage />}
                   <div className='relative px-6 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
                     <div className='pb-4'>
                       <h1 className=' text-4xl font-bold py-4'>{plan.name}</h1>
