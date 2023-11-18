@@ -112,7 +112,7 @@ const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
   }
 
   return (
-    <Box sx={{ width: '100%', alignSelf: 'center', marginTop: '2rem' }}>
+    <Box sx={{ width: '100%', alignSelf: 'center', marginTop: '1rem' }}>
       <Paper
         elevation={8}
         sx={{ p: '32px', display: 'flex', flexDirection: 'column', gap: 3 }}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Link from 'next/link'
 import {
   FaDiscord,
@@ -11,6 +11,13 @@ import {
 import Image from 'next/image'
 
 export const Footermobile = () => {
+  const partnerRef = useRef<HTMLAnchorElement>(null)
+
+  const scrollToPartner = () => {
+    if (partnerRef.current !== null) {
+      partnerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
   return (
     <footer className='w-full bg-neutral-600 flex flex-col items-center justify-center text-white h-auto pb-36 pt-10 gap-6 md:hidden'>
       <div className='flex flex-col w-[100%] px-[50px] gap-8'>
@@ -28,17 +35,29 @@ export const Footermobile = () => {
         </div>
 
         <div className='flex justify-start gap-6 items-center pt-4 w-[110%] sm:w-full'>
-          <Link className='group relative inline-block ' href='/software'>
+          <Link
+            className='group relative inline-block '
+            href='/software'
+            onClick={scrollToPartner}
+            ref={partnerRef}
+          >
             Software
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[65px]'></span>
           </Link>
-          <Link className=' group relative inline-block ' href='#plans'>
+          <Link
+            className=' group relative inline-block '
+            href='#plans'
+            onClick={scrollToPartner}
+            ref={partnerRef}
+          >
             Bundles
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[60px]'></span>
           </Link>
           <Link
             className=' group relative inline-block text-center'
             href='/partners'
+            onClick={scrollToPartner}
+            ref={partnerRef}
           >
             Become Our Partner
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-full'></span>

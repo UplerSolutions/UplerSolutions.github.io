@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Link from 'next/link'
 import {
   FaDiscord,
@@ -11,6 +11,13 @@ import Image from 'next/image'
 import { Footermobile } from '@/components/ui/footermobile/Footermobile'
 
 export const Footer = () => {
+  const partnerRef = useRef<HTMLAnchorElement>(null)
+
+  const scrollToPartner = () => {
+    if (partnerRef.current !== null) {
+      partnerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
   return (
     <div className='flex items-center justify-center flex-col bg-neutral-600 font-semibold w-[100%]'>
       <footer className='hidden md:flex lg:w-[97%] xl:w-[90%] 2xl:w-[100%] bg-neutral-600 flex-col-reverse text-white items-center justify-evenly h-auto pb-20 pt-10 md:flex-row lg:h-[350px] gap-6 lg:gap-0 md:items-start '>
@@ -31,15 +38,30 @@ export const Footer = () => {
         </div>
 
         <div className='flex flex-col gap-10 pt-4'>
-          <Link className='group relative inline-block ' href='/software'>
+          <Link
+            className='group relative inline-block '
+            href='/software'
+            onClick={scrollToPartner}
+            ref={partnerRef}
+          >
             Software
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[62px]'></span>
           </Link>
-          <Link className=' group relative inline-block ' href='#plans'>
+          <Link
+            className=' group relative inline-block '
+            href='#plans'
+            onClick={scrollToPartner}
+            ref={partnerRef}
+          >
             Bundles
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[57px]'></span>
           </Link>
-          <Link className=' group relative inline-block ' href='/apply'>
+          <Link
+            className=' group relative inline-block '
+            href='/apply'
+            onClick={scrollToPartner}
+            ref={partnerRef}
+          >
             Become Our Partner
             <span className='ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-full'></span>
           </Link>
