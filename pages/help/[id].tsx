@@ -60,12 +60,12 @@ const HelpDetailPage = () => {
           <div className='md:w-1/4 md:mr-8 flex flex-col justify-start w-[80%]  pb-10'>
             <Link
               href='/help'
-              className='flex items-center font-semibold uppercase text-xs pt-2 gap-2'
+              className='flex absolute top-[80px] md:relative md:top-0 items-center font-semibold uppercase text-xs pt-2 gap-2'
             >
               <BiArrowBack className='text-primary-color scale-[1.3]' /> help/
               {selectedCategory}
             </Link>
-            <ul className='list-none pl-5'>
+            <ul className='list-none pl-1 md:pl-5'>
               <h1 className='text-2xl pb-4 pt-4'>CATEGORIES</h1>
               <li
                 onClick={() => handleCategoryClick('GeneralInfo')}
@@ -115,7 +115,7 @@ const HelpDetailPage = () => {
             </ul>
           </div>
 
-          <div className='md:w-3/4 w-[85%] bg-purple-100 px-4 py-5 md:p-10 md:h-[530px] md:pb-20'>
+          <div className='md:w-3/4 w-[85%] bg-purple-100 px-4 mt-4   md:mt-0 py-5 md:p-10 md:h-[530px] md:pb-20'>
             {selectedCategory && !selectedTitle && (
               <ul className='list-none'>
                 <h1 className='text-4xl font-bold mb-4'>
