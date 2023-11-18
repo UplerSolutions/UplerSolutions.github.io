@@ -6,7 +6,7 @@ import Stepper from '@/components/ui/contactform/Stepper'
 const Apply: NextPage = () => {
   return (
     <Layout title='Upler - Apply'>
-      <div className=' bg-purple-50 h-[100vh] flex items-center justify-center'>
+      <div className=' bg-purple-50 h-[800px] lg:h-[100vh] flex items-center justify-center '>
         <Stepper />
       </div>
     </Layout>
