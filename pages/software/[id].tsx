@@ -104,7 +104,11 @@ const Software: NextPage<Props> = ({ software }) => {
       <div className='flex flex-col md:flex-row items-center md:items-start  justify-center pt-28  bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] h-[90vh] md:gap-8 pb-10'>
         <div className='w-[90%] md:w-[30%] flex flex-col  text-neutral-950 rounded-xl mt-9'>
           <div className='relative w-full '>
-            <img src={software.imageUrl} alt='' className='w-full rounded-xl' />
+            <img
+              src={`/${software.imageUrl}`}
+              alt=''
+              className='w-full rounded-xl'
+            />
           </div>
           {/* <div>
             <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
