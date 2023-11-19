@@ -25,23 +25,20 @@ export default function Document() {
           sizes='16x16'
           href='/favicon/isotipo.png'
         />
-        <link rel='manifest' href='/favicon/site.webmanifest' />
+        <link rel='manifest' href='./public/favicon/site.webmanifest' />
 
         {/* Robots Search Indexing */}
         <meta
           name='robots'
           content='follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large'
         />
-
-
-
       </Head>
       <body>
         <Main />
         <NextScript />
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MCXXWBZ" height="0" width="0" style="display: none; visibility: hidden;" />`,
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MCXXWBZ" height="0" width="0" style="display: none; visibility: hidden;" />`
           }}
         />
       </body>
