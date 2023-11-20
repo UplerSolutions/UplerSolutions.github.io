@@ -11,7 +11,10 @@ export const Roadmap = () => {
         <div className='flex justify-center'>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
             {roadmapData.map((item, index) => (
-              <div key={index} className='bg-white rounded-lg shadow-md p-6 '>
+              <div
+                key={index}
+                className='bg-white rounded-lg shadow-md p-6 lg:h-[200px]'
+              >
                 <h3 className='text-gray-800 text-xl sm:text-2xl font-semibold mb-4'>
                   {item.title}
                 </h3>
@@ -51,15 +54,15 @@ const roadmapData = [
   },
   {
     title: 'Q3 2024',
-    tasks: ['Payment Streaming']
+    tasks: ['Market Expansion']
+  },
+  {
+    title: 'Q4 2024',
+    tasks: ['Enhancements & Iterations', 'Partnerships & Collaborations']
   },
   {
     title: 'Q4 2024 - Q4 2025',
-    tasks: [
-      'Enhancements & Iterations',
-      'Market Expansion',
-      'Partnerships & Collaborations'
-    ]
+    tasks: ['Payment Streaming']
   }
 ]
 
