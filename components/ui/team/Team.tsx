@@ -19,7 +19,7 @@ export const Team = () => {
         <div className='mt-8'>
           <ul
             role='list'
-            className='grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 lg:grid-cols-3 lg:gap-24'
+            className='grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16 lg:flex lg:flex-wrap lg:justify-center lg:gap-24'
           >
             {team.map((person) => (
               <li key={person.name}>
