@@ -3,36 +3,36 @@ import React, { FC } from 'react'
 import { useRouter } from 'next/router'
 
 interface Props {
-  id: string
-  created_at: string
-  productName: string
-  lowDescription: string
-  longDescription: string
-  price: number
-  updated_at: string
-  seller: string
-  directLink: string
-  imageUrl: string
-  rating: number
-  category: {
-    id: string
-    categoryName: string
-  }
+	id: string
+	created_at: string
+	productName: string
+	lowDescription: string
+	longDescription: string
+	price: number
+	updated_at: string
+	seller: string
+	directLink: string
+	imageUrl: string
+	rating: number
+	category: {
+		id: string
+		categoryName: string
+	}
 }
 
 const CardSoftware: FC<Props> = ({
-  productName,
-  price,
-  lowDescription,
-  imageUrl,
-  id,
-  directLink
+	productName,
+	price,
+	lowDescription,
+	imageUrl,
+	id,
+	directLink
 }) => {
-  const router = useRouter()
+	const router = useRouter()
 
-  const redirect = () => {
-    router.push(`software/${id}`)
-  }
+	const redirect = () => {
+		router.push(`software/${id}`)
+	}
 
   return (
     <div className='z-10 relative h-full w-full'>

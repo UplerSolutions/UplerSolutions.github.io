@@ -4,71 +4,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lexend+Deca&family=Lora&display=swap');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --primary-color: #b96fe7;
-  --secondary-color: #2c2c2c;
-  --swiper-pagination-color: #b96fe7 !important;
-  --swiper-navigation-color: #b96fe7 !important;
-  --swiper-pagination-bullet-size: 14px !important;
-  --swiper-pagination: relative !important;
-  --scroll-behavior: smooth !important;
-  scroll-behavior: smooth !important;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+	--primary-color: #b96fe7;
+	--secondary-color: #2c2c2c;
+	--swiper-pagination-color: #b96fe7 !important;
+	--swiper-navigation-color: #b96fe7 !important;
+	--swiper-pagination-bullet-size: 14px !important;
+	--swiper-pagination: relative !important;
+	--scroll-behavior: smooth !important;
+	scroll-behavior: smooth !important;
 }
 @media (max-width: 420px) {
-  .swiper-pagination {
-    position: relative !important;
-    padding-top: 3px;
-  }
+	.swiper-pagination {
+		position: relative !important;
+		padding-top: 3px;
+	}
 }
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
 }
 
 .card-neumorphism {
-  border-radius: 50px;
-  background: #141414;
-  box-shadow: -20px 20px 43px #121212, 20px -20px 43px #161616;
+	border-radius: 50px;
+	background: #141414;
+	box-shadow:
+		-20px 20px 43px #121212,
+		20px -20px 43px #161616;
 }
 
 [data-rk] [aria-labelledby='rk_connect_title'] {
-  z-index: 2147483645 !important;
+	z-index: 2147483645 !important;
 }
 
 .swiper-pagination {
-  position: relative !important;
-  padding-top: 10px;
+	position: relative !important;
+	padding-top: 10px;
 }
 .swiper-button-next,
 .swiper-button-prev {
-  width: 40px;
-  height: 40px; /* Ajusta el color de fondo según tus necesidades */
-  color: #000; /* Ajusta el color del texto según tus necesidades */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+	width: 40px;
+	height: 40px; /* Ajusta el color de fondo según tus necesidades */
+	color: #000; /* Ajusta el color del texto según tus necesidades */
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 24px; /* Ajusta el tamaño del ícono según tus necesidades */
+	font-size: 24px; /* Ajusta el tamaño del ícono según tus necesidades */
 }
 
 /* Otros estilos personalizados según tus necesidades */

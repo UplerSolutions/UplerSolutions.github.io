@@ -4,14 +4,14 @@ import { Navbar } from '@/components/ui/navbar'
 import { Signup } from '@/components/ui/signup'
 
 const Register: NextPage = () => {
-  return (
-    <main
-      title='Upler - Register'
-      className='bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full selection:text-white selection:bg-primary-color'
-    >
-      <Signup />
-    </main>
-  )
+	return (
+		<main
+			title="Upler - Register"
+			className="w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] selection:bg-primary-color selection:text-white"
+		>
+			<Signup />
+		</main>
+	)
 }
 
 export default Register
