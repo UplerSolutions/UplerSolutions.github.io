@@ -7,9 +7,13 @@ export const Team = () => {
     <div className='bg-neutral-50 pt-20'>
       <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
         <div className='max-w-3xl mx-auto text-center'>
-          <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
-            <span className='block '>Meet the team</span>
-          </h2>
+          <div className='text-[32px] w-full font-bold md:text-3xl  xl:text-5xl flex text-center'>
+            <p className='text-[35px] w-full text-center md:text-3xl xl:text-5xl pb-5'>
+              <span className='text-neutral-600'>Meet our</span>
+              <span className=' text-primary-color '> team</span>
+            </p>
+          </div>
+          <hr className='bg-primary-color border-2 border-primary-color w-[100px] m-auto' />
           <p className='mt-4 text-lg leading-6 text-gray-500 pb-8'>
             A dedicated group passionate about simplifying software management.
             With diverse expertise, we&apos;re committed to delivering
