@@ -168,7 +168,6 @@ const Aboutus: NextPage = () => {
 						</div>
 					</div>
 
-<<<<<<< HEAD
           <div className='grid grid-rows-2  align-center  justify-items-center  xl:m-6 lg:p-8 items-end '>
             <div className='text-primary-color scale-[4.5] pb-4'>
               <PiBinoculars />
@@ -237,45 +236,6 @@ const Aboutus: NextPage = () => {
       </div>
     </Layout>
   )
-=======
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center lg:p-8 xl:m-6 ">
-						<div className="scale-[4.5] pb-4 text-primary-color">
-							<PiBinoculars />
-						</div>
-						<div className="flex flex-col items-center gap-3 md:gap-1">
-							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Vision
-							</h4>
-							<p className="w-[90%] text-neutral-600 ">
-								To be the leading platform for the management
-								and distribution of software tools,
-								revolutionizing how it is accessed and used
-								globally.
-							</p>
-						</div>
-					</div>
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center lg:p-8 xl:m-6 ">
-						<div className="scale-[4.5] pb-4 text-primary-color">
-							<IoDiamondOutline />
-						</div>
-						<div className="flex flex-col items-center gap-3 md:gap-1">
-							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Values
-							</h4>
-							<p className="w-[90%] text-neutral-600">
-								Transparency, commitment to quality,
-								collaboration, strategic partnerships, customer
-								care and empowerment, affordability and
-								efficiency.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<Team />
-		</Layout>
-	)
->>>>>>> 16ce88604a9e2898ef2287c508e4e4cbaa59ae9a
 }
 
 export default Aboutus
