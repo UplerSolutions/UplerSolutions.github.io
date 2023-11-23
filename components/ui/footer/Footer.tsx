@@ -41,7 +41,7 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-10 pt-4">
+				<div className="flex flex-col gap-9 pt-4">
 					<Link
 						className="group relative inline-block "
 						href="/software"
@@ -58,6 +58,15 @@ export const Footer = () => {
 						ref={partnerRef}
 					>
 						Bundles
+						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[57px]"></span>
+					</Link>
+					<Link
+						className=" group relative inline-block "
+						href="/aboutUs"
+						onClick={scrollToPartner}
+						ref={partnerRef}
+					>
+						About Us
 						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[57px]"></span>
 					</Link>
 					<Link

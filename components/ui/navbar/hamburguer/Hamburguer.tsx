@@ -42,6 +42,15 @@ export const Hamburguer = () => {
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />{' '}
+							<li className="">
+								<Link
+									className="flex items-center gap-2 text-center"
+									href="/aboutUs"
+								>
+									<span className=" text-lg">About Us</span>
+								</Link>
+							</li>
+							<hr className="h-[2px] w-full bg-primary-color" />
 							{/*              <li>
                 <Link
                   className='flex flex-col text-center items-center gap-2'

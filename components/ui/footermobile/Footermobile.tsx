@@ -58,12 +58,21 @@ export const Footermobile = () => {
 						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[60px]"></span>
 					</Link>
 					<Link
+						className=" group relative inline-block "
+						href="#plans"
+						onClick={scrollToPartner}
+						ref={partnerRef}
+					>
+						About Us
+						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[60px]"></span>
+					</Link>
+					<Link
 						className=" group relative inline-block text-center"
 						href="/partners"
 						onClick={scrollToPartner}
 						ref={partnerRef}
 					>
-						Become Our Partner
+						Partner
 						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-full"></span>
 					</Link>
 				</div>
