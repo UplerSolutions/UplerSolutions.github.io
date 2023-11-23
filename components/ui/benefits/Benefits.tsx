@@ -9,14 +9,14 @@ export const Benefits = () => {
     <div className='flex flex-row w-[100%] pb-8 2xl:py-20 md:mb-0 items-center justify-center bg-zinc-100 text-center }'>
       <div className='flex flex-col  px-8 w-[90%] md:w-[75%] items-center text-center bg-zinc-50 rounded-3xl lg:pt-5 pb-5'>
         <div className='flex max-w-fit h-fit text-center'>
-          <h2 className='py-8 text-3xl md:ml-12 lg:ml-0 lg:px-0 md:text:5xl lg:text-6xl md:pb-4 lg:pb-10 font-bold text-neutral-700 '>
+          <h2 className='py-8 text-3xl md:ml-12 lg:ml-0 lg:px-0 md:text-5xl 2xl:text-6xl md:pb-16 lg:pb-24 font-bold text-neutral-700 '>
             Why customers choose Upler?
           </h2>
         </div>
-        <div className=' 2xl:grid 2xl:grid-cols-3 md:grid md:grid-cols-2 text-center w-[100%] flex flex-col gap-7'>
+        <div className=' xl:grid xl:grid-cols-3 md:grid md:grid-cols-2 text-center w-[100%] flex flex-col gap-7 2xl:gap-4'>
           {benefits.map((benefit) => (
             <div
-              className='grid grid-rows-2  align-center  justify-items-center  xl:m-6 lg:p-8 items-end md:items-start'
+              className='grid grid-rows-2  align-center  justify-items-center  2xl:m-6  items-end md:items-center lg:items-start'
               key={benefit.title}
             >
               <div>
