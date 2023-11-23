@@ -35,15 +35,17 @@ const MarketSoftware: FC<Props> = ({
 	}
 
 	return (
-		<div className="relative h-[370px] w-[30%]  transition hover:scale-[0.97]">
-			<div className="z-30 flex h-[370px] w-[285px] cursor-pointer flex-col rounded-xl bg-white p-4 text-neutral-950 max-md:pt-2 md:pb-1 md:text-center">
+		<div className="relative w-[30%]  transition  hover:scale-[0.97] xl:h-[370px]">
+			<div className="z-30 flex h-[370px] w-[285px] cursor-pointer flex-col rounded-xl bg-white p-4 text-neutral-950 max-md:pt-2 md:pb-1 md:text-center lg:h-[340px] 2xl:h-[370px]">
 				<div
 					onClick={redirect}
 					className="group/item flex h-full flex-col place-content-start justify-between"
 				>
 					<div className="text-left lg:px-0">
 						<div className=" group/item flex flex-1 flex-col gap-1">
-							<p className="">{lowDescription}</p>
+							<p className="lg:line-clamp-3 2xl:line-clamp-none">
+								{lowDescription}
+							</p>
 						</div>
 					</div>
 					<div className="relative flex w-full flex-col justify-center rounded-xl">

@@ -9,34 +9,34 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 interface Props {
-  software: ISoftware
+	software: ISoftware
 }
 interface Props {
-  id: string
-  created_at: string
-  productName: string
-  lowDescription: string
-  longDescription: string
-  price: number
-  updated_at: string
-  seller: string
-  directLink: string
-  imageUrl: string
-  rating: number
-  category: {
-    id: string
-    categoryName: string
-  }
+	id: string
+	created_at: string
+	productName: string
+	lowDescription: string
+	longDescription: string
+	price: number
+	updated_at: string
+	seller: string
+	directLink: string
+	imageUrl: string
+	rating: number
+	category: {
+		id: string
+		categoryName: string
+	}
 }
 
 const Software: NextPage<Props> = ({ software }) => {
-  const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState(false)
 
-  const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
-  return (
-    /*<div>
+	const handleClick = () => {
+		setIsOpen(!isOpen)
+	}
+	return (
+		/*<div>
       {isOpen && (
         <div>
           <div className='flex flex-col justify-between'>
@@ -100,13 +100,17 @@ const Software: NextPage<Props> = ({ software }) => {
           isOpen ? 'opacity-30' : '' // we can add styles when is open
         }`}
       >*/
-    <Layout title='Upler - Software'>
-      <div className='flex flex-col md:flex-row items-center md:items-start  justify-center pt-28  bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] h-[90vh] md:gap-8 pb-10'>
-        <div className='w-[90%] md:w-[30%] flex flex-col  text-neutral-950 rounded-xl mt-9'>
-          <div className='relative w-full '>
-            <img src={software.imageUrl} alt='' className='w-full rounded-xl' />
-          </div>
-          {/* <div>
+		<Layout title="Upler - Software">
+			<div className="flex h-[90vh] flex-col items-center justify-center  bg-gradient-to-r from-[#fde9fc]  to-[#fffbe0] pb-10 pt-28 md:flex-row md:items-start md:gap-8">
+				<div className="mt-9 flex w-[90%] flex-col  rounded-xl text-neutral-950 md:w-[30%]">
+					<div className="relative w-full ">
+						<img
+							src={`/${software.imageUrl}`}
+							alt=""
+							className="w-full rounded-xl"
+						/>
+					</div>
+					{/* <div>
             <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
               From the founders
             </h1>
@@ -137,55 +141,57 @@ const Software: NextPage<Props> = ({ software }) => {
               </h2>
             </div>
           </div> */}
-        </div>
-        <div className='w-full md:w-[30%] h-[70vh] p-6 rounded-md'>
-          <div className='flex flex-col flex-1 gap-1'>
-            <h2 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
-              {software.productName}
-            </h2>
-            <p className='text-primary-color text-xl md:text-2xl lg:text-3xl font-semibold flex gap-6 items-center'>
-              ${software.price}
-              <Link href={software.directLink} target='_blank'>
-                <button
-                  type='submit'
-                  className=' text-lg bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
-                >
-                  Get Link
-                </button>
-              </Link>
-            </p>
-          </div>
-          <div>
-            <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
-              Description
-            </h1>
-            <p className='text-neutral-500'>{software.longDescription}</p>
-          </div>
-        </div>
-      </div>
-    </Layout>
-    /* </div>
+				</div>
+				<div className="h-[70vh] w-full rounded-md p-6 md:w-[30%]">
+					<div className="flex flex-1 flex-col gap-1">
+						<h2 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
+							{software.productName}
+						</h2>
+						<p className="flex items-center gap-6 text-xl font-semibold text-primary-color md:text-2xl lg:text-3xl">
+							${software.price}
+							<Link href={software.directLink} target="_blank">
+								<button
+									type="submit"
+									className=" h-12 w-48 rounded-xl bg-primary-color text-lg font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
+								>
+									Get Link
+								</button>
+							</Link>
+						</p>
+					</div>
+					<div>
+						<h1 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
+							Description
+						</h1>
+						<p className="text-neutral-500">
+							{software.longDescription}
+						</p>
+					</div>
+				</div>
+			</div>
+		</Layout>
+		/* </div>
     </div>*/
-  )
+	)
 }
 
 export default Software
 
 export const getServerSideProps: GetServerSideProps = async ({
-  res,
-  params
+	res,
+	params
 }) => {
-  const id: string = typeof params?.id === 'string' ? params.id : ''
+	const id: string = typeof params?.id === 'string' ? params.id : ''
 
-  const software = await getSoftware(id)
+	const software = await getSoftware(id)
 
-  res.setHeader(
-    'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
-  )
-  return {
-    props: {
-      software
-    }
-  }
+	res.setHeader(
+		'Cache-Control',
+		'public, s-maxage=10, stale-while-revalidate=59'
+	)
+	return {
+		props: {
+			software
+		}
+	}
 }

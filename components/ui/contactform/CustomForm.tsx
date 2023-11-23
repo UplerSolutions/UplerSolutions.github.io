@@ -15,143 +15,169 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import * as yup from 'yup'
 import CompanyData from './CompanyData'
+import CompanyInfo from './CompanyFeatures'
+import CompanyFeatures from './CompanyFeatures'
 
 interface Props {
-  activeStep: number
+	activeStep: number
 
-  handleBack: () => void
-  handleNext: () => void
+	handleBack: () => void
+	handleNext: () => void
 }
 
 interface DefaultValues {
-  customer: {
-    name: string
-    lastname: string
-    email: string
-  }
-  company: {
-    type: string
-    sector: string
-    name: string
-    website: string
-    email: string
-    address: string
-  }
-  card: {
-    number: string
-    cvc: string
-    expDate: string
-    nameOnCard: string
-  }
-  order: {
-    name: string
-    image: string
-    price: number
-  }
+	customer: {
+		name: string
+		lastname: string
+		email: string
+	}
+	company: {
+		type: string
+		sector: string
+		name: string
+		website: string
+		email: string
+		address: string
+	}
+	card: {
+		number: string
+		cvc: string
+		expDate: string
+		nameOnCard: string
+	}
+	order: {
+		name: string
+		image: string
+		price: number
+	}
 }
 
 const defaultValues: DefaultValues = {
-  customer: {
-    name: '',
-    lastname: '',
-    email: ''
-  },
-  company: {
-    type: '',
-    sector: '',
-    name: '',
-    website: '',
-    email: '',
-    address: ''
-  },
+	customer: {
+		name: '',
+		lastname: '',
+		email: ''
+	},
+	company: {
+		type: '',
+		sector: '',
+		name: '',
+		website: '',
+		email: '',
+		address: ''
+	},
 
-  card: {
-    number: '',
-    cvc: '',
-    expDate: '',
-    nameOnCard: ''
-  },
-  order: {
-    name: '',
-    image: '',
-    price: 0
-  }
+	card: {
+		number: '',
+		cvc: '',
+		expDate: '',
+		nameOnCard: ''
+	},
+	order: {
+		name: '',
+		image: '',
+		price: 0
+	}
 }
 
 const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
-  // const { handleSubmit, getValues, getFieldState, formState } = useFormContext();
+	// const { handleSubmit, getValues, getFieldState, formState } = useFormContext();
 
-  const router = useRouter()
+	const router = useRouter()
 
-  const [info, setinfo] = useState(defaultValues)
+	const [info, setinfo] = useState(defaultValues)
 
-  const handlerCustomer = (data: typeof defaultValues.customer) => {
-    setinfo({
-      ...info,
-      customer: { ...data }
-    })
-    handleNext()
-  }
-  const handlerAddress = (data: typeof defaultValues.company) => {
-    setinfo({
-      ...info,
-      company: { ...data }
-    })
-    handleNext()
-  }
+	const handlerCustomer = (data: typeof defaultValues.customer) => {
+		setinfo({
+			...info,
+			customer: { ...data }
+		})
+		handleNext()
+	}
+	const handlerAddress = (data: typeof defaultValues.company) => {
+		setinfo({
+			...info,
+			company: { ...data }
+		})
+		handleNext()
+	}
 
-  const handlerCard = (data: typeof defaultValues.card) => {
-    setinfo({
-      ...info,
-      card: { ...data }
-    })
+	const handlerCard = (data: typeof defaultValues.card) => {
+		setinfo({
+			...info,
+			card: { ...data }
+		})
 
-    // onSubmit puede ir aca
-  }
+		// onSubmit puede ir aca
+	}
 
-  return (
-    <Box sx={{ width: '100%', alignSelf: 'center', marginTop: '2rem' }}>
-      <Paper
-        elevation={8}
-        sx={{ p: '32px', display: 'flex', flexDirection: 'column', gap: 3 }}
-      >
-        <div>
-          {activeStep === 0 && (
-            <PersonalData
-              handleNext={handleNext}
-              handlerCustomer={handlerCustomer}
-            />
-          )}
+	return (
+		<Box sx={{ width: '100%', alignSelf: 'center', marginTop: '1rem' }}>
+			<Paper
+				elevation={8}
+				sx={{
+					p: '32px',
+					display: 'flex',
+					flexDirection: 'column',
+					gap: 3
+				}}
+			>
+				<div>
+					{activeStep === 0 && (
+						<PersonalData
+							handleNext={handleNext}
+							handlerCustomer={handlerCustomer}
+						/>
+					)}
 
-          {activeStep === 1 && (
-            <CompanyData
-              handleNext={handleNext}
-              handlerAddress={handlerAddress}
-            />
-          )}
+					{activeStep === 1 && (
+						<CompanyData
+							handleNext={handleNext}
+							handlerAddress={handlerAddress}
+						/>
+					)}
+					{activeStep === 2 && (
+						<CompanyFeatures
+							handleNext={handleNext}
+							handlerAddress={handlerAddress}
+						/>
+					)}
 
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            {activeStep >= 1 && (
-              <div className='flex justify-between w-full'>
-                <Button
-                  onClick={handleBack}
-                  className='text-primary-color hover:bg-white'
-                >
-                  Back
-                </Button>
-                <Button
-                  type='submit'
-                  className='bg-primary-color hover:bg-purple-500 text-white'
-                >
-                  Send
-                </Button>
-              </div>
-            )}
-          </Box>
-        </div>
-      </Paper>
-    </Box>
-  )
+					<Box sx={{ display: 'flex', flexDirection: 'row' }}>
+						{activeStep === 1 && (
+							<div className="flex w-full justify-start">
+								<Button
+									onClick={handleBack}
+									className="text-primary-color hover:bg-white"
+								>
+									Back
+								</Button>
+							</div>
+						)}
+					</Box>
+
+					<Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+						{activeStep === 2 && (
+							<div className="flex w-full justify-between">
+								<Button
+									onClick={handleBack}
+									className="text-primary-color hover:bg-white"
+								>
+									Back
+								</Button>
+								<Button
+									type="submit"
+									className="bg-primary-color text-white hover:bg-purple-500"
+								>
+									Send
+								</Button>
+							</div>
+						)}
+					</Box>
+				</div>
+			</Paper>
+		</Box>
+	)
 }
 
 export default CustomForm

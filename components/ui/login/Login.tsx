@@ -64,52 +64,59 @@ export const Login = () => {
 							/>
 						</div>
 					</Link>
-					<form
-						onSubmit={handleSubmit(onSubmit)}
-						className="border-1 flex w-[100%] flex-col items-center justify-center rounded-3xl bg-white p-2 text-neutral-600 drop-shadow-md xl:w-[80%]"
-					>
-						<div className="flex w-[100%] flex-col px-8 pt-8">
-							<h1 className="pb-6  text-3xl  md:font-medium">
-								Welcome !
-							</h1>
-							<h1 className="pb-6  text-4xl font-bold md:font-semibold">
-								Log In
-							</h1>
-							<label
-								htmlFor="username"
-								className="py-4 text-xl font-semibold"
-							>
-								Email or Username
-							</label>
-							<input
-								{...register('username')}
-								type="text"
-								placeholder="johndoe@example.com"
-								name="username"
-								className="rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-							/>
-							<Typography variant="caption" color="red">
-								<ErrorMessage errors={errors} name="username" />
-							</Typography>
-							<label
-								htmlFor="password"
-								className="py-4 text-xl font-semibold"
-							>
-								Password
-							</label>
-							<input
-								{...register('password')}
-								type="password"
-								placeholder="Enter your password"
-								name="password"
-								className="mb-4 rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-							/>
-							<Typography variant="caption" color="red">
-								<ErrorMessage errors={errors} name="password" />
-							</Typography>
-						</div>
-						<div className="mt-4 flex w-full flex-col items-center justify-center gap-4 px-8 pb-10">
-							{/* <div className='flex items-center justify-between pb-6 w-full gap-2'>
+					<div className="border-1 flex w-[100%] flex-col items-center justify-center rounded-3xl bg-white p-2 text-neutral-600 drop-shadow-md xl:w-[80%]">
+						<form
+							onSubmit={handleSubmit(onSubmit)}
+							className=" border-1 flex w-[100%] flex-col items-center justify-center rounded-3xl bg-white p-2 text-neutral-600"
+						>
+							<div className="flex w-[100%] flex-col px-8 pt-8">
+								<h1 className="pb-6  text-3xl  md:font-medium">
+									Welcome !
+								</h1>
+								<h1 className="pb-6  text-4xl font-bold md:font-semibold">
+									Log In
+								</h1>
+								<label
+									htmlFor="username"
+									className="py-4 text-xl font-semibold"
+								>
+									Email or Username
+								</label>
+								<input
+									{...register('username')}
+									type="text"
+									placeholder="johndoe@example.com"
+									name="username"
+									className="rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+								/>
+								<Typography variant="caption" color="red">
+									<ErrorMessage
+										errors={errors}
+										name="username"
+									/>
+								</Typography>
+								<label
+									htmlFor="password"
+									className="py-4 text-xl font-semibold"
+								>
+									Password
+								</label>
+								<input
+									{...register('password')}
+									type="password"
+									placeholder="Enter your password"
+									name="password"
+									className="mb-4 rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+								/>
+								<Typography variant="caption" color="red">
+									<ErrorMessage
+										errors={errors}
+										name="password"
+									/>
+								</Typography>
+							</div>
+							<div className="mt-4 flex w-full flex-col items-center justify-center gap-4 px-8 pb-10">
+								{/* <div className='flex items-center justify-between pb-6 w-full gap-2'>
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -126,34 +133,38 @@ export const Login = () => {
                 </a>
               </div> */}
 
-							<button
-								type="submit"
-								className="h-14 w-full rounded-md bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
-							>
-								Login
-							</button>
-							{errorsApi && (
-								<Typography variant="caption" color="red">
-									{errorsApi}
-								</Typography>
-							)}
-							<h3 className=" text-neutral-400">
-								or continue with
-							</h3>
-							<GoogleButton />
-							<div className="mt-4">
-								<p className="">
-									Don&apos;t have an account yet?{'  '}
-									<Link
-										href="/register"
-										className="text-primary-color hover:underline"
-									>
-										Register
-									</Link>
-								</p>
+								<button
+									type="submit"
+									className="h-14 w-full rounded-md bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
+								>
+									Login
+								</button>
+								{errorsApi && (
+									<Typography variant="caption" color="red">
+										{errorsApi}
+									</Typography>
+								)}
+								<h3 className=" text-neutral-400">
+									or continue with
+								</h3>
 							</div>
+						</form>
+						<div className="w-[87%]">
+							<GoogleButton />
 						</div>
-					</form>
+
+						<div className="mt-4">
+							<p className="">
+								Don&apos;t have an account yet?{'  '}
+								<Link
+									href="/register"
+									className="text-primary-color hover:underline"
+								>
+									Register
+								</Link>
+							</p>
+						</div>
+					</div>
 				</div>
 				<div className="hidden md:flex">
 					<Image

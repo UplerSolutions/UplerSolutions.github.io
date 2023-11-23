@@ -10,95 +10,147 @@ import { FaCheck } from 'react-icons/fa'
 import { useState } from 'react'
 import { data } from '@/data/plans'
 import { IPlan } from '@/interface/plan'
+import Image from 'next/image'
+
+const ComingSoonMessage = () => {
+	return (
+		<div className="flex w-[100%] items-center justify-center">
+			<div className="absolute top-0 z-[1000] m-auto  flex h-full w-[80%] items-center justify-center rounded-3xl bg-neutral-700 bg-opacity-80 text-white duration-300">
+				<Image
+					src="./comingsoon.png"
+					alt="coming soon"
+					width={200}
+					height={200}
+					className="w-full "
+				></Image>
+			</div>
+		</div>
+	)
+}
 
 export const Carousel = () => {
-  const [plans, setPlans] = useState(data)
+	const [plans, setPlans] = useState(data)
+	const [hoveredPlan, setHoveredPlan] = useState('')
 
-  return (
-    <section className='max-w-[100%] w-full md:hidden'>
-      <div className='max-w-[100%] w-full m-auto py-6 '>
-        <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
-          A bundle for each
-          <span className='text-[#b06eca]'> professional </span>
-        </h1>
+	const handleHover = (planName: string) => {
+		setHoveredPlan(planName)
+	}
 
-        <Swiper
-          //style={{
-          //'--swiper-pagination-color': '#b06eca',
-          //'--swiper-navigation-color': '#b06eca',
-          //'--swiper-navigation-position': 'absolute',
-          //'--swiper-pagination-bullet-size': '14px'
-          //}}
-          cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className='mySwiper '
-        >
-          {plans.map((plan: IPlan) => (
-            <SwiperSlide key={plan.name} className='w-full'>
-              <ul className=' w-full flex items-center justify-center pt-10'>
-                <li
-                  key={plan.name}
-                  className='w-[80%] hover:opacity-40 cursor-not-allowed'
-                >
-                  <div className='border flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-1 '>
-                    <div className='relative px-2 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
-                      <div className='pb-4'>
-                        <h1 className=' text-4xl font-bold pb-4'>
-                          {plan.name}
-                        </h1>
-                        <p>{plan.description}</p>
-                      </div>
-                      <h2 className='py-8 text-5xl font-bold flex items-center gap-3 text-primary-color'>
-                        <span className='text-xl'>$</span>
-                        {plan.price}
-                        <span className=' text-base text-neutral-600 font-normal'>
-                          USD /month
-                        </span>
-                      </h2>
-                      {/* <Link href={`/plans/${plan.name}`}>*/}
-                      <button className=' bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-100 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'>
-                        Acquire the Bundle
-                      </button>
-                      {/*</Link> */}
-                    </div>
-                    <div className='px-6 flex flex-col flex-1'>
-                      <div>
-                        <hr className='mx-6 mb-6 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>
-                          {plan.name} Bundle Includes
-                        </h2>
-                        <ul className='pb-6'>
-                          {plan.benefits.map((herramienta) => (
-                            <li
-                              key={herramienta}
-                              className='text-neutral-500 py-3 flex items-center '
-                            >
-                              <FaCheck className='text-primary-color' />
-                              <span className='pl-3'>{herramienta}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <hr className=' my-1 mx-1 h-[2px] rounded border-o bg-neutral-400' />
-                        <h2 className='text-xl font-semibold'>Benefits</h2>
-                      </div>
+	const handleLeave = () => {
+		setHoveredPlan('')
+	}
 
-                      <div className='flex items-center justify-around pb-10 pt-2 '>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                        <div className=' flex flex-col items-center text-center box-content h-8 w-8 p-4  bg-slate-400'></div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
-  )
+	return (
+		<section className="w-full max-w-[100%] md:hidden">
+			<div className="m-auto w-full max-w-[100%] py-6 ">
+				<h1 className="text-center text-3xl font-bold text-neutral-700 lg:p-8 lg:text-5xl">
+					A bundle for each
+					<span className="text-[#b06eca]"> need </span>
+				</h1>
+
+				<Swiper
+					//style={{
+					//'--swiper-pagination-color': '#b06eca',
+					//'--swiper-navigation-color': '#b06eca',
+					//'--swiper-navigation-position': 'absolute',
+					//'--swiper-pagination-bullet-size': '14px'
+					//}}
+					cssMode={true}
+					navigation={true}
+					pagination={true}
+					mousewheel={true}
+					keyboard={true}
+					modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+					className="mySwiper "
+				>
+					{plans.map((plan: IPlan) => (
+						<SwiperSlide key={plan.name} className="w-full">
+							<ul className="flex flex-wrap items-center justify-center gap-5 pt-10 2xl:gap-14">
+								<li
+									key={plan.name}
+									className="relative flex  w-full cursor-not-allowed  justify-center transition duration-300"
+									onMouseEnter={() => handleHover(plan.name)}
+									onMouseLeave={handleLeave}
+								>
+									<div className="flex h-full w-[80%] cursor-not-allowed flex-col items-center justify-center rounded-3xl border-2 bg-white  pt-8 text-neutral-700 hover:border-2 hover:border-gray-600">
+										{hoveredPlan === plan.name && (
+											<ComingSoonMessage />
+										)}
+										<div className="relative flex h-full flex-col items-center justify-evenly px-6 pb-4 text-center first-letter:w-full">
+											<div className="pb-4">
+												<h1 className=" py-4 text-4xl font-bold">
+													{plan.name}
+												</h1>
+												<p>{plan.description}</p>
+											</div>
+											<h2 className="flex items-center gap-3 py-8 text-5xl font-bold text-primary-color">
+												<span className="text-xl">
+													$
+												</span>
+												{plan.price}
+												<span className=" text-base font-normal text-neutral-600">
+													USD /month
+												</span>
+											</h2>
+											<button className="h-12 w-48 cursor-not-allowed rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-100 hover:text-primary-color hover:delay-100">
+												Acquire the Bundle
+											</button>
+										</div>
+										<div className="flex flex-1 flex-col px-6">
+											<div>
+												<hr className="border-o mb-6 h-[2px] rounded bg-neutral-400" />
+												<h2 className="text-xl font-semibold">
+													{plan.name} Bundle Includes
+												</h2>
+												<ul className="pb-6">
+													{plan.benefits.map(
+														(benefits) => (
+															<li
+																key={benefits}
+																className="flex items-center py-3 text-neutral-500 "
+															>
+																<FaCheck className="text-primary-color" />
+																<span className="pl-3">
+																	{benefits}
+																</span>
+															</li>
+														)
+													)}
+												</ul>
+												<hr className=" border-o mx-1 my-1 h-[2px] rounded bg-neutral-400" />
+												<h2 className="text-xl font-semibold">
+													Benefits
+												</h2>
+											</div>
+
+											<div className="flex w-[35%] items-center justify-between pb-10 pt-4">
+												<Image
+													src="https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2020/02/adobe-logo.jpg?fit=840%2C473&ssl=1"
+													alt={''}
+													width={100}
+													height={70}
+												/>
+												<Image
+													src="https://estaticos-cdn.elperiodico.com/clip/ec639019-0fde-42e1-ba01-9598859c2d28_alta-libre-aspect-ratio_default_0.jpg"
+													alt={''}
+													width={100}
+													height={70}
+												/>
+												<Image
+													src="https://www.fathym.com/img/Figma2.png"
+													alt={''}
+													width={100}
+													height={70}
+												/>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</div>
+		</section>
+	)
 }

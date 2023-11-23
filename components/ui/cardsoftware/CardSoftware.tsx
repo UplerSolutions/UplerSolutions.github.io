@@ -36,7 +36,7 @@ const CardSoftware: FC<Props> = ({
 
 	return (
 		<div className="relative z-10 h-full w-full">
-			<div className="z-30 flex w-full grow cursor-pointer flex-col rounded-xl bg-white text-neutral-950 max-md:pt-2 md:p-4 md:pb-1 md:text-center">
+			<div className="z-30 flex w-full grow cursor-pointer flex-col justify-between rounded-xl bg-white text-neutral-950 max-md:pt-2 md:p-4 md:pb-1 md:text-center lg:h-[auto] xl:w-auto 2xl:h-auto 2xl:min-h-[520px]">
 				<div onClick={redirect} className="group/item w-full">
 					<div className="relative flex w-full items-center justify-center rounded-xl">
 						<img
@@ -51,13 +51,14 @@ const CardSoftware: FC<Props> = ({
 							<p className="md:line-clamp-0 line-clamp-2 px-2 text-center md:px-0 md:text-left">
 								{lowDescription}
 							</p>
-							<p className="pt-6 text-[22px] font-semibold text-neutral-600">
-								${price}
-							</p>
 						</div>
 					</div>
 				</div>
-				<div className="z-40 flex w-full items-center justify-center px-3 pb-8 pt-2 md:px-0">
+				<div className="z-40 flex w-full flex-col items-start justify-center gap-2 px-3 pb-8 pt-2 md:px-0">
+					{' '}
+					<p className="pt-6 text-[22px] font-semibold text-neutral-600">
+						${price}
+					</p>
 					<Link href={directLink} target="_blank " className="w-full">
 						<button
 							type="submit"
