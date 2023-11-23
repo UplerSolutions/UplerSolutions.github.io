@@ -141,7 +141,6 @@ const Software: NextPage<Props> = ({ software }) => {
               </h2>
             </div>
           </div> */}
-<<<<<<< HEAD
         </div>
         <div className='w-full md:w-[30%] h-[70vh] p-6 rounded-md'>
           <div className='flex flex-col flex-1 gap-1'>
@@ -168,40 +167,7 @@ const Software: NextPage<Props> = ({ software }) => {
         </div>
       </div>
     </Layout>
-    /* </div>
-=======
-				</div>
-				<div className="h-[70vh] w-full rounded-md p-6 md:w-[30%]">
-					<div className="flex flex-1 flex-col gap-1">
-						<h2 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
-							{software.productName}
-						</h2>
-						<p className="flex items-center gap-6 text-xl font-semibold text-primary-color md:text-2xl lg:text-3xl">
-							${software.price}
-							<Link href={software.directLink} target="_blank">
-								<button
-									type="submit"
-									className=" h-12 w-48 rounded-xl bg-primary-color text-lg font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
-								>
-									Get Link
-								</button>
-							</Link>
-						</p>
-					</div>
-					<div>
-						<h1 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
-							Description
-						</h1>
-						<p className="text-neutral-500">
-							{software.longDescription}
-						</p>
-					</div>
-				</div>
-			</div>
-		</Layout>
-		/* </div>
->>>>>>> 16ce88604a9e2898ef2287c508e4e4cbaa59ae9a
-    </div>*/
+
 	)
 }
 
