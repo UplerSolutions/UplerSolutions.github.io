@@ -167,6 +167,39 @@ const Aboutus: NextPage = () => {
         </div>
       </div>
       <Team />
+      <div className=' justify-center flex w-full items-center '>
+        <div className='bg-gray-50 w-full pt-20 2xl:pt-40 pb-[180px] sm:pb-[120px]  lg:pb-[140px]'>
+          <div className='position absolute w-full z-10'>
+            <img
+              src='./sky.png'
+              alt=''
+              className='hidden lg:flex w-full z-10 absolute h-[1200px]'
+            />
+          </div>{' '}
+          <img
+            src='./phonesky.png'
+            alt=''
+            className='lg:hidden flex w-full z-10 absolute h-[980px] md:h-[1050px]'
+          />
+          <div className='text-[32px] font-bold md:text-3xl  xl:text-5xl flex items-center justify-center text-center md:text-left'>
+            <p className='text-[35px] md:text-3xl xl:text-5xl z-30'>
+              <span className='text-neutral-600 '>Travel trough our</span>
+
+              <span className='text-primary-color '> roadmap</span>
+            </p>
+          </div>
+          <div className='flex w-full justify-center items-center  pt-32'>
+            <img src='./ballons.png' alt='' className='z-30 hidden lg:flex' />
+          </div>
+          <div className='flex w-full justify-center items-center'>
+            <img
+              src='./phoneballons.png'
+              alt=''
+              className='z-30 lg:hidden flex'
+            />
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }

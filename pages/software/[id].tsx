@@ -148,7 +148,6 @@ const Software: NextPage<Props> = ({ software }) => {
               {software.productName}
             </h2>
             <p className='text-primary-color text-xl md:text-2xl lg:text-3xl font-semibold flex gap-6 items-center'>
-              ${software.price}
               <Link href={software.directLink} target='_blank'>
                 <button
                   type='submit'

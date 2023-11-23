@@ -56,9 +56,7 @@ const CardSoftware: FC<Props> = ({
         </div>
         <div className='flex flex-col items-start gap-2 justify-center w-full px-3 md:px-0 pb-8 z-40 pt-2'>
           {' '}
-          <p className='text-neutral-600 font-semibold text-[22px] pt-6'>
-            ${price}
-          </p>
+          <p className='text-neutral-600 font-semibold text-[22px] pt-6'></p>
           <Link href={directLink} target='_blank ' className='w-full'>
             <button
               type='submit'
