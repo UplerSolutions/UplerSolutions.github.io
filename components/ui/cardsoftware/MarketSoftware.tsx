@@ -3,68 +3,68 @@ import React, { FC } from 'react'
 import { useRouter } from 'next/router'
 
 interface Props {
-  id: string
-  created_at: string
-  productName: string
-  lowDescription: string
-  longDescription: string
-  price: number
-  updated_at: string
-  seller: string
-  directLink: string
-  imageUrl: string
-  rating: number
-  category: {
-    id: string
-    categoryName: string
-  }
+	id: string
+	created_at: string
+	productName: string
+	lowDescription: string
+	longDescription: string
+	price: number
+	updated_at: string
+	seller: string
+	directLink: string
+	imageUrl: string
+	rating: number
+	category: {
+		id: string
+		categoryName: string
+	}
 }
 
 const MarketSoftware: FC<Props> = ({
-  productName,
-  price,
-  lowDescription,
-  imageUrl,
-  id,
-  directLink
+	productName,
+	price,
+	lowDescription,
+	imageUrl,
+	id,
+	directLink
 }) => {
-  const router = useRouter()
+	const router = useRouter()
 
-  const redirect = () => {
-    router.push(`software/${id}`)
-  }
+	const redirect = () => {
+		router.push(`software/${id}`)
+	}
 
-  return (
-    <div className='relative w-[30%]  xl:h-[370px]  hover:scale-[0.97] transition'>
-      <div className='lg:h-[340px] 2xl:h-[370px] h-[370px] w-[285px] flex flex-col md:pb-1 max-md:pt-2 p-4 md:text-center bg-white text-neutral-950 rounded-xl cursor-pointer z-30'>
-        <div
-          onClick={redirect}
-          className='group/item flex flex-col justify-between h-full place-content-start'
-        >
-          <div className='lg:px-0 text-left'>
-            <div className=' flex flex-col flex-1 gap-1 group/item'>
-              <p className='lg:line-clamp-3 2xl:line-clamp-none'>
-                {lowDescription}
-              </p>
-            </div>
-          </div>
-          <div className='relative w-full rounded-xl flex flex-col justify-center'>
-            <div className=' text-left'>
-              <h2 className='text-xl'>{productName}</h2>
-              <p className='text-neutral-600 font-semibold text-[22px] pt-1'>
-                ${price}
-              </p>
-            </div>
-            <img
-              src={imageUrl}
-              alt=''
-              className=' md-[200px] flex items-center justify-center md:mt-4'
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+	return (
+		<div className="relative w-[30%]  transition  hover:scale-[0.97] xl:h-[370px]">
+			<div className="z-30 flex h-[370px] w-[285px] cursor-pointer flex-col rounded-xl bg-white p-4 text-neutral-950 max-md:pt-2 md:pb-1 md:text-center lg:h-[340px] 2xl:h-[370px]">
+				<div
+					onClick={redirect}
+					className="group/item flex h-full flex-col place-content-start justify-between"
+				>
+					<div className="text-left lg:px-0">
+						<div className=" group/item flex flex-1 flex-col gap-1">
+							<p className="lg:line-clamp-3 2xl:line-clamp-none">
+								{lowDescription}
+							</p>
+						</div>
+					</div>
+					<div className="relative flex w-full flex-col justify-center rounded-xl">
+						<div className=" text-left">
+							<h2 className="text-xl">{productName}</h2>
+							<p className="pt-1 text-[22px] font-semibold text-neutral-600">
+								${price}
+							</p>
+						</div>
+						<img
+							src={imageUrl}
+							alt={productName}
+							className=" md-[200px] flex items-center justify-center md:mt-4"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default MarketSoftware

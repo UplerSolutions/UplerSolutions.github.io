@@ -3,36 +3,36 @@ import React, { FC } from 'react'
 import { useRouter } from 'next/router'
 
 interface Props {
-  id: string
-  created_at: string
-  productName: string
-  lowDescription: string
-  longDescription: string
-  price: number
-  updated_at: string
-  seller: string
-  directLink: string
-  imageUrl: string
-  rating: number
-  category: {
-    id: string
-    categoryName: string
-  }
+	id: string
+	created_at: string
+	productName: string
+	lowDescription: string
+	longDescription: string
+	price: number
+	updated_at: string
+	seller: string
+	directLink: string
+	imageUrl: string
+	rating: number
+	category: {
+		id: string
+		categoryName: string
+	}
 }
 
 const CardSoftware: FC<Props> = ({
-  productName,
-  price,
-  lowDescription,
-  imageUrl,
-  id,
-  directLink
+	productName,
+	price,
+	lowDescription,
+	imageUrl,
+	id,
+	directLink
 }) => {
-  const router = useRouter()
+	const router = useRouter()
 
-  const redirect = () => {
-    router.push(`software/${id}`)
-  }
+	const redirect = () => {
+		router.push(`software/${id}`)
+	}
 
   return (
     <div className='z-10 relative h-full w-full'>
@@ -56,9 +56,7 @@ const CardSoftware: FC<Props> = ({
         </div>
         <div className='flex flex-col items-start gap-2 justify-center w-full px-3 md:px-0 pb-8 z-40 pt-2'>
           {' '}
-          <p className='text-neutral-600 font-semibold text-[22px] pt-6'>
-            ${price}
-          </p>
+          <p className='text-neutral-600 font-semibold text-[22px] pt-6'></p>
           <Link href={directLink} target='_blank ' className='w-full'>
             <button
               type='submit'

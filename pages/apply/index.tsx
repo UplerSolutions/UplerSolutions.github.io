@@ -4,13 +4,13 @@ import { ContactForm } from '@/components/ui/contactform/ContactForm'
 import Stepper from '@/components/ui/contactform/Stepper'
 
 const Apply: NextPage = () => {
-  return (
-    <Layout title='Upler - Apply'>
-      <div className=' bg-purple-50 h-[800px] lg:h-[100vh] flex items-center justify-center '>
-        <Stepper />
-      </div>
-    </Layout>
-  )
+	return (
+		<Layout title="Upler - Apply">
+			<div className=" flex h-[800px] items-center justify-center bg-purple-50 lg:h-[100vh] ">
+				<Stepper />
+			</div>
+		</Layout>
+	)
 }
 
 export default Apply

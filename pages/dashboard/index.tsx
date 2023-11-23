@@ -7,19 +7,19 @@ import { Panel } from '@/components/ui/panel/Panel'
 import { useSession } from 'next-auth/react'
 
 const Dashboard: NextPage = () => {
-  const { data: session, status } = useSession()
-  return (
-    <Layout title='Upler - Dashboard'>
-      <main className='pt-24 h-[90vh] bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'>
-        <Panel />
-      </main>
-      {/*       <pre>
+	const { data: session, status } = useSession()
+	return (
+		<Layout title="Upler - Dashboard">
+			<main className="h-[90vh] w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
+				<Panel />
+			</main>
+			{/*       <pre>
         <div className='text-black pt-24 h-[90vh] bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'>
           {JSON.stringify(session, null, 2)}
         </div>
       </pre> */}
-    </Layout>
-  )
+		</Layout>
+	)
 }
 
 export default Dashboard
