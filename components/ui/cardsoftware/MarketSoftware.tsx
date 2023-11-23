@@ -57,7 +57,7 @@ const MarketSoftware: FC<Props> = ({
 						</div>
 						<img
 							src={imageUrl}
-							alt=""
+							alt={productName}
 							className=" md-[200px] flex items-center justify-center md:mt-4"
 						/>
 					</div>

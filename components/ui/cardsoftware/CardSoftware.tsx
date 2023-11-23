@@ -41,7 +41,7 @@ const CardSoftware: FC<Props> = ({
 					<div className="relative flex w-full items-center justify-center rounded-xl">
 						<img
 							src={imageUrl}
-							alt=""
+							alt={productName}
 							className=" md-[200px] flex items-center justify-center md:mt-4"
 						/>
 					</div>
