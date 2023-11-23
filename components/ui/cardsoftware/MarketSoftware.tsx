@@ -52,7 +52,7 @@ const MarketSoftware: FC<Props> = ({
 						<div className=" text-left">
 							<h2 className="text-xl">{productName}</h2>
 							<p className="pt-1 text-[22px] font-semibold text-neutral-600">
-								${price}
+								
 							</p>
 						</div>
 						<img
