@@ -3,73 +3,73 @@ import React, { FC } from 'react'
 import { useRouter } from 'next/router'
 
 interface Props {
-  id: string
-  created_at: string
-  productName: string
-  lowDescription: string
-  longDescription: string
-  price: number
-  updated_at: string
-  seller: string
-  directLink: string
-  imageUrl: string
-  rating: number
-  category: {
-    id: string
-    categoryName: string
-  }
+	id: string
+	created_at: string
+	productName: string
+	lowDescription: string
+	longDescription: string
+	price: number
+	updated_at: string
+	seller: string
+	directLink: string
+	imageUrl: string
+	rating: number
+	category: {
+		id: string
+		categoryName: string
+	}
 }
 
 const CardSoftware: FC<Props> = ({
-  productName,
-  price,
-  lowDescription,
-  imageUrl,
-  id,
-  directLink
+	productName,
+	price,
+	lowDescription,
+	imageUrl,
+	id,
+	directLink
 }) => {
-  const router = useRouter()
+	const router = useRouter()
 
-  const redirect = () => {
-    router.push(`software/${id}`)
-  }
+	const redirect = () => {
+		router.push(`software/${id}`)
+	}
 
-  return (
-    <div className='z-10 relative h-full w-full'>
-      <div className='flex grow flex-col md:pb-1 max-md:pt-2 md:p-4 md:text-center bg-white text-neutral-950 rounded-xl w-full cursor-pointer z-30'>
-        <div onClick={redirect} className='group/item w-full'>
-          <div className='relative w-full rounded-xl flex items-center justify-center'>
-            <img
-              src={imageUrl}
-              alt=''
-              className=' md-[200px] flex items-center justify-center md:mt-4'
-            />
-          </div>
-          <div className='lg:px-0 w-full '>
-            <div className=' flex flex-col flex-1 gap-1 group/item items-center justify-center md:justify-start md:items-start'>
-              <h2 className='text-2xl'>{productName}</h2>
-              <p className='line-clamp-2 md:line-clamp-0 text-center px-2 md:text-left md:px-0'>
-                {lowDescription}
-              </p>
-              <p className='text-neutral-600 font-semibold text-[22px] pt-6'>
-                ${price}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className='flex items-center justify-center w-full px-3 md:px-0 pb-8 z-40 pt-2'>
-          <Link href={directLink} target='_blank ' className='w-full'>
-            <button
-              type='submit'
-              className=' text-lg bg-primary-color h-12 w-full rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
-            >
-              Get Link
-            </button>
-          </Link>
-        </div>
-      </div>
-    </div>
-  )
+	return (
+		<div className="relative z-10 h-full w-full">
+			<div className="z-30 flex w-full grow cursor-pointer flex-col rounded-xl bg-white text-neutral-950 max-md:pt-2 md:p-4 md:pb-1 md:text-center">
+				<div onClick={redirect} className="group/item w-full">
+					<div className="relative flex w-full items-center justify-center rounded-xl">
+						<img
+							src={imageUrl}
+							alt=""
+							className=" md-[200px] flex items-center justify-center md:mt-4"
+						/>
+					</div>
+					<div className="w-full lg:px-0 ">
+						<div className=" group/item flex flex-1 flex-col items-center justify-center gap-1 md:items-start md:justify-start">
+							<h2 className="text-2xl">{productName}</h2>
+							<p className="md:line-clamp-0 line-clamp-2 px-2 text-center md:px-0 md:text-left">
+								{lowDescription}
+							</p>
+							<p className="pt-6 text-[22px] font-semibold text-neutral-600">
+								${price}
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="z-40 flex w-full items-center justify-center px-3 pb-8 pt-2 md:px-0">
+					<Link href={directLink} target="_blank " className="w-full">
+						<button
+							type="submit"
+							className=" h-12 w-full rounded-xl bg-primary-color text-lg font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
+						>
+							Get Link
+						</button>
+					</Link>
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default CardSoftware
