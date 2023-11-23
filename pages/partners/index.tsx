@@ -46,7 +46,7 @@ const Partner: NextPage = () => {
           </p>
         </div>
         <hr className='bg-primary-color border-2 border-primary-color w-[100px] m-auto left-0 right-0 ' />
-        <div className=' md:grid md:grid-cols-4 grid grid-cols-2 text-center'>
+        <div className=' md:grid md:grid-cols-4 grid grid-cols-2 text-center gap-4'>
           <div className='grid grid-rows-2  align-center  justify-items-center  xl:m-6 lg:p-8 items-end md:items-start'>
             <div>
               <Image

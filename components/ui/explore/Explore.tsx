@@ -27,15 +27,14 @@ export const Explore: FC<Props> = ({ software }) => {
   const endIndex = startIndex + pageSize
   const displayedProducts: ISoftware[] = software?.slice(startIndex, endIndex)
 
-
   return (
     <div className='flex flex-col items-center justify-center'>
-      <ul className='flex flex-wrap w-full m-auto md:px-4 md:pb-4 md:py-4 lg:py-8 gap-2 md:gap-8 justify-center items-center'>
-        {displayedProducts.length > 0 ?
+      <ul className='flex flex-wrap w-full m-auto md:px-4 md:pb-4 md:py-4 lg:py-8 gap-4 2xl:gap-8 justify-center items-center'>
+        {displayedProducts.length > 0 ? (
           displayedProducts?.map((product) => (
             <li
               key={product.id}
-              className='flex flex-col gap-12 lg:gap-8 w-[45%] xl:w-[30%] md:min-w-[300px] xl:min-w-[350px]'
+              className='flex flex-col gap-12 lg:gap-8 w-[45%] lg:w-[30%] '
             >
               <CardSoftware
                 id={product.id}
@@ -56,9 +55,11 @@ export const Explore: FC<Props> = ({ software }) => {
               />
             </li>
           ))
-          :
-            <h3 className='text-neutral-700'>We Don´t Have Softwares Availible for this Category</h3>
-        }
+        ) : (
+          <h3 className='text-neutral-700'>
+            We Don´t Have Softwares Availible for this Category
+          </h3>
+        )}
       </ul>
       <Pagination
         count={totalPages}

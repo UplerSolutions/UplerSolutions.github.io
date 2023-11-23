@@ -18,12 +18,24 @@ interface Props {
 function valuetext(value: number) {
   return `${value}°C`
 }
+
 const Filter: FC<Props> = ({
   categories,
   onClickFilterByCategory,
   handleChange,
   value1
 }) => {
+  const router = useRouter()
+
+  const handleCategoryClick = (categoryName: string) => {
+    onClickFilterByCategory(categoryName)
+    router.push({
+      pathname: '/software', // Replace with your actual route
+      query: {
+        categoryName: categoryName
+      }
+    })
+  }
   //price
 
   //rating
@@ -53,19 +65,16 @@ const Filter: FC<Props> = ({
               </svg>
             </span>
           </summary>
-          <div className='flex flex-col'>
+          <div className='flex flex-col gap-1'>
             {categories.map((category) => (
               <div
                 key={category.id}
                 className='flex gap-2'
-                onClick={() => onClickFilterByCategory(category.categoryName)}
+                onClick={() => handleCategoryClick(category.categoryName)} // Updated click handler
               >
-                <input
-                  type='radio'
-                  name='category'
-                  className='accent-primary-color'
-                />
-                <p>{category.categoryName}</p>
+                <p className='hover:text-neutral-800 cursor-pointer text-neutral-600'>
+                  {category.categoryName}
+                </p>
               </div>
             ))}
           </div>

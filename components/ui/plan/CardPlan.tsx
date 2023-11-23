@@ -35,7 +35,7 @@ export const CardPlan = () => {
     <>
       <Carousel />
       <section className='hidden max-w-[100%] w-full md:flex md:flex-col'>
-        <div className='2xl:max-w-[75%] w-full max-h-max m-auto px-2 md:py-6 lg:py-8'>
+        <div className='xl:max-w-[80%] 2xl:max-w-[75%] w-full max-h-max m-auto px-2 md:py-6 lg:py-8'>
           <h1 className='lg:text-5xl text-3xl font-bold text-center lg:p-8 text-neutral-700'>
             A bundle for each
             <span className='text-primary-color'> need </span>
@@ -44,11 +44,11 @@ export const CardPlan = () => {
             {plans.map((plan: IPlan) => (
               <li
                 key={plan.name}
-                className='relative inline-block  transition duration-300  cursor-not-allowed lg:w-[30%]'
+                className='relative inline-block  transition duration-300  cursor-not-allowed lg:w-[30%] '
                 onMouseEnter={() => handleHover(plan.name)}
                 onMouseLeave={handleLeave}
               >
-                <div className='cursor-not-allowed flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 border-2 hover:border-2 hover:border-gray-600 w-[100%]'>
+                <div className='lg:min-h-[630px] cursor-not-allowed flex flex-col h-full bg-white text-neutral-700 rounded-3xl pt-8 px-3 border-2 hover:border-2 hover:border-gray-600 w-[100%]'>
                   {hoveredPlan === plan.name && <ComingSoonMessage />}
                   <div className='relative px-6 first-letter:w-full h-full flex flex-col justify-evenly pb-4 text-center items-center'>
                     <div className='pb-4'>
