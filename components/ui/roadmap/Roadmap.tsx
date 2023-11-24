@@ -2,39 +2,45 @@ import React from 'react'
 
 export const Roadmap = () => {
 	return (
-		<div className=' justify-center flex w-full items-center '>
-		<div className='bg-gray-50 w-full pt-20 2xl:pt-40 pb-[180px] sm:pb-[120px]  md:pb-[140px]'>
-			<div className='position absolute w-full z-10'>
+		<div className=" flex w-full items-center justify-center ">
+			<div className="w-full bg-gray-50 pb-[180px] pt-20 sm:pb-[120px] md:pb-[140px]  2xl:pt-40">
+				<div className="position absolute z-10 w-full">
+					<img
+						src="./sky.png"
+						alt=""
+						className="absolute z-10 hidden h-[1200px] w-full md:flex"
+					/>
+				</div>
 				<img
-					src='./sky.png'
-					alt=''
-					className='hidden md:flex w-full z-10 absolute h-[1200px]'
+					src="./phonesky.png"
+					alt=""
+					className="absolute z-10 flex h-[1170px] w-full sm:h-[1110px] md:hidden"
 				/>
-			</div>
-			<img
-				src='./phonesky.png'
-				alt=''
-				className='md:hidden flex w-full z-10 absolute h-[980px] sm:h-[920px]'
-			/>
-			<div className='text-[32px] font-bold md:text-3xl  xl:text-5xl flex items-center justify-center text-center md:text-left'>
-				<p className='text-[35px] text-center w-[300px] md:w-[100%] md:text-3xl xl:text-5xl z-30'>
-					<span className='text-neutral-600 '>Travel trough our</span>
+				<div className="flex items-center justify-center  text-center text-[32px] font-bold md:text-left md:text-3xl xl:text-5xl">
+					<p className="z-30 w-[300px] text-center text-[35px] md:w-[100%] md:text-3xl xl:text-5xl">
+						<span className="text-neutral-600 ">
+							Travel trough our
+						</span>
 
-					<span className='text-primary-color '> roadmap</span>
-				</p>
-			</div>
-			<div className='flex w-full justify-center items-center  pt-32'>
-				<img src='./ballons.png' alt='' className='z-30 hidden md:flex' />
-			</div>
-			<div className='flex w-full justify-center items-center'>
-				<img
-					src='./phoneballons.png'
-					alt=''
-					className='z-30 md:hidden flex'
-				/>
+						<span className="text-primary-color "> roadmap</span>
+					</p>
+				</div>
+				<div className="flex w-full items-center justify-center pt-20 md:pt-32">
+					<img
+						src="./ballons.png"
+						alt=""
+						className="z-30 hidden md:flex"
+					/>
+				</div>
+				<div className="flex w-full items-center justify-center">
+					<img
+						src="./phoneballons.png"
+						alt=""
+						className="z-30 flex md:hidden"
+					/>
+				</div>
 			</div>
 		</div>
-	</div>
 	)
 }
 
