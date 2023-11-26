@@ -7,6 +7,7 @@ import { HiArrowLongRight, HiOutlineShoppingCart } from 'react-icons/hi2'
 import { MdOutlineCancel } from 'react-icons/md'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Product } from '../../components/ui/product/Product'
 
 interface Props {
 	software: ISoftware
@@ -101,8 +102,8 @@ const Software: NextPage<Props> = ({ software }) => {
         }`}
       >*/
 		<Layout title="Upler - Software">
-			<div className="flex h-[90vh] flex-col items-center justify-center  bg-gradient-to-r from-[#fde9fc]  to-[#fffbe0] pb-10 pt-28 md:flex-row md:items-start md:gap-8">
-				<div className="mt-9 flex w-[90%] flex-col  rounded-xl text-neutral-950 md:w-[30%]">
+			<div className="flex flex-col items-center justify-center bg-gradient-to-r  from-[#fde9fc] to-[#fffbe0]  pb-10 pt-28 md:gap-8 lg:h-[90vh] lg:flex-row lg:items-start">
+				<div className="mt-9 flex w-[90%] flex-col  rounded-xl text-neutral-950 lg:w-[30%]">
 					<div className="relative w-full ">
 						<img
 							src={`/${software.imageUrl}`}
@@ -141,33 +142,34 @@ const Software: NextPage<Props> = ({ software }) => {
               </h2>
             </div>
           </div> */}
-        </div>
-        <div className='w-full md:w-[30%] h-[70vh] p-6 rounded-md'>
-          <div className='flex flex-col flex-1 gap-1'>
-            <h2 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
-              {software.productName}
-            </h2>
-            <p className='text-primary-color text-xl md:text-2xl lg:text-3xl font-semibold flex gap-6 items-center'>
-              <Link href={software.directLink} target='_blank'>
-                <button
-                  type='submit'
-                  className=' text-lg bg-primary-color h-12 w-48 rounded-xl text-white font-semibold hover:bg-fuchsia-200 hover:text-primary-color transition hover:delay-100 hover:border-2 hover:border-primary-color'
-                >
-                  Get Link
-                </button>
-              </Link>
-            </p>
-          </div>
-          <div>
-            <h1 className='text-xl md:text-2xl lg:text-3xl text-neutral-600 py-3 font-semibold'>
-              Description
-            </h1>
-            <p className='text-neutral-500'>{software.longDescription}</p>
-          </div>
-        </div>
-      </div>
-    </Layout>
-
+				</div>
+				<div className="h-auto w-full rounded-md p-6 md:w-[95%] lg:h-[70vh] lg:w-[30%]">
+					<div className="flex flex-1 flex-col gap-1">
+						<h2 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
+							{software.productName}
+						</h2>
+						<p className="flex items-center gap-6 text-xl font-semibold text-primary-color md:text-2xl lg:text-3xl">
+							<Link href={software.directLink} target="_blank">
+								<button
+									type="submit"
+									className=" h-12 w-48 rounded-xl bg-primary-color text-lg font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
+								>
+									Get Link
+								</button>
+							</Link>
+						</p>
+					</div>
+					<div>
+						<h1 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
+							Description
+						</h1>
+						<p className="text-neutral-500">
+							{software.longDescription}
+						</p>
+					</div>
+				</div>
+			</div>
+		</Layout>
 	)
 }
 
