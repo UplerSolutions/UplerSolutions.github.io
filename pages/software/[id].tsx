@@ -171,7 +171,6 @@ const Software: NextPage<Props> = ({ software }) => {
 					</div>
 				</div>
 			</div>
-			<Product />
 		</Layout>
 	)
 }
