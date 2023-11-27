@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React, { FC } from 'react'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 interface Props {
 	id: string
@@ -51,14 +52,14 @@ const MarketSoftware: FC<Props> = ({
 					<div className="relative flex w-full flex-col justify-center rounded-xl">
 						<div className=" text-left">
 							<h2 className="text-xl">{productName}</h2>
-							<p className="pt-1 text-[22px] font-semibold text-neutral-600">
-								
-							</p>
+							<p className="pt-1 text-[22px] font-semibold text-neutral-600"></p>
 						</div>
-						<img
+						<Image
 							src={imageUrl}
 							alt={productName}
-							className=" md-[200px] flex items-center justify-center md:mt-4"
+							width={400}
+							height={200}
+							className=" flex w-full items-center justify-center md:mt-4"
 						/>
 					</div>
 				</div>

@@ -105,9 +105,11 @@ const Software: NextPage<Props> = ({ software }) => {
 			<div className="flex flex-col items-center justify-center bg-gradient-to-r  from-[#fde9fc] to-[#fffbe0]  pb-10 pt-28 md:gap-8 lg:h-[90vh] lg:flex-row lg:items-start">
 				<div className="mt-9 flex w-[90%] flex-col  rounded-xl text-neutral-950 lg:w-[30%]">
 					<div className="relative w-full ">
-						<img
+						<Image
 							src={`/${software.imageUrl}`}
 							alt=""
+							width={300}
+							height={300}
 							className="w-full rounded-xl"
 						/>
 					</div>
@@ -169,6 +171,7 @@ const Software: NextPage<Props> = ({ software }) => {
 					</div>
 				</div>
 			</div>
+			<Product />
 		</Layout>
 	)
 }

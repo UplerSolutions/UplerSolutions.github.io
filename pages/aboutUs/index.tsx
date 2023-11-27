@@ -143,8 +143,8 @@ const Aboutus: NextPage = () => {
 			</div>
 
 			<div className="flex flex-col items-center justify-center gap-8 bg-purple-100 py-20 md:gap-5 ">
-				<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl ">
-					<p className="text-[35px] md:text-3xl xl:text-5xl">
+				<div className="flex w-[90%] justify-center text-center text-[32px] font-bold  md:text-left md:text-3xl lg:w-full xl:text-5xl ">
+					<p className="text-center text-[35px] md:text-3xl xl:text-5xl">
 						<span className="text-neutral-600 ">Know our core</span>
 
 						<span className="text-primary-color "> principles</span>
@@ -168,42 +168,44 @@ const Aboutus: NextPage = () => {
 						</div>
 					</div>
 
-          <div className='grid grid-rows-2  align-center  justify-items-center  xl:m-6 lg:p-8 items-end '>
-            <div className='text-primary-color scale-[4.5] pb-4'>
-              <PiBinoculars />
-            </div>
-            <div className='flex flex-col gap-3 md:gap-1 items-center'>
-              <h4 className='text-xl md:text-[25px] text-black pb-0 md:pb-2 pt-2 mb:pt-0'>
-                Vision
-              </h4>
-              <p className='text-neutral-600 w-[90%] '>
-                To be the leading platform for the management and distribution
-                of software tools, revolutionizing how it is accessed and used
-                globally.
-              </p>
-            </div>
-          </div>
-          <div className='grid grid-rows-2  align-center  justify-items-center  xl:m-6 lg:p-8 items-end '>
-            <div className='text-primary-color scale-[4.5] pb-4'>
-              <IoDiamondOutline />
-            </div>
-            <div className='flex flex-col gap-3 md:gap-1 items-center'>
-              <h4 className='text-xl md:text-[25px] text-black pb-0 md:pb-2 pt-2 mb:pt-0'>
-                Values
-              </h4>
-              <p className='text-neutral-600 w-[90%]'>
-                Transparency, commitment to quality, collaboration, strategic
-                partnerships, customer care and empowerment, affordability and
-                efficiency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Team />
-      <Roadmap/>
-    </Layout>
-  )
+					<div className="align-center grid  grid-rows-2  items-end  justify-items-center lg:p-8 xl:m-6 ">
+						<div className="scale-[4.5] pb-4 text-primary-color">
+							<PiBinoculars />
+						</div>
+						<div className="flex flex-col items-center gap-3 md:gap-1">
+							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
+								Vision
+							</h4>
+							<p className="w-[90%] text-neutral-600 ">
+								To be the leading platform for the management
+								and distribution of software tools,
+								revolutionizing how it is accessed and used
+								globally.
+							</p>
+						</div>
+					</div>
+					<div className="align-center grid  grid-rows-2  items-end  justify-items-center lg:p-8 xl:m-6 ">
+						<div className="scale-[4.5] pb-4 text-primary-color">
+							<IoDiamondOutline />
+						</div>
+						<div className="flex flex-col items-center gap-3 md:gap-1">
+							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
+								Values
+							</h4>
+							<p className="w-[90%] text-neutral-600">
+								Transparency, commitment to quality,
+								collaboration, strategic partnerships, customer
+								care and empowerment, affordability and
+								efficiency.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<Team />
+			<Roadmap />
+		</Layout>
+	)
 }
 
 export default Aboutus
