@@ -1,6 +1,7 @@
 import { team } from '@/data/team'
 import Link from 'next/link'
 import { FaLinkedin } from 'react-icons/fa'
+import Image from 'next/image'
 
 export const Team = () => {
 	return (
@@ -29,8 +30,10 @@ export const Team = () => {
 						{team.map((person) => (
 							<li key={person.name}>
 								<div className="space-y-6">
-									<img
+									<Image
 										className="mx-auto h-40 w-40 rounded-full lg:h-56 lg:w-56"
+										width={100}
+										height={100}
 										src={person.image}
 										alt=""
 									/>

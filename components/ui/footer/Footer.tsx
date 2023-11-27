@@ -23,7 +23,7 @@ export const Footer = () => {
 	}
 	return (
 		<div className="flex w-[100%] flex-col items-center justify-center bg-neutral-600 font-semibold">
-			<footer className="hidden h-auto flex-col-reverse items-center justify-evenly gap-6 bg-neutral-600 pb-20 pt-10 text-white md:flex md:flex-row md:items-start lg:h-[350px] lg:w-[97%] lg:gap-0 xl:w-[90%] 2xl:w-[100%] ">
+			<footer className="hidden h-auto flex-col-reverse items-center justify-between gap-6 bg-neutral-600 pb-20 pt-10 text-white md:flex md:flex-row md:items-start lg:h-[350px] lg:w-[90%] lg:gap-0 xl:w-[86%] 2xl:w-[86%] ">
 				<div className="flex flex-col gap-2">
 					<Image
 						height={150}

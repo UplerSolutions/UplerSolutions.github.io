@@ -1,19 +1,24 @@
 import React from 'react'
+import Image from 'next/image'
 
 export const Roadmap = () => {
 	return (
 		<div className=" flex w-full items-center justify-center ">
 			<div className="w-full bg-gray-50 pb-[180px] pt-20 sm:pb-[120px] md:pb-[140px]  2xl:pt-40">
 				<div className="position absolute z-10 w-full">
-					<img
+					<Image
 						src="./sky.png"
 						alt=""
+						width={300}
+						height={300}
 						className="absolute z-10 hidden h-[1200px] w-full md:flex"
 					/>
 				</div>
-				<img
+				<Image
 					src="./phonesky.png"
 					alt=""
+					width={300}
+					height={300}
 					className="absolute z-10 flex h-[1170px] w-full sm:h-[1110px] md:hidden"
 				/>
 				<div className="flex items-center justify-center  text-center text-[32px] font-bold md:text-left md:text-3xl xl:text-5xl">
@@ -26,16 +31,20 @@ export const Roadmap = () => {
 					</p>
 				</div>
 				<div className="flex w-full items-center justify-center pt-20 md:pt-32">
-					<img
+					<Image
 						src="./ballons.png"
 						alt=""
-						className="z-30 hidden md:flex"
+						width={640}
+						height={875}
+						className="z-30 hidden w-[] md:flex"
 					/>
 				</div>
 				<div className="flex w-full items-center justify-center">
-					<img
+					<Image
 						src="./phoneballons.png"
 						alt=""
+						width={366}
+						height={700}
 						className="z-30 flex md:hidden"
 					/>
 				</div>
