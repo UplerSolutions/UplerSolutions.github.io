@@ -137,6 +137,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 								categories={categories}
 							/>
 						</div>
+						{/* 
 						<div className=" mt-4 flex w-full justify-around lg:hidden">
 							<button
 								className="flex h-12 w-[100%] items-center justify-center gap-2 rounded-xl  font-semibold  text-primary-color transition hover:border-primary-color  hover:text-primary-color"
@@ -156,6 +157,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 								Search
 							</button>
 						</div>
+						*/}
 					</Box>
 				</div>
 			</div>
@@ -168,7 +170,8 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 						onClickFilterByCategory={onClickFilterByCategory}
 						categories={categories}
 					/>
-					<div className="flex w-full items-center justify-center gap-2 pl-[2.8rem]">
+					{/*
+										<div className="flex w-full items-center justify-center gap-2 pl-[2.8rem]">
 						<button
 							className="flex h-12 w-[100%] items-center justify-center gap-2 rounded-xl  font-semibold  text-primary-color transition hover:border-primary-color  hover:text-primary-color"
 							type="submit"
@@ -187,6 +190,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 							Search
 						</button>
 					</div>
+					*/}
 				</div>
 				<div className="flex w-full flex-col items-center justify-center pb-20 pt-10">
 					<Explore software={software} />

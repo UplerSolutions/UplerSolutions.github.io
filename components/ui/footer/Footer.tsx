@@ -71,7 +71,7 @@ export const Footer = () => {
 					</Link>
 					<Link
 						className=" group relative inline-block "
-						href="/apply"
+						href="/partners"
 						onClick={scrollToPartner}
 						ref={partnerRef}
 					>

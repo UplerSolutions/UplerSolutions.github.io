@@ -82,6 +82,7 @@ const Filter: FC<Props> = ({
 					</div>
 				</details>
 			</div>
+
 			<hr className="h-[2px] bg-primary-color" />
 			<div className="py-5">
 				<details className="group">
@@ -114,6 +115,7 @@ const Filter: FC<Props> = ({
 				</details>
 			</div>
 			<hr className="h-[2px] bg-primary-color" />
+
 			<div className="pt-3">
 				<div className="">
 					<span className="font-medium">Price</span>
@@ -131,7 +133,6 @@ const Filter: FC<Props> = ({
 						></svg>
 					</span>
 				</div>
-
 				<Box>
 					<Slider
 						getAriaLabel={() => 'Minimum distance'}
