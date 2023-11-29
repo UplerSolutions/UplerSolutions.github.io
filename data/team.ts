@@ -34,7 +34,7 @@ export const team = [
 		name: 'Maria Pia Zubillaga',
 		role: 'Design Lead',
 		linkedin: 'https://www.linkedin.com/in/mariapiazubillaga/',
-		image: './pipi.webp'
+		image: './pia.webp'
 	},
 	{
 		name: 'Mateo Lonzayes',
