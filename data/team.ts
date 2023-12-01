@@ -3,7 +3,7 @@ export const team = [
 		name: 'Agustin Marteau',
 		role: 'Business Developer',
 		linkedin: 'https://www.linkedin.com/in/agustin-marteau-469275258/',
-		image: './agustin.jpg'
+		image: './agustin.webp'
 	},
 	{
 		name: 'Joaquin Mármol',
@@ -34,7 +34,7 @@ export const team = [
 		name: 'Maria Pia Zubillaga',
 		role: 'Design Lead',
 		linkedin: 'https://www.linkedin.com/in/mariapiazubillaga/',
-		image: './pipi.webp'
+		image: './pia.webp'
 	},
 	{
 		name: 'Mateo Lonzayes',

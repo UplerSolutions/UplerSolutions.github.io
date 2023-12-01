@@ -59,7 +59,7 @@ const Partner: NextPage = () => {
 				</div>
 				<hr className="left-0 right-0 m-auto w-[100px] border-2 border-primary-color bg-primary-color " />
 				<div className=" grid grid-cols-2 gap-4 text-center md:grid md:grid-cols-4">
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
@@ -77,7 +77,7 @@ const Partner: NextPage = () => {
 						</div>
 					</div>
 
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
@@ -94,7 +94,7 @@ const Partner: NextPage = () => {
 							</h4>
 						</div>
 					</div>
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
@@ -111,7 +111,7 @@ const Partner: NextPage = () => {
 							</h4>
 						</div>
 					</div>
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
@@ -128,7 +128,7 @@ const Partner: NextPage = () => {
 							</h4>
 						</div>
 					</div>
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
@@ -145,7 +145,7 @@ const Partner: NextPage = () => {
 							</h4>
 						</div>
 					</div>
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
@@ -162,7 +162,7 @@ const Partner: NextPage = () => {
 							</h4>
 						</div>
 					</div>
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
@@ -179,7 +179,7 @@ const Partner: NextPage = () => {
 							</h4>
 						</div>
 					</div>
-					<div className="align-center grid  grid-rows-2  items-end  justify-items-center md:items-start lg:p-8 xl:m-6">
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
 						<div>
 							<Image
 								src={
