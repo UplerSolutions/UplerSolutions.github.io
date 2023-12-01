@@ -38,7 +38,7 @@ export const Footermobile = () => {
 					</h3>
 				</div>
 
-				<div className="flex w-[110%] items-center justify-start gap-6 pt-4 sm:w-full">
+				<div className="flex w-[110%] items-center justify-start gap-4 pt-4 sm:w-full">
 					<Link
 						className="group relative inline-block "
 						href="/software"
