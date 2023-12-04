@@ -8,6 +8,7 @@ import { MdOutlineCancel } from 'react-icons/md'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Product } from '../../components/ui/product/Product'
+import ScrollButton from '../../components/ui/scrollbutton/ScrollButton'
 
 interface Props {
 	software: ISoftware
@@ -102,8 +103,8 @@ const Software: NextPage<Props> = ({ software }) => {
         }`}
       >*/
 		<Layout title="Upler - Software">
-			<div className="flex flex-col items-center justify-center bg-gradient-to-r  from-[#fde9fc] to-[#fffbe0]  pb-10 pt-28 md:gap-8 lg:h-[90vh] lg:flex-row lg:items-start">
-				<div className="mt-9 flex w-[90%] flex-col  rounded-xl text-neutral-950 lg:w-[30%]">
+			<div className="flex flex-col items-center justify-center bg-gradient-to-r  from-[#fde9fc] to-[#fffbe0]  pt-28 md:gap-8 lg:flex-row  lg:items-start lg:pb-10">
+				<div className="mt-9 flex w-[90%] flex-col  rounded-xl text-neutral-950 lg:w-[40%] xl:w-[35%]">
 					<div className="relative w-full ">
 						<Image
 							src={`/${software.imageUrl}`}
@@ -145,7 +146,7 @@ const Software: NextPage<Props> = ({ software }) => {
             </div>
           </div> */}
 				</div>
-				<div className="h-auto w-full rounded-md p-6 md:w-[95%] lg:h-[70vh] lg:w-[30%]">
+				<div className="h-auto w-full rounded-md p-6 pb-20 md:w-[95%] lg:w-[40%]">
 					<div className="flex flex-1 flex-col gap-1">
 						<h2 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
 							{software.productName}
@@ -161,16 +162,18 @@ const Software: NextPage<Props> = ({ software }) => {
 							</Link>
 						</p>
 					</div>
-					<div>
+					<div className="">
 						<h1 className="py-3 text-xl font-semibold text-neutral-600 md:text-2xl lg:text-3xl">
 							Description
 						</h1>
-						<p className="text-neutral-500">
+						<p className=" text-neutral-500">
 							{software.longDescription}
 						</p>
 					</div>
 				</div>
 			</div>
+			<Product software={software} />
+			<ScrollButton />
 		</Layout>
 	)
 }
