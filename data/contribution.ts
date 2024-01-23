@@ -1,26 +1,26 @@
 export const contributions = [
 	{
 		id: '001',
-		label: 'Available Software',
+		label: 'Software Disponible',
 		number: '500+',
 		duration: '2'
 	},
 	{
 		id: '002',
-		label: 'Suscribers',
-		number: '23.000+',
+		label: 'Suscriptores',
+		number: '23,000+',
 		duration: '3'
 	},
 	{
 		id: '003',
-		label: 'In Profits for Partners',
-		number: '34.000+',
+		label: 'Ganancias para Socios',
+		number: '34,000+',
 		duration: '3'
 	},
 	{
 		id: '004',
-		label: 'Total Saved by Users',
-		number: '37.000+',
+		label: 'Total Ahorrado por Usuarios',
+		number: '37,000+',
 		duration: '3'
 	}
-]
+];

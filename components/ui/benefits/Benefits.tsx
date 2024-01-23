@@ -10,7 +10,7 @@ export const Benefits = () => {
 			<div className="flex w-[90%]  flex-col items-center rounded-3xl bg-zinc-50 px-8 pb-5 text-center md:w-[75%] lg:pt-5">
 				<div className="flex h-fit max-w-fit text-center">
 					<h2 className="py-8 text-3xl font-bold text-neutral-700 md:ml-12 md:pb-16 md:text-5xl lg:ml-0 lg:px-0 lg:pb-24 2xl:text-6xl ">
-						Why customers choose Upler?
+						¿Por qué los clientes eligen Upler?
 					</h2>
 				</div>
 				<div className=" flex w-[100%] flex-col gap-7 text-center md:grid md:grid-cols-2 xl:grid xl:grid-cols-3 2xl:gap-4">

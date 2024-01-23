@@ -44,8 +44,8 @@ export const Carousel = () => {
 		<section className="w-full max-w-[100%] md:hidden">
 			<div className="m-auto w-full max-w-[100%] py-6 ">
 				<h1 className="text-center text-3xl font-bold text-neutral-700 lg:p-8 lg:text-5xl">
-					A bundle for each
-					<span className="text-[#b06eca]"> need </span>
+					Un Paquete Para Cada 
+					<span className="text-[#b06eca]"> Necesidad </span>
 				</h1>
 
 				<Swiper
@@ -89,18 +89,18 @@ export const Carousel = () => {
 												</span>
 												{plan.price}
 												<span className=" text-base font-normal text-neutral-600">
-													USD /month
+													USD / mes
 												</span>
 											</h2>
 											<button className="h-12 w-48 cursor-not-allowed rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-100 hover:text-primary-color hover:delay-100">
-												Acquire the Bundle
+												Compra el Paquete
 											</button>
 										</div>
 										<div className="flex flex-1 flex-col px-6">
 											<div>
 												<hr className="border-o mb-6 h-[2px] rounded bg-neutral-400" />
 												<h2 className="text-xl font-semibold">
-													{plan.name} Bundle Includes
+													{plan.name} Paquete Incluye
 												</h2>
 												<ul className="pb-6">
 													{plan.benefits.map(
@@ -119,7 +119,7 @@ export const Carousel = () => {
 												</ul>
 												<hr className=" border-o mx-1 my-1 h-[2px] rounded bg-neutral-400" />
 												<h2 className="text-xl font-semibold">
-													Benefits
+													Beneficios
 												</h2>
 											</div>
 

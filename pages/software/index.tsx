@@ -88,7 +88,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 						Softwares
 					</h1>
 					<p className="w-[90%] text-xl text-neutral-700">
-						Explore our collection and find your solution.
+						Explorá nuestra colección y encontra tu solución
 					</p>
 				</div>
 

@@ -33,8 +33,7 @@ export const Footermobile = () => {
 						className=""
 					/>
 					<h3 className="text-md pb-2 pt-6">
-						Everything you need for your profession in a single
-						subscription.
+						Todo lo que necesitas para tu profesión en una única suscripción.
 					</h3>
 				</div>
 
@@ -54,7 +53,7 @@ export const Footermobile = () => {
 						onClick={scrollToPartner}
 						ref={partnerRef}
 					>
-						Bundles
+						Paquetes
 						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[60px]"></span>
 					</Link>
 					<Link
@@ -63,7 +62,7 @@ export const Footermobile = () => {
 						onClick={scrollToPartner}
 						ref={partnerRef}
 					>
-						About Us
+						Sobre nosotros
 						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-neutral-400 transition-all duration-500 group-hover:w-[60px]"></span>
 					</Link>
 					<Link
@@ -79,7 +78,7 @@ export const Footermobile = () => {
 
 				<div className="flex flex-col gap-2 pr-3 pt-4">
 					<h1 className="pb-3 text-lg font-semibold">
-						Recognized by
+						Reconocido Por
 					</h1>
 					<Image
 						height={150}
@@ -90,10 +89,10 @@ export const Footermobile = () => {
 					/>
 				</div>
 
-				<div className="flex flex-col gap-2 py-4 ">
+				{/* <div className="flex flex-col gap-2 py-4 ">
 					<h1 className="pb-3 text-lg font-semibold">Contact Us</h1>
 					<span>upler.official@gmail.com</span>
-				</div>
+				</div> */}
 				<hr className="pt-6" />
 				<div className="flex items-center justify-between">
 					<div className="flex">

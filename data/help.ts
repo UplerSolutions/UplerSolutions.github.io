@@ -51,84 +51,85 @@ type HelpCategory = {
 export const help: HelpCategory = {
 	GeneralInfo: {
 		ContactUpler: {
-			title: 'Contact Upler',
+			title: 'Contactar con Upler',
 			description:
-				"Take a look at our Help Center to learn all about your AppSumo account, how to partner with us to list your product, and our AppSumo Plus membership. Use the magnifying glass in the bottom right corner of the screen to navigate related articles and contact our support team if you can't find the answer you're looking for."
+				"Consulta nuestro Centro de Ayuda para obtener información sobre tu cuenta de AppSumo, cómo asociarte con nosotros para listar tu producto y nuestra membresía AppSumo Plus. Utiliza la lupa en la esquina inferior derecha de la pantalla para navegar por artículos relacionados y contactar a nuestro equipo de soporte si no encuentras la respuesta que buscas."
 		},
 		ChatActivation: {
-			title: 'Chat Activation',
+			title: 'Activación de Chat',
 			description:
-				"Forgot the seventh variation of the same password you've been using for years? Perhaps 'Password123' hasn't proven to be secure? Is it time to change the password you shared with someone you've had a falling out with? We've got your back. You can reset your AppSumo account password here and bookmark this link for easy access."
+				"¿Olvidaste la séptima variación de la misma contraseña que has estado usando durante años? ¿Quizás 'Contraseña123' no ha demostrado ser segura? ¿Es hora de cambiar la contraseña que compartiste con alguien con quien has tenido desacuerdos? Estamos aquí para ayudarte. Puedes restablecer la contraseña de tu cuenta AppSumo aquí y guardar este enlace para acceder fácilmente."
 		}
 	},
 	Partners: {
 		WhyPartnerWithUpler: {
-			title: 'Why Partner with Upler?',
+			title: '¿Por qué asociarse con Upler?',
 			description:
-				'Upler is here to empower all entrepreneurs. Partnering with Upler gives you the opportunity to make money selling your software, gain new customers, advertise on our platform long-term, and receive valuable feedback from our users to improve your product.'
+				'Upler está aquí para empoderar a todos los emprendedores. Asociarse con Upler te brinda la oportunidad de ganar dinero vendiendo tu software, obtener nuevos clientes, anunciarte a largo plazo en nuestra plataforma y recibir comentarios valiosos de nuestros usuarios para mejorar tu producto.'
 		},
 		HowToPartnerWithUpler: {
-			title: 'How to Partner with Upler?',
+			title: 'Cómo asociarse con Upler',
 			description:
-				'Selling with Upler is as easy as 1-2-3! Become a partner, submit your product, and keep an eye on your email inbox for status updates from our team that will help your offer go live and ready for sale.'
+				'¡Vender con Upler es tan fácil como 1-2-3! Conviértete en socio, envía tu producto y mantente atento a tu bandeja de entrada de correo electrónico para recibir actualizaciones de estado de nuestro equipo que ayudarán a que tu oferta esté lista para la venta y activa.'
 		},
 		ProductSubmissionTips: {
-			title: 'Product Submission Tips',
+			title: 'Consejos para enviar un producto',
 			description:
-				'Here are some guidelines and best practices for creating an excellent submission that aligns perfectly with our audience and increases your chances of having your product accepted for launch in our community.'
+				'Aquí tienes algunas pautas y mejores prácticas para crear una excelente presentación que se alinee perfectamente con nuestra audiencia y aumente tus posibilidades de que tu producto sea aceptado para lanzamiento en nuestra comunidad.'
 		}
 	},
 	Licenses: {
 		WhatIsALicense: {
-			title: 'What Is a License?',
+			title: '¿Qué es una licencia?',
 			description:
-				"Licenses are our newly launched alternative to codes. Hurray! Licenses are super easy to redeem and allow you to connect to our partner's website immediately after activation (you're welcome). Unlike codes, licenses don't need to be stacked, which means you can upgrade or downgrade your tiered plan as you please."
+				"Las licencias son nuestra alternativa recién lanzada a los códigos. ¡Hurra! Las licencias son muy fáciles de canjear y te permiten conectarte al sitio web de nuestro socio inmediatamente después de la activación (de nada). A diferencia de los códigos, las licencias no necesitan apilarse, lo que significa que puedes mejorar o reducir tu plan escalonado según tus preferencias."
 		},
 		WhereIsMyLicense: {
-			title: 'Where Is My License in My Account?',
+			title: '¿Dónde está mi licencia en mi cuenta?',
 			description:
-				"All products purchased in the Upler marketplace can be found on the 'Products' page of your Upler account. You can use the search bar under the 'Products' header in the top left corner of the page to quickly find your purchase."
+				'Todos los productos comprados en el mercado Upler se pueden encontrar en la página "Productos" de tu cuenta Upler. Puedes usar la barra de búsqueda debajo del encabezado "Productos" en la esquina superior izquierda de la página para encontrar rápidamente tu compra.'
 		},
 		HowToActivateLicense: {
-			title: 'How to Activate My License?',
+			title: 'Cómo activar mi licencia',
 			description:
-				"To activate your license and access your purchase, follow these steps: Go to the 'Products' page of your AppSumo account, use the 'Actions' dropdown next to your product to select 'Activate,' click the 'Activate Now' button, and follow the step-by-step instructions to complete the registration and activation process on the partner's site."
+				'Para activar tu licencia y acceder a tu compra, sigue estos pasos: Ve a la página "Productos" de tu cuenta AppSumo, usa el menú desplegable "Acciones" junto a tu producto para seleccionar "Activar", haz clic en el botón "Activar ahora" y sigue las instrucciones paso a paso para completar el registro y el proceso de activación en el sitio del socio.'
 		},
 		HowToLoginWithLicense: {
-			title: 'How to Login with My License?',
+			title: 'Cómo iniciar sesión con mi licencia',
 			description:
-				"Once your license has been activated and your account created, you can continue accessing the product directly through the partner's site using your activation email for login."
+				'Una vez que tu licencia ha sido activada y se ha creado tu cuenta, puedes seguir accediendo al producto directamente a través del sitio del socio utilizando tu correo electrónico de activación para iniciar sesión.'
 		},
 		UpgradeDowngradeLicense: {
-			title: 'Upgrade/Downgrade My License',
+			title: 'Actualizar/Reducir mi licencia',
 			description:
-				"Why should you upgrade/downgrade your license? Because you can! After activating and testing your product's license, you can make changes to the variable features of your tier/plan by either upgrading or downgrading it."
+				'¿Por qué deberías actualizar/reducir tu licencia? ¡Porque puedes! Después de activar y probar la licencia de tu producto, puedes realizar cambios en las características variables de tu plan escalonado ya sea mejorándolo o reduciéndolo.'
 		},
 		ExplanationOfOffersAndProducts: {
-			title: 'Explanation of Offers and Products',
+			title: 'Explicación de Ofertas y Productos',
 			description:
-				"What's a lifetime deal? What's stacking? Get to know the details about the offers and products available on our platform."
+				'¿Qué es una oferta de por vida? ¿Qué es apilar? Conoce los detalles sobre las ofertas y productos disponibles en nuestra plataforma.'
 		},
 		TermsAndFeatures: {
-			title: 'Terms and Features',
+			title: 'Términos y Características',
 			description:
-				'Learn about the terms and features related to Upler purchases and how to navigate your Upler account.'
+				'Aprende sobre los términos y características relacionados con las compras en Upler y cómo navegar por tu cuenta Upler.'
 		},
 		ProductSupport: {
-			title: 'Product Support',
+			title: 'Soporte del Producto',
 			description:
-				'Facing issues with a purchased product? Learn how to get support and contact our partners directly from your Upler account.'
+				'¿Problemas con un producto comprado? Aprende cómo obtener soporte y ponerte en contacto directo con nuestros socios desde tu cuenta Upler.'
 		},
 		Gifts: {
-			title: 'Gifts',
+			title: 'Regalos',
 			description:
-				"Understand what 'gifts' mean in our context and how you might come across them on our website."
+				'Comprende lo que significan los "regalos" en nuestro contexto y cómo podrías encontrarlos en nuestro sitio web.'
 		},
 		CatalogPriceCalculation: {
-			title: 'How Is Catalog Price Calculated?',
+			title: '¿Cómo se calcula el precio del catálogo?',
 			description:
-				"Curious about the struck-through prices? Understand how we calculate these prices to demonstrate the value you're getting with our offers."
+				'¿Curioso acerca de los precios tachados? Entiende cómo calculamos estos precios para demostrar el valor que obtienes con nuestras ofertas.'
 		}
 		// Agrega más secciones aquí si es necesario...
 	}
-}
+};
+

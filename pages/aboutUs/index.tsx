@@ -16,16 +16,16 @@ const Aboutus: NextPage = () => {
 						<p className="text-[35px] md:text-4xl xl:text-5xl 2xl:text-6xl">
 							<span className="">
 								{' '}
-								Where cutting-edge software meets{' '}
+								Donde se encuentra el software de vanguardia
+								{' '}
 							</span>
 							<span className=" text-primary-color ">
-								smart savings
+								ahorros inteligentes
 							</span>
 						</p>
 					</div>
 					<p className="pb-10 pt-8 text-center font-semibold lg:w-[90%] lg:text-left">
-						Your gateway to seamless License Management and
-						Unbeatable Deals
+						Tu puerta de entrada a una Gestión de Licencias sin problemas y Ofertas Inigualables
 					</p>
 					<Link
 						href="/register"
@@ -33,7 +33,7 @@ const Aboutus: NextPage = () => {
 						className="scroll-smooth"
 					>
 						<button className=" h-12 w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-							Register now for free
+							Registrate Ahora Gratis
 						</button>
 					</Link>
 				</div>
@@ -50,8 +50,8 @@ const Aboutus: NextPage = () => {
 			<div className="flex flex-col items-center justify-center gap-8 bg-purple-50  py-20">
 				<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl ">
 					<p className="text-[35px] md:text-3xl xl:text-5xl">
-						<span className="text-neutral-600">Explore our</span>
-						<span className=" text-primary-color "> services</span>
+						<span className="text-neutral-600">Explora Nuestros</span>
+						<span className=" text-primary-color "> Servicios</span>
 					</p>
 				</div>
 				<hr className="left-0 right-0 m-auto mb-20 w-[100px] border-2 border-primary-color bg-primary-color" />
@@ -67,13 +67,10 @@ const Aboutus: NextPage = () => {
 						</div>
 						<div className="flex flex-col  items-center md:gap-1">
 							<h4 className=" mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Trusted Software Marketplace Deals
+								Ofertas de un Mercado de Software de Confianza
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Explore a vast marketplace featuring rigorously
-								evaluated software from trusted partners. Our
-								platform ensures quality standards, providing
-								users with a diverse array of solutions.
+								Explora un vasto mercado que presenta una variedad de softwares rigurosamente evaluado de socios de confianza. Nuestra plataforma garantiza estándares de calidad, ofreciendo a los usuarios una variedad de soluciones.
 							</p>
 						</div>
 					</div>
@@ -88,12 +85,10 @@ const Aboutus: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className=" mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Tailored Software Bundles
+								Paquetes de Software Personalizados
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Discover cost-efficient bundles tailored to your
-								needs, offering a comprehensive range of
-								software services for you.
+								Descubre paquetes eficientes en costos adaptados a tus necesidades, que ofrecen una gama completa de servicios de software para ti.
 							</p>
 						</div>
 					</div>
@@ -108,13 +103,10 @@ const Aboutus: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className=" mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Streamlined License Management
+								Gestión de Licencias Simplificada
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Upler simplifies and streamlines license
-								management. Enjoy a unified platform for
-								tracking, renewing, and managing all
-								subscriptions efficiently.
+								Upler simplifica y agiliza la gestión de licencias. Disfruta de una plataforma unificada para realizar un seguimiento, renovar y gestionar todas las suscripciones de manera eficiente.
 							</p>
 						</div>
 					</div>
@@ -129,13 +121,10 @@ const Aboutus: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className=" mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Exclusive Benefits through Insignia
+								Beneficios Exclusivos a través de Insignia
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Access exclusive benefits with partners through
-								our Upler Insignia system. Enjoy perks and
-								privileges tailored to enhance your digital
-								experience.
+								Accede a beneficios exclusivos con socios a través de nuestro sistema Upler Insignia. Disfruta de ventajas y privilegios diseñados para mejorar tu experiencia digital.
 							</p>
 						</div>
 					</div>
@@ -145,9 +134,9 @@ const Aboutus: NextPage = () => {
 			<div className="flex flex-col items-center justify-center gap-8 bg-purple-100 py-20 md:gap-5 ">
 				<div className="flex w-[90%] justify-center text-center text-[32px] font-bold  md:text-left md:text-3xl lg:w-full xl:text-5xl ">
 					<p className="text-center text-[35px] md:text-3xl xl:text-5xl">
-						<span className="text-neutral-600 ">Know our core</span>
+						<span className="text-neutral-600 ">Conoce Nuestros</span>
 
-						<span className="text-primary-color "> principles</span>
+						<span className="text-primary-color ">Principios</span>
 					</p>
 				</div>
 				<hr className="left-0 right-0 m-auto w-[100px] border-2 border-primary-color bg-primary-color " />
@@ -158,12 +147,10 @@ const Aboutus: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className=" mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Mission
+								Misión
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Simplify access and ownership of software,
-								empowering individuals and businesses with
-								affordable and efficient solutions.
+								Simplificar el acceso y la propiedad del software, empoderando a individuos y empresas con soluciones asequibles y eficientes.
 							</p>
 						</div>
 					</div>
@@ -174,13 +161,10 @@ const Aboutus: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Vision
+								Visión
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								To be the leading platform for the management
-								and distribution of software tools,
-								revolutionizing how it is accessed and used
-								globally.
+								Ser la plataforma líder en la gestión y distribución de herramientas de software, revolucionando cómo se accede y utiliza a nivel mundial.
 							</p>
 						</div>
 					</div>
@@ -190,13 +174,10 @@ const Aboutus: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								Values
+								Valores
 							</h4>
 							<p className="w-[90%] text-neutral-600">
-								Transparency, commitment to quality,
-								collaboration, strategic partnerships, customer
-								care and empowerment, affordability and
-								efficiency.
+								Transparencia, compromiso con la calidad, colaboración, asociaciones estratégicas, atención al cliente y empoderamiento, asequibilidad y eficiencia.
 							</p>
 						</div>
 					</div>

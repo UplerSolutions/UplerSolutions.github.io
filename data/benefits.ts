@@ -1,38 +1,38 @@
 export const data = [
 	{
-		title: 'Load Optimization',
+		title: 'Optimización de Carga',
 		description:
-			'Manage all your software licenses in one place, saving time and resources.',
+			'Administra todas tus licencias de software en un solo lugar, ahorrando tiempo y recursos.',
 		icon: './benefitsIcons/VectorsimplifiedCentralization.svg'
 	},
 	{
-		title: 'Efficient Automation',
+		title: 'Automatización Eficiente',
 		description:
-			'Forget about tracking expiration dates and renewals. Our platform does it for you.',
+			'Olvídate de hacer un seguimiento de fechas de vencimiento y renovaciones. Nuestra plataforma lo hace por ti.',
 		icon: './benefitsIcons/GroupefficientAutomation.svg'
 	},
 	{
-		title: 'Variety of Options',
+		title: 'Variedad de Opciones',
 		description:
-			'Discover personalized software packages tailored to your needs and profession.',
+			'Descubre paquetes de software personalizados adaptados a tus necesidades y profesión.',
 		icon: './benefitsIcons/GroupvarietyOfOptions.svg'
 	},
 	{
-		title: 'Cost Reduction',
+		title: 'Reducción de Costos',
 		description:
-			'Experience substantial savings by accessing our software bundles, allowing you to pay significantly less than you would for individual licenses.',
+			'Experimenta ahorros sustanciales al acceder a nuestros paquetes de software, lo que te permite pagar significativamente menos que por licencias individuales.',
 		icon: './benefitsIcons/VectorcostReduction.svg'
 	},
 	{
-		title: 'Exceptional Support',
+		title: 'Soporte Excepcional',
 		description:
-			'We offer fast and efficient customer service to address your inquiries.',
+			'Ofrecemos un servicio al cliente rápido y eficiente para atender tus consultas.',
 		icon: './benefitsIcons/Vectorsupport.svg'
 	},
 	{
-		title: 'Additional Benefits',
+		title: 'Beneficios Adicionales',
 		description:
-			'Get an exclusive badge with your package subscription and enjoy a number of exclusive benefits offered by our trusted partners.',
+			'Obtén un distintivo exclusivo con tu suscripción al paquete y disfruta de una serie de beneficios exclusivos ofrecidos por nuestros socios de confianza.',
 		icon: './benefitsIcons/GroupadditionalBenefits.svg'
 	}
-]
+];

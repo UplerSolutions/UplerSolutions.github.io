@@ -1,46 +1,46 @@
 export const team = [
 	{
-		name: 'Agustin Marteau',
-		role: 'Business Developer',
+		name: 'Agustín Marteau',
+		role: 'Desarrollador de Negocios',
 		linkedin: 'https://www.linkedin.com/in/agustin-marteau-469275258/',
 		image: './agustin.webp'
 	},
 	{
-		name: 'Joaquin Mármol',
-		role: 'Tech Lead',
+		name: 'Joaquín Mármol',
+		role: 'Líder Técnico',
 		linkedin: 'https://www.linkedin.com/in/joaquin-marmol/',
 		image: './joaquin.webp'
 	},
 	{
 		name: 'Ezequiel Costales',
-		role: 'Product Lead',
+		role: 'Líder de Producto',
 		linkedin: 'https://www.linkedin.com/in/ezequiel-costales/',
 		image: './ezequiel.webp'
 	},
 	{
-		name: 'Serafin Quesada',
-		role: 'Front-end Developer',
+		name: 'Serafín Quesada',
+		role: 'Desarrollador Front-end',
 		linkedin: 'https://www.linkedin.com/in/serafin-quesada/',
 		image: './serafin.webp'
 	},
 
 	{
 		name: 'David Juyneivch',
-		role: 'Project Manager',
+		role: 'Gerente de Proyecto',
 		linkedin: 'https://www.linkedin.com/in/david-juyneivch/',
 		image: './david.webp'
 	},
 	{
-		name: 'Maria Pia Zubillaga',
-		role: 'Design Lead',
+		name: 'Maria Pía Zubillaga',
+		role: 'Líder de Diseño',
 		linkedin: 'https://www.linkedin.com/in/mariapiazubillaga/',
 		image: './pia.webp'
 	},
 	{
 		name: 'Mateo Lonzayes',
-		role: 'Back-end Developer',
+		role: 'Desarrollador Back-end',
 		linkedin:
 			'https://www.linkedin.com/in/mateo-lonzayes-perales-03b01b178/',
 		image: './mateo.webp'
 	}
-]
+];
