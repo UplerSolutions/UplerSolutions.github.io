@@ -84,7 +84,7 @@ export const Product = ({ software }: { software: Software }) => {
 							className="py-10 text-3xl text-neutral-700"
 							id="features"
 						>
-							Features
+							Características
 						</h1>
 						<p className="pb-8 text-neutral-700">
 							Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -155,7 +155,7 @@ export const Product = ({ software }: { software: Software }) => {
 							className="py-10 text-3xl text-neutral-700"
 							id="questions"
 						>
-							Questions
+							Preguntas
 						</h1>
 						<p className="pb-8 text-neutral-700">
 							search a question

@@ -68,7 +68,7 @@ export const Panel = () => {
 						>
 							<AiOutlineLaptop />
 							<span className="text-md hidden  md:flex">
-								Subscriptions
+								Subcripciones
 							</span>
 						</Link>
 						<Link
@@ -77,7 +77,7 @@ export const Panel = () => {
 						>
 							<PiHandCoinsDuotone />
 							<span className="text-md hidden  md:flex">
-								Benefits
+								Beneficios
 							</span>
 						</Link>
 						<Link
@@ -86,7 +86,7 @@ export const Panel = () => {
 						>
 							<TfiHeadphoneAlt />
 							<span className="text-md hidden  md:flex">
-								Support
+								Soporte
 							</span>
 						</Link>
 					</div>
@@ -109,7 +109,7 @@ export const Panel = () => {
 					<div className="flex h-[55vh] w-[95%] flex-col items-start rounded-xl bg-[#bbbbbb1f] p-4 text-sm lg:p-8 lg:text-base">
 						<div className="flex w-full items-center justify-between  py-3">
 							<h1 className="text-center  text-2xl font-semibold">
-								Current
+								Actual
 							</h1>
 
 							<div className="flex items-center">
@@ -123,12 +123,12 @@ export const Panel = () => {
 						</div>
 						<div className=" flex w-full gap-3 md:flex-col">
 							<div className="flex w-full flex-col gap-3 rounded-xl bg-[#dfe5ee] px-2 py-4 md:flex-row md:items-center md:justify-between md:py-4 lg:px-6">
-								<div>Bundle</div>
+								<div>Paquete</div>
 								<div>Email</div>
 								<div className="flex flex-col justify-between gap-3 md:flex-row md:items-center xl:gap-6 2xl:w-[35%] 2xl:gap-0">
-									<div>Phone Number</div>
-									<div>Valid Date</div>
-									<div>Exp. Date</div>
+									<div>Numero de Teléfono</div>
+									<div>Valido hasta</div>
+									<div>Fecha de caducidad</div>
 								</div>
 							</div>
 							<div className="flex w-full flex-col gap-3 rounded-xl bg-[#e2e2e284] px-2 py-4 md:flex-row md:items-center md:justify-between lg:px-6">
@@ -138,7 +138,7 @@ export const Panel = () => {
 										className="accent-primary-color"
 									/>
 									<button className="flex rounded-3xl bg-primary-color px-2 py-2 md:px-3 md:py-3"></button>
-									<div>Expert</div>
+									<div>Experto</div>
 								</div>
 								<div className="2xl:w-[8%]">
 									example@gmail.com

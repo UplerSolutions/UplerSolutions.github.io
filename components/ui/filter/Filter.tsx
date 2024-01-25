@@ -43,12 +43,12 @@ const Filter: FC<Props> = ({
 	const [value, setValue] = useState<number | null>(2)
 	return (
 		<div className="mx-auto mb-6 grid text-black lg:w-[300px] lg:pl-[3rem]">
-			<h2 className="text-lg font-semibold">Filter By</h2>
+			<h2 className="text-lg font-semibold">Filtrar Por</h2>
 
 			<div className="py-5">
 				<details className="group">
 					<summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-						<span className="pb-3">Category</span>
+						<span className="pb-3">Categoría</span>
 						<span className="transition group-open:rotate-180">
 							<svg
 								fill="none"
@@ -87,7 +87,7 @@ const Filter: FC<Props> = ({
 			<div className="py-5">
 				<details className="group">
 					<summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-						<span>Ratings</span>
+						<span>Valoración</span>
 						<span className="transition group-open:rotate-180">
 							<svg
 								fill="none"
@@ -118,7 +118,7 @@ const Filter: FC<Props> = ({
 
 			<div className="pt-3">
 				<div className="">
-					<span className="font-medium">Price</span>
+					<span className="font-medium">Precio</span>
 					<span className="transition group-open:rotate-180">
 						<svg
 							fill="none"

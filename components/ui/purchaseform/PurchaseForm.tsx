@@ -170,16 +170,16 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 						<div className="flex flex-col gap-10">
 							<div className="flex flex-col items-center gap-4  text-center sm:flex-row sm:gap-0 sm:text-left md:gap-[150px]">
 								<h1 className="text-2xl font-bold md:text-3xl lg:text-4xl xl:text-[42px] ">
-									¡Almost There! Finish order
+									¡Ya casi! Finalice su order
 								</h1>
 								<div className="flex items-center gap-6">
 									<GoShieldCheck className="scale-[1.8] text-primary-color" />
-									<span>30-day money-back guarantee</span>
+									<span>Garantía de devolución de dinero de 30 días</span>
 								</div>
 							</div>
 							<div>
 								<h2 className="text-xl">
-									Bundle choosen:
+									Paquete Elegido:
 									<span className="font-semibold text-primary-color">
 										{' '}
 										{plan?.name}
@@ -208,7 +208,7 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 					<div className="mb-8 mt-8 w-[90%] rounded-xl bg-gradient-to-r from-[#fff5ff] to-[#fffdf0]  px-6  py-8 md:px-8 lg:w-[75%] 2xl:px-0">
 						<div className="w-full text-2xl font-bold md:text-[28px] lg:text-[32px] xl:text-[36px]">
 							<h2 className="pl-10 pt-6 text-neutral-600 md:pb-10">
-								1. Choose a Period
+								1. Elige un Periodo
 							</h2>
 						</div>
 						<div className="flex flex-wrap items-center justify-center gap-10 pt-6 md:flex-nowrap">
@@ -229,7 +229,7 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 					<div className="flex w-[90%] flex-col rounded-xl bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] p-6 pr-8 text-neutral-700 sm:py-16 sm:pl-8 lg:w-[75%]">
 						<div className="w-full text-2xl font-bold md:text-[28px] lg:text-[32px] xl:text-[36px]">
 							<h2 className="text-neutral-600 md:pb-10 md:pl-4">
-								2. Select your preferred tools
+								2. Seleccione tus softwares 
 							</h2>
 						</div>
 						<div className="flex flex-col items-center justify-center text-center">
@@ -256,7 +256,7 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 					<div className="mb-8 mt-10 flex w-[90%] flex-col items-center justify-center rounded-xl bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] px-6 py-8 text-center lg:w-[75%] xl:items-start xl:text-start ">
 						<div className="flex w-full flex-col items-center justify-between gap-6 text-2xl font-bold md:text-[28px] lg:text-[32px] xl:flex-row xl:text-[36px]">
 							<h2 className="pt-6 text-neutral-600 md:pb-8 md:pl-6">
-								3. Proceed to secure payment
+								3. Procedá a hacer un pago seguro
 							</h2>
 						</div>
 						<div className="flex flex-col md:pl-[3.2rem]">
@@ -265,27 +265,24 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 									<GoShieldCheck className="scale-[1.8] text-primary-color" />
 								</span>
 								<p className="w-[150px] text-neutral-700">
-									30-day money-back guarantee
+									Garantía de devolución de dinero de 30 días
 								</p>
 								<div className="flex items-center gap-6 pl-7">
 									<span>
 										<RxLockClosed className="scale-[1.8] text-primary-color" />
 									</span>
 									<p className="w-[150px] text-neutral-700">
-										Encrypted and secure payments
+										Pagos cifrados y seguros.
 									</p>
 								</div>
 							</div>
 							<div>
 								<h4 className="pt-6 text-neutral-700">
-									By completing the purchase, you agree to our
-									Terms of Service and confirm that you have
-									read our Privacy Policy. You can cancel
-									recurring payments anytime.
+									Al completar la compra, aceptas nuestros Términos de Servicio y confirmas que has leído nuestra Política de Privacidad. Puedes cancelar los pagos recurrentes en cualquier momento.
 								</h4>
 							</div>
 							<span className="pb-8 pt-10 font-semibold text-neutral-700">
-								Need assistance? Check out our FAQs.
+								¿Necesitas ayuda? Consulta nuestras preguntas frecuentes (FAQs).
 							</span>
 						</div>
 						<CreditCard
@@ -299,7 +296,7 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 							type="submit"
 							className=" h-12 w-48 rounded-xl bg-primary-color text-lg font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 						>
-							Buy now
+							Compra Ya
 						</button>
 					</div>
 				</section>

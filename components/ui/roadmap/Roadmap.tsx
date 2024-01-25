@@ -24,7 +24,7 @@ export const Roadmap = () => {
 				<div className="flex items-center justify-center  text-center text-[32px] font-bold md:text-left md:text-3xl xl:text-5xl">
 					<p className="z-30 w-[300px] text-center text-[35px] md:w-[100%] md:text-3xl xl:text-5xl">
 						<span className="text-neutral-600 ">
-							Travel trough our
+							Viaje por nuestro
 						</span>
 
 						<span className="text-primary-color "> roadmap</span>

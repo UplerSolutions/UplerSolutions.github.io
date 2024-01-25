@@ -6,7 +6,7 @@ export const Partner = () => {
 			<div className=" flex w-full flex-col items-center justify-center md:w-[88%] xl:w-[78%]">
 				<div className="flex flex-col items-center justify-center">
 					<div className="flex w-full items-center pb-10 text-center">
-						<div className="flex flex-col items-center justify-center pb-3">
+						{/* <div className="flex flex-col items-center justify-center pb-3">
 							<h3 className="pb-4 text-sm md:text-base lg:text-lg">
 								GET TO KNOW WHO TRUSTS US
 							</h3>
@@ -17,7 +17,7 @@ export const Partner = () => {
 									Partnerships
 								</span>
 							</h2>
-						</div>
+						</div> */}
 						<div className=" hidden lg:invisible">
 							<h3 className="text-neutral-700">
 								CONOCE QUIEN CONFIA EN NOSOTROS

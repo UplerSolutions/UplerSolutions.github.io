@@ -57,7 +57,7 @@ export const Explore: FC<Props> = ({ software }) => {
 					))
 				) : (
 					<h3 className="text-neutral-700">
-						We Don´t Have Softwares Availible for this Category
+						No Contamos con Softwares Disponibles para esta Categoria
 					</h3>
 				)}
 			</ul>
