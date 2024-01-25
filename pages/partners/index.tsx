@@ -169,10 +169,10 @@ const Partner: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								3. Get paid
+								3. Ganá Dinero
 							</h4>
 							<p className="w-[90%] text-neutral-600">
-								Earn more money from your digital products
+								Gana más dinero con tus productos digitales.
 							</p>
 						</div>
 					</div>
@@ -183,14 +183,14 @@ const Partner: NextPage = () => {
 				<div className=" relative  flex flex-col place-items-center items-center   pb-7  text-neutral-700">
 					<div className="flex w-[90%] text-center  text-[32px] font-bold md:w-full md:text-3xl xl:text-5xl">
 						<p className="text-[35px] md:text-3xl xl:text-5xl">
-							<span className=""> Our business is </span>
+							<span className=""> Nuestro negocio </span>
 							<span className=" text-primary-color ">
-								helping yours
+								ayuda al tuyo
 							</span>
 						</p>
 					</div>
 					<p className="pb-10 pt-8 text-center font-semibold lg:w-[90%]">
-						You make things. We make things happen.
+						Tú creas cosas. Nosotros hacemos que las cosas sucedan.
 					</p>
 					<Link
 						href="/apply"
@@ -198,11 +198,11 @@ const Partner: NextPage = () => {
 						className="scroll-smooth"
 					>
 						<button className=" h-12 w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-							Start Selling
+							Empieza a Vender
 						</button>
 					</Link>
 					<p className="  pt-2 text-xs text-neutral-500">
-						Get paid. No upfront fees.
+						Ganá Dinero. Sin tarifas por adelantado..
 					</p>
 				</div>
 			</div>
