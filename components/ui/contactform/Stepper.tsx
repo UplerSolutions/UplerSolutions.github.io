@@ -1,17 +1,6 @@
 import React, { useState } from 'react'
-import Box from '@mui/material/Box'
-import Stepper from '@mui/material/Stepper'
-import Step from '@mui/material/Step'
-import StepLabel from '@mui/material/StepLabel'
-import { FormProvider, useForm } from 'react-hook-form'
-import { ContactForm } from './ContactForm'
+import { Stepper } from '../stepper'
 import CustomForm from './CustomForm'
-
-const steps = [
-	'Personal Information',
-	'Company Information',
-	'Company Features'
-]
 
 export default function HorizontalLinearStepper() {
 	const [activeStep, setActiveStep] = useState(0)
@@ -26,15 +15,7 @@ export default function HorizontalLinearStepper() {
 
 	return (
 		<div className="flex w-[97%] flex-col lg:w-[60%] ">
-			<Stepper activeStep={activeStep} className="accent-primary-color">
-				{steps.map((label) => {
-					return (
-						<Step key={label}>
-							<StepLabel>{label}</StepLabel>
-						</Step>
-					)
-				})}
-			</Stepper>
+			<Stepper activeStep={activeStep} />
 
 			<CustomForm
 				activeStep={activeStep}
