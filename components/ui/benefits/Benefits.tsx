@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { data } from '@/data/benefits'
 import Image from 'next/image'
 

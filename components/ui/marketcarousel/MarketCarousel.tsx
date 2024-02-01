@@ -6,11 +6,10 @@ import {
 	Navigation,
 	Mousewheel,
 	Keyboard,
-	Pagination,
 	EffectCoverflow
 } from 'swiper/modules'
 
-import React, { useState, FC, useEffect } from 'react'
+import { useState, FC, useEffect } from 'react'
 import { ISoftware } from '@/interface/software'
 import MarketSoftware from '../cardsoftware/MarketSoftware'
 import ScrollCarousel from 'scroll-carousel-react'

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState, ChangeEvent, FocusEvent } from 'react'
+import { FC, useEffect, useState, ChangeEvent, FocusEvent } from 'react'
 import { IPlan } from '@/interface/plan'
 import { ISoftware } from '@/interface/software'
 import { getSoftwares } from '@/service/software/software-service'

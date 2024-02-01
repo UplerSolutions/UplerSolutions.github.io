@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useFormContext } from 'react-hook-form'
 
 interface Props {

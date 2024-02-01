@@ -37,7 +37,7 @@ export const Signup = () => {
 	})
 
 	const onSubmit = async (data: FormData) => {
-		const { username, password } = data
+		const { username, password, email } = data
 		const post = await fetch(
 			`${process.env.NEXT_PUBLIC_BACKEND_URL}/createUser`,
 			{
@@ -46,15 +46,9 @@ export const Signup = () => {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					name: 'Joaquin',
-					lastname: 'Marmol',
 					username,
-					email: 'joaquinmarmolnecochea@gmail.com',
+					email,
 					password,
-					city: 'necochea',
-					province: 'buenos aires',
-					street_adrees: '87-784',
-					number_phone: 659056
 				})
 			}
 		)
@@ -191,7 +185,7 @@ export const Signup = () => {
 
 							<div className=" w-full">
 								<h3 className=" py-2 text-center text-neutral-400">
-									or continue con
+									o continue con
 								</h3>
 								<div className="w-full">
 									<GoogleButton />

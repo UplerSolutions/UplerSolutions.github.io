@@ -1,21 +1,10 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
-
-import { set, useFormContext } from 'react-hook-form'
+import { FC, useState } from 'react'
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import { Button } from '@mui/material'
-
 import PersonalData from './PersonalData'
-
-import { useForm, Controller, SubmitHandler } from 'react-hook-form'
-import Typography from '@mui/material/Typography'
-import TextField from '@mui/material/TextField'
 import { useRouter } from 'next/router'
-import { yupResolver } from '@hookform/resolvers/yup'
-
-import * as yup from 'yup'
 import CompanyData from './CompanyData'
-import CompanyInfo from './CompanyFeatures'
 import CompanyFeatures from './CompanyFeatures'
 
 interface Props {

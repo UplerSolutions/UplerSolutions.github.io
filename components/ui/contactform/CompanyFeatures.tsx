@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Typography from '@mui/material/Typography'
 import { useForm } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'

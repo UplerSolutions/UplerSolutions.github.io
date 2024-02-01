@@ -40,7 +40,7 @@ export const schemaCustomer = yup.object({
 		.min(2, 'Minimum 2 characters'),
 	email: yup
 		.string()
-		.email('Invalid email format')
+		.email()
 		.matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Must be a valid email')
 		.required('This field is required')
 })

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import  { FC, useState } from 'react'
 import { Rating, Slider } from '@mui/material'
 import Box from '@mui/material/Box'
 import { ICategory } from '@/interface/category'
