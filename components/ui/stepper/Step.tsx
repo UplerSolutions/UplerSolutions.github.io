@@ -53,7 +53,7 @@ export const Step: FC<Props> = ({ children, isActive, isCompleted, order }) => {
 			) : (
 				<StepIndicator color={color}>3</StepIndicator>
 			)}
-			Confirmation
+			Confirmación
 		</li>
 	)
 }
