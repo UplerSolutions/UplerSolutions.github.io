@@ -8,10 +8,9 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 interface Props {
 	handlerAddress: (data: any) => void
-	handleNext: () => void
 }
 
-const CompanyFeatures: FC<Props> = ({ handlerAddress, handleNext }) => {
+const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
 	const {
 		control,
 		formState: { errors },
@@ -23,49 +22,47 @@ const CompanyFeatures: FC<Props> = ({ handlerAddress, handleNext }) => {
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
-			<Typography
-				sx={{ paddingBottom: '1rem' }}
-				variant="h4"
-				align="center"
-			>
-				Company Features
-			</Typography>
+		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+			<h4 className="mb-4 text-center text-4xl">Company Features</h4>
 
-			<Typography variant="caption" color="red">
-				<ErrorMessage errors={errors} name="name" />
-			</Typography>
+			<div>
+				<CustomTextField
+					name="name"
+					control={control}
+					type="text"
+					label="Product name"
+					required={true}
+				/>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="name" />
+				</p>
+			</div>
 
-			<CustomTextField
-				name="name"
-				control={control}
-				defaultValue=""
-				type="text"
-				label="Product name"
-				required={true}
-			/>
+			<div>
+				<CustomTextField
+					name="website"
+					label="Website URL"
+					type="text"
+					control={control}
+					required={true}
+				/>
 
-			<CustomTextField
-				name="website"
-				label="Website URL"
-				type="text"
-				control={control}
-				defaultValue=""
-				required={true}
-			/>
-
-			<Typography variant="caption" color="red">
-				<ErrorMessage errors={errors} name="email" />
-			</Typography>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="website" />
+				</p>
+			</div>
 
 			<CustomTextField
 				name="email"
 				label="Company email"
 				type="email"
 				control={control}
-				defaultValue=""
 				required={true}
 			/>
+
+			<p className="text-sm font-medium text-red-500">
+				<ErrorMessage errors={errors} name="email" />
+			</p>
 		</form>
 	)
 }

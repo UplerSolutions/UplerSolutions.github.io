@@ -1,9 +1,9 @@
-import { FC, useState } from 'react'
-import Box from '@mui/material/Box'
-import Paper from '@mui/material/Paper'
-import { Button } from '@mui/material'
+import React, { FC, useState } from 'react'
+
+import { Button } from '@/components/ui/button'
+
 import PersonalData from './PersonalData'
-import { useRouter } from 'next/router'
+
 import CompanyData from './CompanyData'
 import CompanyFeatures from './CompanyFeatures'
 
@@ -70,10 +70,6 @@ const defaultValues: DefaultValues = {
 }
 
 const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
-	// const { handleSubmit, getValues, getFieldState, formState } = useFormContext();
-
-	const router = useRouter()
-
 	const [info, setinfo] = useState(defaultValues)
 
 	const handlerCustomer = (data: typeof defaultValues.customer) => {
@@ -101,71 +97,37 @@ const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
 	}
 
 	return (
-		<Box sx={{ width: '100%', alignSelf: 'center', marginTop: '1rem' }}>
-			<Paper
-				elevation={8}
-				sx={{
-					p: '32px',
-					display: 'flex',
-					flexDirection: 'column',
-					gap: 3
-				}}
-			>
-				<div>
-					{activeStep === 0 && (
-						<PersonalData
-							handleNext={handleNext}
-							handlerCustomer={handlerCustomer}
-						/>
-					)}
+		<section className="mt-4 flex w-full flex-col rounded-md p-8 text-black shadow-form">
+			<div>
+				{activeStep === 0 && (
+					<PersonalData handlerCustomer={handlerCustomer} />
+				)}
 
-					{activeStep === 1 && (
-						<CompanyData
-							handleNext={handleNext}
-							handlerAddress={handlerAddress}
-						/>
-					)}
-					{activeStep === 2 && (
-						<CompanyFeatures
-							handleNext={handleNext}
-							handlerAddress={handlerAddress}
-						/>
-					)}
+				{activeStep === 1 && (
+					<CompanyData handlerAddress={handlerAddress} />
+				)}
+				{activeStep === 2 && (
+					<CompanyFeatures handlerAddress={handlerAddress} />
+				)}
+			</div>
 
-					<Box sx={{ display: 'flex', flexDirection: 'row' }}>
-						{activeStep === 1 && (
-							<div className="flex w-full justify-start">
-								<Button
-									onClick={handleBack}
-									className="text-primary-color hover:bg-white"
-								>
-									Back
-								</Button>
-							</div>
-						)}
-					</Box>
+			<footer className="mt-4 flex justify-between">
+				{activeStep !== 0 && (
+					<Button type="button" onClick={handleBack}>
+						Back
+					</Button>
+				)}
 
-					<Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-						{activeStep === 2 && (
-							<div className="flex w-full justify-between">
-								<Button
-									onClick={handleBack}
-									className="text-primary-color hover:bg-white"
-								>
-									Back
-								</Button>
-								<Button
-									type="submit"
-									className="bg-primary-color text-white hover:bg-purple-500"
-								>
-									Send
-								</Button>
-							</div>
-						)}
-					</Box>
-				</div>
-			</Paper>
-		</Box>
+				{activeStep === 2 && (
+					<Button
+						type="submit"
+						className="bg-primary-color text-white hover:bg-purple-500"
+					>
+						Send
+					</Button>
+				)}
+			</footer>
+		</section>
 	)
 }
 

@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 
-export const singup = yup.object().shape({
+export const singup = yup.object({
 	username: yup
 		.string()
 		.min(5, 'At least should be five characters short')
@@ -25,11 +25,12 @@ export const singup = yup.object().shape({
 		.oneOf([yup.ref('password')], 'Passwords must match')
 })
 
-export const login = yup.object().shape({
+export const login = yup.object({
 	username: yup.string().required('Please Enter your username'),
 	password: yup.string().required('Please Enter your password')
 })
-export const schemaCustomer = yup.object({
+
+export const personalDataSchema = yup.object({
 	name: yup
 		.string()
 		.required('This field is required')
@@ -41,6 +42,26 @@ export const schemaCustomer = yup.object({
 	email: yup
 		.string()
 		.email()
+		.matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Must be a valid email')
+		.required('This field is required'),
+	position: yup
+		.string()
+		.required('This field is required')
+		.min(2, 'Minimum 2 characters')
+})
+
+export const companyDataSchema = yup.object({
+	name: yup
+		.string()
+		.required('This field is required')
+		.min(2, 'Minimum 2 characters'),
+	website: yup
+		.string()
+		.url('Invalid URL format')
+		.required('This field is required'),
+	email: yup
+		.string()
+		.email('Invalid email format')
 		.matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Must be a valid email')
 		.required('This field is required')
 })

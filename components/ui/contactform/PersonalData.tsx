@@ -1,95 +1,88 @@
-import  { FC } from 'react'
-import Typography from '@mui/material/Typography'
+import { FC } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
-import { Button } from '@mui/material'
+import { Button } from '@/components/ui/button'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { schemaCustomer } from '@/rules'
+import { personalDataSchema } from '@/rules'
 
 interface Props {
 	handlerCustomer: (data: any) => void
-	handleNext: () => void
 }
 
-const PersonalData: FC<Props> = ({ handlerCustomer, handleNext }) => {
+const PersonalData: FC<Props> = ({ handlerCustomer }) => {
 	const {
 		control,
 		formState: { errors },
 		handleSubmit
-	} = useForm({ resolver: yupResolver(schemaCustomer) })
+	} = useForm({ resolver: yupResolver(personalDataSchema) })
 
 	const onSubmit: SubmitHandler<any> = (data: any) => {
 		handlerCustomer(data)
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
-			<Typography
-				sx={{ paddingBottom: '1rem' }}
-				variant="h4"
-				align="center"
-			>
-				Personal Information
-			</Typography>
+		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+			<h4 className="mb-4 text-center text-4xl">Personal Information</h4>
 
-			<Typography variant="caption" color="red">
-				<ErrorMessage errors={errors} name="name" />
-			</Typography>
+			<div>
+				<CustomTextField
+					name="name"
+					control={control}
+					type="text"
+					label="Name"
+					required={true}
+				/>
 
-			<CustomTextField
-				name="name"
-				control={control}
-				defaultValue=""
-				type="text"
-				label="Name"
-				required={true}
-			/>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="name" />
+				</p>
+			</div>
 
-			<Typography variant="caption" color="red">
-				<ErrorMessage errors={errors} name="lastname" />
-			</Typography>
+			<div>
+				<CustomTextField
+					name="lastname"
+					label="Lastname"
+					type="text"
+					control={control}
+					required={true}
+				/>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="lastname" />
+				</p>
+			</div>
 
-			<CustomTextField
-				name="lastname"
-				label="Lastname"
-				type="text"
-				control={control}
-				defaultValue=""
-				required={true}
-			/>
+			<div>
+				<CustomTextField
+					name="email"
+					label="Email"
+					type="email"
+					control={control}
+					defaultValue=""
+					required={true}
+				/>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="email" />
+				</p>
+			</div>
 
-			<Typography variant="caption" color="red">
-				<ErrorMessage errors={errors} name="email" />
-			</Typography>
+			<div>
+				<CustomTextField
+					name="position"
+					label="Your position"
+					type="text"
+					control={control}
+					required={true}
+				/>
 
-			<CustomTextField
-				name="email"
-				label="Email"
-				type="email"
-				control={control}
-				defaultValue=""
-				required={true}
-			/>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="position" />
+				</p>
+			</div>
 
-			<CustomTextField
-				name="Your position"
-				label="Your position"
-				type="text"
-				control={control}
-				defaultValue=""
-				required={true}
-			/>
-			{
-				<Button
-					variant="contained"
-					type="submit"
-					className="bg-primary-color hover:bg-purple-500"
-				>
-					{' '}
-					Next
-				</Button>
-			}
+			<Button type="submit" className="self-start">
+				Next
+			</Button>
 		</form>
 	)
 }
