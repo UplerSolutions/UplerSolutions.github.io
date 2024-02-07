@@ -114,7 +114,7 @@ const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
 			<footer className="mt-4 flex justify-between">
 				{activeStep !== 0 && (
 					<Button type="button" onClick={handleBack}>
-						Back
+						ATRAS
 					</Button>
 				)}
 
@@ -123,7 +123,7 @@ const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
 						type="submit"
 						className="bg-primary-color text-white hover:bg-purple-500"
 					>
-						Send
+						ENVIAR
 					</Button>
 				)}
 			</footer>

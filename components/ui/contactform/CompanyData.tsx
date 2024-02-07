@@ -26,7 +26,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 			onSubmit={handleSubmit(onSubmit)}
 			className="relative flex flex-col gap-4"
 		>
-			<h4 className="mb-4 text-center text-4xl">Company Information</h4>
+			<h4 className="mb-4 text-center text-4xl">Información de la Compania</h4>
 
 			<div>
 				<CustomTextField
@@ -34,7 +34,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 					control={control}
 					defaultValue=""
 					type="text"
-					label="Product name"
+					label="Nombre de producto"
 					required={true}
 				/>
 				<p className="text-sm font-medium text-red-500">
@@ -45,7 +45,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 			<div>
 				<CustomTextField
 					name="website"
-					label="Website URL"
+					label="URL de la pagina web"
 					type="text"
 					control={control}
 					defaultValue=""
@@ -60,7 +60,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 			<div>
 				<CustomTextField
 					name="email"
-					label="Company email"
+					label="Email de la compania"
 					type="email"
 					control={control}
 					defaultValue=""
@@ -73,7 +73,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 			</div>
 
 			<Button type="submit" className="absolute -bottom-14 right-0">
-				NEXT
+				SIGUIENTE
 			</Button>
 		</form>
 	)

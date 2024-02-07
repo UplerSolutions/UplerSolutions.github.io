@@ -23,14 +23,14 @@ const PersonalData: FC<Props> = ({ handlerCustomer }) => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-			<h4 className="mb-4 text-center text-4xl">Personal Information</h4>
+			<h4 className="mb-4 text-center text-4xl">Información  Personal</h4>
 
 			<div>
 				<CustomTextField
 					name="name"
 					control={control}
 					type="text"
-					label="Name"
+					label="Nombre"
 					required={true}
 				/>
 
@@ -42,7 +42,7 @@ const PersonalData: FC<Props> = ({ handlerCustomer }) => {
 			<div>
 				<CustomTextField
 					name="lastname"
-					label="Lastname"
+					label="Apellido"
 					type="text"
 					control={control}
 					required={true}
@@ -69,7 +69,7 @@ const PersonalData: FC<Props> = ({ handlerCustomer }) => {
 			<div>
 				<CustomTextField
 					name="position"
-					label="Your position"
+					label="Tu posición"
 					type="text"
 					control={control}
 					required={true}
@@ -81,7 +81,7 @@ const PersonalData: FC<Props> = ({ handlerCustomer }) => {
 			</div>
 
 			<Button type="submit" className="self-start">
-				Next
+				SIGUIENTE
 			</Button>
 		</form>
 	)
