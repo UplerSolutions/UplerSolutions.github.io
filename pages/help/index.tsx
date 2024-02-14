@@ -36,7 +36,7 @@ const Help: NextPage = () => {
 							className=" group relative inline-block "
 							href="/"
 						>
-							Home
+							Inicio
 							<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 						</Link>
 					</div>
@@ -88,11 +88,10 @@ const Help: NextPage = () => {
 							</div>
 							<div className="flex flex-col items-center gap-3 md:gap-1">
 								<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-									1. General Info
+									1. Informacion General
 								</h4>
 								<p className="w-[90%] text-neutral-600">
-									Find out how to contact us, partner with us,
-									and abide by our TOS.
+									Descubre cómo contactarnos, asociarte con nosotros y cumplir con nuestros Términos de Servicio (TOS).
 								</p>
 							</div>
 						</div>
@@ -108,8 +107,7 @@ const Help: NextPage = () => {
 									2. Partners
 								</h4>
 								<p className="w-[90%] text-neutral-600">
-									Find out all about being an AppSumo partner
-									here!
+									Descubre todo sobre ser un socio de AppSumo aquí.
 								</p>
 							</div>
 						</div>
@@ -122,10 +120,10 @@ const Help: NextPage = () => {
 							</div>
 							<div className="flex flex-col items-center gap-3 md:gap-1">
 								<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-									3. Licenses
+									3. Licensias
 								</h4>
 								<p className="w-[90%] text-neutral-600">
-									A new alternative to code-based products!
+									Una nueva alternativa a los productos basados en código.
 								</p>
 							</div>
 						</div>

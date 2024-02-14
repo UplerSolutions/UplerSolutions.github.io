@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
@@ -65,7 +65,7 @@ const CardSoftware: FC<Props> = ({
 							type="submit"
 							className=" h-12 w-full rounded-xl bg-primary-color text-lg font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 						>
-							Get Link
+							Conseguí el Link
 						</button>
 					</Link>
 				</div>

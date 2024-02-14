@@ -1,80 +1,80 @@
 import React, { FC } from 'react'
-import Typography from '@mui/material/Typography'
 import { useForm } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
-import { Button } from '@mui/material'
+import { Button } from '@/components/ui/button'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { companyDataSchema } from '@/rules'
 
 interface Props {
 	handlerAddress: (data: any) => void
-	handleNext: () => void
 }
 
-const DataDireccionEntrega: FC<Props> = ({ handlerAddress, handleNext }) => {
+const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 	const {
 		control,
 		formState: { errors },
 		handleSubmit
-	} = useForm()
+	} = useForm({ resolver: yupResolver(companyDataSchema) })
 
 	const onSubmit = (data: any) => {
 		handlerAddress(data)
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)}>
-			<Typography
-				sx={{ paddingBottom: '1rem' }}
-				variant="h4"
-				align="center"
-			>
-				Company Information
-			</Typography>
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className="relative flex flex-col gap-4"
+		>
+			<h4 className="mb-4 text-center text-4xl">Información de la Compania</h4>
 
-			<Typography variant="caption" color="red">
-				<ErrorMessage errors={errors} name="name" />
-			</Typography>
-
-			<CustomTextField
-				name="name"
-				control={control}
-				defaultValue=""
-				type="text"
-				label="Product name"
-				required={true}
-			/>
-
-			<CustomTextField
-				name="website"
-				label="Website URL"
-				type="text"
-				control={control}
-				defaultValue=""
-				required={true}
-			/>
-
-			<Typography variant="caption" color="red">
-				<ErrorMessage errors={errors} name="email" />
-			</Typography>
-
-			<CustomTextField
-				name="email"
-				label="Company email"
-				type="email"
-				control={control}
-				defaultValue=""
-				required={true}
-			/>
-
-			<div className="[300px] flex justify-end pt-4">
-				<button
-					type="submit"
-					className=" absolute px-[12px] py-[6px] text-[#1976d2] hover:bg-[#1976d20b] "
-				>
-					NEXT
-				</button>
+			<div>
+				<CustomTextField
+					name="name"
+					control={control}
+					defaultValue=""
+					type="text"
+					label="Nombre de producto"
+					required={true}
+				/>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="name" />
+				</p>
 			</div>
+
+			<div>
+				<CustomTextField
+					name="website"
+					label="URL de la pagina web"
+					type="text"
+					control={control}
+					defaultValue=""
+					required={true}
+				/>
+
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="website" />
+				</p>
+			</div>
+
+			<div>
+				<CustomTextField
+					name="email"
+					label="Email de la compania"
+					type="email"
+					control={control}
+					defaultValue=""
+					required={true}
+				/>
+
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="email" />
+				</p>
+			</div>
+
+			<Button type="submit" className="absolute -bottom-14 right-0">
+				SIGUIENTE
+			</Button>
 		</form>
 	)
 }

@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react'
+import { useState, FC } from 'react'
 import Pagination from '@mui/material/Pagination'
 import { ISoftware } from '@/interface/software'
 import CardSoftware from '@/components/ui/cardsoftware/CardSoftware'
@@ -57,7 +57,7 @@ export const Explore: FC<Props> = ({ software }) => {
 					))
 				) : (
 					<h3 className="text-neutral-700">
-						We Don´t Have Softwares Availible for this Category
+						No Contamos con Softwares Disponibles para esta Categoria
 					</h3>
 				)}
 			</ul>

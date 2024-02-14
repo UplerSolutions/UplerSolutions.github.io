@@ -10,16 +10,13 @@ export const Team = () => {
 				<div className="mx-auto max-w-3xl text-center">
 					<div className="flex w-full text-center text-[32px]  font-bold md:text-3xl xl:text-5xl">
 						<p className="w-full pb-5 text-center text-[35px] md:text-3xl xl:text-5xl">
-							<span className="text-neutral-600">Meet our</span>
-							<span className=" text-primary-color "> team</span>
+							<span className="text-neutral-600">Conoce nuestro</span>
+							<span className=" text-primary-color "> equipo</span>
 						</p>
 					</div>
 					<hr className="m-auto w-[100px] border-2 border-primary-color bg-primary-color" />
 					<p className="mt-4 pb-8 text-lg leading-6 text-gray-500">
-						A dedicated group passionate about simplifying software
-						management. With diverse expertise, we&apos;re committed
-						to delivering streamlined solutions for effortless
-						software success
+
 					</p>
 				</div>
 				<div className="mt-8">

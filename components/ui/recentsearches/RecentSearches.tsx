@@ -42,7 +42,7 @@ export const RecentSearches = ({ open, anchorEl, onClose }: Props) => {
 					{!recentSearches.length ? (
 						<>
 							<MenuItem disabled>
-								you do not have resent searchs
+								no tenes busquedas recientes
 							</MenuItem>
 						</>
 					) : (

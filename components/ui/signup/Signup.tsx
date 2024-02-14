@@ -37,7 +37,7 @@ export const Signup = () => {
 	})
 
 	const onSubmit = async (data: FormData) => {
-		const { username, password } = data
+		const { username, password, email } = data
 		const post = await fetch(
 			`${process.env.NEXT_PUBLIC_BACKEND_URL}/createUser`,
 			{
@@ -46,15 +46,9 @@ export const Signup = () => {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					name: 'Joaquin',
-					lastname: 'Marmol',
 					username,
-					email: 'joaquinmarmolnecochea@gmail.com',
+					email,
 					password,
-					city: 'necochea',
-					province: 'buenos aires',
-					street_adrees: '87-784',
-					number_phone: 659056
 				})
 			}
 		)
@@ -92,10 +86,10 @@ export const Signup = () => {
 							className="flex w-[100%] flex-col px-8 pt-8"
 						>
 							<h1 className="pb-4  text-3xl  md:font-medium">
-								Welcome !
+								Bienvenido!
 							</h1>
 							<h1 className="pb-4  text-4xl font-bold md:font-semibold">
-								Sign Up
+								Iniciar Sesión
 							</h1>
 							<label
 								htmlFor="email"
@@ -117,7 +111,7 @@ export const Signup = () => {
 								htmlFor="username"
 								className="py-4 text-xl font-semibold"
 							>
-								Username
+								Nombre de Usuario
 							</label>
 							<input
 								{...register('username')}
@@ -133,7 +127,7 @@ export const Signup = () => {
 								htmlFor="password"
 								className="py-4 text-xl font-semibold"
 							>
-								Password
+								Contraseña
 							</label>
 							<input
 								{...register('password')}
@@ -149,7 +143,7 @@ export const Signup = () => {
 								htmlFor="password"
 								className="py-4 text-xl font-semibold"
 							>
-								Confirm Password
+								Confirmar Contraseña
 							</label>
 							<input
 								{...register('confirmPassword')}
@@ -168,7 +162,7 @@ export const Signup = () => {
 								type="submit"
 								className="h-14 w-full rounded-md bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 							>
-								Signup
+								Registrarse
 							</button>
 						</form>
 						<div className="mt-4 flex w-full flex-col items-center justify-center gap-4 px-8 pb-10">
@@ -179,7 +173,7 @@ export const Signup = () => {
                     {...register('rememberMe')}
                     className='accent-primary-color text-primary-color ml-1 hover:text-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50'
                   />
-                  Remember Me
+                  Remember MeF
                 </label>
                 <a
                   href='/forgot-password'
@@ -191,18 +185,18 @@ export const Signup = () => {
 
 							<div className=" w-full">
 								<h3 className=" py-2 text-center text-neutral-400">
-									or continue with
+									o continue con
 								</h3>
 								<div className="w-full">
 									<GoogleButton />
 								</div>
 								<p className=" pt-4 text-center">
-									Don&apos;t have an account yet?{'  '}
+									¿Ya tenés una cuenta?{'  '}
 									<Link
 										href="/login"
 										className="text-primary-color hover:underline"
 									>
-										Login
+										Iniciar Sesión
 									</Link>
 								</p>
 							</div>

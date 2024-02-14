@@ -14,19 +14,17 @@ const Partner: NextPage = () => {
 					<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl 2xl:text-6xl">
 						<p className="text-[35px] md:text-4xl xl:text-5xl 2xl:text-6xl">
 							<span className=" text-primary-color ">
-								Earn money
+								Gana dinero
 							</span>
 
 							<span className="">
 								{' '}
-								selling your digital products
+								vendiendo tus productos digitales
 							</span>
 						</p>
 					</div>
 					<p className="pb-10 pt-8 text-center font-semibold lg:w-[90%] lg:text-left">
-						Your portal to a world of digital opportunities, where
-						showcasing your products to potential customers
-						won&apos;t cost you a dime.
+						Tu portal hacia un mundo de oportunidades digitales, donde mostrar tus productos a posibles clientes no te costará ni un centavo.
 					</p>
 					<Link
 						href="/apply"
@@ -34,7 +32,7 @@ const Partner: NextPage = () => {
 						className="scroll-smooth"
 					>
 						<button className=" h-12 w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-							Start Selling
+							Empeza a Vender
 						</button>
 					</Link>
 				</div>
@@ -52,9 +50,9 @@ const Partner: NextPage = () => {
 				<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl ">
 					<p className="text-[35px] md:text-3xl xl:text-5xl">
 						<span className="text-neutral-600">
-							Digital products you can
+							Productos Digitales que podés 
 						</span>
-						<span className=" text-primary-color "> sell</span>
+						<span className=" text-primary-color "> vender</span>
 					</p>
 				</div>
 				<hr className="left-0 right-0 m-auto w-[100px] border-2 border-primary-color bg-primary-color " />
@@ -94,118 +92,16 @@ const Partner: NextPage = () => {
 							</h4>
 						</div>
 					</div>
-					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
-						<div>
-							<Image
-								src={
-									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dadd6d8e750039d4bb7_online-course.svg'
-								}
-								width={95}
-								height={95}
-								alt={''}
-							/>
-						</div>
-						<div className="flex flex-col gap-3 md:gap-1">
-							<h4 className="pb-2 text-xl text-black md:text-[25px]">
-								Online courses
-							</h4>
-						</div>
-					</div>
-					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
-						<div>
-							<Image
-								src={
-									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dae354dfad445217802_wordpress.svg'
-								}
-								width={95}
-								height={95}
-								alt={''}
-							/>
-						</div>
-						<div className="flex flex-col gap-3 md:gap-1">
-							<h4 className="pb-2 text-xl text-black md:text-[25px]">
-								WP plugins
-							</h4>
-						</div>
-					</div>
-					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
-						<div>
-							<Image
-								src={
-									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dad660530f06ed5adbd_ebooks.svg'
-								}
-								width={95}
-								height={95}
-								alt={''}
-							/>
-						</div>
-						<div className="flex flex-col gap-3 md:gap-1">
-							<h4 className="pb-2 text-xl text-black md:text-[25px]">
-								Ebooks
-							</h4>
-						</div>
-					</div>
-					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
-						<div>
-							<Image
-								src={
-									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dae9ffab4696f1dbf5b_Template-library.svg'
-								}
-								width={95}
-								height={95}
-								alt={''}
-							/>
-						</div>
-						<div className="flex flex-col gap-3 md:gap-1">
-							<h4 className="pb-2 text-xl text-black md:text-[25px]">
-								Template library
-							</h4>
-						</div>
-					</div>
-					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
-						<div>
-							<Image
-								src={
-									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dade99fbf14133dd328_chrome-library.svg'
-								}
-								width={95}
-								height={95}
-								alt={''}
-							/>
-						</div>
-						<div className="flex flex-col gap-3 md:gap-1">
-							<h4 className="pb-2 text-xl text-black md:text-[25px]">
-								Chrome extensions
-							</h4>
-						</div>
-					</div>
-					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
-						<div>
-							<Image
-								src={
-									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dad8995994bb6a3743c_conference-tickets.svg'
-								}
-								width={95}
-								height={95}
-								alt={''}
-							/>
-						</div>
-						<div className="flex flex-col gap-3 md:gap-1">
-							<h4 className="pb-2 text-xl text-black md:text-[25px]">
-								Conference tickets
-							</h4>
-						</div>
-					</div>
+
+
 				</div>
 				<Link href="/apply" scroll={false} className="scroll-smooth ">
 					<button className=" h-12 w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-						Start Selling
+						Empezá a Vender
 					</button>
 				</Link>
 				<p className="w-[90%] pb-12 text-center text-neutral-600 lg:w-1/3">
-					Don&apos;t see your digital product listed? That&apos;s
-					okay, all products are welcome! List for free and we&apos;ll
-					let you know if it&apos;s a fit.
+					¿No ves tu producto digital listado? No hay problema, ¡todos los productos son bienvenidos! Lista de forma gratuita y te informaremos si es adecuado.
 				</p>
 			</div>
 			<hr className="absolute left-0 right-0 m-auto w-[80px] rotate-90 border-4 border-primary-color bg-primary-color" />
@@ -213,7 +109,7 @@ const Partner: NextPage = () => {
 				<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl ">
 					<p className="text-[35px] md:text-3xl xl:text-5xl">
 						<span className="text-neutral-600 ">
-							How Upler works
+							¿Comó funciona Upler?
 						</span>
 					</p>
 				</div>
@@ -232,11 +128,10 @@ const Partner: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className=" mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								1. List
+								1. Lista
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Start listing your digital product on Upler for
-								free
+								Comienza a listar tu producto digital en Upler de forma gratuita.
 							</p>
 						</div>
 					</div>
@@ -254,11 +149,10 @@ const Partner: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								2. Spread the word
+								2. Difunde la palabra
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								We&apos;ll spread the word with you, telling our
-								1M+ entrepreneurs
+								Nosotros también difundiremos la palabra contigo, informando a nuestros más de 1 millón de emprendedores.
 							</p>
 						</div>
 					</div>
@@ -275,10 +169,10 @@ const Partner: NextPage = () => {
 						</div>
 						<div className="flex flex-col items-center gap-3 md:gap-1">
 							<h4 className="mb:pt-0 pb-0 pt-2 text-xl text-black md:pb-2 md:text-[25px]">
-								3. Get paid
+								3. Ganá Dinero
 							</h4>
 							<p className="w-[90%] text-neutral-600">
-								Earn more money from your digital products
+								Gana más dinero con tus productos digitales.
 							</p>
 						</div>
 					</div>
@@ -289,14 +183,14 @@ const Partner: NextPage = () => {
 				<div className=" relative  flex flex-col place-items-center items-center   pb-7  text-neutral-700">
 					<div className="flex w-[90%] text-center  text-[32px] font-bold md:w-full md:text-3xl xl:text-5xl">
 						<p className="text-[35px] md:text-3xl xl:text-5xl">
-							<span className=""> Our business is </span>
+							<span className=""> Nuestro negocio </span>
 							<span className=" text-primary-color ">
-								helping yours
+								ayuda al tuyo
 							</span>
 						</p>
 					</div>
 					<p className="pb-10 pt-8 text-center font-semibold lg:w-[90%]">
-						You make things. We make things happen.
+						Tú creas cosas. Nosotros hacemos que las cosas sucedan.
 					</p>
 					<Link
 						href="/apply"
@@ -304,11 +198,11 @@ const Partner: NextPage = () => {
 						className="scroll-smooth"
 					>
 						<button className=" h-12 w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-							Start Selling
+							Empieza a Vender
 						</button>
 					</Link>
 					<p className="  pt-2 text-xs text-neutral-500">
-						Get paid. No upfront fees.
+						Ganá Dinero. Sin tarifas por adelantado..
 					</p>
 				</div>
 			</div>

@@ -50,7 +50,7 @@ const HelpDetailPage = () => {
 					<div className="flex w-auto gap-9 font-lato text-lg font-medium">
 						<Link href="/">
 							<p className="group relative inline-block text-[0.9rem]">
-								Home
+								Inicio
 								<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 							</p>
 						</Link>
@@ -65,11 +65,11 @@ const HelpDetailPage = () => {
 							className="absolute top-[80px] flex items-center gap-2 pt-2 text-xs font-semibold uppercase md:relative md:top-0"
 						>
 							<BiArrowBack className="scale-[1.3] text-primary-color" />{' '}
-							help/
+							Ayuda
 							{selectedCategory}
 						</Link>
 						<ul className="list-none pl-1 md:pl-5">
-							<h1 className="pb-4 pt-4 text-2xl">CATEGORIES</h1>
+							<h1 className="pb-4 pt-4 text-2xl">CATEGORIAS</h1>
 							<li
 								onClick={() =>
 									handleCategoryClick('GeneralInfo')
@@ -85,7 +85,7 @@ const HelpDetailPage = () => {
 								) : (
 									''
 								)}{' '}
-								General Info
+								Informacion General
 							</li>
 							<li
 								onClick={() => handleCategoryClick('Partners')}
@@ -115,7 +115,7 @@ const HelpDetailPage = () => {
 								) : (
 									''
 								)}{' '}
-								Licenses
+								Licencias
 							</li>
 						</ul>
 					</div>

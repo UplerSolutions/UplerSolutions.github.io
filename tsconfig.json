@@ -25,7 +25,8 @@
 		"components/ui/recentsearches/index.ts",
 		"pages/_app.tsx",
 		"pages/auth/nextauth.js",
-		"pages/api/auth/[...nextauth].ts"
+		"pages/api/auth/[...nextauth].ts",
+		"rules/index.ts"
 	],
 	"exclude": ["node_modules"]
 }

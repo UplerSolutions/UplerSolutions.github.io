@@ -40,14 +40,14 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
 			<div className="flex w-full flex-col items-center justify-center gap-8 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] pt-24 lg:flex-row lg:items-start lg:pt-48 xl:pb-16 2xl:pb-20">
 				<div className="relative flex w-[80%] flex-col  place-items-center items-center pb-7 text-neutral-700 lg:ml-[7%] lg:w-[40%]  lg:place-items-start  lg:items-start">
 					<div className="text-center text-[40px] font-bold md:text-left md:text-5xl  2xl:text-7xl">
-						<h3 className="md:pb-4 ">Your Ultimate</h3>
+						<h3 className="md:pb-4 ">Tu Suscripción</h3>
 						<span className="text-[35px] text-primary-color md:text-5xl  2xl:text-7xl">
-							Subscription.
+							Definitiva.
 						</span>
 					</div>
 					<p className="pb-10 pt-6 text-center lg:w-[50%] lg:text-left">
-						Gain access to hundreds of software tools. All in one
-						single subscription.
+						Accede a cientas de herramientas de software. Todo en
+						una única suscripción.
 					</p>
 					<Link
 						href="/software"
@@ -55,7 +55,7 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
 						className="scroll-smooth"
 					>
 						<button className="h-12  w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-							Find Your Software
+							Encuentra Tu Software
 						</button>
 					</Link>
 				</div>
@@ -65,20 +65,20 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
 						category={undefined}
 					/>
 					<div className=" flex w-full justify-center pt-2 font-semibold text-primary-color lg:items-end lg:justify-end">
-						<Link href={'/software'}>View all</Link>
+						<Link href={'/software'}>Explorá</Link>
 					</div>
 				</div>
 			</div>
 
 			{/*       CONTRIBUTIONS BANNER
-      <main className=' pb-6 flex-wrap md:flex-nowrap md:flex justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
-        <div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-around md:justify-center md:flex-nowrap py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
-          {contributions.map((contribution) => (
-            <Contributions key={contribution.id} count={contribution} />
-          ))}
-        </div>
-      </main>
-       */}
+					<main className=' pb-6 flex-wrap md:flex-nowrap md:flex justify-center items-center lg:pb-10 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] text-neutral-700'>
+						<div className='flex flex-wrap gap-3 md-gap-0 w-full items-center justify-around md:justify-center md:flex-nowrap py-4 md:w-4/5 lg:w-[74%] rounded-[40px] bg- md:bg-white md:bg-opacity-[0.5] '>
+						{contributions.map((contribution) => (
+							<Contributions key={contribution.id} count={contribution} />
+						))}
+						</div>
+					</main>
+				*/}
 			<Upler />
 			<Benefits />
 			<div

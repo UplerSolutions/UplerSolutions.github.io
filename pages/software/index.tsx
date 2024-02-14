@@ -7,9 +7,7 @@ import { SearchBar } from '@/components/ui/searchbar'
 import { RecentSearches } from '@/components/ui/recentsearches'
 import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
-import FilterMobile from '@/components/ui/filter/FilterMobile'
 import Filter from '@/components/ui/filter/Filter'
-import { MarketCarousel } from '@/components/ui/marketcarousel/MarketCarousel'
 
 import { ISoftware } from '@/interface/software'
 import { ICategory } from '@/interface/category'
@@ -19,7 +17,6 @@ import {
 	getSoftwaresByCategory
 } from '@/service/software/software-service'
 import { getCategories } from '@/service/categories/categories-service'
-import { AiOutlineClear } from 'react-icons/ai'
 
 interface Props {
 	software: ISoftware[]
@@ -88,7 +85,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 						Softwares
 					</h1>
 					<p className="w-[90%] text-xl text-neutral-700">
-						Explore our collection and find your solution.
+						Explorá nuestra colección y encontra tu solución
 					</p>
 				</div>
 

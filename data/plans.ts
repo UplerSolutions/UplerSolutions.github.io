@@ -3,26 +3,27 @@ import { IPlan } from '@/interface/plan'
 export const data: IPlan[] = [
 	{
 		id: 1,
-		name: 'Basic',
-		description: 'Begin with a strong start',
+		name: 'Básico',
+		description: 'Comienza con un inicio sólido',
 		price: 4,
-		benefits: ['Two software to choose'],
+		benefits: ['Dos programas de software para elegir'],
 		amount: 2
 	},
 	{
 		id: 2,
-		name: 'Advanced',
-		description: 'Boost Your Productivity with Essential Tools',
+		name: 'Avanzado',
+		description: 'Aumenta tu productividad con herramientas esenciales',
 		price: 10,
-		benefits: ['Four software to choose'],
+		benefits: ['Cuatro programas de software para elegir'],
 		amount: 4
 	},
 	{
 		id: 3,
-		name: 'Expert',
-		description: 'Empower Your Business with Versatile Solutions',
+		name: 'Experto',
+		description: 'Potencia tu negocio con soluciones versátiles',
 		price: 14,
-		benefits: ['Eight software to choose'],
+		benefits: ['Ocho programas de software para elegir'],
 		amount: 8
 	}
-]
+];
+

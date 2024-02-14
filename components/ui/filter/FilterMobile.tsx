@@ -46,7 +46,7 @@ const FilterMobile: FC<Props> = ({
 							<div className="py-5">
 								<details className="group">
 									<summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-										<span className="pb-3">Category</span>
+										<span className="pb-3">Categoría</span>
 										<span className="transition group-open:rotate-180">
 											<svg
 												fill="none"
@@ -89,7 +89,7 @@ const FilterMobile: FC<Props> = ({
 							<div className="py-5">
 								<details className="group">
 									<summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-										<span>Ratings</span>
+										<span>Valoracióm</span>
 										<span className="transition group-open:rotate-180">
 											<svg
 												fill="none"
@@ -119,7 +119,7 @@ const FilterMobile: FC<Props> = ({
 							<hr className="h-[2px] bg-primary-color" />
 							<div className="pt-3">
 								<div className="">
-									<span className="font-medium">Price</span>
+									<span className="font-medium">Precio</span>
 									<span className="transition group-open:rotate-180">
 										<svg
 											fill="none"
@@ -155,7 +155,7 @@ const FilterMobile: FC<Props> = ({
 									onClick={handleRouterPush}
 								>
 									{' '}
-									Search
+									Buscar
 								</button>
 								<button
 									className="mt-6 h-12  w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
@@ -163,7 +163,7 @@ const FilterMobile: FC<Props> = ({
 									onClick={handleRouterClear}
 								>
 									{' '}
-									Clear Filters
+									Limpiar Filtros
 								</button>
 							</div>
 						</div>

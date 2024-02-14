@@ -1,5 +1,4 @@
-import { FC, useState } from 'react'
-import Link from 'next/link'
+import { useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
 import { data } from '@/data/plans'
 import { Carousel } from '@/components/ui/carousel/Carousel'
@@ -37,8 +36,8 @@ export const CardPlan = () => {
 			<section className="hidden w-full max-w-[100%] md:flex md:flex-col">
 				<div className="m-auto max-h-max w-full px-2 md:py-6 lg:py-8 xl:max-w-[80%] 2xl:max-w-[75%]">
 					<h1 className="text-center text-3xl font-bold text-neutral-700 lg:p-8 lg:text-5xl">
-						A bundle for each
-						<span className="text-primary-color"> need </span>
+						Un paquete para cada 
+						<span className="text-primary-color"> necesidad </span>
 					</h1>
 					<ul className="flex flex-wrap items-center justify-center gap-5 pt-10 2xl:gap-14">
 						{plans.map((plan: IPlan) => (
@@ -63,18 +62,18 @@ export const CardPlan = () => {
 											<span className="text-xl">$</span>
 											{plan.price}
 											<span className=" text-base font-normal text-neutral-600">
-												USD /month
+												USD /mes
 											</span>
 										</h2>
 										<button className="h-12 w-48 cursor-not-allowed rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-100 hover:text-primary-color hover:delay-100">
-											Acquire the Bundle
+											Adquiere el Paquete
 										</button>
 									</div>
 									<div className="flex flex-1 flex-col px-6">
 										<div>
 											<hr className="border-o mb-6 h-[2px] rounded bg-neutral-400" />
 											<h2 className="text-xl font-semibold">
-												{plan.name} Bundle Includes
+												{plan.name} Paquete Incluye
 											</h2>
 											<ul className="pb-6">
 												{plan.benefits.map(
@@ -93,7 +92,7 @@ export const CardPlan = () => {
 											</ul>
 											<hr className=" border-o mx-1 my-1 h-[2px] rounded bg-neutral-400" />
 											<h2 className="text-xl font-semibold">
-												Benefits
+												Beneficios
 											</h2>
 										</div>
 

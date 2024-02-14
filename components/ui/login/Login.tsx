@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -71,16 +71,16 @@ export const Login = () => {
 						>
 							<div className="flex w-[100%] flex-col px-8 pt-8">
 								<h1 className="pb-6  text-3xl  md:font-medium">
-									Welcome !
+									Bienvenido !
 								</h1>
 								<h1 className="pb-6  text-4xl font-bold md:font-semibold">
-									Log In
+									Iniciar Sesión
 								</h1>
 								<label
 									htmlFor="username"
 									className="py-4 text-xl font-semibold"
 								>
-									Email or Username
+									Email or Nombre de Usuario
 								</label>
 								<input
 									{...register('username')}
@@ -99,7 +99,7 @@ export const Login = () => {
 									htmlFor="password"
 									className="py-4 text-xl font-semibold"
 								>
-									Password
+									Contraseña
 								</label>
 								<input
 									{...register('password')}
@@ -137,7 +137,7 @@ export const Login = () => {
 									type="submit"
 									className="h-14 w-full rounded-md bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 								>
-									Login
+									Iniciar Sesión
 								</button>
 								{errorsApi && (
 									<Typography variant="caption" color="red">
@@ -145,7 +145,7 @@ export const Login = () => {
 									</Typography>
 								)}
 								<h3 className=" text-neutral-400">
-									or continue with
+									o continuar con 
 								</h3>
 							</div>
 						</form>
@@ -155,12 +155,12 @@ export const Login = () => {
 
 						<div className="mt-4">
 							<p className="">
-								Don&apos;t have an account yet?{'  '}
+								¿No tenés cuenta?{'  '}
 								<Link
 									href="/register"
 									className="text-primary-color hover:underline"
 								>
-									Register
+									Registrate
 								</Link>
 							</p>
 						</div>

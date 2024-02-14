@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Image from 'next/image'
 import { useFormContext } from 'react-hook-form'
 

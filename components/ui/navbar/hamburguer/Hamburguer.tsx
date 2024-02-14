@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Signin from '../../signin/Signin'
 import Link from 'next/link'
 
@@ -29,7 +29,7 @@ export const Hamburguer = () => {
 									className="flex flex-row items-center gap-2 text-center"
 									href="/#plans"
 								>
-									<span className=" text-lg">Plans</span>
+									<span className=" text-lg">Planes</span>
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />
@@ -47,7 +47,7 @@ export const Hamburguer = () => {
 									className="flex items-center gap-2 text-center"
 									href="/aboutUs"
 								>
-									<span className=" text-lg">About Us</span>
+									<span className=" text-lg">Sobre nosotros</span>
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />
