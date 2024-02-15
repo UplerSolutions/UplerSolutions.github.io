@@ -1,9 +1,9 @@
-import * as React from 'react'
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Image from 'next/image'
 import { BsCheck2 } from 'react-icons/bs'
 import { IoStarSharp } from 'react-icons/io5'
+import { SyntheticEvent, useState } from 'react'
 
 interface Software {
 	longDescription: string
@@ -11,9 +11,9 @@ interface Software {
 	productName: string
 }
 export const Product = ({ software }: { software: Software }) => {
-	const [value, setValue] = React.useState('overview')
+	const [value, setValue] = useState('overview')
 
-	const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+	const handleChange = (event: SyntheticEvent, newValue: string) => {
 		setValue(newValue)
 	}
 	return (

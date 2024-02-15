@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react'
+import { useState, FC } from 'react'
 import Pagination from '@mui/material/Pagination'
 import { ISoftware } from '@/interface/software'
 import CardSoftware from '@/components/ui/cardsoftware/CardSoftware'

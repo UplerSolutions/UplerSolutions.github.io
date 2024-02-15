@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Signin from '../../signin/Signin'
 import Link from 'next/link'
 

@@ -6,9 +6,9 @@ interface Props {
 }
 
 const steps = [
-	'Personal Information',
-	'Company Information',
-	'Company Features'
+	'Información Personal',
+	'Información de la Compania',
+	'Características del Producto'
 ]
 
 export const Stepper: FC<Props> = ({ activeStep }) => {
@@ -24,7 +24,7 @@ export const Stepper: FC<Props> = ({ activeStep }) => {
 							? 'first'
 							: index === steps.length - 1
 							  ? 'last'
-							  : 'middle'
+					 		  : 'middle'
 					}
 				>
 					{step}

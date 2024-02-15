@@ -1,6 +1,6 @@
-import { BiUser } from 'react-icons/bi'
-import React, { useEffect, useState } from 'react'
-import { signIn, signOut, useSession } from 'next-auth/react'
+
+import { useEffect, useState } from 'react'
+import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { PiHandCoinsDuotone } from 'react-icons/pi'

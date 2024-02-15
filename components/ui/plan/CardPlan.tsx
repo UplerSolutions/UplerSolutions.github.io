@@ -1,5 +1,4 @@
-import { FC, useState } from 'react'
-import Link from 'next/link'
+import { useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
 import { data } from '@/data/plans'
 import { Carousel } from '@/components/ui/carousel/Carousel'
