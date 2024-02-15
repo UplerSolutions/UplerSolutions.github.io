@@ -14,11 +14,12 @@ export default function HorizontalLinearStepper() {
 	}
 
 	return (
-		<div className="flex w-[97%] flex-col lg:w-[60%] ">
+		<div className="flex w-full max-w-[1000px] flex-col">
 			<Stepper activeStep={activeStep} />
 
 			<CustomForm
 				activeStep={activeStep}
+				setActiveStep={setActiveStep}
 				handleBack={handleBack}
 				handleNext={handleNext}
 			/>

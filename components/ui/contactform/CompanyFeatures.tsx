@@ -2,13 +2,13 @@ import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
-
+import { Button } from '../button'
 
 interface Props {
-	handlerAddress: (data: any) => void
+	handlerProduct: (data: any) => void
 }
 
-const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
+const CompanyFeatures: FC<Props> = ({ handlerProduct }) => {
 	const {
 		control,
 		formState: { errors },
@@ -16,12 +16,17 @@ const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
 	} = useForm()
 
 	const onSubmit = (data: any) => {
-		handlerAddress(data)
+		handlerProduct(data)
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-			<h4 className="mb-4 text-center text-4xl">Características del Producto</h4>
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className="relative flex flex-col gap-4"
+		>
+			<h4 className="mb-4 text-center text-4xl">
+				Características del Producto
+			</h4>
 
 			<div>
 				<CustomTextField
@@ -38,7 +43,7 @@ const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
 
 			<div>
 				<CustomTextField
-					name="descripción"
+					name="description"
 					label="Descripción"
 					type="text"
 					control={control}
@@ -50,17 +55,23 @@ const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
 				</p>
 			</div>
 
-			<CustomTextField
-				name="categoria"
-				label="Categoria"
-				type="email"
-				control={control}
-				required={true}
-			/>
+			<div>
+				<CustomTextField
+					name="category"
+					label="Categoria"
+					type="text"
+					control={control}
+					required={true}
+				/>
 
-			<p className="text-sm font-medium text-red-500">
-				<ErrorMessage errors={errors} name="categoria" />
-			</p>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="categoria" />
+				</p>
+			</div>
+
+			<Button type="submit" className="absolute -bottom-14 right-0">
+				SIGUIENTE
+			</Button>
 		</form>
 	)
 }

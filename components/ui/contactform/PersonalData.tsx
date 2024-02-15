@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { ChangeEvent, FC } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
@@ -23,7 +23,7 @@ const PersonalData: FC<Props> = ({ handlerCustomer }) => {
 
 	return (
 		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-			<h4 className="mb-4 text-center text-4xl">Información  Personal</h4>
+			<h4 className="mb-4 text-center text-4xl">Información Personal</h4>
 
 			<div>
 				<CustomTextField
