@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
-import { ContactForm } from '@/components/ui/contactform/ContactForm'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Benefits } from '@/components/ui/benefits'
 import ScrollButton from '@/components/ui/scrollbutton/ScrollButton'
 
 const Partner: NextPage = () => {

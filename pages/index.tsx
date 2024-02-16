@@ -1,24 +1,20 @@
 'use client' // For Next JS 13 app router
-
 import React from 'react'
-
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { SITE_NAME, SITE_DESCRIPTION } from '@/utils/config'
 import { Layout } from '@/components/layout/Layout'
-import { Contributions } from '@/components/ui/contributions'
 import { CardPlan } from '@/components/ui/plan'
 import { Benefits } from '@/components/ui/benefits'
 import { Upler } from '@/components/ui/upler/Upler'
 import { Partner } from '@/components/ui/partner/Partner'
-import { MarketCarousel } from '@/components/ui/marketcarousel/MarketCarousel'
-import { useEffect, useState } from 'react'
+
 import { getSoftwares } from '../service/software/software-service'
 import { ISoftware } from '@/interface/software'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
-import Script from 'next/script'
 import ScrollButton from '@/components/ui/scrollbutton/ScrollButton'
+
 const ScrollCarousel = dynamic(
 	() => import('@/components/ui/marketcarousel/MarketCarousel'),
 	{ ssr: false }

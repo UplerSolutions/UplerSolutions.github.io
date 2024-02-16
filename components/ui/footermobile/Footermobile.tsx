@@ -5,7 +5,6 @@ import {
 	FaInstagram,
 	FaLinkedin,
 	FaYoutube,
-	FaGreaterThan,
 	FaTwitter
 } from 'react-icons/fa'
 import Image from 'next/image'

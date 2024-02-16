@@ -25,8 +25,8 @@ export const Stepper: FC<Props> = ({ activeStep }) => {
 						index === 0
 							? 'first'
 							: index === steps.length - 1
-							  ? 'last'
-							  : 'middle'
+								? 'last'
+								: 'middle'
 					}
 				>
 					{step}

@@ -1,8 +1,5 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
-import { Login } from '@/components/ui/login/Login'
-import { Navbar } from '../../components/ui/navbar/Navbar'
-import Image from 'next/image'
 import { Panel } from '@/components/ui/panel/Panel'
 import { useSession } from 'next-auth/react'
 import { SideBar } from '@/components/ui/sidebar-dashboard'

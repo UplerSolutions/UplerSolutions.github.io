@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import { BiChevronDown, BiUser } from 'react-icons/bi'
+import { BiUser } from 'react-icons/bi'
 import { FaSignOutAlt } from 'react-icons/fa'
 
 const SigninButton = () => {
@@ -61,9 +61,8 @@ const SigninButton = () => {
 					<div>
 						<button
 							onClick={handleClick}
-							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${
-								isOpen ? '' : ''
-							}`}
+							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${isOpen ? '' : ''
+								}`}
 							aria-expanded="true"
 							aria-haspopup="true"
 						>
@@ -144,9 +143,8 @@ const SigninButton = () => {
 					<div>
 						<button
 							onClick={handleClick}
-							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${
-								isOpen ? '' : ''
-							}`}
+							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${isOpen ? '' : ''
+								}`}
 							aria-expanded="true"
 							aria-haspopup="true"
 						>

@@ -4,7 +4,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation, Mousewheel, Keyboard, Pagination } from 'swiper/modules'
-import Link from 'next/link'
 // Import Swiper styles
 import { FaCheck } from 'react-icons/fa'
 import { useState } from 'react'
