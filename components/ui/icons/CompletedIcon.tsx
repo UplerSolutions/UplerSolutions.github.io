@@ -4,7 +4,7 @@ interface IconProps {
 	className?: string
 }
 
-export const CompletedIcon: FC<IconProps> = ({ className = 'h-12 w-12' }) => (
+export const CompletedIcon: FC<IconProps> = ({ className = 'h-6 w-6' }) => (
 	<svg
 		className={`me-2.5 ${className}`}
 		aria-hidden="true"

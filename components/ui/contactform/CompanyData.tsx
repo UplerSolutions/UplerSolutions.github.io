@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
@@ -7,10 +7,10 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { companyDataSchema } from '@/rules'
 
 interface Props {
-	handlerAddress: (data: any) => void
+	handlerCompany: (data: any) => void
 }
 
-const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
+const CompanyData: FC<Props> = ({ handlerCompany }) => {
 	const {
 		control,
 		formState: { errors },
@@ -18,7 +18,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 	} = useForm({ resolver: yupResolver(companyDataSchema) })
 
 	const onSubmit = (data: any) => {
-		handlerAddress(data)
+		handlerCompany(data)
 	}
 
 	return (
@@ -26,7 +26,9 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 			onSubmit={handleSubmit(onSubmit)}
 			className="relative flex flex-col gap-4"
 		>
-			<h4 className="mb-4 text-center text-4xl">Información de la Compania</h4>
+			<h4 className="mb-4 text-center text-4xl">
+				Información de la Compania
+			</h4>
 
 			<div>
 				<CustomTextField
@@ -34,7 +36,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 					control={control}
 					defaultValue=""
 					type="text"
-					label="Nombre de producto"
+					label="Nombre de compañía"
 					required={true}
 				/>
 				<p className="text-sm font-medium text-red-500">
@@ -60,7 +62,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 			<div>
 				<CustomTextField
 					name="email"
-					label="Email de la compania"
+					label="Email de la compañía"
 					type="email"
 					control={control}
 					defaultValue=""
@@ -79,4 +81,4 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 	)
 }
 
-export default DataDireccionEntrega
+export default CompanyData
