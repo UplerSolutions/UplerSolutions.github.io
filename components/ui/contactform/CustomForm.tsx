@@ -93,19 +93,19 @@ const CustomForm: FC<Props> = ({
 		<section className="mt-4 flex w-full flex-col rounded-md p-8 text-black shadow-form">
 			<div>
 				{activeStep === 0 && (
-					<PersonalData handlerCustomer={handlerCustomer} />
+					<PersonalData handlerCustomer={handlerCustomer} info={info} />
 				)}
 
 				{activeStep === 1 && (
-					<CompanyData handlerCompany={handlerCompany} />
+					<CompanyData handlerCompany={handlerCompany} info={info} />
 				)}
 
 				{activeStep === 2 && (
-					<CompanyFeatures handlerProduct={handlerProduct} />
+					<CompanyFeatures handlerProduct={handlerProduct} info={info} />
 				)}
 
 				{activeStep === 3 && (
-					<Confirmation info={info} setActiveStep={setActiveStep} />
+					<Confirmation info={info} setActiveStep={setActiveStep}  />
 				)}
 			</div>
 

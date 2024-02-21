@@ -5,17 +5,19 @@ import { ErrorMessage } from '@hookform/error-message'
 import { Button } from '@/components/ui/button'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { personalDataSchema } from '@/rules'
+import { DefaultValues } from './CustomForm'
 
 interface Props {
 	handlerCustomer: (data: any) => void
+	info: DefaultValues
 }
 
-const PersonalData: FC<Props> = ({ handlerCustomer }) => {
+const PersonalData: FC<Props> = ({ handlerCustomer, info }) => {
 	const {
 		control,
 		formState: { errors },
 		handleSubmit
-	} = useForm({ resolver: yupResolver(personalDataSchema) })
+	} = useForm({defaultValues:info.customerInfo ,resolver: yupResolver(personalDataSchema) })
 
 	const onSubmit: SubmitHandler<any> = (data: any) => {
 		handlerCustomer(data)

@@ -3,17 +3,21 @@ import { useForm } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
 import { Button } from '../button'
+import { DefaultValues } from './CustomForm'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { productFeatures } from '@/rules'
 
 interface Props {
 	handlerProduct: (data: any) => void
+	info: DefaultValues
 }
 
-const CompanyFeatures: FC<Props> = ({ handlerProduct }) => {
+const CompanyFeatures: FC<Props> = ({ handlerProduct, info }) => {
 	const {
 		control,
 		formState: { errors },
 		handleSubmit
-	} = useForm()
+	} = useForm({ defaultValues: info.productFeatures, resolver: yupResolver(productFeatures) })
 
 	const onSubmit = (data: any) => {
 		handlerProduct(data)
@@ -51,7 +55,7 @@ const CompanyFeatures: FC<Props> = ({ handlerProduct }) => {
 				/>
 
 				<p className="text-sm font-medium text-red-500">
-					<ErrorMessage errors={errors} name="descripción" />
+					<ErrorMessage errors={errors} name="description" />
 				</p>
 			</div>
 
@@ -65,7 +69,7 @@ const CompanyFeatures: FC<Props> = ({ handlerProduct }) => {
 				/>
 
 				<p className="text-sm font-medium text-red-500">
-					<ErrorMessage errors={errors} name="categoria" />
+					<ErrorMessage errors={errors} name="category" />
 				</p>
 			</div>
 

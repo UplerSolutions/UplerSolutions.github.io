@@ -5,17 +5,19 @@ import { ErrorMessage } from '@hookform/error-message'
 import { Button } from '@/components/ui/button'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { companyDataSchema } from '@/rules'
+import { DefaultValues } from './CustomForm'
 
 interface Props {
 	handlerCompany: (data: any) => void
+	info: DefaultValues
 }
 
-const CompanyData: FC<Props> = ({ handlerCompany }) => {
+const CompanyData: FC<Props> = ({ handlerCompany, info }) => {
 	const {
 		control,
 		formState: { errors },
 		handleSubmit
-	} = useForm({ resolver: yupResolver(companyDataSchema) })
+	} = useForm({ defaultValues: info.companyInfo, resolver: yupResolver(companyDataSchema) })
 
 	const onSubmit = (data: any) => {
 		handlerCompany(data)
