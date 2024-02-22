@@ -38,7 +38,7 @@ export const Hamburguer = () => {
 									className="flex items-center gap-2 text-center"
 									href="/partners"
 								>
-									<span className=" text-lg">Partner</span>
+									<span className=" text-lg">Vender</span>
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />{' '}

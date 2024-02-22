@@ -89,7 +89,7 @@ export const Signup = () => {
 								Bienvenido!
 							</h1>
 							<h1 className="pb-4  text-4xl font-bold md:font-semibold">
-								Iniciar Sesión
+								Registrate
 							</h1>
 							<label
 								htmlFor="email"

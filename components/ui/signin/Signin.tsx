@@ -208,12 +208,12 @@ const SigninButton = () => {
 		return (
 			<div className="absolute flex w-60 items-center justify-center gap-4 font-lato text-[16px] md:relative md:flex md:w-auto md:gap-6">
 				<Link href="/login">
-					<span className="text-primary-color">Log in</span>
+					<span className="text-primary-color">Iniciar Sesión</span>
 				</Link>
 
 				<Link href="/register">
 					<button className="group relative h-9 w-24 rounded-xl border-2  border-primary-color bg-primary-color px-2 text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-						Sign up
+						Regsitrarse
 					</button>
 				</Link>
 			</div>
