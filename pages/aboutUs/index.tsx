@@ -134,7 +134,7 @@ const Aboutus: NextPage = () => {
 			<div className="flex flex-col items-center justify-center gap-8 bg-purple-100 py-20 md:gap-5 ">
 				<div className="flex w-[90%] justify-center text-center text-[32px] font-bold  md:text-left md:text-3xl lg:w-full xl:text-5xl ">
 					<p className="text-center text-[35px] md:text-3xl xl:text-5xl">
-						<span className="text-neutral-600 ">Conoce Nuestros</span>
+						<span className="text-neutral-600 ">Conoce Nuestros </span>
 
 						<span className="text-primary-color ">Principios</span>
 					</p>
