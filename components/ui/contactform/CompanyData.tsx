@@ -61,20 +61,6 @@ const CompanyData: FC<Props> = ({ handlerCompany, info }) => {
 				</p>
 			</div>
 
-			<div>
-				<CustomTextField
-					name="email"
-					label="Email de la compañía"
-					type="email"
-					control={control}
-					defaultValue=""
-					required={true}
-				/>
-
-				<p className="text-sm font-medium text-red-500">
-					<ErrorMessage errors={errors} name="email" />
-				</p>
-			</div>
 
 			<Button type="submit" className="absolute -bottom-14 right-0">
 				SIGUIENTE

@@ -10,68 +10,94 @@ interface Props {
 export const Confirmation: FC<Props> = ({ info, setActiveStep }) => {
 	return (
 		<>
-			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl">
+			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl font-bold">
 				Información Personal{' '}
 				<button onClick={(e) => setActiveStep(0)}>
-					<EditIcon className="mt-1 h-7 w-7" />
+					<EditIcon className="ml-4 mt-1 h-7 w-7" />
 				</button>
 			</h4>
 
-			<div className="mb-4 flex flex-col">
-				<p>
-					<strong>Nombre:</strong> {info.customerInfo.name}
-				</p>
-				<p>
-					<strong>Apellido:</strong> {info.customerInfo.lastname}
-				</p>
-				<p>
-					<strong>Email:</strong> {info.customerInfo.email}
-				</p>
-				<p>
-					<strong>Posición:</strong> {info.customerInfo.position}
-				</p>
+			<div className="mb-4 flex flex-col ">
+				<div className="flex  w-4/5">
+					<p className=" w-[25%]  text-xl font-bold ">Nombre </p>
+					<span className=" text-xl font-normal italic">
+						{info.customerInfo.name}
+					</span>
+				</div>
+				<div className="flex  w-4/5">
+					<p className="w-[25%] text-xl  font-bold  ">Apellido </p>
+					<span className="text-xl font-normal italic">
+						{info.customerInfo.lastname}
+					</span>
+				</div>
+				<div className="flex w-4/5">
+					<p className="w-[25%] text-xl  font-bold  ">Email </p>
+					<span className="text-xl font-normal italic">
+						{info.customerInfo.email}
+					</span>
+				</div>
+				<div className="flex  w-4/5">
+					<p className="w-[25%] text-xl  font-bold  ">Posición </p>
+					<span className="text-xl font-normal italic">
+						{info.customerInfo.position}
+					</span>
+				</div>
 			</div>
 
-			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl">
+			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl font-bold">
 				Información de la Compañía{' '}
 				<button onClick={(e) => setActiveStep(1)}>
-					<EditIcon className="mt-1 h-7 w-7" />
+					<EditIcon className="ml-4 mt-1 h-7 w-7" />
 				</button>
 			</h4>
 
 			<div className="mb-4 flex flex-col">
-				<p>
-					<strong>Nombre de compañía:</strong> {info.companyInfo.name}
-				</p>
-				<p>
-					<strong>URL de la pagina web:</strong>{' '}
-					{info.companyInfo.website}
-				</p>
-				<p>
-					<strong>Email de la compañía:</strong>{' '}
-					{info.companyInfo.email}
-				</p>
+				<div className="flex ">
+					<p className="w-[35%] text-xl  font-bold  ">
+						Nombre de compañía
+					</p>
+					<span className="  text-xl font-normal italic">
+						{info.companyInfo.name}
+					</span>
+				</div>
+				<div className="flex ">
+					<p className="w-[35%] text-xl  font-bold  ">URL</p>
+					<span className=" text-xl font-normal italic">
+						{info.companyInfo.website}
+					</span>
+				</div>
 			</div>
 
-			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl">
+			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl font-bold">
 				Información del Producto{' '}
 				<button onClick={(e) => setActiveStep(2)}>
-					<EditIcon className="mt-1 h-7 w-7" />
+					<EditIcon className="ml-4 mt-1 h-7 w-7" />
 				</button>
 			</h4>
 
 			<div className="mb-4 flex flex-col">
-				<p>
-					<strong>Nombre del Producto:</strong>{' '}
-					{info.productFeatures.name}
-				</p>
-				<p>
-					<strong>Descripción:</strong>{' '}
-					{info.productFeatures.description}
-				</p>
-				<p>
-					<strong>Categoria:</strong> {info.productFeatures.category}
-				</p>
+				<div className="flex  w-4/5">
+					<p className=" w-[40%] text-xl  font-bold  ">
+						Nombre del Producto{' '}
+					</p>
+					<span className=" text-xl font-normal italic">
+						{info.productFeatures.name}
+					</span>
+				</div>
+				<div className="flex w-4/5">
+					<p className=" w-[40%] text-xl  font-bold  ">
+						Descripción{' '}
+					</p>
+					<span className=" text-xl font-normal italic">
+						{info.productFeatures.description}
+					</span>
+				</div>
+				<div className="flex w-4/5">
+					<p className=" w-[40%] text-xl  font-bold  ">Categoria </p>
+					<span className=" text-xl font-normal italic">
+						{info.productFeatures.category}
+					</span>
+				</div>
 			</div>
 		</>
 	)

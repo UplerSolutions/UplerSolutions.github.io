@@ -26,7 +26,6 @@ export interface DefaultValues {
 	companyInfo: {
 		name: string
 		website: string
-		email: string
 	}
 	productFeatures: {
 		name: string
@@ -45,7 +44,6 @@ const defaultValues: DefaultValues = {
 	companyInfo: {
 		name: '',
 		website: '',
-		email: ''
 	},
 	productFeatures: {
 		name: '',
