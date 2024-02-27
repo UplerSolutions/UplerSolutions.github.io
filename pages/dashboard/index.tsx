@@ -7,6 +7,7 @@ import { SideBar } from '@/components/ui/sidebar-dashboard'
 
 const Dashboard: NextPage = () => {
 	const { data: session, status } = useSession()
+	
 	return (
 		<Layout title="Upler - Dashboard">
 			<div className="h-[90vh] w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
