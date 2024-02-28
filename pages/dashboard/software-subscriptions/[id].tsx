@@ -4,31 +4,9 @@ import { SideBar } from '@/components/ui/sidebar-dashboard'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import Pagination from '@mui/material/Pagination'
 
 const SoftwareSuscriptions: NextPage = () => {
-	const { data: session } = useSession()
-	const router = useRouter()
-	const pageSize = 5
-	const totalPages = Math.ceil(pageSize)
 
-	const [currentPage, setCurrentPage] = useState<number>(1)
-
-	const onPageChange = (page: number) => {
-		setCurrentPage(page)
-	}
-	const handlePaginationChange = (
-		event: React.ChangeEvent<unknown>,
-		page: number
-	) => {
-		onPageChange(page)
-	}
-
-	useEffect(() => {
-		if (session && session.user && router.pathname === '/login') {
-			router.push('/')
-		}
-	}, [session, router])
 
 	return (
 		<Layout title="Upler - Dashboard">
@@ -70,14 +48,6 @@ const SoftwareSuscriptions: NextPage = () => {
 										</div>
 									</div>
 								</div>
-							</div>
-							<div className="">
-								<Pagination
-									count={totalPages}
-									page={currentPage}
-									onChange={handlePaginationChange}
-									className="pt-10"
-								/>
 							</div>
 						</div>
 					</div>

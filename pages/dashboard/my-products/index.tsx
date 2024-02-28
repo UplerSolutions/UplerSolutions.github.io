@@ -5,6 +5,7 @@ import { AiOutlinePlusSquare } from 'react-icons/ai'
 import { getSoftware } from '@/service/software/software-service'
 import { ISoftware } from '@/interface/software'
 import Image from 'next/image'
+
 interface Props {
 	software: ISoftware
 }
@@ -16,15 +17,15 @@ const Benefits: NextPage<Props> = ({ software }) => {
 				<div className="flex w-full justify-center pb-64  text-neutral-600 xl:gap-5">
 					<SideBar />
 					<div className=" flex  w-full flex-col p-8">
-						<div className="flex w-full flex-col items-center justify-center rounded-xl bg-purple-500 py-6 font-semibold lg:py-8 xl:py-10">
+						<div className="flex w-full flex-col items-center justify-center rounded-xl  py-6 font-semibold lg:py-8 xl:py-10">
 							<div className="flex w-[95%] flex-col items-start rounded-xl bg-purple-300 p-4 text-sm lg:p-8 lg:text-base">
 								<div className="mb-4 flex w-full items-center   justify-between border-b-2 border-black py-3">
 									<h1 className="text-center  text-2xl font-semibold">
 										Mis Productos
 									</h1>
 								</div>
-								<div className="flex w-full gap-5 sm:flex-col sm:items-center md:flex-row">
-									<div className="h-auto w-1/5 rounded-md bg-[#dfe5ee] ">
+								<div className="flex w-full gap-5 flex-col md:flex-row items-center ">
+									<div className="h-auto w-4/5 rounded-md bg-[#dfe5ee] ">
 										<div className="flex flex-col items-center gap-6 py-4 ">
 											<h3 className="text-lg font-bold">
 												Agregar nuevo producto{}
@@ -34,7 +35,7 @@ const Benefits: NextPage<Props> = ({ software }) => {
 											</button>
 										</div>
 									</div>
-									<div className="h-auto w-1/5 rounded-md bg-[#dfe5ee]  ">
+									<div className="h-auto w-4/5 rounded-md bg-[#dfe5ee]  ">
 										<div className="flex flex-col items-center gap-6 py-4 ">
 											<h3 className="text-lg font-bold">
 												{software.productName}
@@ -47,7 +48,7 @@ const Benefits: NextPage<Props> = ({ software }) => {
 											/>
 										</div>
 									</div>
-									<div className="h-auto w-1/5 rounded-md bg-[#dfe5ee]  ">
+									<div className="h-auto w-4/5 rounded-md bg-[#dfe5ee]  ">
 										<div className="flex flex-col items-center gap-6 py-4 ">
 											<h3 className="text-lg font-bold">
 												{software.productName}
@@ -60,7 +61,7 @@ const Benefits: NextPage<Props> = ({ software }) => {
 											/>
 										</div>
 									</div>
-									<div className="h-auto w-1/5 rounded-md bg-[#dfe5ee]  ">
+									<div className="h-auto w-4/5 rounded-md bg-[#dfe5ee]  ">
 										<div className="flex flex-col items-center gap-6 py-4 ">
 											<h3 className="text-lg font-bold">
 												{software.productName}
@@ -73,7 +74,7 @@ const Benefits: NextPage<Props> = ({ software }) => {
 											/>
 										</div>
 									</div>
-									<div className="h-auto w-1/5 rounded-md bg-[#dfe5ee]  ">
+									<div className="h-auto w-4/5 rounded-md bg-[#dfe5ee]  ">
 										<div className="flex flex-col items-center gap-6 py-4 ">
 											<h3 className="text-lg font-bold">
 												{software.productName}
@@ -102,12 +103,7 @@ const Benefits: NextPage<Props> = ({ software }) => {
 }
 
 export default Benefits
-export const getServerSideProps: GetServerSideProps = async ({
-	req,
-	res,
-	params,
-	query
-}) => {
+export const getServerSideProps: GetServerSideProps = async () => {
 	const software = await getSoftware('8d8f5745-7512-41f9-8112-876f783fc867')
 	return {
 		props: { software }
