@@ -24,20 +24,20 @@ const Settings: NextPage = () => {
 	}
 	return (
 		<Layout title="Upler - Dashboard">
-			<div className="h-[90vh] w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
-				<div className="flex w-full justify-center pb-64  text-neutral-600 xl:gap-5">
+			<div className="h-auto w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
+				<div className="flex  h-full w-full flex-col justify-center  text-neutral-600 sm:flex-row xl:gap-5">
 					<SideBar />
-					<div className="mb-20 flex h-[80vh] w-full flex-col p-2 pt-5 md:p-4">
-						<div className="flex h-[75vh] w-full flex-col items-center justify-center rounded-xl bg-slate-50 py-6 font-semibold lg:py-8 xl:py-10">
-							<div className="flex h-[55vh] w-[95%] flex-col items-start rounded-xl bg-[#bbbbbb1f] p-4 text-sm lg:p-8 lg:text-base">
+					<div className=" flex w-full flex-col p-2 pt-5 md:p-4">
+						<div className=" mb-20 flex w-full flex-col items-center justify-center rounded-xl bg-slate-50 py-6 pt-5 font-semibold lg:py-8 xl:py-10">
+							<div className="flex  w-[95%] flex-col items-start rounded-xl bg-[#bbbbbb1f] p-4 text-sm lg:p-8 lg:text-base">
 								<div className="mb-4 flex w-full items-center justify-between border-b-2 border-black py-3">
-									<h1 className="text-center  text-3xl font-semibold">
+									<h1 className="text-center  text-2xl font-semibold">
 										Configuración
 									</h1>
 								</div>
 								<div className=" flex w-full flex-col gap-3">
 									<div className="flex w-full flex-col gap-3 px-2 py-4 ">
-										<h3 className=" text-2xl font-semibold">
+										<h3 className=" text-xl font-semibold">
 											Usuario
 										</h3>
 										<form className="flex w-2/5 flex-col gap-7">
@@ -120,7 +120,7 @@ const Settings: NextPage = () => {
 										</form>
 									</div>
 									<div className="flex w-full flex-col gap-3 px-2 py-4 ">
-										<h3 className=" text-2xl font-semibold">
+										<h3 className=" text-xl font-semibold">
 											Metodos de pago
 										</h3>
 									</div>
