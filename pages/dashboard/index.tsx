@@ -12,7 +12,7 @@ const Dashboard: NextPage = () => {
 			<div className=" w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
 				<div className="flex  h-full w-full flex-col justify-center  text-neutral-600  sm:flex-row xl:gap-5">
 					<SideBar />
-					<div className="-2 flex w-full flex-col pt-5 md:p-4">
+					<div className="flex w-full flex-col p-2 pt-5 md:p-4">
 						<div className="mb-20 flex w-full flex-col items-center justify-center rounded-xl bg-slate-50 py-6 font-semibold lg:py-8 xl:py-10">
 							<div className="mb-8 flex w-[95%] flex-col items-start gap-10 rounded-xl bg-[#bbbbbb1f] p-4  text-sm lg:p-8 lg:text-base">
 								<div className="w-full ">

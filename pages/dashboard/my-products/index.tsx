@@ -10,21 +10,21 @@ interface Props {
 	software: ISoftware
 }
 
-const Benefits: NextPage<Props> = ({ software }) => {
+const MyProducts: NextPage<Props> = ({ software }) => {
 	return (
 		<Layout title="Upler - Dashboard">
 			<div className=" w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
-				<div className="flex w-full justify-center pb-64  text-neutral-600 xl:gap-5">
+				<div className="flex w-full flex-col justify-center pb-64  text-neutral-600  sm:flex-row xl:gap-5">
 					<SideBar />
-					<div className=" flex  w-full flex-col p-8">
-						<div className="flex w-full flex-col items-center justify-center rounded-xl  py-6 font-semibold lg:py-8 xl:py-10">
-							<div className="flex w-[95%] flex-col items-start rounded-xl bg-purple-300 p-4 text-sm lg:p-8 lg:text-base">
-								<div className="mb-4 flex w-full items-center   justify-between border-b-2 border-black py-3">
+					<div className=" flex w-full flex-col p-2 pt-5 md:p-4">
+						<div className="mb-20 flex w-full flex-col items-center justify-center rounded-xl bg-slate-50 py-6 font-semibold lg:py-8 xl:py-10">
+							<div className="mb-8 flex w-[95%] flex-col items-start rounded-xl  bg-[#bbbbbb1f] p-4 text-sm lg:p-8 lg:text-base">
+								<div className="mb-8 flex w-full items-center  justify-between  border-b-2 border-black py-3">
 									<h1 className="text-center  text-2xl font-semibold">
 										Mis Productos
 									</h1>
 								</div>
-								<div className="flex w-full gap-5 flex-col md:flex-row items-center ">
+								<div className="flex w-full flex-col items-center gap-5 md:flex-row ">
 									<div className="h-auto w-4/5 rounded-md bg-[#dfe5ee] ">
 										<div className="flex flex-col items-center gap-6 py-4 ">
 											<h3 className="text-lg font-bold">
@@ -102,7 +102,7 @@ const Benefits: NextPage<Props> = ({ software }) => {
 	)
 }
 
-export default Benefits
+export default MyProducts
 export const getServerSideProps: GetServerSideProps = async () => {
 	const software = await getSoftware('8d8f5745-7512-41f9-8112-876f783fc867')
 	return {

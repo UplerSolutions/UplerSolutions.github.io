@@ -30,9 +30,7 @@ const SoftwareSuscriptions: NextPage = () => {
 			router.push('/')
 		}
 	}, [session, router])
-	const redirect = (id: number) => {
-		router.push(`/software-subscriptions/${id}`)
-	}
+
 	return (
 		<Layout title="Upler - Dashboard">
 			<div className="h-auto w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
