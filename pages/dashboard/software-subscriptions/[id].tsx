@@ -5,9 +5,7 @@ import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-const SoftwareSuscriptions: NextPage = () => {
-
-
+const SoftwareSuscription: NextPage = () => {
 	return (
 		<Layout title="Upler - Dashboard">
 			<div className="h-[90vh] w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
@@ -62,4 +60,4 @@ const SoftwareSuscriptions: NextPage = () => {
 	)
 }
 
-export default SoftwareSuscriptions
+export default SoftwareSuscription
