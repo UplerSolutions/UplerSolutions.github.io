@@ -20,7 +20,7 @@ const MyProducts: NextPage<Props> = ({ software }) => {
 						<div className="mb-20 flex w-full flex-col items-center justify-center rounded-xl bg-slate-50 py-6 font-semibold lg:py-8 xl:py-10">
 							<div className="mb-8 flex w-[95%] flex-col items-start rounded-xl  bg-[#bbbbbb1f] p-4 text-sm lg:p-8 lg:text-base">
 								<div className="mb-8 flex w-full items-center  justify-between  border-b-2 border-black py-3">
-									<h1 className="text-center  text-2xl font-semibold">
+									<h1 className="text-center  text-2xl font-bold">
 										Mis Productos
 									</h1>
 								</div>
@@ -42,7 +42,7 @@ const MyProducts: NextPage<Props> = ({ software }) => {
 											</h3>
 											<Image
 												src={software.imageUrl}
-												alt=""
+												alt="img"
 												width={250}
 												height={250}
 											/>
@@ -55,7 +55,7 @@ const MyProducts: NextPage<Props> = ({ software }) => {
 											</h3>
 											<Image
 												src={software.imageUrl}
-												alt=""
+												alt="img"
 												width={250}
 												height={250}
 											/>
@@ -68,7 +68,7 @@ const MyProducts: NextPage<Props> = ({ software }) => {
 											</h3>
 											<Image
 												src={software.imageUrl}
-												alt=""
+												alt="img"
 												width={250}
 												height={250}
 											/>
@@ -81,7 +81,7 @@ const MyProducts: NextPage<Props> = ({ software }) => {
 											</h3>
 											<Image
 												src={software.imageUrl}
-												alt=""
+												alt="img"
 												width={250}
 												height={250}
 											/>

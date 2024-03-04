@@ -40,7 +40,7 @@ const SoftwareSuscriptions: NextPage = () => {
 						<div className="mb-20 flex w-full flex-col items-center justify-center rounded-xl bg-slate-50 p-2 py-6 pt-5 font-semibold md:p-4 lg:py-8 xl:py-10">
 							<div className="mb-8 flex h-full w-[95%] flex-col items-start rounded-xl bg-[#bbbbbb1f] p-4  text-sm lg:p-8 lg:text-base">
 								<div className="mb-4 flex w-full items-center   justify-between border-b-2 border-black py-3">
-									<h1 className="text-center  text-2xl font-semibold">
+									<h1 className="text-center  text-2xl font-bold">
 										Actual
 									</h1>
 								</div>
