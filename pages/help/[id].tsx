@@ -3,9 +3,6 @@ import { useEffect, useState } from 'react'
 import { HelpContent, HelpData, help } from '../../data/help'
 import Link from 'next/link'
 import Image from 'next/image'
-import { LiaGreaterThanSolid } from 'react-icons/lia'
-import { FaGreaterThan } from 'react-icons/fa'
-import { BsChevronRight } from 'react-icons/bs'
 import { BiArrowBack, BiChevronRight } from 'react-icons/bi'
 
 const HelpDetailPage = () => {

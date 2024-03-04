@@ -1,24 +1,26 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
 import { Button } from '@/components/ui/button'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { companyDataSchema } from '@/rules'
+import { DefaultValues } from './CustomForm'
 
 interface Props {
-	handlerAddress: (data: any) => void
+	handlerCompany: (data: any) => void
+	info: DefaultValues
 }
 
-const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
+const CompanyData: FC<Props> = ({ handlerCompany, info }) => {
 	const {
 		control,
 		formState: { errors },
 		handleSubmit
-	} = useForm({ resolver: yupResolver(companyDataSchema) })
+	} = useForm({ defaultValues: info.companyInfo, resolver: yupResolver(companyDataSchema) })
 
 	const onSubmit = (data: any) => {
-		handlerAddress(data)
+		handlerCompany(data)
 	}
 
 	return (
@@ -26,7 +28,9 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 			onSubmit={handleSubmit(onSubmit)}
 			className="relative flex flex-col gap-4"
 		>
-			<h4 className="mb-4 text-center text-4xl">Información de la Compania</h4>
+			<h4 className="mb-4 text-center text-4xl">
+				Información de la Compania
+			</h4>
 
 			<div>
 				<CustomTextField
@@ -34,7 +38,7 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 					control={control}
 					defaultValue=""
 					type="text"
-					label="Nombre de producto"
+					label="Nombre de compañía"
 					required={true}
 				/>
 				<p className="text-sm font-medium text-red-500">
@@ -57,20 +61,6 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 				</p>
 			</div>
 
-			<div>
-				<CustomTextField
-					name="email"
-					label="Email de la compania"
-					type="email"
-					control={control}
-					defaultValue=""
-					required={true}
-				/>
-
-				<p className="text-sm font-medium text-red-500">
-					<ErrorMessage errors={errors} name="email" />
-				</p>
-			</div>
 
 			<Button type="submit" className="absolute -bottom-14 right-0">
 				SIGUIENTE
@@ -79,4 +69,4 @@ const DataDireccionEntrega: FC<Props> = ({ handlerAddress }) => {
 	)
 }
 
-export default DataDireccionEntrega
+export default CompanyData

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 
@@ -6,108 +6,104 @@ import PersonalData from './PersonalData'
 
 import CompanyData from './CompanyData'
 import CompanyFeatures from './CompanyFeatures'
+import { Confirmation } from './Confirmation'
 
 interface Props {
 	activeStep: number
+	setActiveStep: (step: number) => void
 
 	handleBack: () => void
 	handleNext: () => void
 }
 
-interface DefaultValues {
-	customer: {
+export interface DefaultValues {
+	customerInfo: {
 		name: string
 		lastname: string
 		email: string
+		position: string
 	}
-	company: {
-		type: string
-		sector: string
+	companyInfo: {
 		name: string
 		website: string
-		email: string
-		address: string
 	}
-	card: {
-		number: string
-		cvc: string
-		expDate: string
-		nameOnCard: string
-	}
-	order: {
+	productFeatures: {
 		name: string
-		image: string
-		price: number
+		description: string
+		category: string
 	}
 }
 
 const defaultValues: DefaultValues = {
-	customer: {
+	customerInfo: {
 		name: '',
 		lastname: '',
-		email: ''
+		email: '',
+		position: ''
 	},
-	company: {
-		type: '',
-		sector: '',
+	companyInfo: {
 		name: '',
 		website: '',
-		email: '',
-		address: ''
 	},
-
-	card: {
-		number: '',
-		cvc: '',
-		expDate: '',
-		nameOnCard: ''
-	},
-	order: {
+	productFeatures: {
 		name: '',
-		image: '',
-		price: 0
+		description: '',
+		category: ''
 	}
 }
 
-const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
-	const [info, setinfo] = useState(defaultValues)
+const CustomForm: FC<Props> = ({
+	activeStep,
+	setActiveStep,
+	handleBack,
+	handleNext
+}) => {
+	const [info, setInfo] = useState(defaultValues)
 
-	const handlerCustomer = (data: typeof defaultValues.customer) => {
-		setinfo({
+	const handlerCustomer = (data: typeof defaultValues.customerInfo) => {
+		setInfo({
 			...info,
-			customer: { ...data }
+			customerInfo: { ...data }
 		})
 		handleNext()
 	}
-	const handlerAddress = (data: typeof defaultValues.company) => {
-		setinfo({
+	const handlerCompany = (data: typeof defaultValues.companyInfo) => {
+		setInfo({
 			...info,
-			company: { ...data }
+			companyInfo: { ...data }
 		})
 		handleNext()
 	}
 
-	const handlerCard = (data: typeof defaultValues.card) => {
-		setinfo({
+	const handlerProduct = (data: typeof defaultValues.productFeatures) => {
+		setInfo({
 			...info,
-			card: { ...data }
+			productFeatures: { ...data }
 		})
-
-		// onSubmit puede ir aca
+		handleNext()
 	}
+
+	useEffect(() => {
+		console.log(info)
+	}, [info])
 
 	return (
 		<section className="mt-4 flex w-full flex-col rounded-md p-8 text-black shadow-form">
 			<div>
 				{activeStep === 0 && (
-					<PersonalData handlerCustomer={handlerCustomer} />
+					<PersonalData handlerCustomer={handlerCustomer} info={info} />
 				)}
 
 				{activeStep === 1 && (
-					<CompanyData handlerAddress={handlerAddress} />
+					<CompanyData handlerCompany={handlerCompany} info={info} />
 				)}
+
 				{activeStep === 2 && (
-					<CompanyFeatures handlerAddress={handlerAddress} />
+					<CompanyFeatures handlerProduct={handlerProduct} info={info} />
+				)}
+
+				{activeStep === 3 && (
+					<Confirmation info={info} setActiveStep={setActiveStep}  />
 				)}
 			</div>
 
@@ -118,7 +114,7 @@ const CustomForm: FC<Props> = ({ activeStep, handleBack, handleNext }) => {
 					</Button>
 				)}
 
-				{activeStep === 2 && (
+				{activeStep === 3 && (
 					<Button
 						type="submit"
 						className="bg-primary-color text-white hover:bg-purple-500"

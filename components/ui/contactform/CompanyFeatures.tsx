@@ -2,26 +2,35 @@ import { FC } from 'react'
 import { useForm } from 'react-hook-form'
 import { CustomTextField } from './customInput/CustomTextField'
 import { ErrorMessage } from '@hookform/error-message'
-
+import { Button } from '../button'
+import { DefaultValues } from './CustomForm'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { productFeatures } from '@/rules'
 
 interface Props {
-	handlerAddress: (data: any) => void
+	handlerProduct: (data: any) => void
+	info: DefaultValues
 }
 
-const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
+const CompanyFeatures: FC<Props> = ({ handlerProduct, info }) => {
 	const {
 		control,
 		formState: { errors },
 		handleSubmit
-	} = useForm()
+	} = useForm({ defaultValues: info.productFeatures, resolver: yupResolver(productFeatures) })
 
 	const onSubmit = (data: any) => {
-		handlerAddress(data)
+		handlerProduct(data)
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-			<h4 className="mb-4 text-center text-4xl">Características del Producto</h4>
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className="relative flex flex-col gap-4"
+		>
+			<h4 className="mb-4 text-center text-4xl">
+				Características del Producto
+			</h4>
 
 			<div>
 				<CustomTextField
@@ -38,7 +47,7 @@ const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
 
 			<div>
 				<CustomTextField
-					name="descripción"
+					name="description"
 					label="Descripción"
 					type="text"
 					control={control}
@@ -46,21 +55,27 @@ const CompanyFeatures: FC<Props> = ({ handlerAddress }) => {
 				/>
 
 				<p className="text-sm font-medium text-red-500">
-					<ErrorMessage errors={errors} name="descripción" />
+					<ErrorMessage errors={errors} name="description" />
 				</p>
 			</div>
 
-			<CustomTextField
-				name="categoria"
-				label="Categoria"
-				type="email"
-				control={control}
-				required={true}
-			/>
+			<div>
+				<CustomTextField
+					name="category"
+					label="Categoria"
+					type="text"
+					control={control}
+					required={true}
+				/>
 
-			<p className="text-sm font-medium text-red-500">
-				<ErrorMessage errors={errors} name="categoria" />
-			</p>
+				<p className="text-sm font-medium text-red-500">
+					<ErrorMessage errors={errors} name="category" />
+				</p>
+			</div>
+
+			<Button type="submit" className="absolute -bottom-14 right-0">
+				SIGUIENTE
+			</Button>
 		</form>
 	)
 }

@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
 import { Layout } from '@/components/layout/Layout'
-import { ContactForm } from '@/components/ui/contactform/ContactForm'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Benefits } from '@/components/ui/benefits'
 import ScrollButton from '@/components/ui/scrollbutton/ScrollButton'
 
-const Partner: NextPage = () => {
+
+
+const Partner: NextPage= () => {
 	return (
 		<Layout title="Upler - Partner">
 			<div className="xl:pb-18 flex w-full flex-col items-center justify-center gap-8 bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] pt-24 lg:flex-row lg:items-start lg:pt-48 2xl:pb-20">
@@ -14,12 +14,12 @@ const Partner: NextPage = () => {
 					<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl 2xl:text-6xl">
 						<p className="text-[35px] md:text-4xl xl:text-5xl 2xl:text-6xl">
 							<span className=" text-primary-color ">
-								Gana dinero
+								Gana Dinero
 							</span>
 
 							<span className="">
 								{' '}
-								vendiendo tus productos digitales
+								Vendiendo tus Productos Digitales
 							</span>
 						</p>
 					</div>
@@ -50,9 +50,9 @@ const Partner: NextPage = () => {
 				<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl ">
 					<p className="text-[35px] md:text-3xl xl:text-5xl">
 						<span className="text-neutral-600">
-							Productos Digitales que podés 
+							Softwares que Podés
 						</span>
-						<span className=" text-primary-color "> vender</span>
+						<span className=" text-primary-color "> Vender</span>
 					</p>
 				</div>
 				<hr className="left-0 right-0 m-auto w-[100px] border-2 border-primary-color bg-primary-color " />
@@ -70,7 +70,7 @@ const Partner: NextPage = () => {
 						</div>
 						<div className="flex flex-col gap-3 md:gap-1">
 							<h4 className=" pb-2 text-xl text-black md:text-[25px]">
-								Software
+								IA
 							</h4>
 						</div>
 					</div>
@@ -88,11 +88,95 @@ const Partner: NextPage = () => {
 						</div>
 						<div className="flex flex-col gap-3 md:gap-1">
 							<h4 className="pb-2 text-xl text-black md:text-[25px]">
-								PDFs
+								Marketing
 							</h4>
 						</div>
 					</div>
-
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
+						<div>
+							<Image
+								src={
+									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dad0ddc742e412f9a02_pdfs.svg'
+								}
+								width={95}
+								height={95}
+								alt={''}
+							/>
+						</div>
+						<div className="flex flex-col gap-3 md:gap-1">
+							<h4 className="pb-2 text-xl text-black md:text-[25px]">
+								Trading
+							</h4>
+						</div>
+					</div>
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
+						<div>
+							<Image
+								src={
+									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dad0ddc742e412f9a02_pdfs.svg'
+								}
+								width={95}
+								height={95}
+								alt={''}
+							/>
+						</div>
+						<div className="flex flex-col gap-3 md:gap-1">
+							<h4 className="pb-2 text-xl text-black md:text-[25px]">
+								Design
+							</h4>
+						</div>
+					</div>
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
+						<div>
+							<Image
+								src={
+									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dad0ddc742e412f9a02_pdfs.svg'
+								}
+								width={95}
+								height={95}
+								alt={''}
+							/>
+						</div>
+						<div className="flex flex-col gap-3 md:gap-1">
+							<h4 className="pb-2 text-xl text-black md:text-[25px]">
+								Development
+							</h4>
+						</div>
+					</div>
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
+						<div>
+							<Image
+								src={
+									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dad0ddc742e412f9a02_pdfs.svg'
+								}
+								width={95}
+								height={95}
+								alt={''}
+							/>
+						</div>
+						<div className="flex flex-col gap-3 md:gap-1">
+							<h4 className="pb-2 text-xl text-black md:text-[25px]">
+								Cloud
+							</h4>
+						</div>
+					</div>
+					<div className="align-center grid  grid-rows-2  justify-items-center  md:items-start lg:items-end lg:p-8 xl:m-6">
+						<div>
+							<Image
+								src={
+									'https://uploads-ssl.webflow.com/608a3c0d9ffab4cb6d1d27fb/608a5dad0ddc742e412f9a02_pdfs.svg'
+								}
+								width={95}
+								height={95}
+								alt={''}
+							/>
+						</div>
+						<div className="flex flex-col gap-3 md:gap-1">
+							<h4 className="pb-2 text-xl text-black md:text-[25px]">
+								Business
+							</h4>
+						</div>
+					</div>
 
 				</div>
 				<Link href="/apply" scroll={false} className="scroll-smooth ">
@@ -202,7 +286,7 @@ const Partner: NextPage = () => {
 						</button>
 					</Link>
 					<p className="  pt-2 text-xs text-neutral-500">
-						Ganá Dinero. Sin tarifas por adelantado..
+						Ganá Dinero. Sin tarifas por adelantado.
 					</p>
 				</div>
 			</div>

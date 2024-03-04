@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { singup } from '@/rules'
@@ -89,7 +89,7 @@ export const Signup = () => {
 								Bienvenido!
 							</h1>
 							<h1 className="pb-4  text-4xl font-bold md:font-semibold">
-								Iniciar Sesión
+								Registrate
 							</h1>
 							<label
 								htmlFor="email"
