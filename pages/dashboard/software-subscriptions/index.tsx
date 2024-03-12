@@ -34,12 +34,12 @@ const SoftwareSuscriptions: NextPage = () => {
 	return (
 		<Layout title="Upler - Dashboard">
 			<div className="h-auto w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
-				<div className="flex  h-full w-full flex-col justify-center  text-neutral-600  sm:flex-row xl:gap-5">
+				<div className="flex  h-full w-full flex-col justify-center pb-64 text-neutral-600  sm:flex-row xl:gap-5">
 					<SideBar />
 					<div className="flex w-full flex-col p-2 pt-5 md:p-4">
 						<div className="mb-20 flex w-full flex-col items-center justify-center rounded-xl bg-slate-50 p-2 py-6 pt-5 font-semibold md:p-4 lg:py-8 xl:py-10">
-							<div className="mb-8 flex h-full w-[95%] flex-col items-start rounded-xl bg-[#bbbbbb1f] p-4  text-sm lg:p-8 lg:text-base">
-								<div className="mb-4 flex w-full items-center   justify-between border-b-2 border-black py-3">
+							<div className="mb-8 flex w-[95%] flex-col items-start rounded-xl bg-[#bbbbbb1f] p-4  text-sm lg:p-8 lg:text-base">
+								<div className="mb-8 flex w-full items-center   justify-between border-b-2 border-black py-3">
 									<h1 className="text-center  text-2xl font-bold">
 										Actual
 									</h1>

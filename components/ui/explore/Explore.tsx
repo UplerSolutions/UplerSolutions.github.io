@@ -29,7 +29,7 @@ export const Explore: FC<Props> = ({ software }) => {
 
 	return (
 		<div className="flex flex-col items-center justify-center">
-			<ul className="m-auto flex w-full flex-wrap items-center justify-center gap-4 md:px-4 md:py-4 md:pb-4 lg:p-0 lg:py-8 2xl:gap-8">
+			<ul className="m-auto flex flex-col sm:flex-row w-full flex-wrap items-center justify-center gap-4 md:px-4 md:py-4 md:pb-4 lg:p-0 lg:py-8 2xl:gap-8">
 				{displayedProducts.length > 0 ? (
 					displayedProducts?.map((product) => (
 						<li
