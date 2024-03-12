@@ -1,7 +1,7 @@
-import { ChangeEvent, FocusEvent } from 'react'
+import { ChangeEvent, FocusEvent, useState } from 'react'
 import Cards, { ReactCreditCardsProps } from 'react-credit-cards-2'
+import { useForm } from 'react-hook-form'
 import 'react-credit-cards-2/dist/es/styles-compiled.css'
-import { useFormContext } from 'react-hook-form'
 
 interface PaymentFormState {
 	number: string
@@ -11,24 +11,45 @@ interface PaymentFormState {
 	focus: string
 }
 
-interface Props {
-	state: PaymentFormState
-	handleInputFocus: (evt: FocusEvent<HTMLInputElement>) => void
-	handleInputChange: (evt: ChangeEvent<HTMLInputElement>) => void
-}
+const CreditCard = () => {
+	const { register, formState } = useForm<PaymentFormState>()
 
-const CreditCard: React.FC<Props> = ({
-	state,
-	handleInputFocus,
-	handleInputChange
-}) => {
-	const { register, formState } = useFormContext()
+	const [state, setState] = useState({
+		number: '',
+		expiry: '',
+		cvc: '',
+		name: '',
+		focus: ''
+	})
 
-	// Add validation logic here
-	// For example, you can check the length of card number, expiry, and CVC
+	const [state2, setState2] = useState({
+		number: 1233242341231231,
+		expiry: 1026,
+		cvc: 123,
+		name: 'Serafin Quesada'
+	})
+
+	const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = evt.target
+
+		setState((prev) => ({ ...prev, [name]: value }))
+	}
+
+	const handleInputFocus = (evt: FocusEvent<HTMLInputElement>) => {
+		setState((prev) => ({ ...prev, focus: evt.target.name }))
+	}
 
 	return (
-		<div className="flex flex-col items-center gap-4 py-4 md:px-12 xl:flex-row ">
+		<div className="w-mx flex flex-col items-center gap-4 py-4 md:items-start md:px-12 ">
+			<div className="flex w-full gap-10">
+				<Cards
+					number={state2.number}
+					expiry={state2.expiry}
+					cvc={state2.cvc}
+					name={state2.name}
+				/>
+			</div>
+
 			<Cards
 				number={state.number}
 				expiry={state.expiry}
@@ -37,50 +58,41 @@ const CreditCard: React.FC<Props> = ({
 				focused={state.focus as ReactCreditCardsProps['focused']}
 			/>
 			<div className="flex flex-col items-center">
-				<div className="flex w-[98%] flex-col gap-4 text-black sm:w-full">
+				<form className="flex w-[98%] flex-col gap-4 text-black sm:w-full">
 					<input
-						{...register('paymentMethod.number')}
+						{...register('number')}
 						type="text"
 						name="number"
 						placeholder="Card Number"
-						value={state.number}
-						onChange={handleInputChange}
-						onFocus={handleInputFocus}
 						className="rounded-md px-3 py-1"
 					/>
 					<input
-						{...register('paymentMethod.name')}
+						{...register('name')}
 						type="text"
 						name="name"
 						placeholder="Name"
-						value={state.name}
-						onChange={handleInputChange}
-						onFocus={handleInputFocus}
 						className="rounded-md px-3 py-1"
 					/>
 					<div className="flex items-center justify-center gap-4 ">
 						<input
-							{...register('paymentMethod.expiry')}
+							{...register('expiry')}
 							type="text"
 							name="expiry"
 							placeholder="MM/YY"
-							value={state.expiry}
-							onChange={handleInputChange}
-							onFocus={handleInputFocus}
 							className="w-4/5 rounded-md px-3 py-1"
 						/>
 						<input
-							{...register('paymentMethod.cvc')}
+							{...register('cvc')}
 							type="text"
 							name="cvc"
 							placeholder="CVC"
-							value={state.cvc}
-							onChange={handleInputChange}
-							onFocus={handleInputFocus}
 							className="w-4/5 rounded-md px-3 py-1"
 						/>
 					</div>
-				</div>
+					<button className="mt-4 w-max self-center rounded-lg bg-slate-400 p-4 hover:bg-slate-500 hover:transition-colors">
+						Add New Credit Card
+					</button>
+				</form>
 			</div>
 		</div>
 	)
