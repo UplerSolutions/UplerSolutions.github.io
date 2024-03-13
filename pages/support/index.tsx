@@ -3,21 +3,15 @@ import { Layout } from '@/components/layout/Layout'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 
-interface ReqBody {
-	to: string
+interface FormData {
+	email: string
 	subject: string
-	extra: string
-	text: string
+	message: string
 }
+
 const Support: NextPage = () => {
-	const [enviar, setEnviar] = useState<ReqBody>({
-		to: 'quesada.serafin03@gmail.com',
-		subject: 'asunto',
-		text: 'hello world',
-		extra: 'Serafin '
-	})
 	const router = useRouter()
 	const [open, setOpen] = useState(false)
 	const preguntasFrecuentes = [
@@ -153,6 +147,38 @@ const Support: NextPage = () => {
 		}
 	]
 
+	const [formData, setFormData] = useState<FormData>({
+		email: '',
+		subject: '',
+		message: ''
+	})
+
+	const handleChange = (
+		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		const { name, value } = e.target
+		setFormData((prevState) => ({
+			...prevState,
+			[name]: value
+		}))
+	}
+
+	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+		event.preventDefault()
+		// Aquí puedes manejar el envío del formulario
+		console.log('Email:', formData.email)
+		console.log('Asunto:', formData.subject)
+		console.log('Mensaje:', formData.message)
+		// Puedes enviar los datos a través de una solicitud HTTP aquí
+
+		const res = await fetch('/api/send', {
+			method: 'POST',
+			body: JSON.stringify(formData)
+		})
+		const data = await res.json()
+		console.log(data )
+	}
+
 	return (
 		<Layout title="Upler - Faq´s">
 			<div className="flex flex-col items-center justify-center bg-gradient-to-r   from-[#fde9fc] to-[#fffbe0] pt-20 text-neutral-600">
@@ -186,20 +212,73 @@ const Support: NextPage = () => {
 					</ol>
 				</div>
 
-				<div id="contact" className="mb-10">
-					<button
-						className="rounded-xl bg-primary-color p-3 text-center font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
-						onClick={async () => {
-							const res = await fetch('/api/send', {
-								method: 'POST',
-								body: JSON.stringify(enviar)
-							})
-							const data = await res.json()
-							console.log(data)
-						}}
+				<div id="contact" className="mx-auto max-w-md">
+					<form
+						onSubmit={handleSubmit}
+						className="mb-4 rounded bg-white px-8 pb-8 pt-6 shadow-md"
 					>
-						Mandar Mail
-					</button>
+						<div className="mb-4">
+							<label
+								htmlFor="email"
+								className="mb-2 block text-sm font-bold text-gray-700"
+							>
+								Email
+							</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="Ingresa tu email"
+								value={formData.email}
+								onChange={handleChange}
+								className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+								required
+							/>
+						</div>
+						<div className="mb-4">
+							<label
+								htmlFor="subject"
+								className="mb-2 block text-sm font-bold text-gray-700"
+							>
+								Asunto
+							</label>
+							<input
+								type="text"
+								id="subject"
+								name="subject"
+								placeholder="Ingresa el asunto"
+								value={formData.subject}
+								onChange={handleChange}
+								className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+								required
+							/>
+						</div>
+						<div className="mb-6">
+							<label
+								htmlFor="message"
+								className="mb-2 block text-sm font-bold text-gray-700"
+							>
+								Mensaje
+							</label>
+							<textarea
+								id="message"
+								name="message"
+								placeholder="Escribe tu mensaje aquí"
+								value={formData.message}
+								onChange={handleChange}
+								className="focus:shadow-outline h-32 w-full resize-none appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+								required
+							/>
+						</div>
+						<div className="flex items-center justify-between">
+							<button
+								type="submit"
+								className="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
+							>
+								Enviar
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</Layout>

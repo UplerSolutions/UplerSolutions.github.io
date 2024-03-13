@@ -11,17 +11,17 @@ interface ReqBody {
 }
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse,) => {
-    const { body }: { body: ReqBody } = req
+    console.log(res, "res");
+    
     try {
         const { data, error } = await resend.emails.send({
-            from: 'Upler <onboarding@resend.dev>',
-            to: body.to,
-            subject: body.subject,
+            from: 'Acme <onboarding@resend.dev>',
+            to: "quesada.serafin03@gmail.com",
+            subject: 'Hello world',
             react: EmailTemplate({ firstName: 'John' }),
-            text: body.text, // Añade el texto del email aquí
+            text: 'Hello world', // Añade el texto del email aquí
         });
 
-        console.log(body.to);
 
         if (error) {
             res.status(400).json({ error });
@@ -30,7 +30,6 @@ export default async (req: NextApiRequest, res: NextApiResponse,) => {
         }
 
         res.status(200).json({ data });
-        console.log(data);
 
     } catch (error) {
         res.status(400).json({ error });
