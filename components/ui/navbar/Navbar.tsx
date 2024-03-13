@@ -18,32 +18,34 @@ export const Navbar = () => {
 				</Link>
 				<div className="hidden gap-9 font-lato text-lg font-medium lg:flex lg:w-auto">
 					<Link
-						className="group relative inline-block "
+						className="ease group relative bottom-0  left-0 inline-block h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"
 						href="/software"
 					>
 						Software
-						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 					</Link>
 					<Link
-						className="group relative inline-block "
+						className="ease group relative bottom-0  left-0 inline-block h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"
 						href="/#plans"
 					>
 						Paquetes
-						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 					</Link>
+					{/* <Link
+						className="ease group relative bottom-0  left-0 inline-block h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"
+						href="/dashboard"
+					>
+						Panel
+					</Link> */}
 					<Link
-						className=" group relative inline-block "
+						className="ease group relative bottom-0  left-0 inline-block h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"
 						href="/partners"
 					>
 						Vender
-						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 					</Link>
 					<Link
-						className=" group relative inline-block "
+						className="ease group relative bottom-0  left-0 inline-block h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"
 						href="/aboutUs"
 					>
 						Sobre nosotros
-						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 					</Link>
 				</div>
 				<div className="hidden gap-3 lg:flex">

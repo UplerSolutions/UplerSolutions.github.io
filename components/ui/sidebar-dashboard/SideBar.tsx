@@ -32,7 +32,7 @@ export const SideBar = () => {
 					>
 						<AiOutlineLaptop />
 						<span className="text-md hidden  md:flex">
-							Subcripciones
+							Suscripciones
 						</span>
 					</Link>
 					<Link
