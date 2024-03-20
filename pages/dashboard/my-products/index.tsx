@@ -34,7 +34,7 @@ const MyProducts: NextPage<Props> = ({ software }) => {
 												/>
 											</div>
 											<Link
-												href={''}
+												href={'/createProduct'}
 												className="w-full rounded-xl  bg-primary-color px-6 py-2 text-center text-lg font-semibold text-white transition hover:border hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 											>
 												Agregar un producto
