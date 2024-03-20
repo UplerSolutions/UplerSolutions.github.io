@@ -48,7 +48,7 @@ export const Signup = () => {
 				body: JSON.stringify({
 					username,
 					email,
-					password,
+					password
 				})
 			}
 		)
@@ -107,6 +107,7 @@ export const Signup = () => {
 							<Typography variant="caption" color="red">
 								<ErrorMessage errors={errors} name="email" />
 							</Typography>
+							
 							<label
 								htmlFor="username"
 								className="py-4 text-xl font-semibold"
