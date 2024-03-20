@@ -70,9 +70,9 @@ export const Login = () => {
 							className=" border-1 flex w-[100%] flex-col items-center justify-center rounded-3xl bg-white p-2 text-neutral-600"
 						>
 							<div className="flex w-[100%] flex-col px-8 pt-8">
-								<h1 className="pb-6  text-3xl  md:font-medium">
+								<h2 className="pb-6  text-3xl  md:font-medium">
 									Bienvenido !
-								</h1>
+								</h2>
 								<h1 className="pb-6  text-4xl font-bold md:font-semibold">
 									Iniciar Sesión
 								</h1>

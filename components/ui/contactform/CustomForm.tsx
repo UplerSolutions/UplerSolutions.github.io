@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 
@@ -43,7 +43,7 @@ const defaultValues: DefaultValues = {
 	},
 	companyInfo: {
 		name: '',
-		website: '',
+		website: ''
 	},
 	productFeatures: {
 		name: '',
@@ -83,15 +83,14 @@ const CustomForm: FC<Props> = ({
 		handleNext()
 	}
 
-	useEffect(() => {
-		console.log(info)
-	}, [info])
-
 	return (
 		<section className="mt-4 flex w-full flex-col rounded-md p-8 text-black shadow-form">
 			<div>
 				{activeStep === 0 && (
-					<PersonalData handlerCustomer={handlerCustomer} info={info} />
+					<PersonalData
+						handlerCustomer={handlerCustomer}
+						info={info}
+					/>
 				)}
 
 				{activeStep === 1 && (
@@ -99,11 +98,14 @@ const CustomForm: FC<Props> = ({
 				)}
 
 				{activeStep === 2 && (
-					<CompanyFeatures handlerProduct={handlerProduct} info={info} />
+					<CompanyFeatures
+						handlerProduct={handlerProduct}
+						info={info}
+					/>
 				)}
 
 				{activeStep === 3 && (
-					<Confirmation info={info} setActiveStep={setActiveStep}  />
+					<Confirmation info={info} setActiveStep={setActiveStep} />
 				)}
 			</div>
 
