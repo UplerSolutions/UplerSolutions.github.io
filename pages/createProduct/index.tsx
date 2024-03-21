@@ -3,7 +3,7 @@ import { ICategory } from '@/interface/category'
 import { ISoftware } from '@/interface/software'
 import { getCategories } from '@/service/categories/categories-service'
 import { Tab, Tabs } from '@mui/material'
-import { GetStaticProps, NextPage } from 'next'
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -344,7 +344,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 
 export default CreateProduct
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
 	const categories = await getCategories()
 	return {
 		props: { categories }
