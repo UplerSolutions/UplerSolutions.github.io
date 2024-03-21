@@ -4,6 +4,7 @@ import { Panel } from '@/components/ui/panel/Panel'
 import { SideBar } from '@/components/ui/sidebar-dashboard'
 import { useState } from 'react'
 import { EditIcon } from '@/components/ui/icons'
+import CreditCard from '@/components/ui/creditcard/CreditCard'
 
 const Settings: NextPage = () => {
 	const [isInputEnabled1, setIsInputEnabled1] = useState(true)
@@ -31,7 +32,7 @@ const Settings: NextPage = () => {
 						<div className=" mb-20 flex w-full flex-col items-center justify-center rounded-xl bg-slate-50 py-6 pt-5 font-semibold lg:py-8 xl:py-10">
 							<div className="flex  w-[95%] flex-col items-start rounded-xl bg-[#bbbbbb1f] p-4 text-sm lg:p-8 lg:text-base">
 								<div className="mb-4 flex w-full items-center justify-between border-b-2 border-black py-3">
-									<h1 className="text-center  text-2xl font-semibold">
+									<h1 className="text-center  text-2xl font-bold">
 										Configuración
 									</h1>
 								</div>
@@ -123,6 +124,8 @@ const Settings: NextPage = () => {
 										<h3 className=" text-xl font-semibold">
 											Metodos de pago
 										</h3>
+										<CreditCard/>
+										
 									</div>
 								</div>
 							</div>

@@ -24,7 +24,7 @@ export const SideBar = () => {
 					</Link>
 					<Link
 						className={`${
-							pathname === '/dashboard/software-subscriptions'
+							pathname.startsWith('/dashboard/software-subscriptions')
 								? 'bg-[#d1b8dc]'
 								: ''
 						} flex w-[56px] items-center justify-start gap-3 rounded-3xl py-3 pl-5 text-center hover:rounded-3xl hover:bg-[#d1b8dc] md:w-[200px] lg:w-[270px]`}
@@ -32,7 +32,7 @@ export const SideBar = () => {
 					>
 						<AiOutlineLaptop />
 						<span className="text-md hidden  md:flex">
-							Subcripciones
+							Suscripciones
 						</span>
 					</Link>
 					<Link

@@ -17,43 +17,99 @@ const Dashboard: NextPage = () => {
 							<div className="mb-8 flex w-[95%] flex-col items-start gap-10 rounded-xl bg-[#bbbbbb1f] p-4  text-sm lg:p-8 lg:text-base">
 								<div className="w-full ">
 									<div className="mb-4 flex w-full items-center   justify-between border-b-2 border-black py-3">
-										<h1 className="text-center  text-2xl font-semibold">
+										<h1 className="text-center  text-2xl font-bold">
 											Mis Consumos
 										</h1>
 									</div>
 									<div className="grid w-full grid-cols-6 grid-rows-2 gap-10">
 										<div className="col-start-1 col-end-5 h-[100px] border  border-red-400">
-											1
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Gastos en Subcripciones
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 										<div className="col-start-5 col-end-7 h-[100px]  border  border-red-400">
-											2
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Gastos en Subcripciones
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 										<div className="col-start-1 col-end-3 row-start-2 h-[100px]  border  border-red-400">
-											3
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Gastos en Subcripciones
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 										<div className="col-start-3 col-end-7 row-start-2 h-[100px]  border  border-red-400">
-											4
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Gastos en Subcripciones
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div className="w-full ">
 									<div className="mb-4 flex w-full items-center   justify-between border-b-2 border-black py-3">
-										<h1 className="text-center  text-2xl font-semibold">
+										<h1 className="text-center  text-2xl font-bold">
 											Mis Ganancias
 										</h1>
 									</div>
 									<div className="grid w-full grid-cols-6 grid-rows-2 gap-10">
 										<div className="col-start-1 col-end-5 h-[100px] border  border-red-400">
-											1
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Ganancias por Subcripciones
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 										<div className="col-start-5 col-end-7 h-[100px]  border  border-red-400">
-											2
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Subcripciones Totales
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 										<div className="col-start-1 col-end-3 row-start-2 h-[100px]  border  border-red-400">
-											3
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Softwares Propios
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 										<div className="col-start-3 col-end-7 row-start-2 h-[100px]  border  border-red-400">
-											4
+											<div className="flex flex-col">
+												<h3 className="text-left  text-xl font-semibold">
+													Ganancia Por Software
+												</h3>
+												<div>
+													<p> Total: $200</p>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>

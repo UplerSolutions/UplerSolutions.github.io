@@ -19,13 +19,13 @@ import {
 import { getCategories } from '@/service/categories/categories-service'
 
 interface Props {
-	software: ISoftware[]
+	softwares: ISoftware[]
 	categories: ICategory[]
 }
 
 const minDistance = 10
 
-const Softwares: NextPage<Props> = ({ software, categories }) => {
+const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 	const router = useRouter()
 	const { recentSearches, setRecentSearches } = useRecentSearches()
 
@@ -190,7 +190,7 @@ const Softwares: NextPage<Props> = ({ software, categories }) => {
 					*/}
 				</div>
 				<div className="flex w-full flex-col items-center justify-center pb-20 pt-10">
-					<Explore software={software} />
+					<Explore softwares={softwares} />
 				</div>
 			</section>
 		</Layout>
@@ -205,15 +205,15 @@ export const getServerSideProps: GetServerSideProps = async ({
 	params,
 	query
 }) => {
-	let software: ISoftware[] = []
+	let softwares: ISoftware[] = []
 	const { search, low, high, categoryName }: any = query
 	if (search) {
 		const name: string = typeof search === 'string' ? search : ''
-		software = await getSoftwareByName(name)
+		softwares = await getSoftwareByName(name)
 	} else if (categoryName) {
-		software = await getSoftwaresByCategory(categoryName)
+		softwares = await getSoftwaresByCategory(categoryName)
 	} else {
-		software = await getSoftwares()
+		softwares = await getSoftwares()
 	}
 
 	const categories = await getCategories()
@@ -224,6 +224,6 @@ export const getServerSideProps: GetServerSideProps = async ({
 	)
 
 	return {
-		props: { software, categories }
+		props: { softwares, categories }
 	}
 }

@@ -16,8 +16,7 @@ const Aboutus: NextPage = () => {
 						<p className="text-[35px] md:text-4xl xl:text-5xl 2xl:text-6xl">
 							<span className="">
 								{' '}
-								Donde se encuentra el software de vanguardia
-								{' '}
+								Donde se encuentra el software de vanguardia{' '}
 							</span>
 							<span className=" text-primary-color ">
 								ahorros inteligentes
@@ -25,16 +24,15 @@ const Aboutus: NextPage = () => {
 						</p>
 					</div>
 					<p className="pb-10 pt-8 text-center font-semibold lg:w-[90%] lg:text-left">
-						Tu puerta de entrada a una Gestión de Licencias sin problemas y Ofertas Inigualables
+						Tu puerta de entrada a una Gestión de Licencias sin
+						problemas y Ofertas Inigualables
 					</p>
 					<Link
 						href="/register"
 						scroll={false}
-						className="scroll-smooth"
+						className="rounded-xl bg-primary-color p-3 text-center font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100 "
 					>
-						<button className=" h-12 w-48 rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-							Registrate Ahora Gratis
-						</button>
+						Registrate Ahora Gratis
 					</Link>
 				</div>
 				<div className="relative hidden w-full flex-col items-center justify-center overflow-hidden pb-10 lg:flex lg:w-[60%] lg:pr-[7%]">
@@ -50,7 +48,9 @@ const Aboutus: NextPage = () => {
 			<div className="flex flex-col items-center justify-center gap-8 bg-purple-50  py-20">
 				<div className="flex text-center text-[32px]  font-bold md:text-left md:text-3xl xl:text-5xl ">
 					<p className="text-[35px] md:text-3xl xl:text-5xl">
-						<span className="text-neutral-600">Explora Nuestros</span>
+						<span className="text-neutral-600">
+							Explora Nuestros
+						</span>
 						<span className=" text-primary-color "> Servicios</span>
 					</p>
 				</div>
@@ -70,7 +70,11 @@ const Aboutus: NextPage = () => {
 								Ofertas de un Mercado de Software de Confianza
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Explora un vasto mercado que presenta una variedad de softwares rigurosamente evaluado de socios de confianza. Nuestra plataforma garantiza estándares de calidad, ofreciendo a los usuarios una variedad de soluciones.
+								Explora un vasto mercado que presenta una
+								variedad de softwares rigurosamente evaluado de
+								socios de confianza. Nuestra plataforma
+								garantiza estándares de calidad, ofreciendo a
+								los usuarios una variedad de soluciones.
 							</p>
 						</div>
 					</div>
@@ -88,7 +92,9 @@ const Aboutus: NextPage = () => {
 								Paquetes de Software Personalizados
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Descubre paquetes eficientes en costos adaptados a tus necesidades, que ofrecen una gama completa de servicios de software para ti.
+								Descubre paquetes eficientes en costos adaptados
+								a tus necesidades, que ofrecen una gama completa
+								de servicios de software para ti.
 							</p>
 						</div>
 					</div>
@@ -106,7 +112,11 @@ const Aboutus: NextPage = () => {
 								Gestión de Licencias Simplificada
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Upler simplifica y agiliza la gestión de licencias. Disfruta de una plataforma unificada para realizar un seguimiento, renovar y gestionar todas las suscripciones de manera eficiente.
+								Upler simplifica y agiliza la gestión de
+								licencias. Disfruta de una plataforma unificada
+								para realizar un seguimiento, renovar y
+								gestionar todas las suscripciones de manera
+								eficiente.
 							</p>
 						</div>
 					</div>
@@ -124,7 +134,10 @@ const Aboutus: NextPage = () => {
 								Beneficios Exclusivos a través de Insignia
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Accede a beneficios exclusivos con socios a través de nuestro sistema Upler Insignia. Disfruta de ventajas y privilegios diseñados para mejorar tu experiencia digital.
+								Accede a beneficios exclusivos con socios a
+								través de nuestro sistema Upler Insignia.
+								Disfruta de ventajas y privilegios diseñados
+								para mejorar tu experiencia digital.
 							</p>
 						</div>
 					</div>
@@ -134,7 +147,9 @@ const Aboutus: NextPage = () => {
 			<div className="flex flex-col items-center justify-center gap-8 bg-purple-100 py-20 md:gap-5 ">
 				<div className="flex w-[90%] justify-center text-center text-[32px] font-bold  md:text-left md:text-3xl lg:w-full xl:text-5xl ">
 					<p className="text-center text-[35px] md:text-3xl xl:text-5xl">
-						<span className="text-neutral-600 ">Conoce Nuestros </span>
+						<span className="text-neutral-600 ">
+							Conoce Nuestros{' '}
+						</span>
 
 						<span className="text-primary-color ">Principios</span>
 					</p>
@@ -150,7 +165,9 @@ const Aboutus: NextPage = () => {
 								Misión
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Simplificar el acceso y la propiedad del software, empoderando a individuos y empresas con soluciones asequibles y eficientes.
+								Simplificar el acceso y la propiedad del
+								software, empoderando a individuos y empresas
+								con soluciones asequibles y eficientes.
 							</p>
 						</div>
 					</div>
@@ -164,7 +181,10 @@ const Aboutus: NextPage = () => {
 								Visión
 							</h4>
 							<p className="w-[90%] text-neutral-600 ">
-								Ser la plataforma líder en la gestión y distribución de herramientas de software, revolucionando cómo se accede y utiliza a nivel mundial.
+								Ser la plataforma líder en la gestión y
+								distribución de herramientas de software,
+								revolucionando cómo se accede y utiliza a nivel
+								mundial.
 							</p>
 						</div>
 					</div>
@@ -177,7 +197,10 @@ const Aboutus: NextPage = () => {
 								Valores
 							</h4>
 							<p className="w-[90%] text-neutral-600">
-								Transparencia, compromiso con la calidad, colaboración, asociaciones estratégicas, atención al cliente y empoderamiento, asequibilidad y eficiencia.
+								Transparencia, compromiso con la calidad,
+								colaboración, asociaciones estratégicas,
+								atención al cliente y empoderamiento,
+								asequibilidad y eficiencia.
 							</p>
 						</div>
 					</div>
