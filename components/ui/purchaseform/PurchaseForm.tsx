@@ -286,9 +286,7 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 							</span>
 						</div>
 						<CreditCard
-							state={state}
-							handleInputFocus={handleInputFocus}
-							handleInputChange={handleInputChange}
+
 						/>
 					</div>
 					<div className="pb-14 xl:pl-[3.2rem]">
