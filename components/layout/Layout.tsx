@@ -12,7 +12,7 @@ interface Props {
 
 export const Layout: FC<Props> = ({ children, title }) => {
 	return (
-		<main className="selection:bg-primary-color selection:text-white">
+		<div className="selection:bg-primary-color selection:text-white">
 			<Head>
 				<title>{title}</title>
 			</Head>
@@ -21,6 +21,6 @@ export const Layout: FC<Props> = ({ children, title }) => {
 				<main>{children}</main>
 				<Footer />
 			</div>
-		</main>
+		</div>
 	)
 }

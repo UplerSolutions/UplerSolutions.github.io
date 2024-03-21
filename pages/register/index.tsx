@@ -1,6 +1,4 @@
 import type { NextPage } from 'next'
-import { Layout } from '@/components/layout/Layout'
-import { Navbar } from '@/components/ui/navbar'
 import { Signup } from '@/components/ui/signup'
 
 const Register: NextPage = () => {

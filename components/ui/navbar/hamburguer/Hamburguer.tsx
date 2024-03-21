@@ -10,44 +10,44 @@ export const Hamburguer = () => {
 	}
 
 	return (
-		<div className="relative md:hidden">
+		<div className="relative lg:hidden">
 			{isOpen && (
 				<div>
-					<nav className="absolute right-[-1rem] top-[-2.2rem] h-screen w-64 bg-pink-50 p-4">
-						<ul className="flex flex-col items-end gap-6 pt-16 text-right font-[600] text-primary-color">
+					<nav className="absolute right-[-1rem] top-[-2.2rem] h-screen w-64 bg-pink-50 p-4 md:right-[-4rem]">
+						<ul className="flex flex-col items-end gap-6 pt-16 text-right text-lg  font-[600] ">
 							<li>
 								<Link
-									className="flex flex-row  items-center gap-2 text-center"
+									className="flex flex-row items-center  gap-2 text-center hover:text-primary-color "
 									href="/software"
 								>
-									<span className=" text-lg">Software</span>
+									Software
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />
 							<li>
 								<Link
-									className="flex flex-row items-center gap-2 text-center"
+									className="flex flex-row items-center gap-2 text-center hover:text-primary-color"
 									href="/#plans"
 								>
-									<span className=" text-lg">Planes</span>
+									Paquetes
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />
 							<li className="">
 								<Link
-									className="flex items-center gap-2 text-center"
+									className="flex items-center gap-2 text-center hover:text-primary-color"
 									href="/partners"
 								>
-									<span className=" text-lg">Partner</span>
+									Vender
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />{' '}
 							<li className="">
 								<Link
-									className="flex items-center gap-2 text-center"
+									className="flex items-center gap-2 text-center hover:text-primary-color"
 									href="/aboutUs"
 								>
-									<span className=" text-lg">Sobre nosotros</span>
+									Sobre nosotros
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />

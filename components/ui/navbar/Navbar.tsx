@@ -37,7 +37,7 @@ export const Navbar = () => {
 						className=" group relative inline-block "
 						href="/partners"
 					>
-						Conviértete en nuestro Partner
+						Partner
 						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 					</Link>
 					<Link
@@ -48,7 +48,7 @@ export const Navbar = () => {
 						<span className="ease absolute bottom-0 left-0 h-0 w-0 border-b-2 border-primary-color transition-all duration-500 group-hover:w-full"></span>
 					</Link>
 				</div>
-				<div className="hidden gap-3 md:flex">
+				<div className="hidden gap-3 lg:flex">
 					<Signin />
 				</div>
 				<Hamburguer />

@@ -4,11 +4,11 @@ import { ISoftware } from '@/interface/software'
 import CardSoftware from '@/components/ui/cardsoftware/CardSoftware'
 
 interface Props {
-	software: ISoftware[]
+	softwares: ISoftware[]
 }
-export const Explore: FC<Props> = ({ software }) => {
+export const Explore: FC<Props> = ({ softwares }) => {
 	const pageSize = 8
-	const totalProducts = software?.length
+	const totalProducts = softwares?.length
 	const totalPages = Math.ceil(totalProducts / pageSize)
 
 	const [currentPage, setCurrentPage] = useState<number>(1)
@@ -25,11 +25,14 @@ export const Explore: FC<Props> = ({ software }) => {
 
 	const startIndex = (currentPage - 1) * pageSize
 	const endIndex = startIndex + pageSize
-	const displayedProducts: ISoftware[] = software?.slice(startIndex, endIndex)
+	const displayedProducts: ISoftware[] = softwares?.slice(
+		startIndex,
+		endIndex
+	)
 
 	return (
 		<div className="flex flex-col items-center justify-center">
-			<ul className="m-auto flex w-full flex-wrap items-center justify-center gap-4 md:px-4 md:py-4 md:pb-4 lg:p-0 lg:py-8 2xl:gap-8">
+			<ul className="m-auto flex flex-col sm:flex-row w-full flex-wrap items-center justify-center gap-4 md:px-4 md:py-4 md:pb-4 lg:p-0 lg:py-8 2xl:gap-8">
 				{displayedProducts.length > 0 ? (
 					displayedProducts?.map((product) => (
 						<li

@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import { BiChevronDown, BiUser } from 'react-icons/bi'
+import { BiUser } from 'react-icons/bi'
 import { FaSignOutAlt } from 'react-icons/fa'
 
 const SigninButton = () => {
@@ -61,9 +61,8 @@ const SigninButton = () => {
 					<div>
 						<button
 							onClick={handleClick}
-							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${
-								isOpen ? '' : ''
-							}`}
+							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${isOpen ? '' : ''
+								}`}
 							aria-expanded="true"
 							aria-haspopup="true"
 						>
@@ -144,9 +143,8 @@ const SigninButton = () => {
 					<div>
 						<button
 							onClick={handleClick}
-							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${
-								isOpen ? '' : ''
-							}`}
+							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${isOpen ? '' : ''
+								}`}
 							aria-expanded="true"
 							aria-haspopup="true"
 						>
@@ -210,12 +208,12 @@ const SigninButton = () => {
 		return (
 			<div className="absolute flex w-60 items-center justify-center gap-4 font-lato text-[16px] md:relative md:flex md:w-auto md:gap-6">
 				<Link href="/login">
-					<span className="text-primary-color">Log in</span>
+					<span className="text-primary-color">Iniciar Sesión</span>
 				</Link>
 
 				<Link href="/register">
 					<button className="group relative h-9 w-24 rounded-xl border-2  border-primary-color bg-primary-color px-2 text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-						Sign up
+						Regsitrarse
 					</button>
 				</Link>
 			</div>

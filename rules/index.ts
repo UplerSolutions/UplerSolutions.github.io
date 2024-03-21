@@ -58,10 +58,21 @@ export const companyDataSchema = yup.object({
 	website: yup
 		.string()
 		.url('Invalid URL format')
-		.required('This field is required'),
-	email: yup
-		.string()
-		.email('Invalid email format')
-		.matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Must be a valid email')
 		.required('This field is required')
+})
+
+
+export const productFeatures = yup.object({
+	name: yup
+		.string()
+		.required('This field is required')
+		.min(2, 'Minimum 2 characters'),
+	description: yup
+		.string()
+		.required('This field is required')
+		.min(2, 'Minimum 2 characters'),
+	category: yup
+		.string()
+		.required('This field is required')
+		.min(2, 'Minimum 2 characters'),
 })

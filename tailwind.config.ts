@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const { nextui } = require('@nextui-org/react')
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -22,7 +23,11 @@ module.exports = {
 			},
 			fontFamily: {
 				lato: ['Lato', 'sans-serif']
-			}
+			},
+			screens: {
+				'xs': '475px',
+				...defaultTheme.screens,
+			},
 		}
 	}
 }

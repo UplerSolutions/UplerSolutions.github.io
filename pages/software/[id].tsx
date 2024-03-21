@@ -3,8 +3,6 @@ import React, { useState } from 'react'
 import { ISoftware } from '@/interface/software'
 import { Layout } from '@/components/layout/Layout'
 import { getSoftware } from '@/service/software/software-service'
-import { HiArrowLongRight, HiOutlineShoppingCart } from 'react-icons/hi2'
-import { MdOutlineCancel } from 'react-icons/md'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Product } from '../../components/ui/product/Product'
@@ -13,23 +11,7 @@ import ScrollButton from '../../components/ui/scrollbutton/ScrollButton'
 interface Props {
 	software: ISoftware
 }
-interface Props {
-	id: string
-	created_at: string
-	productName: string
-	lowDescription: string
-	longDescription: string
-	price: number
-	updated_at: string
-	seller: string
-	directLink: string
-	imageUrl: string
-	rating: number
-	category: {
-		id: string
-		categoryName: string
-	}
-}
+
 
 const Software: NextPage<Props> = ({ software }) => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -172,7 +154,7 @@ const Software: NextPage<Props> = ({ software }) => {
 					</div>
 				</div>
 			</div>
-			<Product software={software} />
+			<Product {...software} 	 />
 			<ScrollButton />
 		</Layout>
 	)
