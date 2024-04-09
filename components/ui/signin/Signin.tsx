@@ -61,8 +61,9 @@ const SigninButton = () => {
 					<div>
 						<button
 							onClick={handleClick}
-							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${isOpen ? '' : ''
-								}`}
+							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${
+								isOpen ? '' : ''
+							}`}
 							aria-expanded="true"
 							aria-haspopup="true"
 						>
@@ -143,8 +144,9 @@ const SigninButton = () => {
 					<div>
 						<button
 							onClick={handleClick}
-							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${isOpen ? '' : ''
-								}`}
+							className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${
+								isOpen ? '' : ''
+							}`}
 							aria-expanded="true"
 							aria-haspopup="true"
 						>
@@ -212,8 +214,8 @@ const SigninButton = () => {
 				</Link>
 
 				<Link href="/register">
-					<button className="group relative h-9 w-24 rounded-xl border-2  border-primary-color bg-primary-color px-2 text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-						Regsitrarse
+					<button className="group relative rounded-xl border-2 border-primary-color bg-primary-color  px-5  py-2 text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
+						Registrarse
 					</button>
 				</Link>
 			</div>
