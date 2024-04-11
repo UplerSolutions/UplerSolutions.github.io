@@ -38,7 +38,7 @@ export const Hamburguer = () => {
 									className="flex items-center gap-2 text-center hover:text-primary-color"
 									href="/partners"
 								>
-									Vender
+									Socios
 								</Link>
 							</li>
 							<hr className="h-[2px] w-full bg-primary-color" />{' '}
