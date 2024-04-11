@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { ChangeEvent, FC, FormEvent, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 
@@ -7,6 +7,9 @@ import PersonalData from './PersonalData'
 import CompanyData from './CompanyData'
 import CompanyFeatures from './CompanyFeatures'
 import { Confirmation } from './Confirmation'
+import { FormProvider, useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { contactForm } from '@/rules'
 
 interface Props {
 	activeStep: number
@@ -17,39 +20,29 @@ interface Props {
 }
 
 export interface DefaultValues {
-	customerInfo: {
-		name: string
-		lastname: string
-		email: string
-		position: string
-	}
-	companyInfo: {
-		name: string
-		website: string
-	}
-	productFeatures: {
-		name: string
-		description: string
-		category: string
-	}
+	name: string
+	lastname: string
+	email: string
+	position: string
+
+	companyName: string
+	website: string
+
+	productName: string
+	productDescription: string
+	productCategory: string
 }
 
 const defaultValues: DefaultValues = {
-	customerInfo: {
-		name: '',
-		lastname: '',
-		email: '',
-		position: ''
-	},
-	companyInfo: {
-		name: '',
-		website: ''
-	},
-	productFeatures: {
-		name: '',
-		description: '',
-		category: ''
-	}
+	name: '',
+	lastname: '',
+	email: '',
+	position: '',
+	companyName: '',
+	website: '',
+	productName: '',
+	productDescription: '',
+	productCategory: ''
 }
 
 const CustomForm: FC<Props> = ({
@@ -58,56 +51,41 @@ const CustomForm: FC<Props> = ({
 	handleBack,
 	handleNext
 }) => {
-	const [info, setInfo] = useState(defaultValues)
-
-	const handlerCustomer = (data: typeof defaultValues.customerInfo) => {
-		setInfo({
-			...info,
-			customerInfo: { ...data }
-		})
-		handleNext()
-	}
-	const handlerCompany = (data: typeof defaultValues.companyInfo) => {
-		setInfo({
-			...info,
-			companyInfo: { ...data }
-		})
-		handleNext()
-	}
-
-	const handlerProduct = (data: typeof defaultValues.productFeatures) => {
-		setInfo({
-			...info,
-			productFeatures: { ...data }
-		})
-		handleNext()
+	const methods = useForm({
+		resolver: yupResolver(contactForm),
+		reValidateMode: 'onChange',
+		defaultValues: defaultValues
+	})
+	const handleOnSubmit = async (info: DefaultValues) => {
+		const post = await fetch(
+			process.env.NEXT_PUBLIC_BACKEND_URL + '/createContact',
+			{
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(info)
+			}
+		)
+		console.log(await post.json())
 	}
 
 	return (
-		<section className="mt-4 flex w-full flex-col rounded-md p-8 text-black shadow-form">
-			<div>
-				{activeStep === 0 && (
-					<PersonalData
-						handlerCustomer={handlerCustomer}
-						info={info}
-					/>
-				)}
+		<FormProvider {...methods}>
+			<form
+				onSubmit={methods.handleSubmit(handleOnSubmit)}
+				className="mt-4 flex w-full flex-col rounded-md p-8 text-black shadow-form"
+			>
+				{activeStep === 0 && <PersonalData handleNext={handleNext} />}
 
-				{activeStep === 1 && (
-					<CompanyData handlerCompany={handlerCompany} info={info} />
-				)}
+				{activeStep === 1 && <CompanyData handleNext={handleNext} />}
 
 				{activeStep === 2 && (
-					<CompanyFeatures
-						handlerProduct={handlerProduct}
-						info={info}
-					/>
+					<CompanyFeatures handleNext={handleNext} />
 				)}
 
 				{activeStep === 3 && (
-					<Confirmation info={info} setActiveStep={setActiveStep} />
+					<Confirmation setActiveStep={setActiveStep} />
 				)}
-			</div>
+			</form>
 
 			<footer className="mt-4 flex justify-between">
 				{activeStep !== 0 && (
@@ -115,17 +93,8 @@ const CustomForm: FC<Props> = ({
 						ATRAS
 					</Button>
 				)}
-
-				{activeStep === 3 && (
-					<Button
-						type="submit"
-						className="bg-primary-color text-white hover:bg-purple-500"
-					>
-						ENVIAR
-					</Button>
-				)}
 			</footer>
-		</section>
+		</FormProvider>
 	)
 }
 

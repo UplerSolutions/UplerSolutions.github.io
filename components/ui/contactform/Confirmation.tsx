@@ -1,15 +1,19 @@
 import { FC } from 'react'
 import { DefaultValues } from './CustomForm'
 import { EditIcon } from '../icons'
+import { useFormContext } from 'react-hook-form'
+import { Button } from '../button'
 
 interface Props {
-	info: DefaultValues
 	setActiveStep: (step: number) => void
 }
 
-export const Confirmation: FC<Props> = ({ info, setActiveStep }) => {
+export const Confirmation: FC<Props> = ({ setActiveStep }) => {
+	const { getValues } = useFormContext()
+
+	const info = getValues()
 	return (
-		<>
+		<div className="relative flex flex-col">
 			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl font-bold">
 				Información Personal{' '}
 				<button onClick={(e) => setActiveStep(0)}>
@@ -21,25 +25,25 @@ export const Confirmation: FC<Props> = ({ info, setActiveStep }) => {
 				<div className="flex  w-4/5">
 					<p className=" w-[25%]  text-xl font-bold ">Nombre </p>
 					<span className=" text-xl font-normal italic">
-						{info.customerInfo.name}
+						{info.name}
 					</span>
 				</div>
 				<div className="flex  w-4/5">
 					<p className="w-[25%] text-xl  font-bold  ">Apellido </p>
 					<span className="text-xl font-normal italic">
-						{info.customerInfo.lastname}
+						{info.lastname}
 					</span>
 				</div>
 				<div className="flex w-4/5">
 					<p className="w-[25%] text-xl  font-bold  ">Email </p>
 					<span className="text-xl font-normal italic">
-						{info.customerInfo.email}
+						{info.email}
 					</span>
 				</div>
 				<div className="flex  w-4/5">
 					<p className="w-[25%] text-xl  font-bold  ">Posición </p>
 					<span className="text-xl font-normal italic">
-						{info.customerInfo.position}
+						{info.position}
 					</span>
 				</div>
 			</div>
@@ -57,13 +61,13 @@ export const Confirmation: FC<Props> = ({ info, setActiveStep }) => {
 						Nombre de compañía
 					</p>
 					<span className="  text-xl font-normal italic">
-						{info.companyInfo.name}
+						{info.companyName}
 					</span>
 				</div>
 				<div className="flex ">
 					<p className="w-[35%] text-xl  font-bold  ">URL</p>
 					<span className=" text-xl font-normal italic">
-						{info.companyInfo.website}
+						{info.website}
 					</span>
 				</div>
 			</div>
@@ -81,7 +85,7 @@ export const Confirmation: FC<Props> = ({ info, setActiveStep }) => {
 						Nombre del Producto{' '}
 					</p>
 					<span className=" text-xl font-normal italic">
-						{info.productFeatures.name}
+						{info.productName}
 					</span>
 				</div>
 				<div className="flex w-4/5">
@@ -89,16 +93,19 @@ export const Confirmation: FC<Props> = ({ info, setActiveStep }) => {
 						Descripción{' '}
 					</p>
 					<span className=" text-xl font-normal italic">
-						{info.productFeatures.description}
+						{info.productDescription}
 					</span>
 				</div>
 				<div className="flex w-4/5">
 					<p className=" w-[40%] text-xl  font-bold  ">Categoria </p>
 					<span className=" text-xl font-normal italic">
-						{info.productFeatures.category}
+						{info.productCategory}
 					</span>
 				</div>
 			</div>
-		</>
+			<Button type="submit" className="self-end">
+				ENVIAR
+			</Button>
+		</div>
 	)
 }

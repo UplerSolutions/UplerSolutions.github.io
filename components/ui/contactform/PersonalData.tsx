@@ -1,40 +1,38 @@
 import { FC } from 'react'
-import { useForm, SubmitHandler } from 'react-hook-form'
-import { CustomTextField } from './customInput/CustomTextField'
+import { useFormContext } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 import { Button } from '@/components/ui/button'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { personalDataSchema } from '@/rules'
-import { DefaultValues } from './CustomForm'
 
 interface Props {
-	handlerCustomer: (data: any) => void
-	info: DefaultValues
+	handleNext: () => void
 }
 
-const PersonalData: FC<Props> = ({ handlerCustomer, info }) => {
+const PersonalData: FC<Props> = ({ handleNext }) => {
 	const {
-		control,
-		formState: { errors },
-		handleSubmit
-	} = useForm({defaultValues:info.customerInfo ,resolver: yupResolver(personalDataSchema) })
-
-	const onSubmit: SubmitHandler<any> = (data: any) => {
-		handlerCustomer(data)
-	}
-
+		register,
+		formState: { errors }
+	} = useFormContext()
+	console.log(errors)
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+		<div className="flex flex-col gap-4">
 			<h4 className="mb-4 text-center text-4xl">Información Personal</h4>
-
 			<div>
-				<CustomTextField
-					name="name"
-					control={control}
-					type="text"
-					label="Nombre"
-					required={true}
-				/>
+				<div className="relative">
+					<input
+						{...register('name')}
+						type="text"
+						className="peer block w-full appearance-none rounded-lg border-2 border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+						placeholder="Martin"
+						required
+						name="name"
+					/>
+					<label
+						htmlFor="name"
+						className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+					>
+						Nombre
+					</label>
+				</div>
 
 				<p className="text-sm font-medium text-red-500">
 					<ErrorMessage errors={errors} name="name" />
@@ -42,50 +40,80 @@ const PersonalData: FC<Props> = ({ handlerCustomer, info }) => {
 			</div>
 
 			<div>
-				<CustomTextField
-					name="lastname"
-					label="Apellido"
-					type="text"
-					control={control}
-					required={true}
-				/>
+				<div className="relative">
+					<input
+						{...register('lastname')}
+						type="text"
+						className="peer block w-full appearance-none rounded-lg border-2 border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+						placeholder="Alvarez"
+						required
+						name="lastname"
+					/>
+					<label
+						htmlFor="lastname"
+						className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+					>
+						Apellido
+					</label>
+				</div>
+
 				<p className="text-sm font-medium text-red-500">
 					<ErrorMessage errors={errors} name="lastname" />
 				</p>
 			</div>
 
 			<div>
-				<CustomTextField
-					name="email"
-					label="Email"
-					type="email"
-					control={control}
-					defaultValue=""
-					required={true}
-				/>
+				<div className="relative">
+					<input
+						{...register('email')}
+						type="text"
+						className="peer block w-full appearance-none rounded-lg border-2 border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+						placeholder="tuemail@gmail.com"
+						required
+						name="email"
+					/>
+					<label
+						htmlFor="email"
+						className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+					>
+						Email
+					</label>
+				</div>
 				<p className="text-sm font-medium text-red-500">
 					<ErrorMessage errors={errors} name="email" />
 				</p>
 			</div>
 
 			<div>
-				<CustomTextField
-					name="position"
-					label="Tu posición"
-					type="text"
-					control={control}
-					required={true}
-				/>
+				<div className="relative">
+					<input
+						{...register('position')}
+						type="text"
+						className="peer block w-full appearance-none rounded-lg border-2 border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+						placeholder="CEO"
+						required
+						name="position"
+					/>
+					<label
+						htmlFor="position"
+						className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4"
+					>
+						Tu Posicion
+					</label>
+				</div>
 
 				<p className="text-sm font-medium text-red-500">
 					<ErrorMessage errors={errors} name="position" />
 				</p>
 			</div>
-
-			<Button type="submit" className="self-start">
+			<Button
+				className="self-end"
+				onClick={handleNext}
+				
+			>
 				SIGUIENTE
 			</Button>
-		</form>
+		</div>
 	)
 }
 
