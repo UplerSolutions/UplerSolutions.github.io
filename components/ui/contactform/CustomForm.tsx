@@ -1,9 +1,5 @@
-import { ChangeEvent, FC, FormEvent, useState } from 'react'
-
-import { Button } from '@/components/ui/button'
-
+import { FC } from 'react'
 import PersonalData from './PersonalData'
-
 import CompanyData from './CompanyData'
 import CompanyFeatures from './CompanyFeatures'
 import { Confirmation } from './Confirmation'
@@ -53,7 +49,7 @@ const CustomForm: FC<Props> = ({
 }) => {
 	const methods = useForm({
 		resolver: yupResolver(contactForm),
-		reValidateMode: 'onChange',
+		reValidateMode: 'onBlur',
 		defaultValues: defaultValues
 	})
 	const handleOnSubmit = async (info: DefaultValues) => {
@@ -65,7 +61,8 @@ const CustomForm: FC<Props> = ({
 				body: JSON.stringify(info)
 			}
 		)
-		console.log(await post.json())
+		const res = await post.json()
+		console.log(res)
 	}
 
 	return (
@@ -76,24 +73,27 @@ const CustomForm: FC<Props> = ({
 			>
 				{activeStep === 0 && <PersonalData handleNext={handleNext} />}
 
-				{activeStep === 1 && <CompanyData handleNext={handleNext} />}
+				{activeStep === 1 && (
+					<CompanyData
+						handleBack={handleBack}
+						handleNext={handleNext}
+					/>
+				)}
 
 				{activeStep === 2 && (
-					<CompanyFeatures handleNext={handleNext} />
+					<CompanyFeatures
+						handleBack={handleBack}
+						handleNext={handleNext}
+					/>
 				)}
 
 				{activeStep === 3 && (
-					<Confirmation setActiveStep={setActiveStep} />
+					<Confirmation
+						handleBack={handleBack}
+						setActiveStep={setActiveStep}
+					/>
 				)}
 			</form>
-
-			<footer className="mt-4 flex justify-between">
-				{activeStep !== 0 && (
-					<Button type="button" onClick={handleBack}>
-						ATRAS
-					</Button>
-				)}
-			</footer>
 		</FormProvider>
 	)
 }

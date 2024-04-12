@@ -1,19 +1,26 @@
 import { FC } from 'react'
-import { DefaultValues } from './CustomForm'
 import { EditIcon } from '../icons'
 import { useFormContext } from 'react-hook-form'
 import { Button } from '../button'
+import { ErrorMessage } from '@hookform/error-message'
 
 interface Props {
 	setActiveStep: (step: number) => void
+	handleBack: () => void
 }
 
-export const Confirmation: FC<Props> = ({ setActiveStep }) => {
-	const { getValues } = useFormContext()
+export const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
+	const {
+		getValues,
+		formState: { errors }
+	} = useFormContext()
 
 	const info = getValues()
+
+	console.log(errors)
+
 	return (
-		<div className="relative flex flex-col">
+		<section className="relative flex flex-col">
 			<h4 className="mb-6 flex items-center gap-2 text-center text-4xl font-bold">
 				Información Personal{' '}
 				<button onClick={(e) => setActiveStep(0)}>
@@ -103,9 +110,31 @@ export const Confirmation: FC<Props> = ({ setActiveStep }) => {
 					</span>
 				</div>
 			</div>
-			<Button type="submit" className="self-end">
-				ENVIAR
-			</Button>
-		</div>
+			<div className=" flex justify-between">
+				<Button className="self-start" onClick={handleBack}>
+					ATRAS
+				</Button>
+				{Object.keys(errors).length > 0 ? (
+					<Button type="submit" disable className="self-end">
+						ENVIAR
+					</Button>
+				) : (
+					<Button type="submit"  className="self-end">
+						ENVIAR
+					</Button>
+				)}
+			</div>
+			<div className="pt-4 ">
+				{Object.keys(errors).length > 0 ? (
+					<p className="text-lg font-medium text-red-500">
+						{' '}
+						Debes completar todos los campos para contactarte con
+						nosotros
+					</p>
+				) : (
+					''
+				)}
+			</div>
+		</section>
 	)
 }

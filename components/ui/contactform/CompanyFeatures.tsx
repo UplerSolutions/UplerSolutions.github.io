@@ -5,15 +5,16 @@ import { Button } from '../button'
 
 interface Props {
 	handleNext: () => void
+	handleBack: () => void
 }
 
-const CompanyFeatures: FC<Props> = ({ handleNext }) => {
+const CompanyFeatures: FC<Props> = ({ handleNext, handleBack }) => {
 	const {
 		register,
 		formState: { errors }
 	} = useFormContext()
 	return (
-		<div className="relative flex flex-col gap-4">
+		<section className="relative flex flex-col gap-4">
 			<h4 className="mb-4 text-center text-4xl">
 				Características del Producto
 			</h4>
@@ -69,7 +70,6 @@ const CompanyFeatures: FC<Props> = ({ handleNext }) => {
 						type="text"
 						className="peer block w-full appearance-none rounded-lg border-2 border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
 						placeholder="Trading"
-						required
 						name="productCategory"
 					/>
 					<label
@@ -80,16 +80,18 @@ const CompanyFeatures: FC<Props> = ({ handleNext }) => {
 					</label>
 				</div>
 				<p className="text-sm font-medium text-red-500">
-					<ErrorMessage errors={errors} name="category" />
+					<ErrorMessage errors={errors} name="productCategory" />
 				</p>
 			</div>
-			<Button
-				className="self-end"
-				onClick={handleNext}
-			>
-				SIGUIENTE
-			</Button>
-		</div>
+			<div className=" flex justify-between">
+				<Button className="self-start" onClick={handleBack}>
+					ATRAS
+				</Button>
+				<Button className="self-end" onClick={handleNext}>
+					SIGUIENTE
+				</Button>
+			</div>
+		</section>
 	)
 }
 

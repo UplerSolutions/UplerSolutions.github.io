@@ -42,8 +42,7 @@ export const contactForm = yup.object({
 		.min(2, 'Mínimo de 2 caracteres'),
 	email: yup
 		.string()
-		.email()
-		.matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Debe ser un mail')
+		.email('Debe ser un mail valido')
 		.required('Este campo es requerido'),
 	position: yup
 		.string()

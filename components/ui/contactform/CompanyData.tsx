@@ -5,14 +5,15 @@ import { Button } from '@/components/ui/button'
 
 interface Props {
 	handleNext: () => void
+	handleBack: () => void
 }
-const CompanyData: FC<Props> = ({ handleNext }) => {
+const CompanyData: FC<Props> = ({ handleNext, handleBack }) => {
 	const {
 		register,
 		formState: { errors }
 	} = useFormContext()
 	return (
-		<div className="relative flex flex-col gap-4">
+		<section className="relative flex flex-col gap-4">
 			<h4 className="mb-4 text-center text-4xl">
 				Información de la Compania
 			</h4>
@@ -45,7 +46,7 @@ const CompanyData: FC<Props> = ({ handleNext }) => {
 						{...register('website')}
 						type="text"
 						className="peer block w-full appearance-none rounded-lg border-2 border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
-						placeholder="Upler.tech"
+						placeholder="https://www.tuweb"
 						required
 						name="website"
 					/>
@@ -61,13 +62,15 @@ const CompanyData: FC<Props> = ({ handleNext }) => {
 					<ErrorMessage errors={errors} name="website" />
 				</p>
 			</div>
-			<Button
-				className="self-end"
-				onClick={handleNext}
-			>
-				SIGUIENTE
-			</Button>
-		</div>
+			<div className=" flex justify-between">
+				<Button className="self-start" onClick={handleBack}>
+					ATRAS
+				</Button>
+				<Button className="self-end" onClick={handleNext}>
+					SIGUIENTE
+				</Button>
+			</div>
+		</section>
 	)
 }
 
