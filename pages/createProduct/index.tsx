@@ -13,27 +13,14 @@ import {
 	SyntheticEvent,
 	useState
 } from 'react'
-
-interface Software {
-	productName: string
-	lowDescription: string
-	longDescription: string
-	price: number
-	updated_at: string
-	seller: string
-	directLink: string
-	imageUrl: string
-	rating: number
-	category: {
-		categoryName: string
-	}
-}
+import { useForm } from 'react-hook-form'
 
 interface Props {
 	categories: ICategory[]
 }
 
 const CreateProduct: NextPage<Props> = ({ categories }) => {
+	const [erros, setErros] = useState<string[]>([])
 	const [software, setProduct] = useState({
 		productName: '',
 		lowDescription: '',
@@ -122,6 +109,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										Nombre de Producto
 									</label>
 									<input
+										required
 										value={software?.productName}
 										onChange={handleOnChange}
 										placeholder="Kepla"
@@ -140,6 +128,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										Vendedor
 									</label>
 									<input
+										required
 										value={software?.seller}
 										onChange={handleOnChange}
 										placeholder="Jacob James"
@@ -157,6 +146,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										Año de lanzamiento
 									</label>
 									<input
+										required
 										value={software?.yearRelease}
 										onChange={handleOnChange}
 										placeholder=""
@@ -174,6 +164,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										Precio
 									</label>
 									<input
+										required
 										value={software?.price}
 										onChange={handleOnChange}
 										placeholder="100"
@@ -191,6 +182,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										URL web
 									</label>
 									<input
+										required
 										value={software?.directLink}
 										onChange={handleOnChange}
 										placeholder="Kepla"
@@ -272,6 +264,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										Seleccione una Foto
 									</label>
 									<input
+										required
 										type="file"
 										accept="image/*"
 										onChange={handleFileChange}
@@ -289,7 +282,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 					</Link>
 					<div
 						id="product"
-						className="flex justify-center w-screen flex-col gap-4 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] px-14  py-4 pt-36 md:flex-row  "
+						className="flex w-screen flex-col justify-center gap-4 bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] px-14  py-4 pt-36 md:flex-row  "
 					>
 						<Image
 							src={
@@ -340,18 +333,11 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 
 						<hr className="w-full" />
 						<div className="flex ">
-							<div className="mt-10 flex flex-col items-start gap-10 pt-3">
+							<div className="mt-10 flex flex-col  items-start gap-10 pt-3">
 								<h3 className="  text-3xl text-neutral-700">
 									Overview
 								</h3>
-								<div className="mb-12 flex flex-col gap-10  ">
-									<p className=" w-[80%] text-neutral-700 md:w-full">
-										{software?.longDescription === ''
-											? 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam aperiam quo facere voluptatem, inventore itaque corrupti autem, quidem saepe nobis modi? Maiores possimus similique quidem vel vitae! Animi, neque dignissimos!' +
-											  ' ' +
-											  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam aperiam quo facere voluptatem, inventore itaque corrupti autem, quidem saepe nobis modi? Maiores possimus similique quidem vel vitae! Animi, neque dignissimos!'
-											: software.longDescription}
-									</p>
+								<div className="mb-12 flex flex-col gap-10 md:flex-row   ">
 									<Image
 										src={
 											software?.imageUrl === ''
@@ -363,6 +349,13 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										height={500}
 										className=" rounded-xl border border-black"
 									/>
+									<p className="md:w-[50%]  text-neutral-700 ">
+										{software?.longDescription === ''
+											? 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam aperiam quo facere voluptatem, inventore itaque corrupti autem, quidem saepe nobis modi? Maiores possimus similique quidem vel vitae! Animi, neque dignissimos!' +
+											  ' ' +
+											  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam aperiam quo facere voluptatem, inventore itaque corrupti autem, quidem saepe nobis modi? Maiores possimus similique quidem vel vitae! Animi, neque dignissimos!'
+											: software.longDescription}
+									</p>
 								</div>
 							</div>
 						</div>

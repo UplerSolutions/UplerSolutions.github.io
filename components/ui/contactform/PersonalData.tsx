@@ -12,7 +12,7 @@ const PersonalData: FC<Props> = ({ handleNext }) => {
 		register,
 		formState: { errors }
 	} = useFormContext()
-	console.log(errors)
+
 	return (
 		<div className="flex flex-col gap-4">
 			<h4 className="mb-4 text-center text-4xl">Información Personal</h4>
@@ -106,13 +106,7 @@ const PersonalData: FC<Props> = ({ handleNext }) => {
 					<ErrorMessage errors={errors} name="position" />
 				</p>
 			</div>
-			<Button
-				className="self-end"
-				onClick={handleNext}
-				
-			>
-				SIGUIENTE
-			</Button>
+
 		</div>
 	)
 }
