@@ -1,6 +1,4 @@
 import  { FC, useState } from 'react'
-import { Rating, Slider } from '@mui/material'
-import Box from '@mui/material/Box'
 import { ICategory } from '@/interface/category'
 import { useRouter } from 'next/router'
 
@@ -15,9 +13,6 @@ interface Props {
 	value1: number[]
 }
 
-function valuetext(value: number) {
-	return `${value}°C`
-}
 
 const Filter: FC<Props> = ({
 	categories,
@@ -44,7 +39,6 @@ const Filter: FC<Props> = ({
 	return (
 		<div className="mx-auto mb-6 grid text-black lg:w-[300px] lg:pl-[3rem]">
 			<h2 className="text-lg font-semibold">Filtrar Por</h2>
-
 			<div className="py-5">
 				<details className="group">
 					<summary className="flex cursor-pointer list-none items-center justify-between font-medium">
@@ -67,24 +61,25 @@ const Filter: FC<Props> = ({
 					</summary>
 					<div className="flex flex-col gap-1">
 						{categories.map((category) => (
-							<div
+							<button
 								key={category.id}
 								className="flex gap-2"
 								onClick={() =>
 									handleCategoryClick(category.categoryName)
 								} // Updated click handler
 							>
-								<p className="cursor-pointer text-neutral-600 hover:text-neutral-800">
+								<p className=" text-neutral-600 hover:text-neutral-800">
 									{category.categoryName}
 								</p>
-							</div>
+							</button>
 						))}
 					</div>
 				</details>
 			</div>
 
+
 			<hr className="h-[2px] bg-primary-color" />
-			<div className="py-5">
+			{/* <div className="py-5">
 				<details className="group">
 					<summary className="flex cursor-pointer list-none items-center justify-between font-medium">
 						<span>Valoración</span>
@@ -145,7 +140,7 @@ const Filter: FC<Props> = ({
 						color="secondary"
 					/>
 				</Box>
-			</div>
+			</div> */}
 		</div>
 	)
 }
