@@ -1,7 +1,7 @@
 import { useState, FC } from 'react'
-import Pagination from '@mui/material/Pagination'
 import { ISoftware } from '@/interface/software'
 import CardSoftware from '@/components/ui/cardsoftware/CardSoftware'
+import Pagination from '../pagination/Pagination'
 
 interface Props {
 	softwares: ISoftware[]
@@ -16,12 +16,8 @@ export const Explore: FC<Props> = ({ softwares }) => {
 	const onPageChange = (page: number) => {
 		setCurrentPage(page)
 	}
-	const handlePaginationChange = (
-		event: React.ChangeEvent<unknown>,
-		page: number
-	) => {
-		onPageChange(page)
-	}
+
+	console.log(softwares)
 
 	const startIndex = (currentPage - 1) * pageSize
 	const endIndex = startIndex + pageSize
@@ -32,7 +28,7 @@ export const Explore: FC<Props> = ({ softwares }) => {
 
 	return (
 		<div className="flex flex-col items-center justify-center">
-			<ul className="m-auto flex flex-col sm:flex-row w-full flex-wrap items-center justify-center gap-4 md:px-4 md:py-4 md:pb-4 lg:p-0 lg:py-8 2xl:gap-8">
+			<ul className="m-auto flex w-full flex-col flex-wrap items-center justify-center gap-4 sm:flex-row md:px-4 md:py-4 md:pb-4 lg:p-0 lg:py-8 2xl:gap-8">
 				{displayedProducts.length > 0 ? (
 					displayedProducts?.map((product) => (
 						<li
@@ -60,15 +56,16 @@ export const Explore: FC<Props> = ({ softwares }) => {
 					))
 				) : (
 					<h3 className="text-neutral-700">
-						No Contamos con Softwares Disponibles para esta Categoria
+						No Contamos con Softwares Disponibles para esta
+						Categoria
 					</h3>
 				)}
 			</ul>
 			<Pagination
-				count={totalPages}
-				page={currentPage}
-				onChange={handlePaginationChange}
-				className="pt-10"
+				totalPages={totalPages}
+				currentPage={currentPage}
+				onPageChange={onPageChange}
+				
 			/>
 		</div>
 	)
