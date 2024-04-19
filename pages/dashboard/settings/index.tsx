@@ -4,7 +4,6 @@ import { Panel } from '@/components/ui/panel/Panel'
 import { SideBar } from '@/components/ui/sidebar-dashboard'
 import { useState } from 'react'
 import { EditIcon } from '@/components/ui/icons'
-import CreditCard from '@/components/ui/creditcard/CreditCard'
 
 const Settings: NextPage = () => {
 	const [isInputEnabled1, setIsInputEnabled1] = useState(true)
@@ -25,7 +24,7 @@ const Settings: NextPage = () => {
 	}
 	return (
 		<Layout title="Upler - Dashboard">
-			<div className="h-auto w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
+			<section className="h-auto w-full bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] pt-24">
 				<div className="flex  h-full w-full flex-col justify-center  text-neutral-600 sm:flex-row xl:gap-5">
 					<SideBar />
 					<div className=" flex w-full flex-col p-2 pt-5 md:p-4">
@@ -120,19 +119,13 @@ const Settings: NextPage = () => {
 											</div>
 										</form>
 									</div>
-									<div className="flex w-full flex-col gap-3 px-2 py-4 ">
-										<h3 className=" text-xl font-semibold">
-											Metodos de pago
-										</h3>
-										<CreditCard/>
-										
-									</div>
+									
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 			{/*       <pre>
 			<div className='text-black pt-24 h-[90vh] bg-gradient-to-r from-[#fde9fc] to-[#fffbe0] w-full'>
 			{JSON.stringify(session, null, 2)}

@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { singup } from '@/rules'
 import { ErrorMessage } from '@hookform/error-message'
-import Typography from '@mui/material/Typography'
+
 interface FormData {
 	username: string
 	email: string
@@ -104,10 +104,10 @@ export const Signup = () => {
 								name="email"
 								className="rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 							/>
-							<Typography variant="caption" color="red">
+							<p className='text-red-500'>
 								<ErrorMessage errors={errors} name="email" />
-							</Typography>
-							
+							</p>
+
 							<label
 								htmlFor="username"
 								className="py-4 text-xl font-semibold"
@@ -121,9 +121,9 @@ export const Signup = () => {
 								name="username"
 								className="rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 							/>
-							<Typography variant="caption" color="red">
+							<p className='text-red-500'>
 								<ErrorMessage errors={errors} name="username" />
-							</Typography>
+							</p>
 							<label
 								htmlFor="password"
 								className="py-4 text-xl font-semibold"
@@ -137,9 +137,9 @@ export const Signup = () => {
 								name="password"
 								className="mb-4 rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 							/>
-							<Typography variant="caption" color="red">
+							<p className='text-red-500'>
 								<ErrorMessage errors={errors} name="password" />
-							</Typography>
+							</p>
 							<label
 								htmlFor="password"
 								className="py-4 text-xl font-semibold"
@@ -153,12 +153,12 @@ export const Signup = () => {
 								name="confirmPassword"
 								className="mb-4 rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 							/>
-							<Typography variant="caption" color="red">
+							<p className='text-red-500'>
 								<ErrorMessage
 									errors={errors}
 									name="confirmPassword"
 								/>
-							</Typography>
+							</p>
 							<button
 								type="submit"
 								className="h-14 w-full rounded-md bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"

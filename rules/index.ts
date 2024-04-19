@@ -30,49 +30,42 @@ export const login = yup.object({
 	password: yup.string().required('Please Enter your password')
 })
 
-export const personalDataSchema = yup.object({
+
+export const contactForm = yup.object({
 	name: yup
 		.string()
-		.required('This field is required')
-		.min(2, 'Minimum 2 characters'),
+		.required('Este campo es requerido')
+		.min(2, 'Mínimo de 2 caracteres'),
 	lastname: yup
 		.string()
-		.required('This field is required')
-		.min(2, 'Minimum 2 characters'),
+		.required('Este campo es requerido')
+		.min(2, 'Mínimo de 2 caracteres'),
 	email: yup
 		.string()
-		.email()
-		.matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Must be a valid email')
-		.required('This field is required'),
+		.email('Debe ser un mail valido')
+		.required('Este campo es requerido'),
 	position: yup
 		.string()
-		.required('This field is required')
-		.min(2, 'Minimum 2 characters')
-})
-
-export const companyDataSchema = yup.object({
-	name: yup
+		.required('Este campo es requerido')
+		.min(2, 'Mínimo de 2 caracteres'),
+	companyName: yup
 		.string()
-		.required('This field is required')
-		.min(2, 'Minimum 2 characters'),
+		.required('Este campo es requerido')
+		.min(2, 'Mínimo de 2 caracteres'),
 	website: yup
 		.string()
-		.url('Invalid URL format')
-		.required('This field is required')
-})
-
-
-export const productFeatures = yup.object({
-	name: yup
+		.url('Formato de URL invalido')
+		.required('Este campo es requerido'),
+	productName: yup
 		.string()
-		.required('This field is required')
-		.min(2, 'Minimum 2 characters'),
-	description: yup
+		.required('Este campo es requerido')
+		.min(2, 'Mínimo de 2 caracteres'),
+	productDescription: yup
 		.string()
-		.required('This field is required')
-		.min(2, 'Minimum 2 characters'),
-	category: yup
+		.required('Este campo es requerido')
+		.min(2, 'Mínimo de 2 caracteres'),
+	productCategory: yup
 		.string()
-		.required('This field is required')
-		.min(2, 'Minimum 2 characters'),
+		.required('Este campo es requerido')
+		.min(2, 'Mínimo de 2 caracteres'),
 })
