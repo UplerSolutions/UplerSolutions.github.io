@@ -3,13 +3,12 @@ import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import GoogleButton from '../googlebutton/GoogleButton'
 import Image from 'next/image'
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { login } from '@/rules'
 import { ErrorMessage } from '@hookform/error-message'
-import Typography from '@mui/material/Typography'
 
 interface FormData {
 	username: string
@@ -89,12 +88,12 @@ export const Login = () => {
 									name="username"
 									className="rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 								/>
-								<Typography variant="caption" color="red">
+								<p className="text-red-500">
 									<ErrorMessage
 										errors={errors}
 										name="username"
 									/>
-								</Typography>
+								</p>
 								<label
 									htmlFor="password"
 									className="py-4 text-xl font-semibold"
@@ -108,12 +107,12 @@ export const Login = () => {
 									name="password"
 									className="mb-4 rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 								/>
-								<Typography variant="caption" color="red">
+								<p className="text-red-500">
 									<ErrorMessage
 										errors={errors}
 										name="password"
 									/>
-								</Typography>
+								</p>
 							</div>
 							<div className="mt-4 flex w-full flex-col items-center justify-center gap-4 px-8 pb-10">
 								{/* <div className='flex items-center justify-between pb-6 w-full gap-2'>
@@ -140,12 +139,10 @@ export const Login = () => {
 									Iniciar Sesión
 								</button>
 								{errorsApi && (
-									<Typography variant="caption" color="red">
-										{errorsApi}
-									</Typography>
+									<p className="text-red-500">{errorsApi}</p>
 								)}
 								<h3 className=" text-neutral-400">
-									o continuar con 
+									o continuar con
 								</h3>
 							</div>
 						</form>

@@ -136,7 +136,7 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 								type="submit"
 								onClick={handleRouterClear}
 							>
-								Clear{' '}
+								Limpiar Filtros{' '}
 							</button>
 						</div>
 					</div>
@@ -158,7 +158,7 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 							type="submit"
 							onClick={handleRouterClear}
 						>
-							Clear{' '}
+							Limpiar Filtros{' '}
 						</button>
 					</div>
 				</div>
