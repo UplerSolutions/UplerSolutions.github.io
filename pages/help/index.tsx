@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { SearchBar } from '../../components/ui/searchbar/SearchBar'
-import { Box, Typography } from '@mui/material'
 import { RecentSearches } from '@/components/ui/recentsearches'
 import { useRouter } from 'next/router'
 import { useRecentSearches } from '@/hooks/useRecentSearches'
@@ -41,13 +40,8 @@ const Help: NextPage = () => {
 				</div>
 			</nav>
 			<div className="h-[225px] bg-gradient-to-r from-[#ffcffc] to-[#fff7c4] pt-28 md:h-[350px] md:pt-48">
-				<Box
-					maxWidth={'sm'}
-					margin="auto"
-					className="w-[82%] xl:w-[100%]"
-				>
-					<Typography textAlign="center" my={2}></Typography>
-					<Box className="flex flex-col gap-2" ref={anchorEl}>
+				<div className="m-auto w-[82%] max-w-sm xl:w-[100%]">
+					<div className="flex flex-col gap-2" ref={anchorEl}>
 						<SearchBar
 							onSubmit={async (searchTerm: string) => {
 								router.push({
@@ -74,8 +68,8 @@ const Help: NextPage = () => {
 								setOpen(false)
 							}}
 						/>
-					</Box>
-				</Box>
+					</div>
+				</div>
 			</div>
 			<div className="flex  h-full w-full flex-col items-center gap-4 bg-purple-50 pb-24 pt-10 md:h-[70vh]">
 				<div className=" grid w-[90%] grid-cols-1 gap-6 text-center md:grid md:grid-cols-3 xl:w-[70%]">
@@ -89,7 +83,9 @@ const Help: NextPage = () => {
 									1. Informacion General
 								</h4>
 								<p className="w-[90%] text-neutral-600">
-									Descubre cómo contactarnos, asociarte con nosotros y cumplir con nuestros Términos de Servicio (TOS).
+									Descubre cómo contactarnos, asociarte con
+									nosotros y cumplir con nuestros Términos de
+									Servicio (TOS).
 								</p>
 							</div>
 						</div>
@@ -105,7 +101,8 @@ const Help: NextPage = () => {
 									2. Partners
 								</h4>
 								<p className="w-[90%] text-neutral-600">
-									Descubre todo sobre ser un socio de AppSumo aquí.
+									Descubre todo sobre ser un socio de AppSumo
+									aquí.
 								</p>
 							</div>
 						</div>
@@ -121,7 +118,8 @@ const Help: NextPage = () => {
 									3. Licensias
 								</h4>
 								<p className="w-[90%] text-neutral-600">
-									Una nueva alternativa a los productos basados en código.
+									Una nueva alternativa a los productos
+									basados en código.
 								</p>
 							</div>
 						</div>

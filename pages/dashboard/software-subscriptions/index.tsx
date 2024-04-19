@@ -4,8 +4,8 @@ import { SideBar } from '@/components/ui/sidebar-dashboard'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import Pagination from '@mui/material/Pagination'
 import Link from 'next/link'
+import Pagination from '@/components/ui/pagination/Pagination'
 
 const SoftwareSuscriptions: NextPage = () => {
 	const { data: session } = useSession()
@@ -17,12 +17,6 @@ const SoftwareSuscriptions: NextPage = () => {
 
 	const onPageChange = (page: number) => {
 		setCurrentPage(page)
-	}
-	const handlePaginationChange = (
-		event: React.ChangeEvent<unknown>,
-		page: number
-	) => {
-		onPageChange(page)
 	}
 
 	useEffect(() => {
@@ -81,14 +75,11 @@ const SoftwareSuscriptions: NextPage = () => {
 									</Link>
 								</div>
 							</div>
-							<div className="">
-								<Pagination
-									count={totalPages}
-									page={currentPage}
-									onChange={handlePaginationChange}
-									className=""
-								/>
-							</div>
+							<Pagination
+								totalPages={totalPages}
+								currentPage={currentPage}
+								onPageChange={onPageChange}
+							/>
 						</div>
 					</div>
 				</div>
