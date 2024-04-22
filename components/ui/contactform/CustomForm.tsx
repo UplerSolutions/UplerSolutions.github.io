@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import PersonalData from './PersonalData'
 import CompanyData from './CompanyData'
-import CompanyFeatures from './CompanyFeatures'
-import { Confirmation } from './Confirmation'
+import ProductFeatures from './ProductFeatures'
+import Confirmation  from './Confirmation'
 import { FormProvider, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { contactForm } from '@/rules'
@@ -81,7 +81,7 @@ const CustomForm: FC<Props> = ({
 				)}
 
 				{activeStep === 2 && (
-					<CompanyFeatures
+					<ProductFeatures
 						handleBack={handleBack}
 						handleNext={handleNext}
 					/>

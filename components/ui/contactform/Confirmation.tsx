@@ -9,7 +9,22 @@ interface Props {
 	handleBack: () => void
 }
 
-export const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
+interface Category {
+	[key: string]: string
+}
+
+const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
+	
+	const categories: Category[] = [
+		{ '6efb3129-75cd-48a8-864a-077ffdc9e101': 'IA' },
+		{ '11102a34-7614-4b54-bca1-61e48ef73cd3': 'Marketing' },
+		{ 'ae34d078-4e04-490d-b883-f853e552cf1c': 'Trading' },
+		{ '01340019-4012-4830-a87d-9af6fb2ec73d': 'Design' },
+		{ '526f9c1c-e8ae-4431-85d2-9e58e557d733': 'Development' },
+		{ '7b5a2647-ae64-4bc5-8fe1-b6a054b3c607': 'Cloud' },
+		{ '09706a16-24db-4103-a8f8-f26001df8427': 'Business' }
+	]
+
 	const {
 		getValues,
 		formState: { errors }
@@ -17,7 +32,7 @@ export const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
 
 	const info = getValues()
 
-	console.log(errors)
+	console.log(info.productCategory)
 
 	return (
 		<section className="relative flex flex-col">
@@ -106,7 +121,13 @@ export const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
 				<div className="flex w-4/5">
 					<p className=" w-[40%] text-xl  font-bold  ">Categoria </p>
 					<span className=" text-xl font-normal italic">
-						{info.productCategory}
+						{categories.map((cat) => {
+							const categoryId = Object.keys(cat)[0]
+							const categoryName = cat[categoryId]
+							return categoryId === info.productCategory
+								? categoryName
+								: null
+						})}
 					</span>
 				</div>
 			</div>
@@ -119,7 +140,7 @@ export const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
 						ENVIAR
 					</Button>
 				) : (
-					<Button type="submit"  className="self-end">
+					<Button type="submit" className="self-end">
 						ENVIAR
 					</Button>
 				)}
@@ -138,3 +159,5 @@ export const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
 		</section>
 	)
 }
+
+export default Confirmation

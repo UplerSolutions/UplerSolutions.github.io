@@ -1,19 +1,14 @@
 import { Layout } from '@/components/layout/Layout'
 import { ICategory } from '@/interface/category'
-import { ISoftware } from '@/interface/software'
 import { getCategories } from '@/service/categories/categories-service'
-import { Tab, Tabs } from '@mui/material'
-import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
+import { GetServerSideProps, NextPage } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
 	ChangeEvent,
-	ChangeEventHandler,
 	FormEvent,
-	SyntheticEvent,
 	useState
 } from 'react'
-import { useForm } from 'react-hook-form'
 
 interface Props {
 	categories: ICategory[]
