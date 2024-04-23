@@ -3,7 +3,7 @@ import type { NextPage, GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { useRecentSearches } from '@/hooks/useRecentSearches'
 import { SearchBar } from '@/components/ui/searchbar'
-import { RecentSearches } from '@/components/ui/recentsearches'
+
 import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
 import Filter from '@/components/ui/filter/Filter'
@@ -26,7 +26,6 @@ const minDistance = 10
 
 const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 	const router = useRouter()
-	const { recentSearches, setRecentSearches } = useRecentSearches()
 
 	const [categoryFilter, setCategoryFilter] = useState<string>()
 	//price
@@ -99,23 +98,6 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 											search: searchTerm
 										}
 									})
-									// also add to push recent searches after every search
-									if (!recentSearches.includes(searchTerm)) {
-										setRecentSearches([
-											searchTerm,
-											...recentSearches
-										])
-									}
-								}}
-								inputProps={{
-									onFocus: () => setOpen(true)
-								}}
-							/>
-							<RecentSearches
-								open={open}
-								anchorEl={anchorEl.current}
-								onClose={() => {
-									setOpen(false)
 								}}
 							/>
 						</div>

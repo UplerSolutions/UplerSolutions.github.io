@@ -32,7 +32,6 @@ const Confirmation: FC<Props> = ({ setActiveStep, handleBack }) => {
 
 	const info = getValues()
 
-	console.log(info.productCategory)
 
 	return (
 		<section className="relative flex flex-col">

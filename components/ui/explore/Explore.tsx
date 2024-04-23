@@ -17,7 +17,6 @@ export const Explore: FC<Props> = ({ softwares }) => {
 		setCurrentPage(page)
 	}
 
-	console.log(softwares)
 
 	const startIndex = (currentPage - 1) * pageSize
 	const endIndex = startIndex + pageSize

@@ -12,8 +12,6 @@
 	"dependencies": {
 		"@hookform/error-message": "^2.0.1",
 		"@hookform/resolvers": "^3.3.2",
-		"@mui/icons-material": "^5.14.9",
-		"@mui/material": "^5.14.10",
 		"@nextui-org/react": "^2.0.16",
 		"@react-email/components": "0.0.15",
 		"@types/node": "20.6.3",

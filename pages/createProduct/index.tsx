@@ -71,7 +71,6 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 			}
 		)
 		const res = await post.json()
-		console.log(res)
 	}
 
 	return (
