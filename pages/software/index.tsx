@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import type { NextPage, GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
-import { useRecentSearches } from '@/hooks/useRecentSearches'
 import { SearchBar } from '@/components/ui/searchbar'
 
 import { Layout } from '@/components/layout/Layout'
