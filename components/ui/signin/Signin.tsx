@@ -53,7 +53,7 @@ const SigninButton = () => {
 							onClick={() => signOut()}
 							className="group relative h-11 rounded-xl border-2 border-primary-color bg-primary-color px-2 font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100 lg:px-6"
 						>
-							Sign Out
+							Cerrar Sesión
 						</button>
 					</div>
 				</div>
@@ -116,7 +116,7 @@ const SigninButton = () => {
 									onClick={() => signOut()}
 									className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white"
 								>
-									Sign out <FaSignOutAlt />
+									Cerrar Sesión <FaSignOutAlt />
 								</button>
 							</div>
 						</div>
@@ -136,7 +136,7 @@ const SigninButton = () => {
 							onClick={() => signOut()}
 							className="group relative h-11 rounded-xl border-2 border-primary-color bg-primary-color  px-2 font-semibold text-white transition hover:rounded-xl hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100 lg:px-6"
 						>
-							Sign Out
+							Cerrar Sesión
 						</button>
 					</div>
 				</div>
@@ -198,7 +198,7 @@ const SigninButton = () => {
 									onClick={() => signOut()}
 									className="flex w-full items-center gap-2 px-4 py-2 text-left text-sm text-gray-700 hover:bg-primary-color hover:text-white"
 								>
-									Sign out <FaSignOutAlt />
+									Cerrar Sesión <FaSignOutAlt />
 								</button>
 							</div>
 						</div>
@@ -208,15 +208,15 @@ const SigninButton = () => {
 		)
 	} else {
 		return (
-			<div className="absolute flex w-60 items-center justify-center gap-4 font-lato text-[16px] md:relative md:flex md:w-auto md:gap-6">
-				<Link href="/login">
-					<span className="text-primary-color">Iniciar Sesión</span>
+			<div className="relative flex flex-col items-center justify-end h-2/4  gap-4 font-lato text-[16px] sm:flex-row    md:gap-6">
+				<Link href="/login" className="text-primary-color">
+					Iniciar Sesión
 				</Link>
-
-				<Link href="/register">
-					<button className="group relative rounded-xl border-2 border-primary-color bg-primary-color  px-5  py-2 text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100">
-						Registrarse
-					</button>
+				<Link
+					href="/register"
+					className="rounded-xl border-2 border-primary-color bg-primary-color  px-5  py-2 text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
+				>
+					Registrarse
 				</Link>
 			</div>
 		)
