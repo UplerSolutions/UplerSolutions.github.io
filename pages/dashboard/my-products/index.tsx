@@ -35,7 +35,7 @@ const MyProducts: NextPage<Props> = ({ software }) => {
 											</div>
 											<Link
 												href={'/createProduct'}
-												className="group relative rounded-xl border-2 border-primary-color bg-primary-color  delay-100 px-5  py-2 text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color "
+												className="rounded-xl bg-primary-color px-5 py-2 font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 											>
 												Agregar un producto
 											</Link>

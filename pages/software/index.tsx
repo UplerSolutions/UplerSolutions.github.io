@@ -113,7 +113,7 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 
 						<div className=" mt-4 flex w-full justify-center lg:hidden">
 							<button
-								className="h-12  w-[80%] rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
+								className="rounded-xl bg-primary-color px-5 py-2 font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 								type="submit"
 								onClick={handleRouterClear}
 							>
