@@ -45,12 +45,12 @@ const SigninButton = () => {
 		session.user.user
 	) {
 		return (
-			<div className="relative flex h-3/5 flex-col justify-center">
-				<div className="flex h-full flex-col items-center justify-end">
+			<div className="relative flex  flex-col ">
+				<div className="flex h-[40%] flex-col ">
 					<button
 						onClick={handleClick}
-						className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white ${
-							isOpen ? '' : 'aaaaa'
+						className={`inline-flex w-full justify-center gap-x-1.5 rounded-md bg-purple-200 px-3 py-2 text-sm font-semibold text-primary-color shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-primary-color hover:text-white mt-3 lg:mt-0 ${
+							isOpen ? '' : ''
 						}`}
 						aria-expanded="true"
 						aria-haspopup="true"
@@ -75,13 +75,11 @@ const SigninButton = () => {
 				</div>
 				{isOpen && (
 					<div
-						className="absolute z-10  w-56 rounded-md bg-purple-200 shadow-lg ring-1 ring-black ring-opacity-5 hover:rounded-md"
-						style={{ top: 'calc(80%)' }}
+						className="absolute z-10 w-full rounded-md bg-purple-200 shadow-lg ring-1 ring-black ring-opacity-5 hover:rounded-md md:mt-14 lg:mt-10"
 						role="menu"
 						aria-orientation="vertical"
 						aria-labelledby="menu-button"
 					>
-						<div className="" role="none">
 							<Link
 								href="/dashboard"
 								className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-color hover:text-white"
@@ -97,7 +95,6 @@ const SigninButton = () => {
 							>
 								Cerrar Sesión <FaSignOutAlt />
 							</button>
-						</div>
 					</div>
 				)}
 			</div>
