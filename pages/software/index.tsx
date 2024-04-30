@@ -34,14 +34,6 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 		setCategoryFilter(categoryName)
 	}
 
-	const handleRouterPush = () => {
-		router.push({
-			query: {
-				categoryName: categoryFilter ? categoryFilter : ''
-			}
-		})
-	}
-
 	const handleRouterClear = () => {
 		router.push({
 			query: {}

@@ -196,10 +196,12 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 									<select
 										value={software.category}
 										onChange={handleOnChange}
-										placeholder="Eliga una categoria"
 										name="category"
 										className=" rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 									>
+										<option value="" disabled hidden>
+											Eliga una categoria
+										</option>
 										{categories?.map((cat) => (
 											<option key={cat.id} value={cat.id}>
 												{cat.categoryName}
@@ -343,7 +345,7 @@ const CreateProduct: NextPage<Props> = ({ categories }) => {
 										height={500}
 										className=" rounded-xl border border-black"
 									/>
-									<p className="md:w-[50%]  text-neutral-700 ">
+									<p className="text-neutral-700  md:w-[50%] ">
 										{software?.longDescription === ''
 											? 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam aperiam quo facere voluptatem, inventore itaque corrupti autem, quidem saepe nobis modi? Maiores possimus similique quidem vel vitae! Animi, neque dignissimos!' +
 											  ' ' +

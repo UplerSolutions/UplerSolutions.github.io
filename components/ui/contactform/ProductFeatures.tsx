@@ -88,10 +88,13 @@ const ProductFeatures: FC<Props> = ({ handleNext, handleBack }) => {
 					</label>
 					<select
 						{...register('productCategory')}
-						placeholder="Eliga una categoria"
+						aria-placeholder="Eliga una categoria"
 						name="productCategory"
 						className=" rounded-md border-2 px-3 py-3  focus:border-primary-color focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 					>
+						<option value="" disabled hidden>
+							Eliga una categoria
+						</option>
 						{categories?.map((cat) => (
 							<option key={cat.id} value={cat.id}>
 								{cat.categoryName}
