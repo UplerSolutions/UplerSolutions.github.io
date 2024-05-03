@@ -48,8 +48,8 @@ export default function Home({ softwareData }: { softwareData: ISoftware[] }) {
 					<Link
 						href="/software"
 						scroll={false}
-						className="scroll-smooth rounded-xl bg-primary-color p-3 text-center font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100 "
-						>
+						className="  group relative  rounded-xl border-2 border-primary-color bg-primary-color px-5 py-2 text-lg font-semibold  text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100 "
+					>
 						Encuentra Tu Software
 					</Link>
 				</div>

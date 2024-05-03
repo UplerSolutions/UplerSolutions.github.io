@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import Pagination from '@mui/material/Pagination'
+import Pagination from '../pagination/Pagination'
 
 export const Panel = () => {
 	const { data: session } = useSession()
@@ -14,10 +14,7 @@ export const Panel = () => {
 	const onPageChange = (page: number) => {
 		setCurrentPage(page)
 	}
-	const handlePaginationChange = (
-		event: React.ChangeEvent<unknown>,
-		page: number
-	) => {
+	const handlePaginationChange = (page: number) => {
 		onPageChange(page)
 	}
 
@@ -78,14 +75,11 @@ export const Panel = () => {
 					</div>
 				</div>
 
-				<div className="">
-					<Pagination
-						count={totalPages}
-						page={currentPage}
-						onChange={handlePaginationChange}
-						className="pt-10"
-					/>
-				</div>
+				<Pagination
+					totalPages={totalPages}
+					currentPage={currentPage}
+					onPageChange={handlePaginationChange}
+				/>
 			</div>
 		</div>
 	)

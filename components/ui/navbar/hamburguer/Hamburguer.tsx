@@ -10,62 +10,59 @@ export const Hamburguer = () => {
 	}
 
 	return (
-		<div className="relative lg:hidden">
+		<div className="relative lg:hidden ">
 			{isOpen && (
-				<div>
-					<nav className="absolute right-[-1rem] top-[-2.2rem] h-screen w-64 bg-pink-50 p-4 md:right-[-4rem]">
-						<ul className="flex flex-col items-end gap-6 pt-16 text-right text-lg  font-[600] ">
-							<li>
-								<Link
-									className="flex flex-row items-center  gap-2 text-center hover:text-primary-color "
-									href="/software"
-								>
-									Software
-								</Link>
-							</li>
-							<hr className="h-[2px] w-full bg-primary-color" />
-							<li>
-								<Link
-									className="flex flex-row items-center gap-2 text-center hover:text-primary-color"
-									href="/#plans"
-								>
-									Paquetes
-								</Link>
-							</li>
-							<hr className="h-[2px] w-full bg-primary-color" />
-							<li className="">
-								<Link
-									className="flex items-center gap-2 text-center hover:text-primary-color"
-									href="/partners"
-								>
-									Vender
-								</Link>
-							</li>
-							<hr className="h-[2px] w-full bg-primary-color" />{' '}
-							<li className="">
-								<Link
-									className="flex items-center gap-2 text-center hover:text-primary-color"
-									href="/aboutUs"
-								>
-									Sobre nosotros
-								</Link>
-							</li>
-							<hr className="h-[2px] w-full bg-primary-color" />
-							{/*              <li>
+				<nav className="absolute right-[-1rem] top-[-2.2rem] h-screen w-64 bg-pink-50 p-4 md:right-[-4rem]">
+					<ul className="flex flex-col items-end gap-6 pt-16 text-right text-lg  font-[600] ">
+						<li>
+							<Link
+								className="flex flex-row items-center  gap-2 text-center hover:text-primary-color "
+								href="/software"
+							>
+								Software
+							</Link>
+						</li>
+						<hr className="h-[2px] w-full bg-primary-color" />
+						<li>
+							<Link
+								className="flex flex-row items-center gap-2 text-center hover:text-primary-color"
+								href="/#plans"
+							>
+								Paquetes
+							</Link>
+						</li>
+						<hr className="h-[2px] w-full bg-primary-color" />
+						<li className="">
+							<Link
+								className="flex items-center gap-2 text-center hover:text-primary-color"
+								href="/partners"
+							>
+								Socios
+							</Link>
+						</li>
+						<hr className="h-[2px] w-full bg-primary-color" />{' '}
+						<li className="">
+							<Link
+								className="flex items-center gap-2 text-center hover:text-primary-color"
+								href="/aboutUs"
+							>
+								Sobre nosotros
+							</Link>
+						</li>
+						<hr className="h-[2px] w-full bg-primary-color" />
+						{/*              <li>
                 <Link
-                  className='flex flex-col text-center items-center gap-2'
-                  href='/dashboard'
-                >
-                  <span className='text-lg'>Dashboard</span>
-                </Link>
-              </li>
+					className='flex flex-col text-center items-center gap-2'
+					href='/dashboard'
+					>
+					<span className='text-lg'>Dashboard</span>
+					</Link>
+				</li>
               <hr className='h-[2px] w-full bg-primary-color' /> */}
-						</ul>
-						<div className="absolute top-[85vh] ">
-							<Signin />
-						</div>
-					</nav>
-				</div>
+					</ul>
+						<Signin />
+					
+				</nav>
 			)}
 			<button
 				onClick={handleClick}

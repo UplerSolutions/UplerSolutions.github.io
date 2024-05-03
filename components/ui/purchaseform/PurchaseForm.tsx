@@ -5,13 +5,12 @@ import { getSoftwares } from '@/service/software/software-service'
 
 import Period from './Period'
 import { CheckboxGroup } from './CheckboxGroup'
-import CreditCard from '@/components/ui/creditcard/CreditCard'
 
 import { useForm, FormProvider } from 'react-hook-form'
 import { RxLockClosed } from 'react-icons/rx'
 import { GoShieldCheck } from 'react-icons/go'
 import { FaCheck } from 'react-icons/fa'
-import Pagination from '@mui/material/Pagination'
+import Pagination from '../pagination/Pagination'
 
 interface Props {
 	plan: IPlan
@@ -85,7 +84,6 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 			paymentMethod: { ...state },
 			user: ''
 		}
-		console.log(formatData)
 	}
 
 	useEffect(() => {
@@ -174,7 +172,10 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 								</h1>
 								<div className="flex items-center gap-6">
 									<GoShieldCheck className="scale-[1.8] text-primary-color" />
-									<span>Garantía de devolución de dinero de 30 días</span>
+									<span>
+										Garantía de devolución de dinero de 30
+										días
+									</span>
 								</div>
 							</div>
 							<div>
@@ -229,7 +230,7 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 					<div className="flex w-[90%] flex-col rounded-xl bg-gradient-to-r from-[#fff5ff] to-[#fffdf0] p-6 pr-8 text-neutral-700 sm:py-16 sm:pl-8 lg:w-[75%]">
 						<div className="w-full text-2xl font-bold md:text-[28px] lg:text-[32px] xl:text-[36px]">
 							<h2 className="text-neutral-600 md:pb-10 md:pl-4">
-								2. Seleccione tus softwares 
+								2. Seleccione tus softwares
 							</h2>
 						</div>
 						<div className="flex flex-col items-center justify-center text-center">
@@ -243,10 +244,9 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 							/>
 
 							<Pagination
-								count={totalPages}
-								page={currentPage}
-								onChange={(event, page) => onPageChange(page)}
-								className="flex items-center justify-center pt-4"
+								totalPages={totalPages}
+								currentPage={currentPage}
+								onPageChange={(page) => onPageChange(page)}
 							/>
 						</div>
 					</div>
@@ -278,16 +278,18 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 							</div>
 							<div>
 								<h4 className="pt-6 text-neutral-700">
-									Al completar la compra, aceptas nuestros Términos de Servicio y confirmas que has leído nuestra Política de Privacidad. Puedes cancelar los pagos recurrentes en cualquier momento.
+									Al completar la compra, aceptas nuestros
+									Términos de Servicio y confirmas que has
+									leído nuestra Política de Privacidad. Puedes
+									cancelar los pagos recurrentes en cualquier
+									momento.
 								</h4>
 							</div>
 							<span className="pb-8 pt-10 font-semibold text-neutral-700">
-								¿Necesitas ayuda? Consulta nuestras preguntas frecuentes (FAQs).
+								¿Necesitas ayuda? Consulta nuestras preguntas
+								frecuentes (FAQs).
 							</span>
 						</div>
-						<CreditCard
-
-						/>
 					</div>
 					<div className="pb-14 xl:pl-[3.2rem]">
 						<button

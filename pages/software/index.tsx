@@ -1,10 +1,8 @@
 import { useRef, useState } from 'react'
 import type { NextPage, GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
-import { useRecentSearches } from '@/hooks/useRecentSearches'
-import { Box, Typography } from '@mui/material'
 import { SearchBar } from '@/components/ui/searchbar'
-import { RecentSearches } from '@/components/ui/recentsearches'
+
 import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
 import Filter from '@/components/ui/filter/Filter'
@@ -27,7 +25,6 @@ const minDistance = 10
 
 const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 	const router = useRouter()
-	const { recentSearches, setRecentSearches } = useRecentSearches()
 
 	const [categoryFilter, setCategoryFilter] = useState<string>()
 	//price
@@ -35,14 +32,6 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 
 	const onClickFilterByCategory = (categoryName: string) => {
 		setCategoryFilter(categoryName)
-	}
-
-	const handleRouterPush = () => {
-		router.push({
-			query: {
-				categoryName: categoryFilter ? categoryFilter : ''
-			}
-		})
 	}
 
 	const handleRouterClear = () => {
@@ -90,13 +79,9 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 				</div>
 
 				<div className=" flex w-full flex-col justify-center gap-6 md:w-[90%]">
-					<Box
-						maxWidth={'sm'}
-						margin="auto"
-						className="w-[82%] xl:w-[100%]"
-					>
-						<Typography textAlign="center" my={2}></Typography>
-						<Box className="flex flex-col gap-6" ref={anchorEl}>
+					<div className="m-auto w-[82%] max-w-sm xl:w-[100%]">
+						<p className="py-2 text-center"></p>
+						<div className="flex flex-col gap-6" ref={anchorEl}>
 							<SearchBar
 								onSubmit={async (searchTerm: string) => {
 									router.push({
@@ -104,26 +89,9 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 											search: searchTerm
 										}
 									})
-									// also add to push recent searches after every search
-									if (!recentSearches.includes(searchTerm)) {
-										setRecentSearches([
-											searchTerm,
-											...recentSearches
-										])
-									}
-								}}
-								inputProps={{
-									onFocus: () => setOpen(true)
 								}}
 							/>
-							<RecentSearches
-								open={open}
-								anchorEl={anchorEl.current}
-								onClose={() => {
-									setOpen(false)
-								}}
-							/>
-						</Box>
+						</div>
 						<div className="w-full pt-6 lg:hidden">
 							<Filter
 								handleChange={handleChange}
@@ -134,28 +102,17 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 								categories={categories}
 							/>
 						</div>
-						{/* 
-						<div className=" mt-4 flex w-full justify-around lg:hidden">
+
+						<div className=" mt-4 flex w-full justify-center lg:hidden">
 							<button
-								className="flex h-12 w-[100%] items-center justify-center gap-2 rounded-xl  font-semibold  text-primary-color transition hover:border-primary-color  hover:text-primary-color"
+								className="rounded-xl bg-primary-color px-5 py-2 font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 								type="submit"
 								onClick={handleRouterClear}
 							>
-								Clear{' '}
-								<p>
-									<AiOutlineClear />
-								</p>
-							</button>
-							<button
-								className="h-12  w-[100%] rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
-								type="submit"
-								onClick={handleRouterPush}
-							>
-								Search
+								Limpiar Filtros{' '}
 							</button>
 						</div>
-						*/}
-					</Box>
+					</div>
 				</div>
 			</div>
 
@@ -167,27 +124,16 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 						onClickFilterByCategory={onClickFilterByCategory}
 						categories={categories}
 					/>
-					{/*
-										<div className="flex w-full items-center justify-center gap-2 pl-[2.8rem]">
+
+					<div className="flex w-full items-center justify-center gap-2 pl-[2.8rem]">
 						<button
-							className="flex h-12 w-[100%] items-center justify-center gap-2 rounded-xl  font-semibold  text-primary-color transition hover:border-primary-color  hover:text-primary-color"
+							className="h-12  w-[80%]  rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 							type="submit"
 							onClick={handleRouterClear}
 						>
-							Clear{' '}
-							<p>
-								<AiOutlineClear />
-							</p>
-						</button>
-						<button
-							className="h-12  w-[100%] rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
-							type="submit"
-							onClick={handleRouterPush}
-						>
-							Search
+							Limpiar Filtros{' '}
 						</button>
 					</div>
-					*/}
 				</div>
 				<div className="flex w-full flex-col items-center justify-center pb-20 pt-10">
 					<Explore softwares={softwares} />
@@ -206,7 +152,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 	query
 }) => {
 	let softwares: ISoftware[] = []
-	const { search, low, high, categoryName }: any = query
+	const { search, categoryName }: any = query
 	if (search) {
 		const name: string = typeof search === 'string' ? search : ''
 		softwares = await getSoftwareByName(name)

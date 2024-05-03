@@ -1,7 +1,5 @@
 import { ICategory } from '@/interface/category'
-import { Rating, Slider } from '@mui/material'
-import Box from '@mui/material/Box'
-import React, { FC, useState } from 'react'
+import { FC, useState } from 'react'
 import { BsSliders } from 'react-icons/bs'
 
 function valuetext(value: number) {
@@ -86,7 +84,7 @@ const FilterMobile: FC<Props> = ({
 								</details>
 							</div>
 							<hr className="h-[2px] bg-primary-color" />
-							<div className="py-5">
+							{/* <div className="py-5">
 								<details className="group">
 									<summary className="flex cursor-pointer list-none items-center justify-between font-medium">
 										<span>Valoracióm</span>
@@ -135,7 +133,7 @@ const FilterMobile: FC<Props> = ({
 									</span>
 								</div>
 
-								<Box>
+								<div>
 									<Slider
 										getAriaLabel={() => 'Minimum distance'}
 										value={value1}
@@ -145,8 +143,8 @@ const FilterMobile: FC<Props> = ({
 										disableSwap
 										color="secondary"
 									/>
-								</Box>
-							</div>
+								</div>
+							</div> */}
 
 							<div className="flex w-[100%] flex-row justify-evenly">
 								<button

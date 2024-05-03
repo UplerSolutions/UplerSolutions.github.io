@@ -165,11 +165,6 @@ const Support: NextPage = () => {
 
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
-		// Aquí puedes manejar el envío del formulario
-		console.log('Email:', formData.email)
-		console.log('Asunto:', formData.subject)
-		console.log('Mensaje:', formData.message)
-		// Puedes enviar los datos a través de una solicitud HTTP aquí
 
 		const res = await fetch('/api/send', {
 			method: 'POST',

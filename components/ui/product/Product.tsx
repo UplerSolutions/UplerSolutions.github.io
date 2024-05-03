@@ -1,49 +1,50 @@
-import Tabs from '@mui/material/Tabs'
-import Tab from '@mui/material/Tab'
 import Image from 'next/image'
-import { BsCheck2 } from 'react-icons/bs'
-import { IoStarSharp } from 'react-icons/io5'
-import { FC, SyntheticEvent, useState } from 'react'
+import { FC } from 'react'
 import { ISoftware } from '@/interface/software'
+import Link from 'next/link'
+
+const navLinks = [
+	{
+		text: 'overview'
+	}
+]
 
 export const Product: FC<ISoftware> = ({
 	longDescription,
 	imageUrl,
 	productName
 }) => {
-	const [value, setValue] = useState('overview')
-
-	const handleChange = (event: SyntheticEvent, newValue: string) => {
-		setValue(newValue)
-	}
 	return (
 		<div className="flex flex-col items-center bg-neutral-50">
-			<div className=" w-full md:w-[92%]">
-				<Tabs
-					value={value}
-					onChange={handleChange}
-					textColor="secondary"
-					indicatorColor="secondary"
-					variant="scrollable"
-					scrollButtons
-					allowScrollButtonsMobile
-					aria-label="scrollable force tabs example"
-				>
-					<Tab value="overview" label="Overview" />
-					{/*<Tab value="Features" label="Features" href="#features" />
-					<Tab
+			<nav className=" w-full md:w-[92%]">
+				<ul className="flex gap-2">
+					{navLinks.map((link) => (
+						<Link
+							key={link.text}
+							className="hover:border-b-1 text-xl text-neutral-500 transition-colors d  uppercase hover:border-b-fuchsia-800 hover:text-fuchsia-800"
+							href={`#${link.text}`}
+						>
+							{link.text}
+						</Link>
+					))}
+
+					{/* <Link
+						className="hover:border-b-1 text-lg uppercase hover:border-b-violet-500"
+						href="#features"
+					/> */}
+					{/* <Tab
 						value="Questions"
 						label="Questions"
 						href="#questions"
 					/>
 					<Tab value="Reviews" label="Reviews" href="#reviews" /> */}
-				</Tabs>
-			</div>
+				</ul>
+			</nav>
 			<hr className="w-full" />
 
 			<div className="flex">
 				<div className="flex flex-col items-center lg:pl-8">
-					<div className="w-[87%]">
+					<div className="w-[87%]" id="overview">
 						<h1 className=" py-10 text-3xl text-neutral-700">
 							Overview
 						</h1>
@@ -60,7 +61,8 @@ export const Product: FC<ISoftware> = ({
 							/>
 						</div>
 					</div>
-					{/* <div className="flex w-[87%] flex-col justify-start">
+					<div>
+						{/* <div className="flex w-[87%] flex-col justify-start">
 						<h1
 							className="py-10 text-3xl text-neutral-700"
 							id="features"
@@ -413,6 +415,7 @@ export const Product: FC<ISoftware> = ({
 							</div>
 						</div>
 					</div> */}
+					</div>
 				</div>
 				<aside className="hidden w-[100%] lg:flex"></aside>
 			</div>
