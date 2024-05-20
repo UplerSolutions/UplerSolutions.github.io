@@ -1,48 +1,33 @@
-import { SearchOutlined } from '@mui/icons-material'
-import {
-	Divider,
-	IconButton,
-	InputBase,
-	InputBaseProps,
-	Paper
-} from '@mui/material'
+import { IoMdSearch } from 'react-icons/io'
+
 import { useState } from 'react'
 
 type Props = {
-	// the outside components only needs to know if the searchbar form has been submitted
 	onSubmit(searchTerm: string): void
-	// add inputProps so that we can listen to onFocus / onBlur events if needed
-	inputProps: InputBaseProps
 }
 export const SearchBar = (props: Props) => {
 	const [searchTerm, setSearchTerm] = useState('')
 
 	return (
 		// We use the Paper component since it already contains the style that we want.
-		<Paper
-			component="form"
-			elevation={3}
-			sx={{ display: 'flex', alignItems: 'center', px: 1, py: 0.5 }}
+		<form
 			onSubmit={(e) => {
 				e.preventDefault()
 				props.onSubmit((searchTerm as string) ?? '')
 			}}
+			className="flex items-center bg-[#ffff] shadow-xl transition-shadow"
 		>
-			{/* Input base contains the fewest styles possible so it's perfect for creating custom components like these */}
-			<InputBase
-				sx={{ ml: 1, flex: 1 }}
-				placeholder="Search..."
-				inputProps={{ 'aria-label': 'search' }}
-				value={searchTerm}
+			<input
 				onChange={(e) => {
 					setSearchTerm(e.target.value)
 				}}
-				{...props.inputProps}
+				type="text"
+				placeholder="Busca tu software ideal"
+				className="text-xl w-[90%] rounded-md py-4 px-3 text-black  "
 			/>
-			<Divider sx={{ height: 28, mx: 0.5 }} orientation="vertical" />
-			<IconButton type="submit">
-				<SearchOutlined />
-			</IconButton>
-		</Paper>
+			<button type="submit" className="self-center text-black">
+				<IoMdSearch />
+			</button>
+		</form>
 	)
 }

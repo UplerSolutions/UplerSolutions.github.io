@@ -1,9 +1,8 @@
 import { useRef, useState } from 'react'
 import type { NextPage, GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
-import { useRecentSearches } from '@/hooks/useRecentSearches'
 import { SearchBar } from '@/components/ui/searchbar'
-import { RecentSearches } from '@/components/ui/recentsearches'
+
 import { Layout } from '@/components/layout/Layout'
 import { Explore } from '@/components/ui/explore/Explore'
 import Filter from '@/components/ui/filter/Filter'
@@ -26,7 +25,6 @@ const minDistance = 10
 
 const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 	const router = useRouter()
-	const { recentSearches, setRecentSearches } = useRecentSearches()
 
 	const [categoryFilter, setCategoryFilter] = useState<string>()
 	//price
@@ -34,14 +32,6 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 
 	const onClickFilterByCategory = (categoryName: string) => {
 		setCategoryFilter(categoryName)
-	}
-
-	const handleRouterPush = () => {
-		router.push({
-			query: {
-				categoryName: categoryFilter ? categoryFilter : ''
-			}
-		})
 	}
 
 	const handleRouterClear = () => {
@@ -99,23 +89,6 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 											search: searchTerm
 										}
 									})
-									// also add to push recent searches after every search
-									if (!recentSearches.includes(searchTerm)) {
-										setRecentSearches([
-											searchTerm,
-											...recentSearches
-										])
-									}
-								}}
-								inputProps={{
-									onFocus: () => setOpen(true)
-								}}
-							/>
-							<RecentSearches
-								open={open}
-								anchorEl={anchorEl.current}
-								onClose={() => {
-									setOpen(false)
 								}}
 							/>
 						</div>
@@ -132,7 +105,7 @@ const Softwares: NextPage<Props> = ({ softwares, categories }) => {
 
 						<div className=" mt-4 flex w-full justify-center lg:hidden">
 							<button
-								className="h-12  w-[80%] rounded-xl bg-primary-color font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
+								className="rounded-xl bg-primary-color px-5 py-2 font-semibold text-white transition hover:border-2 hover:border-primary-color hover:bg-fuchsia-200 hover:text-primary-color hover:delay-100"
 								type="submit"
 								onClick={handleRouterClear}
 							>

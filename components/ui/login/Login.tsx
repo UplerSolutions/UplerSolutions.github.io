@@ -37,7 +37,9 @@ export const Login = () => {
 	})
 
 	const onSubmit = async (data: FormData) => {
+		console.log(data)
 		const { username, password } = data
+
 		// Handle login submission here
 		const responseNextAuth = await signIn('credentials', {
 			username,
@@ -45,8 +47,9 @@ export const Login = () => {
 			redirect: false
 		})
 		if (!responseNextAuth?.ok) {
-			setErrorsApi('Username or Password incorrect')
+			setErrorsApi('Username or password incorrect')
 		}
+		console.log(responseNextAuth)
 	}
 
 	return (
@@ -128,7 +131,7 @@ export const Login = () => {
                   href='/forgot-password'
                   className='text-primary-color hover:underline'
                 >
-                  Forgot Password?
+                  Forgot password?
                 </a>
               </div> */}
 

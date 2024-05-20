@@ -84,7 +84,6 @@ const PurchaseForm: FC<Props> = ({ plan }) => {
 			paymentMethod: { ...state },
 			user: ''
 		}
-		console.log(formatData)
 	}
 
 	useEffect(() => {

@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { SearchBar } from '../../components/ui/searchbar/SearchBar'
-import { RecentSearches } from '@/components/ui/recentsearches'
+
 import { useRouter } from 'next/router'
-import { useRecentSearches } from '@/hooks/useRecentSearches'
+
 import { useRef, useState } from 'react'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { FaBusinessTime } from 'react-icons/fa'
@@ -12,7 +12,6 @@ import { TbLicense } from 'react-icons/tb'
 
 const Help: NextPage = () => {
 	const router = useRouter()
-	const { recentSearches, setRecentSearches } = useRecentSearches()
 	const [open, setOpen] = useState(false)
 	const anchorEl = useRef<HTMLDivElement>(null)
 	return (
@@ -49,23 +48,6 @@ const Help: NextPage = () => {
 										search: searchTerm
 									}
 								})
-								// also add to push recent searches after every search
-								if (!recentSearches.includes(searchTerm)) {
-									setRecentSearches([
-										searchTerm,
-										...recentSearches
-									])
-								}
-							}}
-							inputProps={{
-								onFocus: () => setOpen(true)
-							}}
-						/>
-						<RecentSearches
-							open={open}
-							anchorEl={anchorEl.current}
-							onClose={() => {
-								setOpen(false)
 							}}
 						/>
 					</div>

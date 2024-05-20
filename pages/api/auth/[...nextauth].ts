@@ -25,7 +25,7 @@ export default NextAuth({
 					}
 				)
 				const user = await res.json()
-				localStorage.setItem("token", user.accessToken)
+				// localStorage.setItem("token", user.accessToken)
 				if (res.ok && user) {
 					return user
 				}
