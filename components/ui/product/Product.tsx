@@ -48,16 +48,16 @@ export const Product: FC<ISoftware> = ({
 						<h1 className=" py-10 text-3xl text-neutral-700">
 							Overview
 						</h1>
-						<div className="mb-12 flex flex-col-reverse gap-10 md:flex-row-reverse ">
+						<div className="mb-12 flex flex-col-reverse gap-10 lg:flex-row-reverse ">
 							<p className=" w-[80%]  text-neutral-700 md:w-full">
 								{longDescription}
 							</p>
 							<Image
 								src={`/${imageUrl}`}
-								alt=""
+								alt="img"
 								width={200}
 								height={200}
-								className=" w-[80%] rounded-2xl md:w-full "
+								className=" w-full rounded-2xl lg:w-2/4 "
 							/>
 						</div>
 					</div>

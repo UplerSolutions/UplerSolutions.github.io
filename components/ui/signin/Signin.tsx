@@ -57,7 +57,7 @@ const SigninButton = () => {
 					>
 						<p className="flex items-center gap-2">
 							<BiUser />
-							<p className="flex text-center ">{getUserName()}</p>
+							<span className="flex text-center ">{getUserName()}</span>
 						</p>
 						<svg
 							className="-mr-1 h-5 w-5 text-gray-400"
