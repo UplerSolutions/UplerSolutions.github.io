@@ -90,10 +90,10 @@ const Software: NextPage<Props> = ({ software }) => {
 					<div className="relative w-full ">
 						<Image
 							src={`/${software.imageUrl}`}
-							alt=""
+							alt="img"
 							width={300}
 							height={300}
-							className="w-full rounded-xl"
+							className="w-full rounded-xl "
 						/>
 					</div>
 					{/* <div>
