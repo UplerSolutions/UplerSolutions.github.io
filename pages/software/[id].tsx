@@ -85,7 +85,7 @@ const Software: NextPage<Props> = ({ software }) => {
         }`}
       >*/
 		<Layout title="Upler - Software">
-			<div className="flex flex-col items-center justify-center bg-gradient-to-r  from-[#fde9fc] to-[#fffbe0]  pt-28 md:gap-8 lg:flex-row  lg:items-start lg:pb-10">
+			<div className="flex flex-col items-center justify-center bg-gradient-to-r  from-[#fde9fc] to-[#fffbe0]  pt-28 md:gap-8 lg:flex-row  lg:items-start lg:pb-10 h-[85vh]">
 				<div className="mt-9 flex w-[90%] flex-col  rounded-xl text-neutral-950 lg:w-[40%] xl:w-[35%]">
 					<div className="relative w-full ">
 						<Image
