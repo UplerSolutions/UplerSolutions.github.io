@@ -21,7 +21,7 @@ export const Product: FC<ISoftware> = ({
 					{navLinks.map((link) => (
 						<Link
 							key={link.text}
-							className="hover:border-b-1 text-xl text-neutral-500 transition-colors d  uppercase hover:border-b-fuchsia-800 hover:text-fuchsia-800"
+							className="hover:border-b-1 text-xl text-neutral-500 transition-colors uppercase hover:border-b-fuchsia-800 hover:text-fuchsia-800"
 							href={`#${link.text}`}
 						>
 							{link.text}
@@ -42,22 +42,22 @@ export const Product: FC<ISoftware> = ({
 			</nav>
 			<hr className="w-full" />
 
-			<div className="flex">
+			<div className="flex w-[92%]">
 				<div className="flex flex-col items-center lg:pl-8">
-					<div className="w-[87%]" id="overview">
+					<div className="" id="overview">
 						<h1 className=" py-10 text-3xl text-neutral-700">
 							Overview
 						</h1>
-						<div className="mb-12 flex flex-col-reverse gap-10 lg:flex-row-reverse ">
-							<p className=" w-[80%]  text-neutral-700 md:w-full">
+						<div className="mb-12 flex flex-col-reverse gap-10 lg:flex-row-reverse items-center lg:items-start ">
+							<p className=" text-lg w-[80%] text-neutral-700 lg:w-full">
 								{longDescription}
 							</p>
 							<Image
 								src={`/${imageUrl}`}
-								alt="img"
+								alt=""
 								width={200}
 								height={200}
-								className=" w-full rounded-2xl lg:w-2/4 "
+								className="  rounded-2xl w-3/4 md:w-2/4 "
 							/>
 						</div>
 					</div>
@@ -417,7 +417,6 @@ export const Product: FC<ISoftware> = ({
 					</div> */}
 					</div>
 				</div>
-				<aside className="hidden w-[100%] lg:flex"></aside>
 			</div>
 		</div>
 	)
